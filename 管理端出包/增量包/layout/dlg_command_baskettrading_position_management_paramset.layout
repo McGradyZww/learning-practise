@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_command_baskettrading_management_paramset" title="" width="400" height="440"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="30,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="container.body" pos="0,30,-0,-0">	
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<tabctrl name="dlg_command_baskettrading_management_paramset.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+			<tab name="dcbmpl_pagamset_strategyset" image="skin:IDB_TAB_LOW_ITEM" title="基本参数" active="true" pos="0,30,-0,-0">	
+				<chkbtn name="dcbmpl_checkbutton_entrust_before_hint" title="指令下达二次确认框" skin="IDB_CHECK_BOX" pos="20,25" width="240" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+				<text crtext="000000" crmark="800000" align="left" pos="40,55" width="160" height="24" title="二次确认框光标默认在：" font="default1" show="1" />	 
+				<radiobtn name="dcbmpl_radiobtn_ok_focus" title="确定" skin="IDB_radiobtn" pos="187,55" width="90" height="24" crtext="174590" show="1" check="true" showfocus="0" group="8" font="default1"/>
+				<radiobtn name="dcbmpl_radiobtn_cancel_focus" title="取消" skin="IDB_radiobtn" pos="252,55" width="90" height="24" crtext="174590" show="1" check="false" showfocus="0" group="8" font="default1"/>
+				<chkbtn name="dcbmpl_checkbutton_entrust_success_hint" title="指令下达成功弹出提示框" skin="IDB_CHECK_BOX" pos="20,85" width="240" height="24" crtext="191919" show="0" check="true" showfocus="0" font="default1"/>
+				<chkbtn name="dcbmpl_checkbutton_clean" title="指令下达成功后清空指令数量" skin="IDB_CHECK_BOX" pos="20,85" width="300" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+				<chkbtn name="dcbmpl_checkbutton_with_draw_type" title="指令撤销后，自动撤销订单" skin="IDB_CHECK_BOX" pos="20,145" width="300" height="24" crtext="191919" show="0" check="true" showfocus="0" font="default1"/>
+				<text crtext="000000" crmark="800000" align="left" pos="20,148" width="135" height="20"  title="指令金额显示方式：" font="default1" show="1" />
+				<combobox name="dcbmpl.commandamtfault" tabstop="1" skin="IDB_EDIT" pos="160,145" width="180" height="26"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128">
+					<item name="买入金额+卖出金额" value="0" />
+					<item name="买入金额-卖出金额" value="1" />
+					
+				</combobox>
+			</tab> 	 
+			<tab name="dcbmpl_pagamset_otherset" image="skin:IDB_TAB_LOW_ITEM" title="价格数量参数" pos="0,30,-0,-0"> 
+				<text crtext="000000" crmark="800000" align="left" pos="20,25" width="135" height="20"  title="价格参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="50,55" width="135" height="20"  title="默认指令价格：" font="default1" show="1" />
+				<combobox name="dcbmpl.pricedefault.buy" tabstop="1" skin="IDB_EDIT" pos="140,50" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" value="0" disable="1">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				    <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+				</combobox>
+				<!--<text crtext="000000" crmark="800000" align="left" pos="50,85" width="135" height="20"  title="卖出默认价格：" font="default1" show="1" />
+				<combobox name="dcbmpl.pricedefault.sell" tabstop="1" skin="IDB_EDIT" pos="140,80" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" value="0" disable="1">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				    <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+				</combobox>-->
+				<text crtext="000000" crmark="800000" align="left" pos="20,115" width="135" height="20"  title="数量参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="50,145" width="135" height="20"  title="默认数量策略：" font="default1" show="1" />
+				<combobox name="dcbmpl.default.qty" tabstop="1" skin="IDB_EDIT" pos="140,140" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" >	
+					<!--<item name="篮子个数" value="0" />
+					<item name="篮子净值比例" value="1" />-->
+				    <item name="可用比例" value="3" />
+					<item name="单票净值比例" value="4" />
+					<item name="单票金额" value="5" />			
+				</combobox>
+				<text crtext="000000" crmark="800000" align="left" pos="50,175" width="135" height="20"  title="指令计算价格：" font="default1" show="1" />
+				<combobox name="dcbmpl.default.price" tabstop="1" skin="IDB_EDIT" pos="140,170" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128">
+						<item name="昨收盘" value="0" />
+					  <item name="最新价" value="1" />
+				</combobox>
+			</tab> 
+	
+		</tabctrl> 
+     
+      <!--确认、取消按钮-->
+		<button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+	</div>
+	</body>
+</dlg>

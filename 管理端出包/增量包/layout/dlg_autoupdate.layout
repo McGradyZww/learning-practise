@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_autoupdate" title="自动升级" width="400" height="200"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" />
+		<button name="button.min" pos="-69,0,-35,30" skin="IDB_BT_MIN" show="1" tip="最小化" />
+	</base>
+
+	<body>
+		<img pos="0,0,-0,-0" image="skins\autoupdate.png" mode="extrude" framesize="1" show="1" response="0" />	
+		<div pos="0,30,-0,-0">
+			<chkbtn name="autoupdate_checkbutton_todaynotip" title="今天不再提醒" skin="IDB_CHECK_BOX" pos="10,110,136,195" crtext="191919" show="0" check="false" showfocus="0" disable="1"/>
+			<button name="autoupdate_updateok" tabstop="1" skin="IDB_BT_OK" title="马上升级" pos="167,130" width="114" height="32" show="1" crtext="FFFFFF" font="default3" defaultbutton="1"/>
+			<button name="autoupdate_updatecancel" tabstop="1" skin="IDB_BT_CANCEL" title="以后再说" pos="286,130" width="114" height="32" show="1" font="default3" />
+		</div>
+
+	</body>
+  
+</dlg>

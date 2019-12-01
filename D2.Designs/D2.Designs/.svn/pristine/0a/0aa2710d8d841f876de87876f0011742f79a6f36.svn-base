@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.18.41" procedurename="prt_feefutuclient_AddFutuFeeTmplat" paras="16"/>
+    <func funcname="pubT.18.42" procedurename="prt_feefutuclient_ModiFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.18.43" procedurename="prt_feefutuclient_DeleteFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.18.44" procedurename="prt_feefutuclient_QueryFutuFeeTmplat" paras="14"/>
+    <func funcname="pubT.18.45" procedurename="prt_feefutuclient_QueryFutuFeeTmplatJour" paras="14"/>
+    <func funcname="pubT.18.46" procedurename="prt_feefutuclient_QueryFutuFeeTmplatJour_His" paras="15"/>
+    <func funcname="pubT.18.51" procedurename="prt_feefutuclient_AddContrcTypeFeeTmplatDetail" paras="25"/>
+    <func funcname="pubT.18.52" procedurename="prt_feefutuclient_ModiContrcTypeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.18.53" procedurename="prt_feefutuclient_DeleteContrcTypeFeeTmplatDetail" paras="17"/>
+    <func funcname="pubT.18.54" procedurename="prt_feefutuclient_QueryContrcTypeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.18.55" procedurename="prt_feefutuclient_QueryContrcTypeFeeTmplatDetailJour" paras="16"/>
+    <func funcname="pubT.18.56" procedurename="prt_feefutuclient_QueryContrcTypeFeeTmplatDetailJour_His" paras="17"/>
+    <func funcname="pubT.18.61" procedurename="prt_feefutuclient_AddContrcCodeFeeTmplatDetail" paras="25"/>
+    <func funcname="pubT.18.62" procedurename="prt_feefutuclient_ModiContrcCodeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.18.63" procedurename="prt_feefutuclient_DeleteContrcCodeFeeTmplatDetail" paras="17"/>
+    <func funcname="pubT.18.64" procedurename="prt_feefutuclient_QueryContrcCodeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.18.65" procedurename="prt_feefutuclient_QueryContrcCodeFeeTmplatDetailJour" paras="16"/>
+    <func funcname="pubT.18.66" procedurename="prt_feefutuclient_QueryContrcCodeFeeTmplatDetailJour_His" paras="17"/>
+    <func funcname="pubT.18.71" procedurename="prt_feefutuclient_AddAsacFutuFeeTmplat" paras="16"/>
+    <func funcname="pubT.18.72" procedurename="prt_feefutuclient_ModiAsacFutuFeeTmplat" paras="16"/>
+    <func funcname="pubT.18.73" procedurename="prt_feefutuclient_DeleteAsacFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.18.74" procedurename="prt_feefutuclient_QueryAsacFutuFeeTmplat" paras="16"/>
+    <func funcname="pubT.18.75" procedurename="prt_feefutuclient_QueryAsacFutuFeeTmplatJour" paras="13"/>
+    <func funcname="pubT.18.76" procedurename="prt_feefutuclient_QueryAsacFutuFeeTmplatJour_His" paras="14"/>
+    <func funcname="pubT.18.144" procedurename="prt_feefutuclient_QuerySysContrcTypeFee" paras="14"/>
+    <func funcname="pubT.18.154" procedurename="prt_feefutuclient_QuerySysContrcCodeFee" paras="14"/>
+    <func funcname="pubT.18.302" procedurename="prt_feefutuclient_QueryFeeNo" paras="13"/>
+    <func funcname="pubT.18.303" procedurename="prt_feefutuclient_GetFutuMarginRatio" paras="18"/>
+    <func funcname="pubT.18.77" procedurename="prt_feefutuclient_DeleteFutuFeeTmplatByFeeNo" paras="13"/>
+</funcs>

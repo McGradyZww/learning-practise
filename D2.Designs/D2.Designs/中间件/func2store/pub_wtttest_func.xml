@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.31.1" procedurename="prt_wtttest_add" paras="15"/>
+    <func funcname="pubT.31.2" procedurename="prt_wtttest_dele" paras="10"/>
+    <func funcname="pubT.31.3" procedurename="prt_wtttest_Modify" paras="15"/>
+    <func funcname="pubT.31.4" procedurename="prt_wtttest_sel" paras="13"/>
+</funcs>

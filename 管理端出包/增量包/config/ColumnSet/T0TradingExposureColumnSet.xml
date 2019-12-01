@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员编号" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品编码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组编码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易市场" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="开仓数量" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="开仓市值" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="平仓数量" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="平仓市值" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="未平仓数量" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="未平仓市值" IsVisiblity="true" isTotalRow="true" />
+</ColumnSetClass>

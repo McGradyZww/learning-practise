@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="valT.4.1" procedurename="prt_valcheck_AddMailBoxConfig" paras="17"/>
+    <func funcname="valT.4.2" procedurename="prt_valcheck_UpdateValTableConfig" paras="19"/>
+    <func funcname="valT.4.3" procedurename="prt_valcheck_QueryMailBoxConfig" paras="13"/>
+    <func funcname="valT.4.11" procedurename="prt_valcheck_AddValTableConfig" paras="30"/>
+    <func funcname="valT.4.12" procedurename="prt_valcheck_UpdateValTableConfig" paras="30"/>
+    <func funcname="valT.4.13" procedurename="prt_valcheck_QueryValTableConfig" paras="13"/>
+    <func funcname="valT.4.21" procedurename="prt_valcheck_AddValTable" paras="29"/>
+    <func funcname="valT.4.22" procedurename="prt_valcheck_QueryValTable" paras="14"/>
+</funcs>

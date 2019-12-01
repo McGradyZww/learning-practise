@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+  <author>nd</author>
+  <description>系统菜单</description>
+  <items>
+  	<item  id="1000000" key="40" zh_chs="" zh_cht="" en="" image="ico_systemmgr" is_display="true"/>
+	<item  id="1050000" key="40" zh_chs="" zh_cht="" en="" image="icon_zijinchuli" is_display="true"/>	
+	<item  id="2000000" key="40" zh_chs="" zh_cht="" en="" image="ico_productmgr" is_display="true"/>
+	<item  id="3000000" key="40" zh_chs="" zh_cht="" en="" image="ico_Fundmgr" is_display="true"/>
+	<item  id="4000000" key="40" zh_chs="" zh_cht="" en="" image="ico_Positionmgr" is_display="true"/>
+	<item  id="5000000" key="40" zh_chs="" zh_cht="" en="" image="ico_Trademgr" is_display="true"/>
+	<item  id="6000000" key="40" zh_chs="" zh_cht="" en="" image="ico_riskmgr" is_display="true"/>
+	<item  id="7000000" key="40" zh_chs="" zh_cht="" en="" image="ico_dataquery" is_display="true"/>
+	<item  id="8000000" key="40" zh_chs="" zh_cht="" en="" image="ico_dataimport" is_display="true"/>
+	<item  id="9000000" key="40" zh_chs="" zh_cht="" en="" image="ico_reportmgr" is_display="true"/>
+	</items> 
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_T+0trade_stock_report" image="skin:IDB_TAB_ITEM" active="true" title="增强交易报表" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_T+0trade_stock_report.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="T+0tradeReport_holdPandl_query" image="skin:IDB_TAB_LOW_ITEM" title="持仓盈亏报表" active="true" pos="0,30,-0,-0" menuno="61051201">
+					<div name="T+0tradeReport_holdPandl_query" pos="2,2,-2,-2" placement="T+0tradeReport_holdPandl_query"/>
+				</tab>
+				<tab name="T+0tradeReport_sourceHold_query" image="skin:IDB_TAB_LOW_ITEM" title="券源持仓报表" pos="0,30,-0,-0" menuno="61051202">
+					<div name="T+0tradeReport_sourceHold_query" pos="2,2,-2,-2" placement="T+0tradeReport_sourceHold_query"/>
+				</tab>
+				<tab name="T+0tradeReport_unitTrade_query" image="skin:IDB_TAB_LOW_ITEM" title="账户盈亏报表" pos="0,30,-0,-0" menuno="61051203">
+					<div name="T+0tradeReport_unitTrade_query" pos="2,2,-2,-2" placement="T+0tradeReport_unitTrade_query"/>
+				</tab>
+				<tab name="T+0tradeReport_detail_query" image="skin:IDB_TAB_LOW_ITEM" title="订单流水明细报表" pos="0,30,-0,-0" menuno="61051204">	
+					<div name="T+0tradeReport_detail_query" pos="2,2,-2,-2" placement="T+0tradeReport_detail_query"/>
+				</tab>
+				<tab name="T+0tradeReport_operatorHolding_query" image="skin:IDB_TAB_LOW_ITEM" title="交易明细报表" pos="0,30,-0,-0" menuno="61051205">	
+					<div name="T+0tradeReport_operatorHolding_query" pos="2,2,-2,-2" placement="T+0tradeReport_operatorHolding_query"/>
+				</tab>
+		</tabctrl>
+	</tab>
+</tabctrl>

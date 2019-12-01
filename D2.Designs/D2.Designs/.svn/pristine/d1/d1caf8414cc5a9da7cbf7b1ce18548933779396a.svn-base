@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.1.1" procedurename="prt_tdfupb_offer_update" paras="12"/>
+    <func funcname="tdfutuT.1.2" procedurename="prt_tdfupb_GetCoBusiRecordNo" paras="12"/>
+    <func funcname="tdfutuT.1.3" procedurename="prt_tdfupb_DataToHis" paras="11"/>
+    <func funcname="tdfutuT.1.4" procedurename="prt_tdfupb_CommMarginCalc" paras="73"/>
+</funcs>

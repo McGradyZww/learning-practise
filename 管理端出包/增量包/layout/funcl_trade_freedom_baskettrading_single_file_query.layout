@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_trade_freedom_baskettrading_single_file_query">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    
+    
+    
+   <gridctrl name="grid.funcl_trade_freedom_baskettrading_single_file_query" pos="2,5,-2,-55" show="1"			
+		img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT" header-check="0" 
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" sort="1" editcolumn="1"
+        left-pos="30" row-height="35" header-height="38" bk-transparent="1"
+        font-title="big" font="default2" grid-tip="1"
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">  
+         
+        <column title="证券代码" width="100" align="center" key="stock_code" deletable="0" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="买卖方向" width="100" align="center" key="order_dir" />
+        <column title="买卖数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="指令价格" width="100" align="center" key="command_price" data_type="T" />
+        <column title="买卖金额" width="100" align="center" key="order_amt" data_type="T" />
+        <column title="停牌标志" width="100" align="center" key="stop_status"  deletable="0" />
+        <column title="涨跌停" width="100" align="center" key="ups_and_downs" />
+    </gridctrl>
+    
+    <chkbtn name="checkbutton_rid_ups_and_downs" title="剔除涨跌停" skin="IDB_CHECK_BOX" pos="16,-20,136,-5" crtext="e30202" show="1" check="true" showfocus="0"/>
+	
+	<!--
+	<chkbtn name="checkbutton2" title="剔除停牌" skin="IDB_CHECK_BOX" pos="166,-20,286,-5" crtext="174590" show="1" check="true" showfocus="0"/>
+	
+	<chkbtn name="checkbutton3" title="显示全部执行" skin="IDB_CHECK_BOX" pos="336,-20,456,-5" crtext="0493a0" show="1" check="true" showfocus="0"/>
+	<chkbtn name="checkbutton4" title="显示全部成交" skin="IDB_CHECK_BOX" pos="506,-20,626,-5" crtext="810000" show="1" check="true" showfocus="0"/>
+		-->			
+    	
+  </div>

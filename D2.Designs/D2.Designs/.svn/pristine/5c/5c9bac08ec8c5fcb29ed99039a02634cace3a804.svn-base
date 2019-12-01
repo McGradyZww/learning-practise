@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.9.1" procedurename="prt_pdrkif_QueryProductInfoByRisk" paras="15"/>
+    <func funcname="prodT.9.2" procedurename="prt_pdrkif_QueryProductLimitByRisk" paras="13"/>
+    <func funcname="prodT.9.3" procedurename="prt_pdrkif_QueryPdCapitalByRisk" paras="14"/>
+    <func funcname="prodT.9.4" procedurename="prt_pdrkif_UpdatePdAsset" paras="17"/>
+    <func funcname="prodT.9.5" procedurename="prt_pdrkif_QueryPdAssetByRisk" paras="14"/>
+    <func funcname="prodT.9.6" procedurename="prt_pdrkif_QueryAssetAccoChanel" paras="15"/>
+    <func funcname="prodT.9.7" procedurename="prt_pdrkif_QueryAssetAccoInfoByRisk" paras="14"/>
+</funcs>

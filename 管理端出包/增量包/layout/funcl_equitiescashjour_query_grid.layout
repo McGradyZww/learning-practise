@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_equitiescashjour_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<!--市场编号-->
+		<text crtext="000000" crmark="800000" align="right" pos="10,20,90,40" title="市场编号:" font="bold3" show="0"/>
+		<combobox name="equitiescashjour_query.exchange_no" tabstop="1" skin="IDB_EDIT" pos="90,12" width="120" height="36" tip="市场编号"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50" show="0"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+	
+		<!--资产账号-->
+		<text crtext="000000" crmark="800000" align="right" pos="10,20,90,40" title="资产账号:" font="bold3" show="1"/>
+		<edit name="equitiescashjour_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="90,12" width="120" height="36"
+		   multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1"/>
+		   
+	 
+		<!--单元-->
+		<text crtext="000000" crmark="800000" align="right" pos="230,20" width="80" height="25" title="交易单元:" font="bold3" show="1"/>
+		<combobox name="equitiescashjour_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="310,12" width="120" height="36" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+	  
+		<!--日期-->
+		<text crtext="000000" crmark="800000" align="right" pos="450,20,500,40" title="日期:" font="bold3" show="1"/>
+		<nativewnd name="equitiescashjour_query.begin_date" tabstop="1" skin="IDB_EDIT" pos="500,12" width="120" height="36"
+			   multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+		<text crtext="000000" crmark="800000" align="right" pos="620,20,640,40" title="——" font="bold3" show="1"/>
+		<nativewnd name="equitiescashjour_query.end_date" tabstop="1" skin="IDB_EDIT" pos="640,12" width="120" height="36"
+			   multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+			   
+		<button name="queryequitiescashjour_button.query" title="" pos="780,15" width="80" height="30" skin="IDB_BT_QUERY" tip="查询" show="1" shortcut="F5" enabledirkey="1"/>
+		<button name="unitstock_button.refresh" title="" pos="-186,15" width="70" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="0" />
+		<button name="query_button.export" title="" pos="-106,15" width="70" height="30" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+		<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />	
+		<!--结果集grid-->	
+		<gridctrl name="grid.funcl_equitiescashjour_query" pos="2,62,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG" editcolumn="1"  
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" img-colsep="skin:IDB_LINE_SPLIT" 
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">    
+			<column title="记录序号" width="100" align="center" key="row_id" data_type="N" />
+			<column title="资金流水号" width="100" align="center" key="cash_jour_no" />
+			<column title="发生日期" width="100" align="center" key="occur_date" />
+			<column title="发生时间" width="100" align="center" key="occur_time" data_type="N"/>
+			<column title="业务标志" width="100" align="center" key="busi_flag" />
+			<column title="机构编号" width="100" align="center" key="company_no" />
+			<column title="产品名称" width="100" align="center" key="product_name" />
+			<column title="资产账户" width="100" align="center" key="asset_account" />
+			<column title="本币币种" width="100" align="center" key="currency_type" data_type="N" />
+			<column title="变动金额" width="100" align="right" key="occur_amt" data_type="T" />
+			<column title="变动后金额" width="100" align="right" key="occur_end_amt" data_type="T" />			
+			<column title="备注信息" width="100" align="center" key="remark_info" />
+			<column title="操作员编号" width="100" align="center" key="operator_no" />
+		</gridctrl>
+  </div>

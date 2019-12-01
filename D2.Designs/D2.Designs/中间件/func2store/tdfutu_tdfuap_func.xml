@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.3.1" procedurename="prt_tdfuap_AddCommand" paras="98"/>
+    <func funcname="tdfutuT.3.2" procedurename="prt_tdfuap_CancelComm" paras="27"/>
+    <func funcname="tdfutuT.3.3" procedurename="prt_tdfuap_GetComm" paras="64"/>
+    <func funcname="tdfutuT.3.4" procedurename="prt_tdfuap_GetSumComm" paras="66"/>
+    <func funcname="tdfutuT.3.5" procedurename="prt_tdfuap_ApprComm" paras="62"/>
+    <func funcname="tdfutuT.3.6" procedurename="prt_tdfuap_DispComm" paras="35"/>
+    <func funcname="tdfutuT.3.7" procedurename="prt_tdfuap_QueryCommList" paras="33"/>
+    <func funcname="tdfutuT.3.8" procedurename="prt_tdfuap_QueryHisCommList" paras="34"/>
+    <func funcname="tdfutuT.3.9" procedurename="prt_tdfuap_QueryCommDispJourList" paras="25"/>
+    <func funcname="tdfutuT.3.10" procedurename="prt_tdfuap_QueryHisCommDispJourList" paras="26"/>
+    <func funcname="tdfutuT.3.11" procedurename="prt_tdfuap_QueryCommApprJourList" paras="24"/>
+    <func funcname="tdfutuT.3.12" procedurename="prt_tdfuap_QueryHisCommApprJourList" paras="25"/>
+    <func funcname="tdfutuT.3.13" procedurename="prt_tdfuap_QuerySumCommList" paras="27"/>
+    <func funcname="tdfutuT.3.14" procedurename="prt_tdfuap_QueryHisSumCommList" paras="28"/>
+    <func funcname="tdfutuT.3.15" procedurename="prt_tdfuap_GetCommLimitActualPrice" paras="18"/>
+    <func funcname="tdfutuT.3.16" procedurename="prt_tdfuap_ModiComm" paras="45"/>
+    <func funcname="tdfutuT.3.17" procedurename="prt_tdfuap_LoopLockGetComm" paras="66"/>
+</funcs>

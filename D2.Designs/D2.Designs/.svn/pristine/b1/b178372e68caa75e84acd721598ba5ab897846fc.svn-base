@@ -1,0 +1,2852 @@
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询资产账户持仓负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryAsacPosiDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryAsacPosiDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_co_no int,
+    IN p_pd_no int,
+    IN p_asset_acco_no int,
+    IN p_exch_no_str varchar(2048),
+    IN p_stock_acco_no int,
+    IN p_stock_code_no_str varchar(4096),
+    IN p_debt_type int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_pd_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_no_str varchar(2048);
+    declare v_stock_acco_no int;
+    declare v_stock_code_no_str varchar(4096);
+    declare v_debt_type int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_pd_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_co_no = p_co_no;
+    SET v_pd_no = p_pd_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_exch_no_str = p_exch_no_str;
+    SET v_stock_acco_no = p_stock_acco_no;
+    SET v_stock_code_no_str = p_stock_code_no_str;
+    SET v_debt_type = p_debt_type;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_pd_no_rights_str = p_pd_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户持仓负债表][字段][{机构编号} = @机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#)  and  (@负债类型#=0 or {负债类型}=@负债类型#) and  instr(@产品编号权限串#,concat(";",{产品编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#) and (@市场编号串# = "; ;" or instr(@市场编号串#, concat(";", {市场编号}, ";")) > 0) and (@股东代码编号# = 0 or {股东代码编号} = @股东代码编号#) and (@证券代码编号串# = "; ;" or instr(@证券代码编号串#, concat(";", {证券代码编号}, ";")) > 0) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_asac_posidebt where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and  (v_debt_type=0 or debt_type=v_debt_type) and  instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_asac_posidebt where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and  (v_debt_type=0 or debt_type=v_debt_type) and  instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询交易组持仓负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryExgpPosiDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryExgpPosiDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_co_no int,
+    IN p_pd_no int,
+    IN p_exch_group_no int,
+    IN p_asset_acco_no int,
+    IN p_exch_no_str varchar(2048),
+    IN p_stock_acco_no int,
+    IN p_stock_code_no_str varchar(4096),
+    IN p_debt_type int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_exch_group_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_exch_group_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_no_str varchar(2048);
+    declare v_stock_acco_no int;
+    declare v_stock_code_no_str varchar(4096);
+    declare v_debt_type int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_exch_group_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_co_no = p_co_no;
+    SET v_pd_no = p_pd_no;
+    SET v_exch_group_no = p_exch_group_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_exch_no_str = p_exch_no_str;
+    SET v_stock_acco_no = p_stock_acco_no;
+    SET v_stock_code_no_str = p_stock_code_no_str;
+    SET v_debt_type = p_debt_type;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_exch_group_no_rights_str = p_exch_group_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组持仓负债表][字段][{机构编号} = @机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#)  and    (@负债类型#=0 or {负债类型}=@负债类型#)  and  (@交易组编号# = 0 or {交易组编号} = @交易组编号#)  and instr(@交易组编号权限串#,concat(";",{交易组编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#) and (@市场编号串# = "; ;" or instr(@市场编号串#, concat(";", {市场编号}, ";")) > 0) and (@股东代码编号# = 0 or {股东代码编号} = @股东代码编号#) and (@证券代码编号串# = "; ;" or instr(@证券代码编号串#, concat(";", {证券代码编号}, ";")) > 0) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, exch_group_no, asset_acco_no, exch_no, 
+        stock_acco_no, stock_code_no, stock_code, stock_type, 
+        asset_type, invest_type, debt_type, begin_debt_qty, 
+        curr_debt_qty, posi_qty_check_diff, begin_debt_amt, curr_debt_amt, 
+        debt_interest_amt, debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_exgp_posidebt where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and    (v_debt_type=0 or debt_type=v_debt_type)  and  (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, exch_group_no, asset_acco_no, exch_no, 
+        stock_acco_no, stock_code_no, stock_code, stock_type, 
+        asset_type, invest_type, debt_type, begin_debt_qty, 
+        curr_debt_qty, posi_qty_check_diff, begin_debt_amt, curr_debt_amt, 
+        debt_interest_amt, debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_exgp_posidebt where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and    (v_debt_type=0 or debt_type=v_debt_type)  and  (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询交易组资金负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryExgpCapitalDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryExgpCapitalDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_pd_no int,
+    IN p_asset_acco_no int,
+    IN p_exch_group_no int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_exch_group_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_group_no int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_exch_group_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_pd_no = p_pd_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_exch_group_no = p_exch_group_no;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_exch_group_no_rights_str = p_exch_group_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组资金负债表][字段][{机构编号} = @操作员机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#)  and (@交易组编号# = 0 or {交易组编号} = @交易组编号#)  and instr(@交易组编号权限串#,concat(";",{交易组编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_group_no, crncy_type, 
+        begin_amt, loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_exgp_capitdebt where co_no = v_opor_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_group_no, crncy_type, 
+        begin_amt, loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_exgp_capitdebt where co_no = v_opor_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询资产账户资金负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryAsacCapitalDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryAsacCapitalDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_pd_no int,
+    IN p_asset_acco_no int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_pd_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_pd_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_pd_no = p_pd_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_pd_no_rights_str = p_pd_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户资金负债表][字段][{机构编号} = @操作员机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#)  and instr(@产品编号权限串#,concat(";",{产品编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_asac_capitdebt where co_no = v_opor_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_asac_capitdebt where co_no = v_opor_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询资产账户负债明细
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryAsacDebtDetail;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryAsacDebtDetail(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_co_no int,
+    IN p_pd_no int,
+    IN p_asset_acco_no int,
+    IN p_exch_no_str varchar(2048),
+    IN p_stock_acco_no int,
+    IN p_stock_code_no_str varchar(4096),
+    IN p_debt_type int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_pd_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_no_str varchar(2048);
+    declare v_stock_acco_no int;
+    declare v_stock_code_no_str varchar(4096);
+    declare v_debt_type int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_pd_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_co_no = p_co_no;
+    SET v_pd_no = p_pd_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_exch_no_str = p_exch_no_str;
+    SET v_stock_acco_no = p_stock_acco_no;
+    SET v_stock_code_no_str = p_stock_code_no_str;
+    SET v_debt_type = p_debt_type;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_pd_no_rights_str = p_pd_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户负债明细表][字段][{机构编号} = @机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#) and instr(@产品编号权限串#,concat(";",{产品编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#)  and  (@负债类型#=0 or {负债类型}=@负债类型#) and (@市场编号串# = "; ;" or instr(@市场编号串#, concat(";", {市场编号}, ";")) > 0) and (@股东代码编号# = 0 or {股东代码编号} = @股东代码编号#) and (@证券代码编号串# = "; ;" or instr(@证券代码编号串#, concat(";", {证券代码编号}, ";")) > 0) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info from db_pdsecu.tb_pdsecr_asac_debtdetail where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no) and instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no)  and  (v_debt_type=0 or debt_type=v_debt_type) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info from db_pdsecu.tb_pdsecr_asac_debtdetail where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no) and instr(v_pd_no_rights_str,concat(";",pd_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no)  and  (v_debt_type=0 or debt_type=v_debt_type) and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询交易组负债明细
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryExgpDebtDetail;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryExgpDebtDetail(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_co_no int,
+    IN p_pd_no int,
+    IN p_exch_group_no int,
+    IN p_asset_acco_no int,
+    IN p_exch_no_str varchar(2048),
+    IN p_stock_acco_no int,
+    IN p_stock_code_no_str varchar(4096),
+    IN p_debt_type int,
+    IN p_row_id bigint,
+    IN p_row_count int,
+    IN p_exch_group_no_rights_str varchar(2048),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_exch_group_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_no_str varchar(2048);
+    declare v_stock_acco_no int;
+    declare v_stock_code_no_str varchar(4096);
+    declare v_debt_type int;
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_exch_group_no_rights_str varchar(2048);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_co_no = p_co_no;
+    SET v_pd_no = p_pd_no;
+    SET v_exch_group_no = p_exch_group_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_exch_no_str = p_exch_no_str;
+    SET v_stock_acco_no = p_stock_acco_no;
+    SET v_stock_code_no_str = p_stock_code_no_str;
+    SET v_debt_type = p_debt_type;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_exch_group_no_rights_str = p_exch_group_no_rights_str;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组负债明细表][字段][{机构编号} = @机构编号# and (@产品编号# = 0 or {产品编号} = @产品编号#)  and (@交易组编号# = 0 or {交易组编号} = @交易组编号#)  and instr(@交易组编号权限串#,concat(";",{交易组编号},";"))>0 and (@资产账户编号# = 0 or {资产账户编号} = @资产账户编号#)  and  (@负债类型#=0 or {负债类型}=@负债类型#)  and (@市场编号串# = "; ;" or instr(@市场编号串#, concat(";", {市场编号}, ";")) > 0) and (@股东代码编号# = 0 or {股东代码编号} = @股东代码编号#) and (@证券代码编号串# = "; ;" or instr(@证券代码编号串#, concat(";", {证券代码编号}, ";")) > 0) and {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        exch_group_no, pass_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        debt_type, strike_qty, strike_amt, strike_fee, 
+        order_no, report_no, order_date, order_time, 
+        order_dir, order_price, order_qty, debt_intrst_rate, 
+        begin_debt_amt, begin_debt_qty, debt_amt, debt_qty, 
+        debt_fee, debt_interest, intrst_base_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt, interest_update_date, debt_end_date, 
+        orign_debt_end_date, defer_times, debt_return_date, debt_status, 
+        remark_info from db_pdsecu.tb_pdsecr_exgp_debtdetail where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no)  and  (v_debt_type=0 or debt_type=v_debt_type)  and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        exch_group_no, pass_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        debt_type, strike_qty, strike_amt, strike_fee, 
+        order_no, report_no, order_date, order_time, 
+        order_dir, order_price, order_qty, debt_intrst_rate, 
+        begin_debt_amt, begin_debt_qty, debt_amt, debt_qty, 
+        debt_fee, debt_interest, intrst_base_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt, interest_update_date, debt_end_date, 
+        orign_debt_end_date, defer_times, debt_return_date, debt_status, 
+        remark_info from db_pdsecu.tb_pdsecr_exgp_debtdetail where co_no = v_co_no and (v_pd_no = 0 or pd_no = v_pd_no)  and (v_exch_group_no = 0 or exch_group_no = v_exch_group_no)  and instr(v_exch_group_no_rights_str,concat(";",exch_group_no,";"))>0 and (v_asset_acco_no = 0 or asset_acco_no = v_asset_acco_no)  and  (v_debt_type=0 or debt_type=v_debt_type)  and (v_exch_no_str = "; ;" or instr(v_exch_no_str, concat(";", exch_no, ";")) > 0) and (v_stock_acco_no = 0 or stock_acco_no = v_stock_acco_no) and (v_stock_code_no_str = "; ;" or instr(v_stock_code_no_str, concat(";", stock_code_no, ";")) > 0) and row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_归档产品证券融资融券数据
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_BackUpPdSecuCrdtData;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_BackUpPdSecuCrdtData(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_table_name varchar(64);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_table_name = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* set @数据表名称# = "~产品证券_融资融券_历史交易组资金负债表^"; */
+    set v_table_name = "db_pdsecu_his.tb_pdsecr_exgp_capitdebt_his";
+
+    /* [删除表记录][产品证券_融资融券_历史交易组资金负债表][{初始化日期}=@初始化日期#][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu_his.tb_pdsecr_exgp_capitdebt_his 
+        where init_date=v_init_date;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组资金负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_capitdebt";
+
+    /* [不分日期数据归历史][产品证券_融资融券_交易组资金负债表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_exgp_capitdebt_his (init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, exch_group_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt) 
+        select v_init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, exch_group_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt 
+        from db_pdsecu.tb_pdsecr_exgp_capitdebt;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_历史资产账户资金负债表^"; */
+    set v_table_name = "db_pdsecu_his.tb_pdsecr_asac_capitdebt_his";
+
+    /* [删除表记录][产品证券_融资融券_历史资产账户资金负债表][{初始化日期}=@初始化日期#][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu_his.tb_pdsecr_asac_capitdebt_his 
+        where init_date=v_init_date;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户资金负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_capitdebt";
+
+    /* [不分日期数据归历史][产品证券_融资融券_资产账户资金负债表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_asac_capitdebt_his (init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, crncy_type, begin_amt, loan_sell_amt, 
+        debt_interest_amt) 
+        select v_init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, crncy_type, begin_amt, loan_sell_amt, 
+        debt_interest_amt 
+        from db_pdsecu.tb_pdsecr_asac_capitdebt;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_历史交易组持仓负债表^"; */
+    set v_table_name = "db_pdsecu_his.tb_pdsecr_exgp_posidebt_his";
+
+    /* [删除表记录][产品证券_融资融券_历史交易组持仓负债表][{初始化日期}=@初始化日期#][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu_his.tb_pdsecr_exgp_posidebt_his 
+        where init_date=v_init_date;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组持仓负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_posidebt";
+
+    /* [不分日期数据归历史][产品证券_融资融券_交易组持仓负债表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_exgp_posidebt_his (init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        exch_group_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt) 
+        select v_init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        exch_group_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt 
+        from db_pdsecu.tb_pdsecr_exgp_posidebt;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_历史资产账户持仓负债表^"; */
+    set v_table_name = "db_pdsecu_his.tb_pdsecr_asac_posidebt_his";
+
+    /* [删除表记录][产品证券_融资融券_历史资产账户持仓负债表][{初始化日期}=@初始化日期#][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu_his.tb_pdsecr_asac_posidebt_his 
+        where init_date=v_init_date;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户持仓负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_posidebt";
+
+    /* [不分日期数据归历史][产品证券_融资融券_资产账户持仓负债表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_asac_posidebt_his (init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, invest_type, 
+        debt_type, begin_debt_qty, curr_debt_qty, posi_qty_check_diff, 
+        begin_debt_amt, curr_debt_amt, debt_interest_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt) 
+        select v_init_date,
+        create_date, create_time, update_date, 
+        update_time, update_times, co_no, pd_no, 
+        asset_acco_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, invest_type, 
+        debt_type, begin_debt_qty, curr_debt_qty, posi_qty_check_diff, 
+        begin_debt_amt, curr_debt_amt, debt_interest_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt 
+        from db_pdsecu.tb_pdsecr_asac_posidebt;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户负债明细表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_debtdetail";
+
+    /* [非主键数据归历史][产品证券_融资融券_资产账户负债明细表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_asac_debtdetail_his (
+        create_date, create_time, update_date, 
+        update_time, update_times, init_date, opor_no, 
+        co_no, pd_no, asset_acco_no, pass_no, 
+        exch_no, stock_acco_no, stock_code_no, stock_code, 
+        stock_type, asset_type, debt_type, strike_qty, 
+        strike_amt, strike_fee, order_no, report_no, 
+        order_date, order_time, order_dir, order_price, 
+        order_qty, debt_intrst_rate, begin_debt_amt, begin_debt_qty, 
+        debt_amt, debt_qty, debt_fee, debt_interest, 
+        intrst_base_amt, debt_return_amt, debt_return_qty, return_interest_amt, 
+        interest_update_date, debt_end_date, orign_debt_end_date, defer_times, 
+        debt_return_date, debt_status, remark_info) 
+        select 
+        create_date, create_time, update_date, 
+        update_time, update_times, init_date, opor_no, 
+        co_no, pd_no, asset_acco_no, pass_no, 
+        exch_no, stock_acco_no, stock_code_no, stock_code, 
+        stock_type, asset_type, debt_type, strike_qty, 
+        strike_amt, strike_fee, order_no, report_no, 
+        order_date, order_time, order_dir, order_price, 
+        order_qty, debt_intrst_rate, begin_debt_amt, begin_debt_qty, 
+        debt_amt, debt_qty, debt_fee, debt_interest, 
+        intrst_base_amt, debt_return_amt, debt_return_qty, return_interest_amt, 
+        interest_update_date, debt_end_date, orign_debt_end_date, defer_times, 
+        debt_return_date, debt_status, remark_info 
+        from db_pdsecu.tb_pdsecr_asac_debtdetail;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户负债明细表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_debtdetail";
+
+    /* [删除表记录][产品证券_融资融券_资产账户负债明细表][{负债状态}=《负债状态-已归还》 ][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu.tb_pdsecr_asac_debtdetail 
+        where debt_status=2 ;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组负债明细表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_debtdetail";
+
+    /* [非主键数据归历史][产品证券_融资融券_交易组负债明细表][字段][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_exgp_debtdetail_his (
+        create_date, create_time, update_date, 
+        update_time, update_times, init_date, opor_no, 
+        co_no, pd_no, asset_acco_no, exch_group_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info) 
+        select 
+        create_date, create_time, update_date, 
+        update_time, update_times, init_date, opor_no, 
+        co_no, pd_no, asset_acco_no, exch_group_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info 
+        from db_pdsecu.tb_pdsecr_exgp_debtdetail;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+            if v_mysql_message <> "" then
+                SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+            else
+                SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+            end if;
+        leave label_pro;
+    end if;
+
+
+    /* [删除表记录][产品证券_融资融券_交易组负债明细表][{负债状态}=《负债状态-已归还》][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu.tb_pdsecr_exgp_debtdetail 
+        where debt_status=2;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_负债变动流水表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_debt_occur_jour";
+
+    /* [数据归历史][产品证券_融资融券_负债变动流水表][字段][1=1][302][@数据表名称#,@初始化日期#] */
+    insert into db_pdsecu_his.tb_pdsecr_debt_occur_jour_his (
+        row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        co_no, pd_no, exch_group_no, asset_acco_no, 
+        exch_no, stock_acco_no, stock_code_no, stock_code, 
+        stock_type, asset_type, debt_type, busi_flag, 
+        occur_qty, occur_amt, occur_end_qty, occur_end_amt, 
+        strike_price, record_valid_flag, curr_row_id, return_capit_jour_nor, 
+        remark_info) 
+        select 
+        row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        co_no, pd_no, exch_group_no, asset_acco_no, 
+        exch_no, stock_acco_no, stock_code_no, stock_code, 
+        stock_type, asset_type, debt_type, busi_flag, 
+        occur_qty, occur_amt, occur_end_qty, occur_end_amt, 
+        strike_price, record_valid_flag, curr_row_id, return_capit_jour_nor, 
+        remark_info 
+        from db_pdsecu.tb_pdsecr_debt_occur_jour 
+        where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.21.302";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* [删除表记录][产品证券_融资融券_负债变动流水表][1=1][301][@数据表名称#,@初始化日期#] */
+    delete from db_pdsecu.tb_pdsecr_debt_occur_jour 
+        where 1=1;
+    if v_error_code = 1 then
+                
+        SET v_error_code = "pdsecuA.21.21.301";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name,",","初始化日期=",v_init_date);
+        end if;
+        leave label_pro;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_初始化更新负债期初
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_InitUpdateDebtBegin;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_InitUpdateDebtBegin(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_table_name varchar(64);
+    declare v_update_date int;
+    declare v_update_time int;
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_table_name = " ";
+    SET v_update_date = date_format(curdate(),'%Y%m%d');
+    SET v_update_time = date_format(curtime(),'%H%i%s');
+
+    
+    label_pro:BEGIN
+    
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组资金负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_capitdebt";
+
+    /* [更新表记录][产品证券_融资融券_交易组资金负债表][{期初金额}={融券卖出金额}][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_exgp_capitdebt set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_amt=loan_sell_amt where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户资金负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_capitdebt";
+
+    /* [更新表记录][产品证券_融资融券_资产账户资金负债表][{期初金额}={融券卖出金额}][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_asac_capitdebt set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_amt=loan_sell_amt where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户持仓负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_posidebt";
+
+    /* [更新表记录][产品证券_融资融券_资产账户持仓负债表][{期初负债数量}={当前负债数量},{期初负债金额}={当前负债金额},{持仓核对差额}=0][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_asac_posidebt set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_debt_qty=curr_debt_qty,begin_debt_amt=curr_debt_amt,posi_qty_check_diff=0 where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组持仓负债表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_posidebt";
+
+    /* [更新表记录][产品证券_融资融券_交易组持仓负债表][{期初负债数量}={当前负债数量},{期初负债金额}={当前负债金额},{持仓核对差额}=0][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_exgp_posidebt set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_debt_qty=curr_debt_qty,begin_debt_amt=curr_debt_amt,posi_qty_check_diff=0 where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_交易组负债明细表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_exgp_debtdetail";
+
+    /* [更新表记录][产品证券_融资融券_交易组负债明细表][{期初负债数量}={负债数量},{期初负债金额}={负债金额},{初始化日期}=@初始化日期#][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_exgp_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_debt_qty=debt_qty,begin_debt_amt=debt_amt,init_date=v_init_date where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* set @数据表名称# = "~产品证券_融资融券_资产账户负债明细表^"; */
+    set v_table_name = "db_pdsecu.tb_pdsecr_asac_debtdetail";
+
+    /* [更新表记录][产品证券_融资融券_资产账户负债明细表][{期初负债数量}={负债数量},{期初负债金额}={负债金额},{初始化日期}=@初始化日期#][1=1][2][@数据表名称#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_asac_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, begin_debt_qty=debt_qty,begin_debt_amt=debt_amt,init_date=v_init_date where 1=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.22.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("数据表名称=",v_table_name),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("数据表名称=",v_table_name);
+        end if;
+        leave label_pro;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_更新资产账户负债利息
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_UpdateAsacDebtInterest;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_UpdateAsacDebtInterest(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_mach_date int;
+    declare v_invest_type int;
+    declare v_tmp_init_date int;
+    declare v_row_id bigint;
+    declare v_create_date int;
+    declare v_create_time int;
+    declare v_update_date int;
+    declare v_update_time int;
+    declare v_update_times int;
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_pass_no int;
+    declare v_exch_no int;
+    declare v_stock_acco_no int;
+    declare v_stock_code_no int;
+    declare v_stock_code varchar(6);
+    declare v_stock_type int;
+    declare v_asset_type int;
+    declare v_debt_type int;
+    declare v_strike_qty decimal(18,2);
+    declare v_strike_amt decimal(18,4);
+    declare v_strike_fee decimal(18,4);
+    declare v_order_no int;
+    declare v_report_no varchar(32);
+    declare v_order_date int;
+    declare v_order_time int;
+    declare v_order_dir int;
+    declare v_order_price decimal(16,9);
+    declare v_order_qty decimal(18,2);
+    declare v_debt_intrst_rate decimal(18,12);
+    declare v_begin_debt_amt decimal(18,4);
+    declare v_begin_debt_qty decimal(18,2);
+    declare v_debt_amt decimal(18,4);
+    declare v_debt_qty decimal(18,2);
+    declare v_debt_fee decimal(18,4);
+    declare v_debt_interest decimal(18,4);
+    declare v_intrst_base_amt decimal(18,4);
+    declare v_debt_return_amt decimal(18,4);
+    declare v_debt_return_qty decimal(18,2);
+    declare v_return_interest_amt decimal(18,4);
+    declare v_interest_update_date int;
+    declare v_debt_end_date int;
+    declare v_orign_debt_end_date int;
+    declare v_defer_times int;
+    declare v_debt_return_date int;
+    declare v_debt_status int;
+    declare v_remark_info varchar(255);
+    declare v_tmp_intrst_base_amt decimal(18,4);
+    declare v_inteval_days int;
+    declare v_occur_intrst_amt decimal(18,4);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_mach_date = date_format(curdate(),'%Y%m%d');
+    SET v_invest_type = 0;
+    SET v_tmp_init_date = date_format(curdate(),'%Y%m%d');
+    SET v_row_id = 0;
+    SET v_create_date = date_format(curdate(),'%Y%m%d');
+    SET v_create_time = date_format(curtime(),'%H%i%s');
+    SET v_update_date = date_format(curdate(),'%Y%m%d');
+    SET v_update_time = date_format(curtime(),'%H%i%s');
+    SET v_update_times = 1;
+    SET v_co_no = 0;
+    SET v_pd_no = 0;
+    SET v_asset_acco_no = 0;
+    SET v_pass_no = 0;
+    SET v_exch_no = 0;
+    SET v_stock_acco_no = 0;
+    SET v_stock_code_no = 0;
+    SET v_stock_code = " ";
+    SET v_stock_type = 0;
+    SET v_asset_type = 0;
+    SET v_debt_type = 0;
+    SET v_strike_qty = 0;
+    SET v_strike_amt = 0;
+    SET v_strike_fee = 0;
+    SET v_order_no = 0;
+    SET v_report_no = " ";
+    SET v_order_date = date_format(curdate(),'%Y%m%d');
+    SET v_order_time = date_format(curtime(),'%H%i%s');
+    SET v_order_dir = 0;
+    SET v_order_price = 0;
+    SET v_order_qty = 0;
+    SET v_debt_intrst_rate = 0;
+    SET v_begin_debt_amt = 0;
+    SET v_begin_debt_qty = 0;
+    SET v_debt_amt = 0;
+    SET v_debt_qty = 0;
+    SET v_debt_fee = 0;
+    SET v_debt_interest = 0;
+    SET v_intrst_base_amt = 0;
+    SET v_debt_return_amt = 0;
+    SET v_debt_return_qty = 0;
+    SET v_return_interest_amt = 0;
+    SET v_interest_update_date = 0;
+    SET v_debt_end_date = 0;
+    SET v_orign_debt_end_date = 0;
+    SET v_defer_times = 0;
+    SET v_debt_return_date = 0;
+    SET v_debt_status = 0;
+    SET v_remark_info = " ";
+    SET v_tmp_intrst_base_amt = 0;
+    SET v_inteval_days = 0;
+    SET v_occur_intrst_amt = 0;
+
+    
+    label_pro:BEGIN
+    
+
+     /* [获取机器日期][@机器日期#] */
+     select date_format(curdate(),'%Y%m%d') into v_mach_date;
+
+
+    /* set @投资类型#=1; */
+    set v_invest_type=1;
+
+    /* set  @临时_初始化日期#=@初始化日期#; */
+    set  v_tmp_init_date=v_init_date;
+
+    /* [声明游标][产品证券_融资融券_资产账户负债明细表][字段][{负债状态}<>《负债状态-已归还》][cursor_debtjour] */
+    cursor_debtjour:BEGIN
+    DECLARE v_cursor_done int default false;
+    DECLARE cursor_debtjour CURSOR FOR
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info 
+        from db_pdsecu.tb_pdsecr_asac_debtdetail 
+        where debt_status<>2;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_cursor_done = TRUE;
+
+
+    /* [打开游标][字段变量][cursor_debtjour][loop_debtjour] */
+    open cursor_debtjour;
+    loop_debtjour: LOOP
+    fetch cursor_debtjour into v_row_id, v_create_date, v_create_time, 
+        v_update_date, v_update_time, v_update_times, v_init_date, 
+        v_opor_no, v_co_no, v_pd_no, v_asset_acco_no, 
+        v_pass_no, v_exch_no, v_stock_acco_no, v_stock_code_no, 
+        v_stock_code, v_stock_type, v_asset_type, v_debt_type, 
+        v_strike_qty, v_strike_amt, v_strike_fee, v_order_no, 
+        v_report_no, v_order_date, v_order_time, v_order_dir, 
+        v_order_price, v_order_qty, v_debt_intrst_rate, v_begin_debt_amt, 
+        v_begin_debt_qty, v_debt_amt, v_debt_qty, v_debt_fee, 
+        v_debt_interest, v_intrst_base_amt, v_debt_return_amt, v_debt_return_qty, 
+        v_return_interest_amt, v_interest_update_date, v_debt_end_date, v_orign_debt_end_date, 
+        v_defer_times, v_debt_return_date, v_debt_status, v_remark_info;
+        IF v_cursor_done THEN
+            LEAVE loop_debtjour;
+        END IF;
+
+
+          /* set @临时_利息积数#=@利息积数#; */
+          set v_tmp_intrst_base_amt=v_intrst_base_amt;
+
+          /* [获取日期差值][@利息积数更改日期#][@临时_初始化日期#][@间隔天数#]; */
+          set v_inteval_days = datediff(v_tmp_init_date,v_interest_update_date);
+
+
+          /* set @利息积数#= @利息积数#+(@负债金额#-@已归还金额#)*@间隔天数#; */
+          set v_intrst_base_amt= v_intrst_base_amt+(v_debt_amt-v_debt_return_amt)*v_inteval_days;
+
+          /* set  @利息积数更改日期#=@临时_初始化日期#; */
+          set  v_interest_update_date=v_tmp_init_date;
+          #新增利息金额
+
+          /* set @变动利息金额#=@负债年利率#/360.0*@利息积数# - @负债年利率#/360.0*@临时_利息积数#; */
+          set v_occur_intrst_amt=v_debt_intrst_rate/360.0*v_intrst_base_amt - v_debt_intrst_rate/360.0*v_tmp_intrst_base_amt;
+
+          /* [更新表记录][产品证券_融资融券_资产账户负债明细表][{负债利息}={负债利息}+@变动利息金额#,{利息积数更改日期}=@利息积数更改日期#,{利息积数}=@利息积数#][{记录序号}=@记录序号#][1][@记录序号#] */
+          set v_update_date = date_format(curdate(),'%Y%m%d');
+          set v_update_time = date_format(curtime(),'%H%i%s');
+          update db_pdsecu.tb_pdsecr_asac_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_interest=debt_interest+v_occur_intrst_amt,interest_update_date=v_interest_update_date,intrst_base_amt=v_intrst_base_amt where row_id=v_row_id;
+          if v_error_code = "1" then
+                      
+              SET v_error_code = "pdsecuA.21.23.1";
+              if v_mysql_message <> "" then
+                  SET v_error_info = CONCAT(concat("记录序号=",v_row_id),"#",v_mysql_message);
+              else
+                  SET v_error_info = concat("记录序号=",v_row_id);
+              end if;
+              close cursor_debtjour;
+              leave label_pro;
+          end if;
+
+
+    /* [关闭游标][cursor_debtjour] */
+        IF v_cursor_done THEN
+            set v_cursor_done = false;
+        END IF;
+    END LOOP;
+    close cursor_debtjour;
+    end cursor_debtjour;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_更新交易组负债利息
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_UpdateExgpDebtInterest;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_UpdateExgpDebtInterest(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_mach_date int;
+    declare v_invest_type int;
+    declare v_tmp_init_date int;
+    declare v_row_id bigint;
+    declare v_create_date int;
+    declare v_create_time int;
+    declare v_update_date int;
+    declare v_update_time int;
+    declare v_update_times int;
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_exch_group_no int;
+    declare v_pass_no int;
+    declare v_exch_no int;
+    declare v_stock_acco_no int;
+    declare v_stock_code_no int;
+    declare v_stock_code varchar(6);
+    declare v_stock_type int;
+    declare v_asset_type int;
+    declare v_debt_type int;
+    declare v_strike_qty decimal(18,2);
+    declare v_strike_amt decimal(18,4);
+    declare v_strike_fee decimal(18,4);
+    declare v_order_no int;
+    declare v_report_no varchar(32);
+    declare v_order_date int;
+    declare v_order_time int;
+    declare v_order_dir int;
+    declare v_order_price decimal(16,9);
+    declare v_order_qty decimal(18,2);
+    declare v_debt_intrst_rate decimal(18,12);
+    declare v_begin_debt_amt decimal(18,4);
+    declare v_begin_debt_qty decimal(18,2);
+    declare v_debt_amt decimal(18,4);
+    declare v_debt_qty decimal(18,2);
+    declare v_debt_fee decimal(18,4);
+    declare v_debt_interest decimal(18,4);
+    declare v_intrst_base_amt decimal(18,4);
+    declare v_debt_return_amt decimal(18,4);
+    declare v_debt_return_qty decimal(18,2);
+    declare v_return_interest_amt decimal(18,4);
+    declare v_interest_update_date int;
+    declare v_debt_end_date int;
+    declare v_orign_debt_end_date int;
+    declare v_defer_times int;
+    declare v_debt_return_date int;
+    declare v_debt_status int;
+    declare v_remark_info varchar(255);
+    declare v_tmp_intrst_base_amt decimal(18,4);
+    declare v_inteval_days int;
+    declare v_occur_intrst_amt decimal(18,4);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_mach_date = date_format(curdate(),'%Y%m%d');
+    SET v_invest_type = 0;
+    SET v_tmp_init_date = date_format(curdate(),'%Y%m%d');
+    SET v_row_id = 0;
+    SET v_create_date = date_format(curdate(),'%Y%m%d');
+    SET v_create_time = date_format(curtime(),'%H%i%s');
+    SET v_update_date = date_format(curdate(),'%Y%m%d');
+    SET v_update_time = date_format(curtime(),'%H%i%s');
+    SET v_update_times = 1;
+    SET v_co_no = 0;
+    SET v_pd_no = 0;
+    SET v_asset_acco_no = 0;
+    SET v_exch_group_no = 0;
+    SET v_pass_no = 0;
+    SET v_exch_no = 0;
+    SET v_stock_acco_no = 0;
+    SET v_stock_code_no = 0;
+    SET v_stock_code = " ";
+    SET v_stock_type = 0;
+    SET v_asset_type = 0;
+    SET v_debt_type = 0;
+    SET v_strike_qty = 0;
+    SET v_strike_amt = 0;
+    SET v_strike_fee = 0;
+    SET v_order_no = 0;
+    SET v_report_no = " ";
+    SET v_order_date = date_format(curdate(),'%Y%m%d');
+    SET v_order_time = date_format(curtime(),'%H%i%s');
+    SET v_order_dir = 0;
+    SET v_order_price = 0;
+    SET v_order_qty = 0;
+    SET v_debt_intrst_rate = 0;
+    SET v_begin_debt_amt = 0;
+    SET v_begin_debt_qty = 0;
+    SET v_debt_amt = 0;
+    SET v_debt_qty = 0;
+    SET v_debt_fee = 0;
+    SET v_debt_interest = 0;
+    SET v_intrst_base_amt = 0;
+    SET v_debt_return_amt = 0;
+    SET v_debt_return_qty = 0;
+    SET v_return_interest_amt = 0;
+    SET v_interest_update_date = 0;
+    SET v_debt_end_date = 0;
+    SET v_orign_debt_end_date = 0;
+    SET v_defer_times = 0;
+    SET v_debt_return_date = 0;
+    SET v_debt_status = 0;
+    SET v_remark_info = " ";
+    SET v_tmp_intrst_base_amt = 0;
+    SET v_inteval_days = 0;
+    SET v_occur_intrst_amt = 0;
+
+    
+    label_pro:BEGIN
+    
+
+     /* [获取机器日期][@机器日期#] */
+     select date_format(curdate(),'%Y%m%d') into v_mach_date;
+
+
+    /* set @投资类型#=1; */
+    set v_invest_type=1;
+
+    /* set  @临时_初始化日期#=@初始化日期#; */
+    set  v_tmp_init_date=v_init_date;
+
+    /* [声明游标][产品证券_融资融券_交易组负债明细表][字段][{负债状态}<>《负债状态-已归还》][cursor_debtjour] */
+    cursor_debtjour:BEGIN
+    DECLARE v_cursor_done int default false;
+    DECLARE cursor_debtjour CURSOR FOR
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        exch_group_no, pass_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        debt_type, strike_qty, strike_amt, strike_fee, 
+        order_no, report_no, order_date, order_time, 
+        order_dir, order_price, order_qty, debt_intrst_rate, 
+        begin_debt_amt, begin_debt_qty, debt_amt, debt_qty, 
+        debt_fee, debt_interest, intrst_base_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt, interest_update_date, debt_end_date, 
+        orign_debt_end_date, defer_times, debt_return_date, debt_status, 
+        remark_info 
+        from db_pdsecu.tb_pdsecr_exgp_debtdetail 
+        where debt_status<>2;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_cursor_done = TRUE;
+
+
+    /* [打开游标][字段变量][cursor_debtjour][loop_debtjour] */
+    open cursor_debtjour;
+    loop_debtjour: LOOP
+    fetch cursor_debtjour into v_row_id, v_create_date, v_create_time, 
+        v_update_date, v_update_time, v_update_times, v_init_date, 
+        v_opor_no, v_co_no, v_pd_no, v_asset_acco_no, 
+        v_exch_group_no, v_pass_no, v_exch_no, v_stock_acco_no, 
+        v_stock_code_no, v_stock_code, v_stock_type, v_asset_type, 
+        v_debt_type, v_strike_qty, v_strike_amt, v_strike_fee, 
+        v_order_no, v_report_no, v_order_date, v_order_time, 
+        v_order_dir, v_order_price, v_order_qty, v_debt_intrst_rate, 
+        v_begin_debt_amt, v_begin_debt_qty, v_debt_amt, v_debt_qty, 
+        v_debt_fee, v_debt_interest, v_intrst_base_amt, v_debt_return_amt, 
+        v_debt_return_qty, v_return_interest_amt, v_interest_update_date, v_debt_end_date, 
+        v_orign_debt_end_date, v_defer_times, v_debt_return_date, v_debt_status, 
+        v_remark_info;
+        IF v_cursor_done THEN
+            LEAVE loop_debtjour;
+        END IF;
+
+
+          /* set @临时_利息积数#=@利息积数#; */
+          set v_tmp_intrst_base_amt=v_intrst_base_amt;
+
+          /* [获取日期差值][@利息积数更改日期#][@临时_初始化日期#][@间隔天数#] */
+          set v_inteval_days = datediff(v_tmp_init_date,v_interest_update_date);
+
+
+          /* set @利息积数#= @利息积数#+(@负债金额#-@已归还金额#)*@间隔天数#; */
+          set v_intrst_base_amt= v_intrst_base_amt+(v_debt_amt-v_debt_return_amt)*v_inteval_days;
+
+          /* set  @利息积数更改日期#=@临时_初始化日期#; */
+          set  v_interest_update_date=v_tmp_init_date;
+          #新增利息金额
+
+          /* set @变动利息金额#=@负债年利率#/360.0*@利息积数# - @负债年利率#/360.0*@临时_利息积数#; */
+          set v_occur_intrst_amt=v_debt_intrst_rate/360.0*v_intrst_base_amt - v_debt_intrst_rate/360.0*v_tmp_intrst_base_amt;
+
+         /* [更新表记录][产品证券_融资融券_交易组负债明细表][{负债利息}={负债利息}+@变动利息金额#,{利息积数更改日期}=@利息积数更改日期#,{利息积数}=@利息积数#][{记录序号}=@记录序号#][1][@记录序号#] */
+         set v_update_date = date_format(curdate(),'%Y%m%d');
+         set v_update_time = date_format(curtime(),'%H%i%s');
+         update db_pdsecu.tb_pdsecr_exgp_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_interest=debt_interest+v_occur_intrst_amt,interest_update_date=v_interest_update_date,intrst_base_amt=v_intrst_base_amt where row_id=v_row_id;
+         if v_error_code = "1" then
+                     
+             SET v_error_code = "pdsecuA.21.24.1";
+             if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(concat("记录序号=",v_row_id),"#",v_mysql_message);
+             else
+                 SET v_error_info = concat("记录序号=",v_row_id);
+             end if;
+             close cursor_debtjour;
+             leave label_pro;
+         end if;
+
+
+    /* [关闭游标][cursor_debtjour] */
+        IF v_cursor_done THEN
+            set v_cursor_done = false;
+        END IF;
+    END LOOP;
+    close cursor_debtjour;
+    end cursor_debtjour;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_初始化融资融券数据
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_InitPdSecuCrdtData;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_InitPdSecuCrdtData(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_remark_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_remark_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+        /* set @备注信息#=""; */
+        set v_remark_info="";
+
+        /* 调用【原子_产品证券_融资融券_更新交易组负债利息】*/
+        call db_pdsecu.pra_pdsecrdt_UpdateExgpDebtInterest(
+            v_opor_co_no,
+            v_opor_no,
+            v_oper_mac,
+            v_oper_ip_addr,
+            v_oper_info,
+            v_oper_way,
+            v_func_code,
+            v_init_date,
+            v_error_code,
+            v_error_info);
+        if v_error_code = "1" then
+            SET v_error_code = "pdsecuA.21.25.999";
+            if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(v_error_info,"#",'调用过程原子_产品证券_融资融券_更新交易组负债利息出现错误！',v_mysql_message);
+            end if;
+            leave label_pro;
+        elseif v_error_code <> "0" then
+            leave label_pro;
+        end if;
+
+
+        /* 调用【原子_产品证券_融资融券_更新资产账户负债利息】*/
+        call db_pdsecu.pra_pdsecrdt_UpdateAsacDebtInterest(
+            v_opor_co_no,
+            v_opor_no,
+            v_oper_mac,
+            v_oper_ip_addr,
+            v_oper_info,
+            v_oper_way,
+            v_func_code,
+            v_init_date,
+            v_error_code,
+            v_error_info);
+        if v_error_code = "1" then
+            SET v_error_code = "pdsecuA.21.25.999";
+            if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(v_error_info,"#",'调用过程原子_产品证券_融资融券_更新资产账户负债利息出现错误！',v_mysql_message);
+            end if;
+            leave label_pro;
+        elseif v_error_code <> "0" then
+            leave label_pro;
+        end if;
+
+
+        /* 调用【原子_产品证券_融资融券_更新资产账户持仓汇总负债利息】*/
+        call db_pdsecu.pra_pdsecrdt_UpdateAsacPosiDebtInterest(
+            v_opor_co_no,
+            v_opor_no,
+            v_oper_mac,
+            v_oper_ip_addr,
+            v_oper_info,
+            v_oper_way,
+            v_func_code,
+            v_init_date,
+            v_error_code,
+            v_error_info);
+        if v_error_code = "1" then
+            SET v_error_code = "pdsecuA.21.25.999";
+            if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(v_error_info,"#",'调用过程原子_产品证券_融资融券_更新资产账户持仓汇总负债利息出现错误！',v_mysql_message);
+            end if;
+            leave label_pro;
+        elseif v_error_code <> "0" then
+            leave label_pro;
+        end if;
+
+
+        /* 调用【原子_产品证券_融资融券_更新交易组持仓汇总负债利息】*/
+        call db_pdsecu.pra_pdsecrdt_UpdateExgpPosiDebtInterest(
+            v_opor_co_no,
+            v_opor_no,
+            v_oper_mac,
+            v_oper_ip_addr,
+            v_oper_info,
+            v_oper_way,
+            v_func_code,
+            v_init_date,
+            v_error_code,
+            v_error_info);
+        if v_error_code = "1" then
+            SET v_error_code = "pdsecuA.21.25.999";
+            if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(v_error_info,"#",'调用过程原子_产品证券_融资融券_更新交易组持仓汇总负债利息出现错误！',v_mysql_message);
+            end if;
+            leave label_pro;
+        elseif v_error_code <> "0" then
+            leave label_pro;
+        end if;
+
+
+        /* 调用【原子_产品证券_融资融券_初始化更新负债期初】*/
+        call db_pdsecu.pra_pdsecrdt_InitUpdateDebtBegin(
+            v_opor_co_no,
+            v_opor_no,
+            v_oper_mac,
+            v_oper_ip_addr,
+            v_oper_info,
+            v_oper_way,
+            v_func_code,
+            v_init_date,
+            v_error_code,
+            v_error_info);
+        if v_error_code = "1" then
+            SET v_error_code = "pdsecuA.21.25.999";
+            if v_mysql_message <> "" then
+                 SET v_error_info = CONCAT(v_error_info,"#",'调用过程原子_产品证券_融资融券_初始化更新负债期初出现错误！',v_mysql_message);
+            end if;
+            leave label_pro;
+        elseif v_error_code <> "0" then
+            leave label_pro;
+        end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_更新资产账户持仓汇总负债利息
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_UpdateAsacPosiDebtInterest;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_UpdateAsacPosiDebtInterest(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* update ~产品证券_融资融券_资产账户持仓负债表^  t ,(select {机构编号},{资产账户编号},{证券代码编号},{负债类型},sum({负债利息}) as {负债利息},sum({归还利息金额}) as {归还利息金额} from ~产品证券_融资融券_资产账户负债明细表^ group by {机构编号},{资产账户编号},{证券代码编号},{负债类型}) x set t.{负债利息金额}=x.{负债利息},t.{归还利息金额}=x.{归还利息金额}  where t.{机构编号}=x.{机构编号}  and t.{资产账户编号}=x.{资产账户编号} and t.{证券代码编号}=x.{证券代码编号} and t.{负债类型}=x.{负债类型}; */
+    update db_pdsecu.tb_pdsecr_asac_posidebt  t ,(select co_no,asset_acco_no,stock_code_no,debt_type,sum(debt_interest) as debt_interest,sum(return_interest_amt) as return_interest_amt from db_pdsecu.tb_pdsecr_asac_debtdetail group by co_no,asset_acco_no,stock_code_no,debt_type) x set t.debt_interest_amt=x.debt_interest,t.return_interest_amt=x.return_interest_amt  where t.co_no=x.co_no  and t.asset_acco_no=x.asset_acco_no and t.stock_code_no=x.stock_code_no and t.debt_type=x.debt_type;
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_更新交易组持仓汇总负债利息
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_UpdateExgpPosiDebtInterest;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_UpdateExgpPosiDebtInterest(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* update ~产品证券_融资融券_交易组持仓负债表^  t ,( select {机构编号},{资产账户编号},{交易组编号},{证券代码编号},{负债类型},sum({负债利息}) as {负债利息},sum({归还利息金额}) as {归还利息金额} from ~产品证券_融资融券_交易组负债明细表^ group by {机构编号},{资产账户编号},{交易组编号},{证券代码编号},{负债类型}) x set t.{负债利息金额}=x.{负债利息}, t.{归还利息金额}=x.{归还利息金额}  where t.{机构编号}=x.{机构编号}  and t.{资产账户编号}=x.{资产账户编号} and  t.{交易组编号}=x.{交易组编号}  and t.{证券代码编号}=x.{证券代码编号} and t.{负债类型}=x.{负债类型}; */
+    update db_pdsecu.tb_pdsecr_exgp_posidebt  t ,( select co_no,asset_acco_no,exch_group_no,stock_code_no,debt_type,sum(debt_interest) as debt_interest,sum(return_interest_amt) as return_interest_amt from db_pdsecu.tb_pdsecr_exgp_debtdetail group by co_no,asset_acco_no,exch_group_no,stock_code_no,debt_type) x set t.debt_interest_amt=x.debt_interest, t.return_interest_amt=x.return_interest_amt  where t.co_no=x.co_no  and t.asset_acco_no=x.asset_acco_no and  t.exch_group_no=x.exch_group_no  and t.stock_code_no=x.stock_code_no and t.debt_type=x.debt_type;
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_更新融资融券负债利率
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_UpdateCrdtDebtIntrstRate;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_UpdateCrdtDebtIntrstRate(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_init_date int,
+    IN p_co_no int,
+    IN p_pd_no int,
+    IN p_asset_acco_no int,
+    IN p_fina_year_intrst_rate decimal(18,12),
+    IN p_secu_loan_year_intrst_rate decimal(18,12),
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_init_date int;
+    declare v_co_no int;
+    declare v_pd_no int;
+    declare v_asset_acco_no int;
+    declare v_fina_year_intrst_rate decimal(18,12);
+    declare v_secu_loan_year_intrst_rate decimal(18,12);
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+    declare v_update_date int;
+    declare v_update_time int;
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_init_date = p_init_date;
+    SET v_co_no = p_co_no;
+    SET v_pd_no = p_pd_no;
+    SET v_asset_acco_no = p_asset_acco_no;
+    SET v_fina_year_intrst_rate = p_fina_year_intrst_rate;
+    SET v_secu_loan_year_intrst_rate = p_secu_loan_year_intrst_rate;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+    SET v_update_date = date_format(curdate(),'%Y%m%d');
+    SET v_update_time = date_format(curtime(),'%H%i%s');
+
+    
+    label_pro:BEGIN
+    
+
+    /* [更新表记录][产品证券_融资融券_资产账户负债明细表][{负债年利率}=@融资年利率#][{机构编号}=@机构编号# and {产品编号}=@产品编号#  and {资产账户编号}=@资产账户编号# and {负债类型}=《负债类型-融资》][1][@资产账户编号#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_asac_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_intrst_rate=v_fina_year_intrst_rate where co_no=v_co_no and pd_no=v_pd_no  and asset_acco_no=v_asset_acco_no and debt_type=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.28.1";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("资产账户编号=",v_asset_acco_no),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("资产账户编号=",v_asset_acco_no);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* [更新表记录][产品证券_融资融券_资产账户负债明细表][{负债年利率}=@融券年利率#][{机构编号}=@机构编号# and {产品编号}=@产品编号#  and {资产账户编号}=@资产账户编号# and {负债类型}=《负债类型-融券》][2][@资产账户编号#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_asac_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_intrst_rate=v_secu_loan_year_intrst_rate where co_no=v_co_no and pd_no=v_pd_no  and asset_acco_no=v_asset_acco_no and debt_type=2;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.28.2";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("资产账户编号=",v_asset_acco_no),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("资产账户编号=",v_asset_acco_no);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* [更新表记录][产品证券_融资融券_交易组负债明细表][{负债年利率}=@融资年利率#][{机构编号}=@机构编号# and {产品编号}=@产品编号#  and {资产账户编号}=@资产账户编号# and {负债类型}=《负债类型-融资》][3][@资产账户编号#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_exgp_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_intrst_rate=v_fina_year_intrst_rate where co_no=v_co_no and pd_no=v_pd_no  and asset_acco_no=v_asset_acco_no and debt_type=1;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.28.3";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("资产账户编号=",v_asset_acco_no),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("资产账户编号=",v_asset_acco_no);
+        end if;
+        leave label_pro;
+    end if;
+
+
+    /* [更新表记录][产品证券_融资融券_交易组负债明细表][{负债年利率}=@融券年利率#][{机构编号}=@机构编号# and {产品编号}=@产品编号#  and {资产账户编号}=@资产账户编号# and {负债类型}=《负债类型-融券》][4][@资产账户编号#] */
+    set v_update_date = date_format(curdate(),'%Y%m%d');
+    set v_update_time = date_format(curtime(),'%H%i%s');
+    update db_pdsecu.tb_pdsecr_exgp_debtdetail set update_date = v_update_date, update_time = v_update_time, update_times = update_times + 1, debt_intrst_rate=v_secu_loan_year_intrst_rate where co_no=v_co_no and pd_no=v_pd_no  and asset_acco_no=v_asset_acco_no and debt_type=2;
+    if v_error_code = "1" then
+                
+        SET v_error_code = "pdsecuA.21.28.4";
+        if v_mysql_message <> "" then
+            SET v_error_info = CONCAT(concat("资产账户编号=",v_asset_acco_no),"#",v_mysql_message);
+        else
+            SET v_error_info = concat("资产账户编号=",v_asset_acco_no);
+        end if;
+        leave label_pro;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控资产账户持仓负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskAsacPosiDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskAsacPosiDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户持仓负债表][字段][{记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_asac_posidebt where row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        invest_type, debt_type, begin_debt_qty, curr_debt_qty, 
+        posi_qty_check_diff, begin_debt_amt, curr_debt_amt, debt_interest_amt, 
+        debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_asac_posidebt where row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控交易组持仓负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskExgpPosiDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskExgpPosiDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组持仓负债表][字段][ {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, exch_group_no, asset_acco_no, exch_no, 
+        stock_acco_no, stock_code_no, stock_code, stock_type, 
+        asset_type, invest_type, debt_type, begin_debt_qty, 
+        curr_debt_qty, posi_qty_check_diff, begin_debt_amt, curr_debt_amt, 
+        debt_interest_amt, debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_exgp_posidebt where  row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, exch_group_no, asset_acco_no, exch_no, 
+        stock_acco_no, stock_code_no, stock_code, stock_type, 
+        asset_type, invest_type, debt_type, begin_debt_qty, 
+        curr_debt_qty, posi_qty_check_diff, begin_debt_amt, curr_debt_amt, 
+        debt_interest_amt, debt_return_amt, debt_return_qty, return_interest_amt from db_pdsecu.tb_pdsecr_exgp_posidebt where  row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控交易组资金负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskExgpCapitalDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskExgpCapitalDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组资金负债表][字段][ {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_group_no, crncy_type, 
+        begin_amt, loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_exgp_capitdebt where  row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, exch_group_no, crncy_type, 
+        begin_amt, loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_exgp_capitdebt where  row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控资产账户资金负债
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskAsacCapitalDebt;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskAsacCapitalDebt(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户资金负债表][字段][{记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_asac_capitdebt where row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, co_no, 
+        pd_no, asset_acco_no, crncy_type, begin_amt, 
+        loan_sell_amt, debt_interest_amt from db_pdsecu.tb_pdsecr_asac_capitdebt where row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控资产账户负债明细
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskAsacDebtDetail;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskAsacDebtDetail(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_资产账户负债明细表][字段][{记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info from db_pdsecu.tb_pdsecr_asac_debtdetail where row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        pass_no, exch_no, stock_acco_no, stock_code_no, 
+        stock_code, stock_type, asset_type, debt_type, 
+        strike_qty, strike_amt, strike_fee, order_no, 
+        report_no, order_date, order_time, order_dir, 
+        order_price, order_qty, debt_intrst_rate, begin_debt_amt, 
+        begin_debt_qty, debt_amt, debt_qty, debt_fee, 
+        debt_interest, intrst_base_amt, debt_return_amt, debt_return_qty, 
+        return_interest_amt, interest_update_date, debt_end_date, orign_debt_end_date, 
+        defer_times, debt_return_date, debt_status, remark_info from db_pdsecu.tb_pdsecr_asac_debtdetail where row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+
+DELIMITER ;;
+use db_pdsecu;;
+
+# 原子_产品证券_融资融券_查询风控交易组负债明细
+DELIMITER ;;
+DROP PROCEDURE IF EXISTS pra_pdsecrdt_QueryRiskExgpDebtDetail;;
+DELIMITER ;;
+CREATE PROCEDURE pra_pdsecrdt_QueryRiskExgpDebtDetail(
+    IN p_opor_co_no int,
+    IN p_opor_no int,
+    IN p_oper_mac varchar(32),
+    IN p_oper_ip_addr varchar(32),
+    IN p_oper_info varchar(1024),
+    IN p_oper_way varchar(2),
+    IN p_func_code varchar(16),
+    IN p_row_id bigint,
+    IN p_row_count int,
+    OUT p_error_code varchar(32),
+    OUT p_error_info varchar(255)
+   )
+BEGIN
+    declare v_opor_co_no int;
+    declare v_opor_no int;
+    declare v_oper_mac varchar(32);
+    declare v_oper_ip_addr varchar(32);
+    declare v_oper_info varchar(1024);
+    declare v_oper_way varchar(2);
+    declare v_func_code varchar(16);
+    declare v_row_id bigint;
+    declare v_row_count int;
+    declare v_error_code varchar(32);
+    declare v_error_info varchar(255);
+
+    DECLARE v_mysql_number int DEFAULT 0;
+    DECLARE v_mysql_row_count int DEFAULT 0;
+    DECLARE v_mysql_sqlstate varchar(32) DEFAULT "";
+    DECLARE v_mysql_message varchar(255) DEFAULT "";
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    BEGIN
+        GET DIAGNOSTICS v_mysql_number = NUMBER, v_mysql_row_count = ROW_COUNT;
+        GET DIAGNOSTICS CONDITION 1 v_mysql_sqlstate = RETURNED_SQLSTATE, v_mysql_message = MESSAGE_TEXT;
+        set v_error_code = "1";
+        set v_error_info = v_mysql_message;
+    END;
+
+
+    SET v_opor_co_no = p_opor_co_no;
+    SET v_opor_no = p_opor_no;
+    SET v_oper_mac = p_oper_mac;
+    SET v_oper_ip_addr = p_oper_ip_addr;
+    SET v_oper_info = p_oper_info;
+    SET v_oper_way = p_oper_way;
+    SET v_func_code = p_func_code;
+    SET v_row_id = p_row_id;
+    SET v_row_count = p_row_count;
+    SET v_error_code = "0";
+    SET v_error_info = " ";
+
+    
+    label_pro:BEGIN
+    
+
+    /* [获取表记录][产品证券_融资融券_交易组负债明细表][字段][ {记录序号}>@记录序号# order by {记录序号}][@指定行数#] */
+    if v_row_count = -1 then
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        exch_group_no, pass_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        debt_type, strike_qty, strike_amt, strike_fee, 
+        order_no, report_no, order_date, order_time, 
+        order_dir, order_price, order_qty, debt_intrst_rate, 
+        begin_debt_amt, begin_debt_qty, debt_amt, debt_qty, 
+        debt_fee, debt_interest, intrst_base_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt, interest_update_date, debt_end_date, 
+        orign_debt_end_date, defer_times, debt_return_date, debt_status, 
+        remark_info from db_pdsecu.tb_pdsecr_exgp_debtdetail where  row_id>v_row_id order by row_id;
+    else
+        select row_id, create_date, create_time, 
+        update_date, update_time, update_times, init_date, 
+        opor_no, co_no, pd_no, asset_acco_no, 
+        exch_group_no, pass_no, exch_no, stock_acco_no, 
+        stock_code_no, stock_code, stock_type, asset_type, 
+        debt_type, strike_qty, strike_amt, strike_fee, 
+        order_no, report_no, order_date, order_time, 
+        order_dir, order_price, order_qty, debt_intrst_rate, 
+        begin_debt_amt, begin_debt_qty, debt_amt, debt_qty, 
+        debt_fee, debt_interest, intrst_base_amt, debt_return_amt, 
+        debt_return_qty, return_interest_amt, interest_update_date, debt_end_date, 
+        orign_debt_end_date, defer_times, debt_return_date, debt_status, 
+        remark_info from db_pdsecu.tb_pdsecr_exgp_debtdetail where  row_id>v_row_id order by row_id limit v_row_count;
+    end if;
+
+    END;
+
+    SET p_error_code = v_error_code;
+    SET p_error_info = v_error_info;
+
+
+
+END;;
+
+

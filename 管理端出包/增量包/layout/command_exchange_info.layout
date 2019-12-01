@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="command_exchange.info" pos="0,10,-0,250" >
+		<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+		<img pos="1,4,-1,-0" image="skins\default\MsgBack.png" mode="tile" show="1" response="0" />
+		<img pos="400,20,402,-20" image="skins\default\line_split.png" mode="tile" show="1" response="0" />
+		<text name="stock_code" pos="30,25" height="20" width="80" align="right" font="default3" crtext="191919" title="证券代码:" />
+		<text pos="112,25" height="20" width="100" align="left" font="default3" crtext="00a0ea" title="600570" />
+		<text name="stock_name" pos="30,50" height="20" width="80" align="right" font="default3" crtext="191919" title="代码名称:" />
+		<text pos="112,50" height="20" width="100" align="left" font="default3" crtext="00a0ea" title="恒生电子" />
+		<text name="current_qty" pos="30,75" height="20" width="80" align="right" font="default3" crtext="191919" title="当前数量:" />
+		<text pos="112,75" height="20" width="80" align="left" font="default3" crtext="00a0ea" title="11,000" />
+		<text name="saleable_qty" pos="30,100" height="20" width="80" align="right" font="default3" crtext="191919" title="可卖数量:" />
+		<text pos="112,100" height="20" width="80" align="left" font="default3" crtext="00a0ea" title="11,000" />
+		<text name="buyable_qty" pos="30,125" height="20" width="80" align="right" font="default3" crtext="191919" title="可买数量:" />
+		<text pos="112,125" height="20" width="80" align="left" font="default3" crtext="00a0ea" title="12,312,312" />
+		<text name="available_qty" pos="30,150" height="20" width="80" align="right" font="default3" crtext="191919" title="可用金额:" />
+		<text pos="112,150" height="20" width="80" align="left" font="default3" crtext="00a0ea" title="469714702.8" />
+		<text name="cost_price" pos="30,175" height="20" width="80" align="right" font="default3" crtext="191919" title="成本价:" />
+		<text pos="112,175" height="20" width="80" align="left" font="default3" crtext="00a0ea" title="38.15" />
+	</div>

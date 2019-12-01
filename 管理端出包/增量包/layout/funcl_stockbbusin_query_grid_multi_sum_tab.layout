@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockbbusin_query_grid_multi_sum_tab">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,11,-15,28" title="  成交查询" font="big" show="1" />-->
+    
+    <!--<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />-->
+	
+		<text crtext="000000" crmark="800000" align="right" pos="0,14" width="80" height="18" title="汇总方式:"  show="1"/>
+		<combobox name="stockeorder_query.sum_mode" tabstop="1" skin="IDB_EDIT" pos="90,10" width="120" height="26" tip="无"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+	
+    <gridctrl name="grid.funcl_stockbbusin_query_multi_sum_tab" pos="2,35,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"  
+        img-count="6" image="skin:IDB_LIST_IMG" sort="1" 
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default1" font-title="default1" sort="1" 
+        valign="middle" down-row="1" align="center" editcolumn="1"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+				<column title="成交均价" width="60" align="center" key="execution_price" data_type="N" />
+		    <column title="成交数量" width="80" align="right" key="execution_qty" data_type="T" sum_column="1" />
+        <column title="成交金额" width="100" align="right" key="execution_amt" data_type="T" sum_column="1" />        
+        
+        <column title="证券代码" width="60" align="center" key="stock_code" />
+        <column title="证券名称" width="60" align="center" key="stock_name" />
+        <column title="订单方向" width="60" align="center" key="order_dir" />
+        <column title="产品名称" width="60" align="center" key="product_name" />
+        <column title="交易单元名称" width="80" align="center" key="unit_name" />        
+
+    </gridctrl> 
+    
+     <gridctrl name="grid.funcl_stockbbusin_query_multi_sum_tab_total" pos="2,-30,-2,-0" show="1"
+         img-sep="skin:IDB_LINE_RP"
+         img-colsep="skin:IDB_LINE_SPLIT"  
+         sort="1" 
+        left-pos="0" row-height="30" header-height="30" bk-transparent="10"
+        font-title="big" font="default" sort="1" 
+        valign="middle" down-row="1" align="center" editcolumn="1"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="合计" width="100" align="center" key="stock_code" />
+        <column title="" width="60" align="center" key="stock_name" />
+        <column title="" width="60" align="center" key="order_dir" />
+        <column title="" width="60" align="center" key="execution_price" data_type="N" />
+        <column title="" width="60" align="center" key="execution_qty" data_type="T" />
+        <column title="" width="60" align="right" key="execution_amt" data_type="T" />      
+        <column title="" width="60" align="center" key="product_name" />
+        <column title="" width="80" align="center" key="unit_name" />
+        
+    </gridctrl>   
+	 <!--证券代码-->
+	  <text crtext="000000" crmark="800000" align="left" pos="4,-32" width="60" height="25" title="证券代码:" font="bold" show="0"/>
+	 	 <edit name="stockeorder_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="74,-35" width="64" height="25"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0"  entrer_selectall="1" show="0" />
+	   <!--单元-->
+	   <text crtext="000000" crmark="800000" align="right" pos="140,-32" width="60" height="25" title="交易单元:" font="bold" show="0"/>
+    <combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="200,-35" width="120" height="25" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128" show="0" >
+	  </combobox>
+	  
+    <button name="stockeorder_button.query" title="" pos="340,-35" width="80" height="25" skin="IDB_BT_QUERY" tip="查询" show="0" />
+    <button name="ins_trade.stock.single.query" skin="IDB_BT_STANDARD" title="刷新" font="default2" pos="-100,-38,-20,-8" show="0" shortcut="RETURN" />       
+    
+  </div>

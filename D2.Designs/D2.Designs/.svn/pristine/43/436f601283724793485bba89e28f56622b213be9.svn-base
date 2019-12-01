@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="clfutuT.2.1" procedurename="prt_clfucl_AddPosi" paras="27"/>
+    <func funcname="clfutuT.2.2" procedurename="prt_clfucl_Prepare" paras="11"/>
+    <func funcname="clfutuT.2.6" procedurename="prt_clfucl_AddOrder" paras="43"/>
+    <func funcname="clfutuT.2.9" procedurename="prt_clfucl_QueryOrder" paras="22"/>
+    <func funcname="clfutuT.2.11" procedurename="prt_clfucl_UpdateOrderClearFlag" paras="11"/>
+    <func funcname="clfutuT.2.21" procedurename="prt_clfucl_AddOutBusi" paras="61"/>
+    <func funcname="clfutuT.2.24" procedurename="prt_clfucl_QueryOutBusi" paras="21"/>
+    <func funcname="clfutuT.2.26" procedurename="prt_clfucl_UpdateBusiClearFlag" paras="11"/>
+    <func funcname="clfutuT.2.37" procedurename="prt_clfucl_DealClear" paras="13"/>
+    <func funcname="clfutuT.2.38" procedurename="prt_clfucl_DealOrderFare" paras="12"/>
+    <func funcname="clfutuT.2.57" procedurename="prt_clfucl_UpdatePreEntry" paras="16"/>
+    <func funcname="clfutuT.2.58" procedurename="prt_clfucl_QueryPreEntry" paras="21"/>
+    <func funcname="clfutuT.2.59" procedurename="prt_clfucl_GetPreEntry" paras="81"/>
+    <func funcname="clfutuT.2.60" procedurename="prt_clfucl_UpdateGetPreEntryUndo" paras="81"/>
+    <func funcname="clfutuT.2.63" procedurename="prt_clfucl_DealEntryError" paras="76"/>
+    <func funcname="clfutuT.2.72" procedurename="prt_clfucl_GetClrTotalData" paras="14"/>
+    <func funcname="clfutuT.2.81" procedurename="prt_clfucl_DealException" paras="11"/>
+    <func funcname="clfutuT.2.83" procedurename="prt_clfucl_UpdateEntryJour" paras="13"/>
+    <func funcname="clfutuT.2.84" procedurename="prt_clfucl_QueryStrikeId" paras="11"/>
+    <func funcname="clfutuT.2.85" procedurename="prt_clfucl_QueryPreEntryId" paras="11"/>
+    <func funcname="clfutuT.2.86" procedurename="prt_clfucl_AutoGetPreEntry" paras="81"/>
+</funcs>

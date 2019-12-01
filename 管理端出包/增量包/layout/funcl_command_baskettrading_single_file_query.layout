@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_command_baskettrading_single_file_query">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>  
+    <gridctrl name="grid.funcl_command_baskettrading_single_file_query" pos="2,2,-2,-60" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT" header-check="1"
+        img-count="6" image="skin:IDB_LIST_IMG" grid-tip="1"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">        
+        <column title="证券代码" width="100" align="center" key="stock_code" deletable="0" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="买卖方向" width="100" align="center" key="order_dir" />
+        <column title="买卖数量" width="100" align="center" key="order_qty" data_type="T" sum_column="1"/>
+        <column title="指令价格" width="100" align="center" key="order_price" data_type="N" />
+        <column title="买卖金额" width="100" align="center" key="order_amt" data_type="T" sum_column="1"/>
+        <column title="交易市场" width="100" align="center" key="exchange_no" deletable="0" />
+    </gridctrl>
+     <gridctrl name="grid.funcl_command_baskettrading_single_file_query_total" pos="2,-60,-2,-30" show="1"
+       img-sep="skin:IDB_LINE_RP" 
+         modify-column-width="1" column-sep="1" 
+        img-colsep="skin:IDB_LINE_SPLIT"       
+        left-pos="0" row-height="30" header-height="30" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">       
+        <column title="" width="100" align="center" key="stock_code" deletable="0" />
+        <column title="" width="100" align="center" key="stock_name" />
+        <column title="" width="100" align="center" key="order_dir" />
+        <column title="" width="100" align="center" key="order_qty" data_type="T" sum_column="1"/>
+        <column title="" width="100" align="center" key="order_price" data_type="N" />
+        <column title="" width="100" align="center" key="order_amt" data_type="T" sum_column="1"/>
+        <column title="" width="100" align="center" key="exchange_no" deletable="0" />
+    </gridctrl>
+	<chkbtn name="checkbutton_excluding_harden" title="剔除涨跌停" skin="IDB_CHECK_BOX" pos="16,-20,136,-5" crtext="e30202" show="1" 
+		check="true" showfocus="0" show="1" />
+			
+  </div>

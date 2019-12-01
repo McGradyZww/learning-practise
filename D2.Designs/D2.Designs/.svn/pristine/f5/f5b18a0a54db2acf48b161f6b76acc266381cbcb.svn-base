@@ -1,0 +1,693 @@
+using LD.Client.Commom;
+using LD.Client.Commom.Enums;
+using LD.Client.Commom.Utility;
+using LDsdkDefine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LD.Client.Contract
+{
+    //逻辑_产品证券_账户运维_查询全部证券账户
+    public class ReqFuncpdsecuL_7_1DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_1DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.1";
+            CommonDTO.func_code = CommonDTO.function_code;
+            co_no = 0;
+            pd_no = 0;
+            asset_acco_no = 0;
+            stock_acco_no = 0;
+            stock_acco_status = "0";
+        }
+ 
+        /// <summary>
+        /// 机构编号
+        /// </summary>
+        public int co_no { get; set; }
+ 
+        /// <summary>
+        /// 产品编号
+        /// </summary>
+        public int pd_no { get; set; }
+ 
+        /// <summary>
+        /// 资产账户编号
+        /// </summary>
+        public int asset_acco_no { get; set; }
+ 
+        /// <summary>
+        /// 股东代码编号
+        /// </summary>
+        public int stock_acco_no { get; set; }
+ 
+        /// <summary>
+        /// 股东代码状态
+        /// </summary>
+        public String stock_acco_status { get; set; }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+            packer.AddField("co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("pd_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("asset_acco_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("stock_acco_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("stock_acco_status", ELDDATATYPE.LD_DATATYPE_STRING);
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.AddInt(co_no);
+            packer.AddInt(pd_no);
+            packer.AddInt(asset_acco_no);
+            packer.AddInt(stock_acco_no);
+            packer.AddStr(stock_acco_status);
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_PD_NO_INT,pd_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ASSET_ACCO_NO_INT,asset_acco_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_NO_INT,stock_acco_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_STATUS_STR,stock_acco_status);
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_归档产品证券数据
+    public class ReqFuncpdsecuL_7_11DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_11DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.11";
+            CommonDTO.func_code = CommonDTO.function_code;
+        }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_初始化产品证券数据
+    public class ReqFuncpdsecuL_7_12DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_12DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.12";
+            CommonDTO.func_code = CommonDTO.function_code;
+        }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_更新港股通待入账记录
+    public class ReqFuncpdsecuL_7_13DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_13DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.13";
+            CommonDTO.func_code = CommonDTO.function_code;
+        }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_更新估值资产
+    public class ReqFuncpdsecuL_7_14DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_14DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.14";
+            CommonDTO.func_code = CommonDTO.function_code;
+            pd_no = 0;
+            crncy_type = "CNY";
+            evalu_nav_asset = 0;
+            evalu_share = 0;
+            total_rece_amt = 0;
+            total_payab_amt = 0;
+        }
+ 
+        /// <summary>
+        /// 产品编号
+        /// </summary>
+        public int pd_no { get; set; }
+ 
+        /// <summary>
+        /// 本币币种
+        /// </summary>
+        public String crncy_type { get; set; }
+ 
+        /// <summary>
+        /// 估值净资产
+        /// </summary>
+        public double evalu_nav_asset { get; set; }
+ 
+        /// <summary>
+        /// 估值份额
+        /// </summary>
+        public double evalu_share { get; set; }
+ 
+        /// <summary>
+        /// 累计应收金额
+        /// </summary>
+        public double total_rece_amt { get; set; }
+ 
+        /// <summary>
+        /// 累计应付金额
+        /// </summary>
+        public double total_payab_amt { get; set; }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+            packer.AddField("pd_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("crncy_type", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("evalu_nav_asset", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("evalu_share", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("total_rece_amt", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("total_payab_amt", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.AddInt(pd_no);
+            packer.AddStr(crncy_type);
+            packer.AddDouble(evalu_nav_asset);
+            packer.AddDouble(evalu_share);
+            packer.AddDouble(total_rece_amt);
+            packer.AddDouble(total_payab_amt);
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_PD_NO_INT,pd_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_CRNCY_TYPE_STR,crncy_type);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_EVALU_NAV_ASSET_FLOAT,evalu_nav_asset);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_EVALU_SHARE_FLOAT,evalu_share);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_TOTAL_RECE_AMT_FLOAT,total_rece_amt);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_TOTAL_PAYAB_AMT_FLOAT,total_payab_amt);
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_更新港股通结算汇率
+    public class ReqFuncpdsecuL_7_15DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_15DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.15";
+            CommonDTO.func_code = CommonDTO.function_code;
+            sh_hk_settle_buy_rate = 0;
+            sh_hk_settle_sell_rate = 0;
+            sz_hk_settle_buy_rate = 0;
+            sz_hksettle_sell_rate = 0;
+            pboc_rate = 0;
+        }
+ 
+        /// <summary>
+        /// 沪港通买入结算汇率
+        /// </summary>
+        public double sh_hk_settle_buy_rate { get; set; }
+ 
+        /// <summary>
+        /// 沪港通卖出结算汇率
+        /// </summary>
+        public double sh_hk_settle_sell_rate { get; set; }
+ 
+        /// <summary>
+        /// 深港通买入结算汇率
+        /// </summary>
+        public double sz_hk_settle_buy_rate { get; set; }
+ 
+        /// <summary>
+        /// 深港通卖出结算汇率
+        /// </summary>
+        public double sz_hksettle_sell_rate { get; set; }
+ 
+        /// <summary>
+        /// 中国人行汇率
+        /// </summary>
+        public double pboc_rate { get; set; }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+            packer.AddField("sh_hk_settle_buy_rate", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("sh_hk_settle_sell_rate", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("sz_hk_settle_buy_rate", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("sz_hksettle_sell_rate", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+            packer.AddField("pboc_rate", ELDDATATYPE.LD_DATATYPE_DOUBLE);
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.AddDouble(sh_hk_settle_buy_rate);
+            packer.AddDouble(sh_hk_settle_sell_rate);
+            packer.AddDouble(sz_hk_settle_buy_rate);
+            packer.AddDouble(sz_hksettle_sell_rate);
+            packer.AddDouble(pboc_rate);
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_SH_HK_SETTLE_BUY_RATE_FLOAT,sh_hk_settle_buy_rate);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_SH_HK_SETTLE_SELL_RATE_FLOAT,sh_hk_settle_sell_rate);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_SZ_HK_SETTLE_BUY_RATE_FLOAT,sz_hk_settle_buy_rate);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_SZ_HKSETTLE_SELL_RATE_FLOAT,sz_hksettle_sell_rate);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_PBOC_RATE_FLOAT,pboc_rate);
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_同步产品信息
+    public class ReqFuncpdsecuL_7_16DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_16DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.16";
+            CommonDTO.func_code = CommonDTO.function_code;
+        }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+ 
+            return fastMsg;
+        }
+    }
+
+    //逻辑_产品证券_账户运维_同步资产所需证券代码信息
+    public class ReqFuncpdsecuL_7_17DTO : ReqBaseDTO
+    {
+        public ReqFuncpdsecuL_7_17DTO(CommonDTO commonDTO)
+        {
+            CommonDTO = commonDTO.Copy();
+            CommonDTO.function_code = "pdsecuL.7.17";
+            CommonDTO.func_code = CommonDTO.function_code;
+        }
+ 
+        public override LDsdkDefine.LDPackerAdapter CreatePacker()
+        {
+            var packer = new LDPackerAdapter();
+ 
+            packer.BeginPack();
+            #region CommonDTOFiled
+            packer.AddField("opor_co_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("opor_pwd", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_mac", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_ip_addr", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_info", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("oper_way", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("menu_no", ELDDATATYPE.LD_DATATYPE_INT);
+            packer.AddField("func_code", ELDDATATYPE.LD_DATATYPE_STRING);
+            packer.AddField("token", ELDDATATYPE.LD_DATATYPE_STRING);
+            #endregion
+ 
+ 
+            #region CommonDTOValue
+            packer.AddInt(CommonDTO.opor_co_no);
+            packer.AddInt(CommonDTO.opor_no);
+            packer.AddStr(CommonDTO.opor_pwd);
+            packer.AddStr(CommonDTO.oper_mac);
+            packer.AddStr(CommonDTO.oper_ip_addr);
+            packer.AddStr(CommonDTO.oper_info);
+            packer.AddStr(CommonDTO.oper_way);
+            packer.AddInt(CommonDTO.menu_no);
+            packer.AddStr(CommonDTO.func_code);
+            packer.AddStr(CommonDTO.SessionID);
+            #endregion
+ 
+            packer.EndPack();
+ 
+            return packer;
+        }
+        public override LDsdkDefineEx.LDFastMessageAdapter CreateFastMessage()
+        {
+            var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(CommonDTO.func_code, 0);
+
+            #region CommonDTOFiled 默认参数，固定格式
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_CO_NO_INT, CommonDTO.opor_co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_NO_INT,  CommonDTO.opor_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPOR_PWD_STR, CommonDTO.opor_pwd);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_MAC_STR, CommonDTO.oper_mac);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_IP_ADDR_STR, CommonDTO.oper_ip_addr);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_INFO_STR, CommonDTO.oper_info);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_OPER_WAY_STR, CommonDTO.oper_way);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_MENU_NO_INT, CommonDTO.menu_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_FUNC_CODE_STR, CommonDTO.func_code);
+            #endregion
+
+ 
+            return fastMsg;
+        }
+    }
+
+}

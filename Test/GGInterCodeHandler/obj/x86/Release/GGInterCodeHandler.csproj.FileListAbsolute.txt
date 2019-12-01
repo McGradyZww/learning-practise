@@ -1,0 +1,13 @@
+D:\learning\Test\GGInterCodeHandler\bin\x86\Release\港股内码处理器.exe.config
+D:\learning\Test\GGInterCodeHandler\bin\x86\Release\港股内码处理器.exe
+D:\learning\Test\GGInterCodeHandler\bin\x86\Release\港股内码处理器.pdb
+D:\learning\Test\Bin\Release\港股内码处理器.exe.config
+D:\learning\Test\Bin\Release\港股内码处理器.exe
+D:\learning\Test\Bin\Release\港股内码处理器.pdb
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\GGInterCodeHandler.csprojResolveAssemblyReference.cache
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\GGInterCodeHandler.BaseClass.MainFormBase.resources
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\GGInterCodeHandler.MainForm.resources
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\GGInterCodeHandler.Properties.Resources.resources
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\GGInterCodeHandler.csproj.GenerateResource.Cache
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\港股内码处理器.exe
+D:\learning\Test\GGInterCodeHandler\obj\x86\Release\港股内码处理器.pdb

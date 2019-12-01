@@ -1,0 +1,441 @@
+using LdNet.ClientSdk.Model;
+using LdNet.ClientSdk.Request;
+using LdNet.ClientCore.Sdk;
+using LdNet.ClientCore.Threading;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+
+namespace LdNet.ClientSdk.Command
+{
+    public partial class UserCommandManager : BaseCommand
+    {
+
+        /// <summary>
+        /// 逻辑_公共_用户_新增操作员信息
+        /// </summary>
+        public IWorkCommand<pubL_5_1_Request, ObservableCollection<pubL_5_1_Info>> pubL_5_1_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_1_Request, ObservableCollection<pubL_5_1_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_1_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_修改操作员信息
+        /// </summary>
+        public IWorkCommand<pubL_5_2_Request, ObservableCollection<pubL_5_2_Info>> pubL_5_2_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_2_Request, ObservableCollection<pubL_5_2_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_2_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询操作员信息
+        /// </summary>
+        public IWorkCommand<pubL_5_4_Request, ObservableCollection<pubL_5_4_Info>> pubL_5_4_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_4_Request, ObservableCollection<pubL_5_4_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_4_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_冻结操作员
+        /// </summary>
+        public IWorkCommand<pubL_5_5_Request, ObservableCollection<pubL_5_5_Info>> pubL_5_5_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_5_Request, ObservableCollection<pubL_5_5_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_5_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_解冻操作员
+        /// </summary>
+        public IWorkCommand<pubL_5_6_Request, ObservableCollection<pubL_5_6_Info>> pubL_5_6_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_6_Request, ObservableCollection<pubL_5_6_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_6_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_注销操作员
+        /// </summary>
+        public IWorkCommand<pubL_5_7_Request, ObservableCollection<pubL_5_7_Info>> pubL_5_7_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_7_Request, ObservableCollection<pubL_5_7_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_7_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_修改操作员密码
+        /// </summary>
+        public IWorkCommand<pubL_5_9_Request, ObservableCollection<pubL_5_9_Info>> pubL_5_9_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_9_Request, ObservableCollection<pubL_5_9_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_9_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_重置操作员密码
+        /// </summary>
+        public IWorkCommand<pubL_5_10_Request, ObservableCollection<pubL_5_10_Info>> pubL_5_10_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_10_Request, ObservableCollection<pubL_5_10_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_10_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询操作员信息流水
+        /// </summary>
+        public IWorkCommand<pubL_5_11_Request, ObservableCollection<pubL_5_11_Info>> pubL_5_11_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_11_Request, ObservableCollection<pubL_5_11_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_11_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询历史操作员信息流水
+        /// </summary>
+        public IWorkCommand<pubL_5_12_Request, ObservableCollection<pubL_5_12_Info>> pubL_5_12_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_12_Request, ObservableCollection<pubL_5_12_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_12_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_检查操作员存在
+        /// </summary>
+        public IWorkCommand<pubL_5_13_Request, ObservableCollection<pubL_5_13_Info>> pubL_5_13_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_13_Request, ObservableCollection<pubL_5_13_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_13_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_获取操作员编号
+        /// </summary>
+        public IWorkCommand<pubL_5_14_Request, ObservableCollection<pubL_5_14_Info>> pubL_5_14_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_14_Request, ObservableCollection<pubL_5_14_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_14_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_操作员登录
+        /// </summary>
+        public IWorkCommand<pubL_5_21_Request, ObservableCollection<pubL_5_21_Info>> pubL_5_21_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_21_Request, ObservableCollection<pubL_5_21_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_21_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_操作员退出
+        /// </summary>
+        public IWorkCommand<pubL_5_22_Request, ObservableCollection<pubL_5_22_Info>> pubL_5_22_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_22_Request, ObservableCollection<pubL_5_22_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_22_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_新增操作员可操作机构
+        /// </summary>
+        public IWorkCommand<pubL_5_41_Request, ObservableCollection<pubL_5_41_Info>> pubL_5_41_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_41_Request, ObservableCollection<pubL_5_41_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_41_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_删除操作员可操作机构
+        /// </summary>
+        public IWorkCommand<pubL_5_42_Request, ObservableCollection<pubL_5_42_Info>> pubL_5_42_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_42_Request, ObservableCollection<pubL_5_42_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_42_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询操作员可操作机构
+        /// </summary>
+        public IWorkCommand<pubL_5_44_Request, ObservableCollection<pubL_5_44_Info>> pubL_5_44_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_44_Request, ObservableCollection<pubL_5_44_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_44_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询全部交易组
+        /// </summary>
+        public IWorkCommand<pubL_5_65_Request, ObservableCollection<pubL_5_65_Info>> pubL_5_65_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_65_Request, ObservableCollection<pubL_5_65_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_65_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询全部操作员信息
+        /// </summary>
+        public IWorkCommand<pubL_5_201_Request, ObservableCollection<pubL_5_201_Info>> pubL_5_201_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_201_Request, ObservableCollection<pubL_5_201_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_201_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_获取操作员交易组权限串
+        /// </summary>
+        public IWorkCommand<pubL_5_202_Request, ObservableCollection<pubL_5_202_Info>> pubL_5_202_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_202_Request, ObservableCollection<pubL_5_202_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_202_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_获取操作员交易组权限
+        /// </summary>
+        public IWorkCommand<pubL_5_203_Request, ObservableCollection<pubL_5_203_Info>> pubL_5_203_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_203_Request, ObservableCollection<pubL_5_203_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_203_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_查询操作员可设置操作员
+        /// </summary>
+        public IWorkCommand<pubL_5_204_Request, ObservableCollection<pubL_5_204_Info>> pubL_5_204_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_204_Request, ObservableCollection<pubL_5_204_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_204_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_冻结交易组
+        /// </summary>
+        public IWorkCommand<pubL_5_205_Request, ObservableCollection<pubL_5_205_Info>> pubL_5_205_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_205_Request, ObservableCollection<pubL_5_205_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_205_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_解冻交易组
+        /// </summary>
+        public IWorkCommand<pubL_5_206_Request, ObservableCollection<pubL_5_206_Info>> pubL_5_206_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_206_Request, ObservableCollection<pubL_5_206_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_206_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_公共_用户_更新交易组禁止订单方向
+        /// </summary>
+        public IWorkCommand<pubL_5_207_Request, ObservableCollection<pubL_5_207_Info>> pubL_5_207_Command
+        {
+            get
+            {
+                var WorkCommand = new WorkCommand<pubL_5_207_Request, ObservableCollection<pubL_5_207_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o, TimeOut).pubL_5_207_InfoList;
+                });
+                SetTimeOut();
+                return WorkCommand;
+            }
+        }
+
+    }
+}

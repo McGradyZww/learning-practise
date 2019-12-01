@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rkfutuT.1.4" procedurename="prt_rkfupb_QueryFutuRiskRule" paras="15"/>
+    <func funcname="rkfutuT.1.5" procedurename="prt_rkfupb_AddFutuRiskItem" paras="29"/>
+    <func funcname="rkfutuT.1.6" procedurename="prt_rkfupb_ModiFutuRiskItem" paras="31"/>
+    <func funcname="rkfutuT.1.7" procedurename="prt_rkfupb_UpdateFutuRiskItemFlag" paras="20"/>
+    <func funcname="rkfutuT.1.8" procedurename="prt_rkfupb_DeleteFutuRiskItem" paras="12"/>
+    <func funcname="rkfutuT.1.9" procedurename="prt_rkfupb_QueryFutuRiskItem" paras="21"/>
+    <func funcname="rkfutuT.1.10" procedurename="prt_rkfupb_AddFutuRiskModel" paras="12"/>
+    <func funcname="rkfutuT.1.11" procedurename="prt_rkfupb_DeleteFutuRiskModel" paras="11"/>
+    <func funcname="rkfutuT.1.12" procedurename="prt_rkfupb_ModiSecuRiskModel" paras="13"/>
+    <func funcname="rkfutuT.1.13" procedurename="prt_rkfupb_QuerySecuRiskModel" paras="12"/>
+    <func funcname="rkfutuT.1.14" procedurename="prt_rkfupb_AddSecuRiskModelItem" paras="12"/>
+    <func funcname="rkfutuT.1.15" procedurename="prt_rkfupb_DeleteSecuRiskModelItem" paras="12"/>
+    <func funcname="rkfutuT.1.16" procedurename="prt_rkfupb_QuerySecuRiskModelItem" paras="15"/>
+    <func funcname="rkfutuT.1.17" procedurename="prt_rkfupb_FutuDataToHis" paras="10"/>
+</funcs>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.4.12" procedurename="prt_dcsypfu_Syncpdfuca_exgp_capit" paras="108"/>
+    <func funcname="dcsyncT.4.13" procedurename="prt_dcsypfu_Syncpdfuca_exgp_asset" paras="108"/>
+    <func funcname="dcsyncT.4.14" procedurename="prt_dcsypfu_Syncpdfuca_asac_capit" paras="108"/>
+    <func funcname="dcsyncT.4.15" procedurename="prt_dcsypfu_Syncpdfupo_exgp_posi" paras="108"/>
+    <func funcname="dcsyncT.4.16" procedurename="prt_dcsypfu_Syncpdfupo_asac_posi" paras="108"/>
+</funcs>

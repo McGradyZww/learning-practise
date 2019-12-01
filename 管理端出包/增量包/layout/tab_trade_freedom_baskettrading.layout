@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_trade_freedom_baskettrading" image="skin:IDB_TAB_ITEM" active="true" title="篮子自由交易" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_trade_freedom_baskettrading.low" pos="8,10,-8,-5" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+		font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+			<tab name="tab_command_baskettrading_single_template" image="skin:IDB_TAB_LOW_ITEM" title="篮子模板"  pos="0,30,-0,-0" menuno="61020401">
+				<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+				<div name="funcl_trade_freedom_baskettrading_single_template_input" pos="4,10,300,390" placement="funcl_trade_freedom_baskettrading_single_template_input"/>
+				<!--行情数据-->
+				<div name="trade_stock.handicap" pos="4,390,300,-4" placement="trade_stock_handicap"/>	
+				<div name="funcl_trade_freedom_basketstock_single_template_query" pos="304,10,-4,-0" placement="funcl_trade_freedom_basketstock_single_template_query"/>
+				
+			</tab>
+			<tab name="tab_command_baskettrading_single_store" image="skin:IDB_TAB_LOW_ITEM" title="持仓买卖"    pos="0,30,-0,-0" menuno="61020402">
+				<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+				<div name="funcl_trade_freedom_baskettrading_single_store_input" pos="4,10,300,-0" placement="funcl_trade_freedom_baskettrading_single_store_input"/>
+				<div name="trade_stock.handicap" pos="4,390,300,-4" placement="trade_stock_handicap"/>	
+				<div name="funcl_trade_freedom_baskettrading_single_store_query" pos="304,10,-4,-0" placement="funcl_trade_freedom_baskettrading_single_store_query"/>
+			</tab>
+			
+			
+			<tab name="tab_command_baskettrading_single_file" image="skin:IDB_TAB_LOW_ITEM" title="外部导入" pos="0,30,-0,-0"  active="true" menuno="61020403">
+				<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+				
+				
+				
+				<div name="funcl_trade_freedom_baskettrading_single_file_input" pos="4,10,300,-0" placement="funcl_trade_freedom_baskettrading_single_file_input"/>		
+				
+				<div name="trade_stock.handicap" pos="4,390,300,-4" placement="trade_stock_handicap"/>	
+				<div name="funcl_trade_freedom_baskettrading_single_file_query" pos="304,10,-4,-0" placement="funcl_trade_freedom_baskettrading_single_file_query"/>
+				
+				
+				
+			</tab>
+			
+			<tab name="tab_command_baskettrading_single_manage" image="skin:IDB_TAB_LOW_ITEM" title="篮子订单管理" pos="0,30,-0,-0" menuno="61020403">
+				<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+				
+				<layout name="split_commandtrade" layout-type="horizontal" pos="4,7,-4,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+					<layout-div name="layout-commandorder" div-pos="-350" >	
+								<div name="funcl_trade_freedom_baskettrading_query_grid_ord_tab.layout" pos="0,4,-0,-10" placement="funcl_trade_freedom_baskettrading_query_grid_ord_tab.layout" />	
+					</layout-div>
+					<layout-div name="layout-2"  notify-scroll="1" min-pos="100">					
+						<div name="funcl_trade_freedom_baskettrading_query_grid_batchsum_tab1" placement="funcl_trade_freedom_baskettrading_query_grid_batchsum_tab1" pos="0,4,-0,-0" />
+						
+						
+						<!--
+						<tabctrl name="tabctrl.command_query_info" pos="0,4,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+							<tab name="funcl_command_baskettrading_query_grid_batchsum_tab0" image="skin:IDB_TAB_INSIDE_ITEM" title="指令证券" active="true" pos="0,28,-0,-0">
+								<div name="funcl_command_baskettrading_query_grid_batchsum_tab0" placement="funcl_command_baskettrading_query_grid_batchsum_tab0" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_trade_freedom_baskettrading_query_grid_batchsum_tab1" image="skin:IDB_TAB_INSIDE_ITEM" title="指令订单" active="true" pos="0,28,-0,-0">
+								<div name="funcl_trade_freedom_baskettrading_query_grid_batchsum_tab1" placement="funcl_trade_freedom_baskettrading_query_grid_batchsum_tab1" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_command_baskettrading_query_grid_batchsum_tab2" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交" div="funcl_stockeorder_query_grid_tab" pos="0,28,-0,-0">
+								<div name="funcl_command_baskettrading_query_grid_batchsum_tab2" placement="funcl_command_baskettrading_query_grid_batchsum_tab2" pos="0,0,-0,-0" />
+							</tab>
+						</tabctrl>
+						-->
+					</layout-div>
+				</layout>
+				
+				
+				
+			</tab>
+			
+		</tabctrl>
+	</tab>
+</tabctrl>

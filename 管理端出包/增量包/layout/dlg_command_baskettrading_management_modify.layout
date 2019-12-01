@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_command_baskettrading_management_modify" title="" width="710" height="600"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="80,5,200,25" title="指令修改" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+	
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		
+		
+				
+			 <gridctrl name="grid.command_baskettrading_management_modify" pos="2,4,-2,-80" show="1"
+				img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+				img-check="skin:IDB_CHECK_BOX" img-colsep=""
+				img-count="6" image="skin:IDB_LIST_IMG"
+				left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+				font-title="big" font="default2"
+				valign="middle" down-row="1" align="center"
+				crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+				<column title="证券代码" width="100" align="center" key="stock_code" />
+				<column title="证券名称" width="100" align="center" key="stock_name" />
+				<column title="买卖方向" width="100" align="center" key="order_dir" />
+				<column title="指令价格" width="100" align="center" key="order_price" />			
+				<column title="指令数量" width="100" align="center" key="command_qty" />
+				<column title="成交数量" width="100" align="center" key="execution_qty" />
+				<column title="挂单数量" width="100" align="center" key="entry_orders_qty" />	    
+			 </gridctrl>
+		 
+
+			  
+			   <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="确 定" pos="-150,-76,-80,-50" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+			   <button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-76,-76,-6,-50" shortcut="" crtext="0" font="default1"/>        
+			
+						
+				<text crtext="000000" crmark="800000" align="left" pos="10,-70,80,-40" title="指令批号：" font="default1" show="1" />	   
+				<text name="textbox_cbmm_commandno" crtext="000000" crmark="800000" align="left" pos="90,-70,200,-40" title="ZL0001" font="default1" show="1" />
+				
+				<text crtext="e30202" crmark="800000" align="left" pos="200,-70,250,-40" title="买价格" font="default1" show="1" />
+				
+				<combobox name="cbmm_buyprice" tabstop="0" skin="IDB_EDIT" pos="250,-76" width="100" height="26" tip=""
+					  small-image="skin:IDB_DROP_DOWN_small" list-height="174"
+					  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+						font="default" crtext="0,0,0" crtip="128,128,128,128">
+					
+						<item name="最新价" value="1" />
+						<item name="对手1" value="11" />
+						<item name="对手2" value="12" />
+						<item name="对手3" value="13" />
+						<item name="对手4" value="14" />
+						<item name="对手5" value="15" />
+				</combobox>
+			
+			
+				<text crtext="0493a0" crmark="800000" align="left" pos="370,-70,420,-40" title="卖价格" font="default1" show="1" />
+				<combobox name="cbmm_sallprice" tabstop="0" skin="IDB_EDIT" pos="420,-76" width="100" height="26" tip=""
+					  small-image="skin:IDB_DROP_DOWN_small" list-height="174"
+					  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+						font="default" crtext="0,0,0" crtip="128,128,128,128">
+					
+						<item name="最新价" value="1" />
+						<item name="对手1" value="11" />
+						<item name="对手2" value="12" />
+						<item name="对手3" value="13" />
+						<item name="对手4" value="14" />
+						<item name="对手5" value="15" />
+				</combobox>
+
+				<chkbtn name="check_cbmm_Hiding_traded_stocks" title="隐藏已成股票" skin="IDB_CHECK_BOX" pos="10,-36" width="110" height="15" crtext="000000" show="1" check="false" showfocus="0"/>
+				<chkbtn name="check_cbmm_Remove_the_ups_and_downs" title="剔除涨跌停股票" skin="IDB_CHECK_BOX" pos="130,-36" width="110" height="15" crtext="000000" show="1" check="false" showfocus="0"/>
+			
+				<text crtext="000000" crmark="800000" align="left" pos="250,-40,320,-10" title="有效时间：" font="default1" show="1" />
+				
+				<edit name="cbmm_begin_time" tabstop="1" skin="IDB_EDIT" small-image="" pos="320,-44" width="84" height="26"
+				   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"  
+				   font="default" crtext="0,0,0" double="1" entrer_selectall="1"/>           
+				
+				<text crtext="000000" crmark="800000" align="left" pos="404,-40" width="18" height="26"  title="~" font="default1" show="1" />
+				 <edit name="cbmm_begin_time" tabstop="1" skin="IDB_EDIT" small-image="" pos="422,-44" width="84" height="26"
+				   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"  
+				   font="default" crtext="0,0,0" double="1" entrer_selectall="1"/>
+				<!----> 
+			 <img pos="4,-79,-4,-77" image="skins\default\line_split.png" mode="tile" show="1" />
+			 	
+		</div>
+		
+	</body>
+  
+</dlg>

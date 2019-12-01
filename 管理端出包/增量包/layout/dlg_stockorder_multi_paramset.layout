@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_stockorder_multi_paramset" title="" width="400" height="580"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="30,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="dlg_stockorder_multi_paramset.body" pos="0,30,-0,-0">	
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+		<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<tabctrl name="tab_multi_pagamset.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+			font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >				
+			<tab name="multi_pagamset_strategyset" image="skin:IDB_TAB_LOW_ITEM" title="策略参数" active="true" pos="0,30,-0,-0">	
+				<text crtext="000000" crmark="800000" align="left" pos="20,10" width="62" height="18"  title="账户参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="40,40,102,158" title="可用不足" font="default1" show="1" />
+				<radiobtn name="multi.radiobtn.move" tabstop="1" title="自动剔除" skin="IDB_radiobtn" pos="104,38" width="120" height="24" crtext="174590" show="1" 
+					check="false" showfocus="1" group="2" font="default1"/>
+				<radiobtn name="multi.radiobtn.most" tabstop="1" title="按最大可用" skin="IDB_radiobtn" pos="194,38" width="120" height="24" crtext="174590" show="1"  
+					check="true" showfocus="1" group="2" font="default1"/>	
+				<!---订单价格---->
+				<text crtext="000000" crmark="800000" align="left" pos="20,70" width="120" height="18"  title="订单价格默认方式" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="40,100" width="35" height="18"  title="买入" font="default1" show="1" />
+				<combobox name="multi.pricedefault.buy" tabstop="1" skin="IDB_EDIT" pos="75,96" width="120" height="26"
+					small-image="skin:IDB_DROP_DOWN_small"
+					multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>			
+				<text crtext="000000" crmark="800000" align="left" pos="200,100" width="35" height="20"  title="卖出" font="default1" show="1" />
+				<combobox name="multi.pricedefault.sell" tabstop="1" skin="IDB_EDIT" pos="235,96" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128">
+				</combobox>				
+				<!---数量策略---->
+				<text crtext="000000" crmark="800000" align="left" pos="20,130" width="120" height="18"  title="数量策略默认方式" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="40,160" width="35" height="18" title="买入" font="default1" show="1" />			 
+				<combobox name="multi.buy.qtytype" tabstop="0" skin="IDB_EDIT" pos="75,156" width="120" height="26" tip=""
+								  small-image="skin:IDB_DROP_DOWN_small"
+								  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+									font="default" crtext="0,0,0" crtip="128,128,128,128">
+				</combobox>				
+				<text crtext="000000" crmark="800000" align="left" pos="200,160" width="35" height="18" title="卖出" font="default1" show="1" />
+				<combobox name="multi.sell.qtytype" tabstop="0" skin="IDB_EDIT" pos="235,156" width="120" height="26" tip=""
+								  small-image="skin:IDB_DROP_DOWN_small"
+								  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+									font="default" crtext="0,0,0" crtip="128,128,128,128">
+				</combobox>
+				<!---分配策略---->
+				<text crtext="000000" crmark="800000" align="left" pos="20,190" width="120" height="18"  title="分配策略默认方式" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="40,220" width="35" height="18" title="买入" font="default1" show="1" />			 
+				<combobox name="multi.buy.alcttype" tabstop="0" skin="IDB_EDIT" pos="75,216" width="120" height="26" tip=""
+								  small-image="skin:IDB_DROP_DOWN_small"
+								  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+									font="default" crtext="0,0,0" crtip="128,128,128,128">
+				</combobox>				
+				<text crtext="000000" crmark="800000" align="left" pos="200,220" width="35" height="18" title="卖出" font="default1" show="1" />
+				<combobox name="multi.sell.alcttype" tabstop="0" skin="IDB_EDIT" pos="235,216" width="120" height="26" tip=""
+								  small-image="skin:IDB_DROP_DOWN_small"
+								  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+									font="default" crtext="0,0,0" crtip="128,128,128,128">
+				</combobox>	
+				
+				<!---快捷数量---->
+				<text crtext="000000" crmark="800000" align="left" pos="20,250" width="112" height="18" title="快捷数量" font="default1" show="1" />	 
+				<radiobtn name="stockeorder_radiobtn_amount_fixed1" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,280" width="120" height="24"
+					crtext="191919" show="1" check="true" showfocus="1" group="3" font="default1"/>
+				<radiobtn name="stockeorder_radiobtn_amount_ratio1" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,280" width="120" height="24"
+					crtext="191919" show="1"  showfocus="1" group="3" font="default1"/>
+				<edit name="stockeorder_edit_amount_value1" tabstop="1" skin="IDB_EDIT" pos="250,280" width="80" height="24" title="0" number="0" double="1"
+					minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+				<radiobtn name="stockeorder_radiobtn_amount_fixed2" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,310" width="120" height="24" 
+					crtext="191919" show="1" check="true" showfocus="1" group="4" font="default1"/>
+				<radiobtn name="stockeorder_radiobtn_amount_ratio2" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,310" width="120" height="24" 
+					crtext="191919" show="1"  showfocus="1" group="4" font="default1"/>
+				<edit name="stockeorder_edit_amount_value2" tabstop="1" skin="IDB_EDIT" pos="250,310" width="80" height="24" title="0" number="0" double="1" 
+					minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+				<radiobtn name="stockeorder_radiobtn_amount_fixed3" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,340" width="120" height="24" 
+					crtext="191919" show="1" check="true" showfocus="1" group="5" font="default1"/>
+				<radiobtn name="stockeorder_radiobtn_amount_ratio3" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,340" width="120" height="24" 
+					crtext="191919" show="1"  showfocus="1" group="5" font="default1"/>
+				<edit name="stockeorder_edit_amount_value3" tabstop="1" skin="IDB_EDIT" pos="250,340" width="80" height="24" title="0" number="0" double="1"  
+					minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+					
+				<text crtext="000000" crmark="800000" align="left" pos="20,375" width="150" height="18"  title="默认交易账户：" font="default1" show="1" />
+				<combobox name="multi.trading.act" tabstop="1" skin="IDB_EDIT" pos="120,370" width="120" height="26"
+					small-image="skin:IDB_DROP_DOWN_small"
+					multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>		
+					
+				<chkbtn name="multi_checkbutton_clean" title="订单下单后清空证券代码、订单价格和订单数量" skin="IDB_CHECK_BOX" pos="20,400" width="300" height="18" 
+					crtext="191919" show="1" check="true" showfocus="0"/>
+				<text name="" title="拆单时同一单元订单最小间隔" crtext='041998' crhover="091560" show="1" crpush='17236b' pos="20,430"  width="170" height="18" font="default1"/>    
+				<edit name="multi_split_interval" tabstop="1" skin="IDB_EDIT" pos="180,426" width="70" height="26" minvalue="100"
+				   multiline="0" autohscroll="1" autovscroll="1" number="1" readonly="0" maxchar="9" changednotify="1"
+				   font="default" crtext="0,0,0"  nochangednotify="1" title="500" />
+				<text name="" title="毫秒(1秒=1000毫秒)" crtext='041998' crhover="091560" show="1" crpush='17236b' pos="255,430"  width="130" height="18" font="default1"/> 				
+			</tab> 	
+			<tab name="multi_pagamset_otherset" image="skin:IDB_TAB_LOW_ITEM" title="账户块显示" pos="0,30,-0,-0"> 
+				<radiobtn name="multi_radiobtn_show_proc" tabstop="1" title="显示产品名称" skin="IDB_radiobtn" pos="40,25" width="120" height="24" crtext="174590" show="1" check="true" showfocus="1" group="9" font="default1"/>
+				<radiobtn name="multi_radiobtn_show_unit" tabstop="1" title="显示单元名称" skin="IDB_radiobtn" pos="170,25" width="120" height="24" crtext="174590" show="1"  showfocus="1" group="9" font="default1"/>
+				<chkbtn name="multi_checkbutton_show_fund_account" title="显示资产账户" skin="IDB_CHECK_BOX" pos="40,55" width="120" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+				<!--chkbtn name="multi_checkbutton_show_order_balance" title="显示订单金额" skin="IDB_CHECK_BOX" pos="40,85" width="120" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/-->
+				<radiobtn name="multi_radiobtn_show_order_balance" tabstop="1" title="显示订单金额" skin="IDB_radiobtn" pos="40,85" width="120" height="24" crtext="174590" show="1" check="true" showfocus="1" group="10" font="default1"/>
+				<radiobtn name="multi_radiobtn_show_nav_balance" tabstop="1" title="显示净值" skin="IDB_radiobtn" pos="170,85" width="120" height="24" crtext="174590" show="1"  showfocus="1" group="10" font="default1"/>
+			
+				<chkbtn name="multi_checkbutton_show_balance_type" title="金额千分位显示" skin="IDB_CHECK_BOX" pos="40,115" width="160" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+				<chkbtn name="multi_checkbutton_show_amount_type" title="订单数量千分位显示" skin="IDB_CHECK_BOX" pos="40,145" width="160" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+				<chkbtn name="multi_checkbutton_show_unit_type" title="以列表形式显示交易单元" skin="IDB_CHECK_BOX" pos="40,175" width="160" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+			</tab> 
+			<tab name="multi_pagamset_remindset" image="skin:IDB_TAB_LOW_ITEM" title="提醒参数" pos="0,30,-0,-0">
+				<chkbtn name="multi_checkbutton_entrust_risk_calc" title="订单下达前执行风险试算" skin="IDB_CHECK_BOX" pos="20,25" width="240" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+				<chkbtn name="multi_checkbutton_entrust_before_hint" title="订单下达弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,55" width="240" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+				<text crtext="000000" crmark="800000" align="left" pos="40,85" width="160" height="24" title="二次确认框光标默认在：" font="default1" show="1" />	 
+				<radiobtn name="multi_radiobtn_ok_focus" title="确定" skin="IDB_radiobtn" pos="187,85" width="90" height="24" crtext="174590" show="1" check="true" showfocus="0" group="8" font="default1"/>
+				<radiobtn name="multi_radiobtn_cancel_focus" title="取消" skin="IDB_radiobtn" pos="252,85" width="90" height="24" crtext="174590" show="1" check="false" showfocus="0" group="8" font="default1"/>
+				<chkbtn name="multi_checkbutton_entrust_success_hint" title="订单下达成功弹出提示框" skin="IDB_CHECK_BOX" pos="20,115" width="240" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+			</tab> 
+		</tabctrl> 		
+		
+      <!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+	</body>
+</dlg>

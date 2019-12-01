@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_trade_command_basket_tradingvolume">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+      <gridctrl name="grid.funcl_trade_command_basket_tradingvolume" pos="2,5,-2,-38" show="1"			
+		img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"  
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" sort="1" editcolumn="1"
+        left-pos="30" row-height="35" header-height="38" bk-transparent="1"
+        font-title="big" font="default2" grid-tip="1"
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">   
+		
+		<column title="产品" width="100" align="center" key="product_name"  />
+		<column title="交易单元" width="100" align="center" key="unit_name" />		
+        <column title="证券代码" width="100" align="center" key="stock_code"  />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="买卖方向" width="100" align="center" key="order_dir" /> 
+		<column title="成交数量" width="100" align="right" key="execution_qty" data_type="N" />
+		<column title="成交均价" width="100" align="center" key="execution_price" data_type="N" /> 	
+		<column title="成交金额" width="100" align="right" key="execution_amt" data_type="N" />
+		 
+    </gridctrl>
+	
+	  
+	  
+	
+	
+	  
+	  
+	  <text crtext="000000" crmark="800000" align="left" pos="20,-25" width="60" height="25" title="证券代码:" show="1"/>
+	 	 <edit name="stockeorder_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="90,-30" width="70" height="25"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" entrer_selectall="1"  />
+	  
+			   
+			   
+		<text crtext="000000" crmark="800000" align="right" pos="170,-25" width="60" height="25" title="订单方向" show="1"/>
+		<combobox name="stockeorder_query.orderdir" tabstop="1" skin="IDB_EDIT" pos="240,-30" width="100" height="25" tip="订单方向"
+				  small-image="skin:IDB_DROP_DOWN_small" autohscroll="1" autovscroll="1"
+				  multiline="0" readonly="1" maxchar="50" list-height="80"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+					<item name="全部" value="0" />
+					<item name="买入" value="1" />
+				 	<item name="卖出" value="2" />
+		</combobox>	  
+	  
+	  <button name="basketorder_button.query" title="" pos="350,-30" width="50" height="25" skin="IDB_BT_STANDARD" title="查询" tip="查询" show="1" />
+	  
+	
+     </div>

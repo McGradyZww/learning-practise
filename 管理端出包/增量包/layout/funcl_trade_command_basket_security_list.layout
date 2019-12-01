@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_trade_command_basket_security_list">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+	 <!--<img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />-->
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="  持仓查询" font="big" show="1" />-->
+   
+    <gridctrl name="grid.funcl_trade_command_basket_security_list" pos="2,2,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254"> 
+        <column title="指令序号" width="100" align="center" key="command_id" deletable="0" />
+        <column title="证券代码" width="64" align="center" key="stock_code" deletable="0" />
+        <column title="证券名称" width="64" align="center" key="stock_name" />		
+        <column title="买卖方向" width="100" align="center" key="command_dir" />		
+        <column title="成交进度" width="100" align="center" key="business_proc" data_type="N" />
+        <column title="成交均价" width="100" align="center" key="execution_price" data_type="T" />     
+        <column title="指令数量" width="100" align="center" key="command_qty" data_type="N" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="N" />             
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="撤单数量" width="100" align="center" key="cancel_qty" data_type="T" />
+        <column title="指令价格" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N" deletable="0"/>
+        <column title="指令完成时间" width="100" align="center" key="command_complete_time" data_type="N" deletable="0"/>
+   
+       	<column title="有效均价" width="100" align="center" key="average_price1" data_type="N" /> 
+        <column title="全天有效均价" width="100" align="center" key="average_price2" data_type="N" /> 
+        <column title="执行价差(%)" width="100" align="center" key="command_diff_price1" data_type="N"/>
+         <column title="全天执行价差(%)" width="120" align="center" key="command_diff_price2" data_type="N"/>
+        <column title="有效占比(%)" width="120" align="center" key="execution_ratio2" data_type="N"/>
+        <column title="全天有效占比(%)" width="120" align="center" key="execution_ratio4" data_type="N"/>
+        <column title="有效数量" width="100" align="center" key="execution_qty2" data_type="T"/>
+        <column title="全天有效数量" width="100" align="center" key="execution_qty4" data_type="T"/>
+        <column title="市场总成交量" width="100" align="center" key="execution_qty1" data_type="T"/>
+         <column title="证券市场" width="100" align="center" key="exchange_no" />
+    </gridctrl>
+     <!--市场编号-->
+	  
+		<chkbtn name="check_ftcbsl_show_complete_transaction_stock" title="显示已成证券" skin="IDB_CHECK_BOX" pos="5,-25" width="100" height="15" crtext="000000" show="0" check="false" showfocus="0"/>
+		<chkbtn name="check_ftcbsl_Excluded_securities" title="剔除停牌证券" skin="IDB_CHECK_BOX" pos="110,-25" width="140" height="15" crtext="000000" show="0" check="false" showfocus="0"/>
+		<chkbtn name="check_ftcbsl_remove_up_stop" title="剔除涨跌停" skin="IDB_CHECK_BOX" pos="110,-25" width="140" height="15" crtext="000000" show="0" check="false" showfocus="0"/>
+	  
+	  
+		<button name="button_add_order" title="" pos="-240,-27" width="80" height="25" skin="IDB_BT_BIG" title="手工下单" tip="手工下单" show="1" />
+		<button name="button_cancel_order" title="" pos="-150,-27" width="50" height="25" skin="IDB_BT_SMALL" title="撤单" tip="撤单" show="1" />
+		<button name="button_change_order" title="" pos="-90,-27" width="80" height="25" skin="IDB_BT_SMALL" title="快速补单" tip="快速补单" show="1" />
+
+	 
+	 <!---
+	 <button name="stockeorder_button.query" title="" pos="595,-27" width="80" height="25" skin="IDB_BT_QUERY" tip="查询" show="1" />
+     <button name="unitstock_button.refresh" title="" pos="-186,-27" width="70" height="25" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+	 <button name="unitstock_button.export" title="" pos="-106,-27" width="70" height="25" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+	 --->
+   
+  </div>

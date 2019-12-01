@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.8.1" procedurename="prt_pdserkif_QueryExgpCapitalByRisk" paras="16"/>
+    <func funcname="pdsecuT.8.2" procedurename="prt_pdserkif_QueryAsacCapitalByRisk" paras="15"/>
+    <func funcname="pdsecuT.8.3" procedurename="prt_pdserkif_QueryExgpPosiByRisk" paras="17"/>
+    <func funcname="pdsecuT.8.4" procedurename="prt_pdserkif_QueryAsacPosiByRisk" paras="17"/>
+    <func funcname="pdsecuT.8.5" procedurename="prt_pdserkif_UpdateExchGroupAsset" paras="15"/>
+    <func funcname="pdsecuT.8.6" procedurename="prt_pdserkif_QueryBondRepoByRisk" paras="14"/>
+    <func funcname="pdsecuT.8.7" procedurename="prt_pdserkif_QueryBlockTradePosiByRisk" paras="15"/>
+</funcs>

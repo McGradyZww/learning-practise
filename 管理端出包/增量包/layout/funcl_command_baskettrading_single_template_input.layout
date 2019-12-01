@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_command_baskettrading_single_template_input" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+     
+	   <!--Row 0-->
+		<text crtext="000000" crmark="800000" align="left" pos="10,20,72,38"   title="交易账户" font="default1" show="1" />	
+	 <combobox name="ins_product_code" tabstop="0" skin="IDB_EDIT" pos="73,16" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50" show="0"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+		<combobox name="ins_unit_code" tabstop="0" skin="IDB_EDIT" pos="73,16" width="120" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0"  maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+		<combobox name="ins_asset_account" tabstop="0" skin="IDB_EDIT" pos="195,16" width="80" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220" show="1"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+		
+	   <lockbtn name="button_product_code_lock" tabstop="0" skin="IDB_BT_LOCK" img-unlock="skin:IDB_BT_UNLOCK"  unlock="1"  lock-ctrl="ins_unit_code" lock-ctrl2="ins_asset_account"  
+	   title="" pos="275,20" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+	   
+	   
+	    <!--Row 1-->
+	   <text crtext="000000" crmark="800000" align="left" pos="10,50,72,68" title="选择篮子" font="default1" show="1" />
+		<combobox name="fcbsti_templet_basket_code" tabstop="0" skin="IDB_EDIT" pos="73,46" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+		
+
+        <!--Row 2-->
+        <!--订单方向-->           
+		<text crtext="000000" crmark="800000" align="left" pos="10,80,72,98" title="订单方向" font="default1" show="1" />		
+		<radiobtn name="ins_radiobtnbuy" tabstop="1" title="" skin="IDB_BUTTON_BUY" pos="73,76" width="50" height="26" crtext="ff0000" show="1" check="true" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+		<radiobtn name="ins_radiobtnsell" tabstop="1" title="" skin="IDB_BUTTON_SELL" pos="128,76" width="50" height="26" crtext="00ff00" show="1" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+		<radiobtn name="ins_radiobtnadjust" tabstop="1" title="" skin="IDB_BUTTON_ADJUST" pos="183,76" width="50" height="26" crtext="174590" show="1" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+		<!--<lockbtn name="button_fcbsti_order_dir_lock" tabstop="0" skin="IDB_BT_LOCK" img-unlock="skin:IDB_BT_UNLOCK"  unlock="1"  lock-ctrl="ins_radiobtnbuy" lock-ctrl2="ins_radiobtnsell"  lock-ctrl3="ins_radiobtnadjust"  title="" pos="275,80" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />-->
+		
+	    <!--Row 3-->
+        <!--买价格-->
+        <text crtext="000000" crmark="800000" align="left" pos="10,110,72,128" title="买价格" font="default1" show="1" />
+		<combobox name="fcbsti_buying_price" tabstop="0" skin="IDB_EDIT" pos="73,106" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" 
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" value="0" disable="1">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				    <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+		</combobox>
+		<!--
+        <button name="button_fcbsti_buying_price_lock" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="275,110" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_fcbsti_buying_price_unlock" tabstop="0" skin="IDB_BT_LOCK" title="" pos="275,110" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />
+        -->  
+		<!--Row 4-->
+        <!--卖价格-->
+        <text crtext="000000" crmark="800000" align="left" pos="10,140,82,158" title="卖价格" font="default1" show="1" />
+		<combobox name="fcbsti_selling_price" tabstop="0" skin="IDB_EDIT" pos="73,136" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" 
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" value="0" disable="1">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				    <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+		</combobox>
+		<!--
+        <button name="button_fcbsti_selling_price_lock" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="275,140" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_fcbsti_selling_price_unlock" tabstop="0" skin="IDB_BT_LOCK" title="" pos="275,140" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />
+          -->
+        <!--Row 5 ->
+        <!--数量策略  -->
+        <text crtext="000000" crmark="800000" align="left" pos="10,170,82,188" title="数量策略" font="default1" show="1" />
+		  <combobox name="fcbsti_qty_based_type" tabstop="0" skin="IDB_EDIT" pos="73,166" width="108" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" value="0">
+					<item name="篮子个数" value="0" />
+					<item name="篮子净值比例" value="1"/>
+					<item name="篮子总金额" value="2" />
+				  <item name="可用比例" value="3" />
+		  </combobox>
+          <lockbtn name="button_fcbsti_quantity_based_policy_lock" tabstop="0" skin="IDB_BT_LOCK" img-unlock="skin:IDB_BT_UNLOCK"  unlock="1"  lock-ctrl="fcbsti_qty_based_type"  
+           title="" pos="275,170" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		 		  <edit name="fcbsti_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="179,166" width="74" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"  
+               font="default" crtext="0,0,0" double="1" title="0" entrer_selectall="1"/>
+          <text name="fcbsti_qty_unit"  crtext="000000" crmark="800000" align="left" pos="252,174" width="20" height="26" title="万" font="default1" show="1" />
+ 		     
+      
+      
+        <!--数量策略的输入值，如果数量策略选择的是，篮子个数，输入框后面的单位变成“个”，选择的是比例模式，单位变成“%”，现在的是金额模式，单位显示成“万”。
+         <text name="fcbsti_quantity"  crtext="000000" crmark="800000" align="left" pos="170,204" width="20" height="26" title="个" font="default1" show="0" />
+         <text name="fcbsti_quantity"  crtext="000000" crmark="800000" align="left" pos="170,204" width="20" height="26" title="万" font="default1" show="1" />-->
+		<!--Row 6   170   188 -->
+       
+       
+         <text crtext="bb030a" crmark="800000" align="left" pos="10,195,102,218" title="可用金额：" font="default1" show="1" />
+        <text name="fcbsti_avail_money" thousands_digital="1" crtext="bb030a" crmark="800000" align="left" pos="73,195,230,218" title="0.00" font="bold1" show="1" />
+               
+        <!--Row 7  h 230 ， 248-->
+    
+		<text crtext="bb030a" crmark="800000" align="left" pos="10,215,102,238" title="单元净值：" font="default1" show="1" />
+        <text name="fcbsti_netvalue" thousands_digital="1" crtext="bb030a" crmark="800000" align="left" pos="73,215,230,238" title="0.00" font="bold1" show="1" />
+        <!--Row 8   h 260  278-->   
+		<text crtext="02d007" crmark="800000" align="left" pos="10,235,102,258" title="指令金额：" font="default1" show="1" />	  
+        <text name="fcbsti_sbtotal"  thousands_digital="1" crtext="02d007" crmark="800000" align="left" pos="73,235,230,258" title="0.00" font="bold1" show="1" />	
+   
+        <!--Row 9   290， 308  -->   
+        <button name="button_fcbsti_calculate" tabstop="0" skin="IDB_BT_SMALL" title="计算"  pos="10,256" width="50" height="26" crtext="1E1E1E" /> 
+		<button name="button_fcbsti_do" tabstop="1" skin="IDB_BT_OK" title="指令下达" pos="70,256" width="70" height="26" shortcut="RETURN" crtext="ffffff" font="default1"/>	
+		<button name="button_fcbsti_Risk_Testing" tabstop="0"  skin="IDB_BT_SMALL" title="风险试算"  crtext="1E1E1E" pos="150,256" width="70" height="26"/> 
+		<textbtn name="fcbsti_basketcommand_paramset" crtext='041998' tabstop="0" crhover="091560" crpush='17236b' pos="220,260,322,284" font="default1" title="参数定制"/>
+        
+        <!--Row 10  320，338  --> 
+		<text crtext="000000" crmark="800000" align="left" pos="10,292,82,340" title="交易员：" font="default1" show="1" />
+         <combobox name="ins_command_executor" tabstop="0" skin="IDB_EDIT" pos="73,285" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="120"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+
+		</combobox>
+		
+		 <lockbtn name="button_trader_lock" tabstop="0"  skin="IDB_BT_LOCK" img-unlock="skin:IDB_BT_UNLOCK"  unlock="1"  lock-ctrl="ins_command_executor"  title="" pos="275,292" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+	       
+        <!--Row 11 350 ， 368 -->
+ 
+  <text crtext="000000" crmark="800000" align="left" pos="10,320" width="99" height="26" title="起始时间" font="default1" show="1" />
+			 <nativewnd name="basketcommand_begin_time" skin="IDB_EDIT" pos="73,316" width="160" height="26"
+				multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+	            font="default" crtext="0,0,0" show="1" disable="1" />			
+			
+			<!--有效结束时间-->   
+			<text crtext="000000" crmark="800000" align="left" pos="10,350" width="99" height="26"  title="结束时间" font="default1" show="1" />
+			 <nativewnd name="basketcommand_end_time" skin="IDB_EDIT" pos="73,346" width="160" height="26"
+				multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+	            font="default" crtext="0,0,0" show="1" />
+	            
+ 	  
+	       
+ 	
+
+		
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

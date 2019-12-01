@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="funcl_trade_command_more_bond_info">
+		<img pos="0,0,-0,-0" image="skins\default\handicap_background.bmp" mode="tile" framesize="0" show="1" response="0"/>
+		<text name="bond_maturity_text" crtext="000000" crmark="800000" align="left" pos="24,0,57,18" title="期限" font="default1" show="1" />
+		<text name="bond_maturity" crtext="087502" crmark="800000" align="right" pos="48,0,110,18" title="" font="default1" show="1" />
+		<text name="interest_ratio_text" crtext="000000" crmark="800000" align="left" pos="122,0,156,18" title="利率" font="default1" show="1" />
+		<text name="interest_ratio" crtext="cf0f0f" crmark="800000" align="right" pos="-68,0,-15,18" title="" font="default1" show="1" />
+		<text name="bond_interest_text" crtext="000000" crmark="800000" align="left" pos="24,19,80,37" title="百元利息" font="default1" show="1" />
+		<text name="bond_interest" crtext="c8c100" crmark="800000" align="right" pos="48,19,200,37" title="" font="default1" show="1" />		
+	</div>

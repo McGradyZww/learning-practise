@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.20.1" procedurename="prt_tdsetdif_DealClearStrikeRsp" paras="65"/>
+    <func funcname="tdsecuT.20.2" procedurename="prt_tdsetdif_UpdateOneStrikeClearFlag" paras="12"/>
+    <func funcname="tdsecuT.20.3" procedurename="prt_tdsetdif_UpdateAllStrikeClearFlag" paras="11"/>
+    <func funcname="tdsecuT.20.4" procedurename="prt_tdsetdif_UpdateGetNewStockOrder" paras="39"/>
+    <func funcname="tdsecuT.20.5" procedurename="prt_tdsetdif_GetStrikeTotal" paras="14"/>
+    <func funcname="tdsecuT.20.6" procedurename="prt_tdsetdif_GetSwitchStrikeTotal" paras="12"/>
+    <func funcname="tdsecuT.20.7" procedurename="prt_tdsetdif_QueryErrorStrike" paras="10"/>
+    <func funcname="tdsecuT.20.8" procedurename="prt_tdsetdif_GetComboPosiInfo" paras="11"/>
+    <func funcname="tdsecuT.20.9" procedurename="prt_tdsetdif_ComboCoActionRegDeal" paras="34"/>
+    <func funcname="tdsecuT.20.10" procedurename="prt_tdsetdif_DealComboPosiPreEntry" paras="11"/>
+    <func funcname="tdsecuT.20.11" procedurename="prt_tdseac_InsertComboPosiEntryJour" paras="21"/>
+    <func funcname="tdsecuT.20.12" procedurename="prt_tdseac_UpdateHKPreEntryRecord" paras="12"/>
+    <func funcname="tdsecuT.20.13" procedurename="prt_tdsetdif_DealFundTradeRecord" paras="55"/>
+    <func funcname="tdsecuT.20.14" procedurename="prt_tdsetdif_UpdateOneOrderClearFlag" paras="12"/>
+    <func funcname="tdsecuT.20.15" procedurename="prt_tdsetdif_QueryStrikeId" paras="12"/>
+    <func funcname="tdsecuT.20.21" procedurename="prt_tdsetdif_DealCrdtClearStrikeRsp" paras="66"/>
+    <func funcname="tdsecuT.20.22" procedurename="prt_tdsetdif_GetCrdtStrikeTotal" paras="14"/>
+    <func funcname="tdsecuT.20.23" procedurename="prt_tdsetdif_GetCrdtSwitchStrikeTotal" paras="12"/>
+    <func funcname="tdsecuT.20.24" procedurename="prt_tdsetdif_QueryErrorCrdtStrike" paras="10"/>
+    <func funcname="tdsecuT.20.25" procedurename="prt_tdsetdif_QueryCrdtStrikeId" paras="11"/>
+    <func funcname="tdsecuT.20.26" procedurename="prt_tdsetdif_ASharePreEntryCheckTotal" paras="13"/>
+    <func funcname="tdsecuT.20.27" procedurename="prt_tdsetdif_AutoDealClearStrikeRsp" paras="65"/>
+</funcs>

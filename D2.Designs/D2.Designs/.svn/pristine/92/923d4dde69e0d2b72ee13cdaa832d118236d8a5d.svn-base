@@ -1,0 +1,380 @@
+using LdNet.ClientSdk.Model;
+using LdNet.ClientCore.Sdk;
+using LdNet.Communication;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using LDsdkDefineEx;
+
+namespace LdNet.ClientSdk.Response
+{
+    public class pdsecuL_7_1_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_1_Response()
+        {
+            this.pdsecuL_7_1_InfoList = new ObservableCollection<pdsecuL_7_1_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_1_Info> pdsecuL_7_1_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_1_Info info = new pdsecuL_7_1_Info();
+            info.co_no = unpacker.GetInt("co_no");
+            info.pd_no = unpacker.GetInt("pd_no");
+            info.asset_acco_no = unpacker.GetInt("asset_acco_no");
+            info.stock_acco_no = unpacker.GetInt("stock_acco_no");
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_acco = unpacker.GetStr("stock_acco");
+            info.stock_acco_name = unpacker.GetStr("stock_acco_name");
+            info.stock_acco_status = unpacker.GetStr("stock_acco_status");
+            info.stock_acco_apoint_status = unpacker.GetStr("stock_acco_apoint_status");
+            pdsecuL_7_1_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_1_InfoList.Add((pdsecuL_7_1_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_查询全部证券账户
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            LDsdkDefineEx.LDGroupAdapter lpGroup = fastMsg.GetGroup(LDBizTagDefine.LDSdkTag.LDTAG_NO_RESULTSET);
+            if (lpGroup != null)
+            {
+                var rowCount = lpGroup.GetRecordCount();
+                for (int i = 0; i < rowCount; i++)
+                {
+                    var info = new pdsecuL_7_1_Info();
+                    var lpRecord =lpGroup.GetRecord(i);
+                    info.co_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT);
+                    info.pd_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_PD_NO_INT);
+                    info.asset_acco_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ASSET_ACCO_NO_INT);
+                    info.stock_acco_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_NO_INT);
+                    info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                    info.stock_acco = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_STR);
+                    info.stock_acco_name = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_NAME_STR);
+                    info.stock_acco_status = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_STATUS_STR);
+                    info.stock_acco_apoint_status = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_APOINT_STATUS_STR);
+                    pdsecuL_7_1_InfoList.Add(info);
+                }
+            }
+        }
+    }
+
+    public class pdsecuL_7_11_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_11_Response()
+        {
+            this.pdsecuL_7_11_InfoList = new ObservableCollection<pdsecuL_7_11_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_11_Info> pdsecuL_7_11_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_11_Info info = new pdsecuL_7_11_Info();
+            pdsecuL_7_11_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_11_InfoList.Add((pdsecuL_7_11_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_归档产品证券数据
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_11_Info();
+                pdsecuL_7_11_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_12_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_12_Response()
+        {
+            this.pdsecuL_7_12_InfoList = new ObservableCollection<pdsecuL_7_12_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_12_Info> pdsecuL_7_12_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_12_Info info = new pdsecuL_7_12_Info();
+            pdsecuL_7_12_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_12_InfoList.Add((pdsecuL_7_12_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_初始化产品证券数据
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_12_Info();
+                pdsecuL_7_12_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_13_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_13_Response()
+        {
+            this.pdsecuL_7_13_InfoList = new ObservableCollection<pdsecuL_7_13_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_13_Info> pdsecuL_7_13_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_13_Info info = new pdsecuL_7_13_Info();
+            pdsecuL_7_13_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_13_InfoList.Add((pdsecuL_7_13_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_更新港股通待入账记录
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_13_Info();
+                pdsecuL_7_13_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_14_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_14_Response()
+        {
+            this.pdsecuL_7_14_InfoList = new ObservableCollection<pdsecuL_7_14_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_14_Info> pdsecuL_7_14_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_14_Info info = new pdsecuL_7_14_Info();
+            pdsecuL_7_14_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_14_InfoList.Add((pdsecuL_7_14_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_更新估值资产
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_14_Info();
+                pdsecuL_7_14_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_15_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_15_Response()
+        {
+            this.pdsecuL_7_15_InfoList = new ObservableCollection<pdsecuL_7_15_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_15_Info> pdsecuL_7_15_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_15_Info info = new pdsecuL_7_15_Info();
+            pdsecuL_7_15_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_15_InfoList.Add((pdsecuL_7_15_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_更新港股通结算汇率
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_15_Info();
+                pdsecuL_7_15_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_16_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_16_Response()
+        {
+            this.pdsecuL_7_16_InfoList = new ObservableCollection<pdsecuL_7_16_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_16_Info> pdsecuL_7_16_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_16_Info info = new pdsecuL_7_16_Info();
+            pdsecuL_7_16_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_16_InfoList.Add((pdsecuL_7_16_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_同步产品信息
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_16_Info();
+                pdsecuL_7_16_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_17_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_17_Response()
+        {
+            this.pdsecuL_7_17_InfoList = new ObservableCollection<pdsecuL_7_17_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_17_Info> pdsecuL_7_17_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_17_Info info = new pdsecuL_7_17_Info();
+            pdsecuL_7_17_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_17_InfoList.Add((pdsecuL_7_17_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_同步资产所需证券代码信息
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_17_Info();
+                pdsecuL_7_17_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pdsecuL_7_18_Response : IResponse
+    {
+        #region 构造函数
+        public pdsecuL_7_18_Response()
+        {
+            this.pdsecuL_7_18_InfoList = new ObservableCollection<pdsecuL_7_18_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pdsecuL_7_18_Info> pdsecuL_7_18_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pdsecuL_7_18_Info info = new pdsecuL_7_18_Info();
+            info.stock_acco_no = unpacker.GetInt("stock_acco_no");
+            pdsecuL_7_18_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pdsecuL_7_18_InfoList.Add((pdsecuL_7_18_Info)info);
+        }
+        #endregion
+
+        //逻辑_产品证券_账户运维_新增证券账户信息
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pdsecuL_7_18_Info();
+                info.stock_acco_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_ACCO_NO_INT);
+                pdsecuL_7_18_InfoList.Add(info);
+            }
+        }
+    }
+
+}

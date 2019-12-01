@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_stock_multiorder_unit_panel" >
+     <img pos="0,0,-0,-0" image="skins\default\UnitBack.png" mode="extrude" framesize="2" width-lt="5"  height-lt="5"  width-rb="5"  height-rb ="5"  show="1" response="0"/>
+	 <chkbtn name="multi.unitpanel.checkbutton" align="left" title="" skin="IDB_CHECK_BOX" pos="0,0,18,18" crtext="191919" show="1" check="true" showfocus="0"/>	  
+	 <text name="multil.unitpanel.code" notiyDown="1" crtext="000000" crmark="800000" align="left" pos="20,5,-0,28" title="51800811" font="default1" show="0" />
+     <text name="multil.unitpanel.name" notiyDown="1" crtext="000000" crmark="800000" align="left" pos="20,5,-0,-0" title="缺省交易单元" font="default1" show="1" />
+     <text name="multil.unitpanel.stockact" notiyDown="1" crtext="000000" crmark="800000" align="right" pos="120,5,-0,28" title="" font="default1" show="0" />
+    
+    <!--资金小提示-->
+     <text name="multil.unitpanel.img.money" crtext="000000" crmark="800000" align="center" pos="-30,1,-0,20" image="skins\default\MONEY_BIG.png"  title="" tip="" font="default1" show="0" />   
+     <text name="multil.unitpanel.img.nomoney" crtext="000000" crmark="800000" align="center" pos="-30,1,-0,20" image="skins\default\NO_MONEY_BIG.png"  title="" tip="" font="default1" show="0" />   
+     <text name="multil.unitpanel.img.nohold" crtext="000000" crmark="800000" align="center" pos="-30,1,-0,20" image="skins\default\NO_HOLD_BIG.png"  title="" tip="" font="default1" show="0" />   
+ 	 <text name="multil.unitpanel.img.hold" crtext="000000" crmark="800000" align="center" pos="-30,1,-0,20" image="skins\default\HOLD_BIG.png"  title="" tip="" font="default1" show="0" />    	
+	<text name="multil.unitpanel.available" notiyDown="1" crtext="000000" crmark="800000" align="left" pos="20,25,-5,45" title="" font="default1" show="1" />	
+ 	 <text name="multil.unitpanel.amt" notiyDown="1" crtext="000000" crmark="800000" align="left" pos="20,45,-5,65" title="" font="default1" show="1" />
+	 
+     <text name="multil.unitpanel.img.sell_mark" crtext="000000" crmark="800000" align="center" pos="2,-30,28,-10" image="skins\default\sell_mark.png"  title="" tip="" font="default1" show="1" />   
+     <text name="multil.unitpanel.img.buy_mark" crtext="000000" crmark="800000" align="center" pos="2,-30,28,-10" image="skins\default\buy_mark.png"  title="" tip="" font="default1" show="1" />     
+     <text name="multil.unitpanel.qty" notiyDown="1" crtext="cf0f0f" crmark="800000" align="left" pos="20,55,-0,-0" title="5000" font="biggest" show="1" />   
+   </div>

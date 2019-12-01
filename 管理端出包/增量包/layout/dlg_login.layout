@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_login" title="[APP_NAME]" width="677" height="338"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+		<button name="button.min" pos="-69,0,-37,29" skin="IDB_BT_MIN" show="1" tip="最小化" />
+		<button name="button.setup" pos="-104,0,-73,29" skin="IDB_BT_SETUP" show="1" tip="网络设置" />
+	</base>
+
+	<body>
+		<img pos="0,0,-0,-0" image="skins\login.png" mode="extrude" framesize="1" show="1" response="0" />
+		<div pos="374,98,-0,-0">
+			<combobox name="login_username" tabstop="1" skin="IDB_EDIT" pos="27,0" width="237" height="38" tip="请输入用户名"
+				  head-image="skin:IDB_COMBO_ITEM" del-image="skin:IDB_COMBO_ITEM_CLOSE" left-image="skin:IDB_USERNAME" small-image="skin:IDB_DROP_DOWN"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" entrer_selectall="1">
+			</combobox>
+			<edit name="login_password" tabstop="1" skin="IDB_EDIT" pos="27,46" width="237" height="38" password="1" tip="请输入密码"
+				  left-image="skin:IDB_EDIT_PWD" 
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" entrer_selectall="1" />
+			<edit name="login_vcode" tabstop="1" skin="IDB_EDIT" small-image="" pos="27,92" width="135" height="38" 
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" entrer_selectall="1"/>
+			<verificationcode name="login_verificationcode" pos="163,94" width="100" height="34"/>
+			<button name="login_btn_ok" tabstop="1" skin="IDB_BT_OK" title="[LOGIN]" pos="27,145" width="114" height="32" show="1" crtext="FFFFFF" font="default3" defaultbutton="1"/>
+			<button name="login_btn_cancel" tabstop="0" skin="IDB_BT_CANCEL" title="[EXIT]" pos="149,145" width="114" height="32" show="1" font="default3" shortcut="ESC" />
+			<text name="login_step_info" crtext="FFFFFF" crmark="800000" align="left" pos="27,190,263,210" title="" font="default1" show="1"/>
+		</div>
+
+		<!--div name="footer" pos="0,-26,-0,-0" >
+			<hidebtn name="checkversion" pos="10,2,150,-0" show="1" text="版本：[APP_VER]" crtip="ffffff"  title="检查更新" crtext="9090ff" action=""/>
+		</div-->
+
+	</body>
+  
+</dlg>

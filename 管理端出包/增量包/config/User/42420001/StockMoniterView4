@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FontSize="12">
+  <SingleColumn Content="订单编号" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="0" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" Width="46" displayIndex="1" />
+  <SingleColumn Content="交易组" IsVisiblity="true" isTotalRow="false" Width="58" displayIndex="2" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="3" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="4" />
+  <SingleColumn Content="订单价格" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="5" />
+  <SingleColumn Content="订单数量" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="6" />
+  <SingleColumn Content="订单方向" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="7" />
+  <SingleColumn Content="订单状态" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="8" />
+  <SingleColumn Content="成交数量" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="9" />
+</ColumnSetClass>

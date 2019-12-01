@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="clsecuT.2.1" procedurename="prt_clsecl_AddOutBusi" paras="64"/>
+    <func funcname="clsecuT.2.3" procedurename="prt_clsecl_QueryOutBusi" paras="23"/>
+    <func funcname="clsecuT.2.5" procedurename="prt_clsecl_UpdateBusiClearFlag" paras="11"/>
+    <func funcname="clsecuT.2.6" procedurename="prt_clsecl_AddFundPreEntryRecord" paras="65"/>
+    <func funcname="clsecuT.2.11" procedurename="prt_clsecl_DealClear" paras="21"/>
+    <func funcname="clsecuT.2.12" procedurename="prt_clsecl_UpdateGetMergeClear" paras="69"/>
+    <func funcname="clsecuT.2.13" procedurename="prt_clsecl_UpdateMergeClearFlag" paras="11"/>
+    <func funcname="clsecuT.2.14" procedurename="prt_clsecl_QueryMergeClear" paras="14"/>
+    <func funcname="clsecuT.2.15" procedurename="prt_clsecl_DealMergeClear" paras="72"/>
+    <func funcname="clsecuT.2.21" procedurename="prt_clsecl_UpdatePreEntryEntryStatus" paras="12"/>
+    <func funcname="clsecuT.2.22" procedurename="prt_clsecl_UpdatePreEntryUndoStatus" paras="13"/>
+    <func funcname="clsecuT.2.23" procedurename="prt_clsecl_UpdatePreEntry" paras="13"/>
+    <func funcname="clsecuT.2.24" procedurename="prt_clsecl_UpdateGetPreEntry" paras="67"/>
+    <func funcname="clsecuT.2.25" procedurename="prt_clsecl_UpdateGetPreEntryUndo" paras="62"/>
+    <func funcname="clsecuT.2.26" procedurename="prt_clsecl_QueryPreEntry" paras="22"/>
+    <func funcname="clsecuT.2.27" procedurename="prt_clsecl_DealEntryError" paras="20"/>
+    <func funcname="clsecuT.2.28" procedurename="prt_clsecl_UpdateEntryJour" paras="13"/>
+    <func funcname="clsecuT.2.29" procedurename="prt_clsecl_DealEntryJourUndo" paras="17"/>
+    <func funcname="clsecuT.2.30" procedurename="prt_clsecl_GetPreEntryInfo" paras="15"/>
+    <func funcname="clsecuT.2.201" procedurename="prt_clsecl_DataTotal" paras="10"/>
+    <func funcname="clsecuT.2.202" procedurename="prt_clsecl_QueryTotalData" paras="18"/>
+    <func funcname="clsecuT.2.203" procedurename="prt_clsecl_GetClrTotalData" paras="14"/>
+    <func funcname="clsecuT.2.204" procedurename="prt_clsecl_QueryClearStrikeId" paras="11"/>
+    <func funcname="clsecuT.2.205" procedurename="prt_clsecl_QueryMergeClearId" paras="11"/>
+    <func funcname="clsecuT.2.206" procedurename="prt_clsecl_QueryPreEntryId" paras="11"/>
+    <func funcname="clsecuT.2.207" procedurename="prt_clsecl_AutoDealClear" paras="21"/>
+    <func funcname="clsecuT.2.208" procedurename="prt_clsecl_AutoUpdateGetMergeClear" paras="69"/>
+    <func funcname="clsecuT.2.209" procedurename="prt_clsecl_AutoUpdateGetPreEntry" paras="67"/>
+    <func funcname="clsecuT.2.210" procedurename="prt_clsecl_ASharePreEntryCheck" paras="13"/>
+</funcs>

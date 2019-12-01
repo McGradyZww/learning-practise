@@ -1,0 +1,67 @@
+<!--指令撤销二次确认框：-->
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="funcl_command_multicancel_confirm" title="" width="850" height="550"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="指令撤销二次确认" response="0" show="1" />
+	</base>
+	
+	<body>
+		<div name="funcl_command_multicancel_confirm.body" pos="0,30,-0,-0">
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		
+      <!--指令信息明细grid-->
+			<gridctrl name="grid.stockorder_command_confirm.detail" pos="5,5,-5,-62" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image="" sort="1" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+		<column title="指令序号" width="100" align="center" key="command_id"  deletable="0" data_type="N" />         
+        <column title="产品名称" width="100" align="center" key="product_name" />                
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="指令方向" width="100" align="center" key="command_dir" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="right" key="command_qty" data_type="T" />
+        <column title="指令金额" width="100" align="right" key="command_amt" data_type="T" />
+        <column title="订单数量" width="100" align="right" key="order_qty" data_type="T" />
+        <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" />
+        <column title="成交数量" width="100" align="right" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="right" key="execution_amt" data_type="T" />
+        <column title="指令状态" width="100" align="center" key="command_status" />
+        <column title="成交状态" width="100" align="center" key="execution_status" />
+        <column title="指令执行人" width="100" align="center" key="command_executor" />        
+        <column title="市场编号" width="100" align="center" key="exchange_no" data_type="N" />
+        <column title="批号" width="100" align="center" key="batch_no" data_type="N" />
+        <column title="指令日期" width="100" align="center" key="command_date" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N"/>
+         <column title="指令完成时间" width="100" align="center" key="command_complete_time" data_type="N"/>
+        <!--column title="指令开始日期" width="100" align="center" key="command_begin_date" />
+        <column title="指令开始时间" width="100" align="center" key="command_begin_time" />
+        <column title="指令结束日期" width="100" align="center" key="command_end_date" />
+        <column title="指令结束时间" width="100" align="center" key="command_end_time" />-->
+        <column title="指令下达人" width="100" align="center" key="command_operator" />
+        <!--<column title="资产类型" width="100" align="center" key="asset_type" />-->           
+        <!--<column title="订单冻结金额" width="100" align="center" key="order_frozen_amt" />-->
+		<column title="交易单元名称" width="100" align="center" key="unit_name" />
+		<column title="产品编码" width="100" align="center" key="product_code" />
+		<column title="交易单元" width="100" align="center" key="unit_code" />
+		<column title="序号" width="0" align="center" key="row_id" /> 
+			</gridctrl>             
+     	
+     	<!--分割线-->
+      <img pos="1,-63,-1,-60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       
+      <!--提示文字、确认、取消按钮-->
+      <text crtext="000000" crmark="800000" align="left" pos="5,-45,255,-15" title="请确认是否撤销本指令?" font="default4" show="1" />
+      <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="-205,-50,-75,-10" font="default3" crtext="FFFFFF" show="1" defaultbutton="1"/>
+	  	<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-70,-50,-10,-10" font="default3" show="1" defaultbutton="1"/>
+		</div>
+	</body>
+</dlg>

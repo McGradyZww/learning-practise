@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.25.8" procedurename="prt_trdif_CheckBatchFundTransMarketStatusAuthOper" paras="78"/>
+    <func funcname="pubT.25.9" procedurename="prt_trdif_CheckFundBatchApprMarketStatusAuthOper" paras="83"/>
+    <func funcname="pubT.25.10" procedurename="prt_trdif_CheckFundTransApprMarketStatusAuthOper" paras="56"/>
+    <func funcname="pubT.25.11" procedurename="prt_trdif_CheckApprMarketStatusAuthOper" paras="62"/>
+    <func funcname="pubT.25.12" procedurename="prt_trdif_CheckBatchApprMarketStatusAuthOper" paras="64"/>
+    <func funcname="pubT.25.13" procedurename="prt_trdif_CheckSecuApprProp" paras="39"/>
+    <func funcname="pubT.25.14" procedurename="prt_trdif_CheckApprDispSysStatusAuthOper" paras="19"/>
+    <func funcname="pubT.25.20" procedurename="prt_trdif_CheckFundTransExchMarketStatusAuthOper" paras="54"/>
+    <func funcname="pubT.25.21" procedurename="prt_trdif_CheckExchMarketStatus" paras="11"/>
+    <func funcname="pubT.25.22" procedurename="prt_trdif_CheckExchMarketStatusAuthOper" paras="60"/>
+    <func funcname="pubT.25.23" procedurename="prt_trdif_CheckBatchExchMarketStatusAuthOper" paras="59"/>
+    <func funcname="pubT.25.24" procedurename="prt_trdif_CheckModiOrderAuthOper" paras="48"/>
+    <func funcname="pubT.25.25" procedurename="prt_trdif_CheckSecuExchProp" paras="39"/>
+    <func funcname="pubT.25.26" procedurename="prt_trdif_CheckSysStatusAuthOperExchBusi" paras="49"/>
+    <func funcname="pubT.25.27" procedurename="prt_trdif_CheckSysStatusExchBusi" paras="50"/>
+    <func funcname="pubT.25.31" procedurename="prt_trdif_CheckRspBusiControl" paras="30"/>
+    <func funcname="pubT.25.32" procedurename="prt_trdif_CheckStrikeRspBusiControl" paras="37"/>
+    <func funcname="pubT.25.132" procedurename="prt_trdif_CheckMarketStatusAuthOperRightsStr" paras="17"/>
+    <func funcname="pubT.25.151" procedurename="prt_trdif_CheckTraderAuthOper" paras="15"/>
+    <func funcname="pubT.25.152" procedurename="prt_trdif_CheckTraderAuthBatchOper" paras="16"/>
+    <func funcname="pubT.25.153" procedurename="prt_trdif_CheckCommExecutorAuthOper" paras="16"/>
+    <func funcname="pubT.25.154" procedurename="prt_trdif_CheckOporAuth" paras="15"/>
+    <func funcname="pubT.25.155" procedurename="prt_trdif_CheckOporAuthBatch" paras="16"/>
+    <func funcname="pubT.25.135" procedurename="prt_trdif_CheckFutuExchMarketStatusAuthOper" paras="31"/>
+    <func funcname="pubT.25.136" procedurename="prt_trdif_CheckFutuCommMarketStatusAuthOper" paras="34"/>
+    <func funcname="pubT.25.137" procedurename="prt_trdif_CheckSysStatusFutuExchBusi" paras="31"/>
+    <func funcname="pubT.25.230" procedurename="prt_trdif_CheckFutuRspBusiControl" paras="16"/>
+    <func funcname="pubT.25.231" procedurename="prt_trdif_CheckExchMarketStatusAuthOperNoOperatorCheck" paras="51"/>
+    <func funcname="pubT.25.232" procedurename="prt_trdif_CheckTrdSysStatusAuth" paras="11"/>
+    <func funcname="pubT.25.233" procedurename="prt_trdif_GetOperLoginInfo" paras="14"/>
+    <func funcname="pubT.25.234" procedurename="prt_trdif_FinaLoanGetBrokerMarginRadio" paras="17"/>
+    <func funcname="pubT.25.235" procedurename="prt_trdif_CheckExchMarketStatusAuthOperWithoutPwd" paras="59"/>
+    <func funcname="pubT.25.236" procedurename="prt_trdif_CheckSecuProp" paras="25"/>
+</funcs>

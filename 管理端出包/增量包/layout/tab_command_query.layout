@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_command_query" image="skin:IDB_TAB_ITEM" active="true" title="指令查询" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<button name="button.command_query_float" title="" pos="-26,0" width="23" height="23" skin="IDB_BT_DRAGFLOAT" tip="浮动" show="1" />
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_command_query.all" pos="8,12,-8,-10" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+					
+				<tab name="tab_command_query.exchange" image="skin:IDB_TAB_LOW_ITEM" title="证券指令查询" active="true" pos="0,30,-0,-0" menuno="61020401">
+					
+					<div name="funcl_stock_instruction_query_grid_command" pos="4,10,-4,-255" placement="funcl_stock_instruction_query_grid_command"/>
+
+					<tabctrl name="tabctrl.command_query_info" pos="4,-250,-4,-0" img-sep="" img-hover=""
+							img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+							font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+							<tab name="funcl_stock_instruction_query_info" image="skin:IDB_TAB_INSIDE_ITEM" title="指令信息" active="true" pos="0,24,-0,-0" >
+								<div name="funcl_stock_instruction_query_info" pos="0,0,-4,-0" placement="funcl_stock_instruction_query_info"/>
+							</tab>			
+							<tab name="funcl_stock_instructionstock_query_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="指令证券" pos="0,28,-0,-0" >
+							<div name="funcl_stock_instructionstock_query_grid" pos="0,0,-4,-0" placement="funcl_stock_instructionstock_query_grid"/>
+							</tab>
+							<tab name="funcl_stockeorder_query_grid_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令订单" pos="0,28,-0,-0" >
+							<div name="funcl_stockeorder_query_grid_tab" pos="0,0,-4,-0" placement="funcl_stockeorder_query_grid_tab"/>
+							</tab>
+							<tab name="funcl_stockbbusin_query_grid_ins" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交" pos="0,28,-0,-0" >
+							<div name="funcl_stockbbusin_query_grid_ins" pos="0,0,-4,-0" placement="funcl_stockbbusin_query_grid_ins"/>
+							</tab>				
+					</tabctrl>
+					
+					<splitctrl pos="0,-255,-0,-250" splitstyle="0" minpos="200" maxpos="-200" leftctrl="funcl_stock_instruction_query_grid_command" rightctrl="tabctrl.command_query_info"/>
+						
+				</tab>
+					
+				<!--tab name="tab_command_query.2" image="skin:IDB_TAB_LOW_ITEM" title="期货指令查询" pos="0,30,-0,-0" menuno="61020402">
+					<text pos="50,20,-2,40" crtext="808080" title="该业务正在实现中，敬请期待。。。。。。"/>
+				</tab>
+					
+				<tab name="tab_command_query.3" image="skin:IDB_TAB_LOW_ITEM" title="融资融券指令查询" pos="0,30,-0,-0" menuno="61020403">
+					<text pos="50,20,-2,40" crtext="808080" title="该业务正在实现中，敬请期待。。。。。。"/>
+				</tab-->
+		</tabctrl>
+	</tab>
+</tabctrl>

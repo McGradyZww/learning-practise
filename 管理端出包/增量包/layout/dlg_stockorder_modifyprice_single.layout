@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_stockorder_modifyprice_single" title="" width="300" height="400"  appwin="0" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						
+	    <text pos="0,25" height="20" width="80" align="right" font="default1" crtext="191919" title="交易账户:" />
+      <text name="dlg_stockorder_product_code" pos="85,25" height="20" width="215" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="0,55" height="20" width="80" align="right" font="default1" crtext="191919" title="证券代码:" />
+      <text name="dlg_stockorder_stock_code" pos="85,55" height="20" width="50" align="left" font="default1" crtext="00a0ea" title="" />
+      <text name="dlg_stockorder_stock_name" pos="140,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="0,85" height="20" width="80" align="right" font="default1" crtext="191919" title="订单方向:" />
+      <text name="dlg_stockorder_dir" pos="85,85" height="20" width="150" align="left" font="bold1" crtext="00a0ea" title="" />
+      <text pos="0,115" height="20" width="80" align="right" font="default1" crtext="191919" title="成交数量:" />
+      <text name="dlg_stockorder_execution_qty" pos="85,115" height="20" width="150" align="left" font="bold1" crtext="00a0ea" title="" />  
+      <text pos="0,145" height="20" width="80" align="right" font="default1" crtext="191919" title="原订单数量:" />
+      <text name="dlg_stockorder_order_qty" pos="85,145" height="20" width="150" align="left" font="bold1" crtext="00a0ea" title="" />
+   		<text pos="0,175" height="20" width="80" align="right" font="default1" crtext="FF1919" title="新订单数量:" />
+      <edit name="modify_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="85,175" width="130" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="1" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" double="1" entrer_selectall="1" />     
+   		<text pos="0,205" height="20" width="80" align="right" font="default1" crtext="191919" title="原订单价格:" />
+      <text name="dlg_stockorder_order_price" pos="85,205" height="20" width="150" align="left" font="bold1" crtext="00a0ea" title="" />
+  	  <text pos="0,235" height="20" width="80" align="right" font="default1" crtext="FF1919" title="新价格:" />
+      <edit name="modify_order_price" tabstop="1" skin="IDB_EDIT" small-image="" pos="85,235" width="130" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" double="1" entrer_selectall="1" />
+     
+
+
+			<text pos="20,280" height="20" width="200" align="left" font="default1" crtext="ff0000" title="确认是否修改？" />
+		  <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" defaultbutton="1"/>
+		</div>
+		
+	</body>
+  
+</dlg>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <author></author>
+  <description></description>
+  <items>
+    <item key="1" value="无此功能。" />
+	<item key="101153" value="此用户不存在。" />
+	<item key="120039" value="认证账户被锁定。" />
+	<item key="120040" value="用户密码错误。" />
+	<item key="120062" value="用户无此站点操作权限。" />
+	<item key="99" value="密码校验错误	" />
+	<item key="-1" value="服务器连接错误。" />
+  </items>
+</resources>

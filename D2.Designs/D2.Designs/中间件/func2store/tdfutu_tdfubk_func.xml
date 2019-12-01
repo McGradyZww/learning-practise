@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.8.1" procedurename="prt_tdfubk_QueryOrder" paras="27"/>
+    <func funcname="tdfutuT.8.2" procedurename="prt_tdfubk_QueryOrder_His" paras="29"/>
+    <func funcname="tdfutuT.8.3" procedurename="prt_tdfubk_QueryOrderRsp" paras="21"/>
+    <func funcname="tdfutuT.8.4" procedurename="prt_tdfubk_QueryStrikeRsp" paras="20"/>
+    <func funcname="tdfutuT.8.5" procedurename="prt_tdfubk_QueryStrikeDetail" paras="23"/>
+    <func funcname="tdfutuT.8.6" procedurename="prt_tdfubk_QueryStrikeDetail_His" paras="23"/>
+    <func funcname="tdfutuT.8.7" procedurename="prt_tdfubk_QueryCancel" paras="21"/>
+    <func funcname="tdfutuT.8.80" procedurename="prt_tdfubk_QueryConoExceptionOrder" paras="11"/>
+    <func funcname="tdfutuT.8.81" procedurename="prt_tdfubk_QueryConoExceptionOrderCnt" paras="11"/>
+</funcs>

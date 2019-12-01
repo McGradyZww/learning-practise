@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_stock_command_confirm">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<img pos="1,0,-1,1" image="skins\default\line_split.png" mode="tile" show="1" response="0"/>			   
+		       
+		<text crtext="000000" crmark="800000" align="left" pos="10,10" width="62" height="18" title="订单数量" font="default1" show="1" />
+		<text name="stockorder_command_qty" crtext="000000" crmark="800000" align="left" pos="73,10"  width="102" height="18" title="0" font="default1"  />	
+		<text name="stock.multiorder.info.qtytotal_zh" crtext="000000" crmark="800000" align="left" pos="73,29" width="150" height="18" title="零" font="default1"  />	
+       
+		<text crtext="000000" crmark="800000" align="left" pos="176,10"  width="62" height="18" title="订单价格" font="default1" show="0" />       
+		<text name="stockorder_command_orderprice" crtext="000000" crmark="800000" align="left" pos="239,10" width="102" height="18" title="0.00" font="default1" show="0" />	
+	   
+		<text crtext="000000" crmark="800000" align="left" pos="176,10"  width="62" height="18" title="订单金额" font="default1" show="1" />
+		<text name="stockorder_command_orderamt" crtext="000000" crmark="800000" align="left" pos="239,10" width="102" height="18" title="0.00" font="default1"  />	
+		<text name="stock.multiorder.info.amttotal_zh" crtext="000000" crmark="800000" align="left" pos="239,29" width="150" height="18" title="零" font="default1"  />	
+	
+		<!----
+		<button name="stockorder_trade.stock.command.entrust" tabstop="1" skin="IDB_BT_OK" title="下单" pos="250,50" width="102" height="30"  shortcut="RETURN" crtext="ffffff" font="default1"/>	
+		<button name="stockorder_trade.stock.command.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取消" pos="353,50" width="50" height="30"  shortcut="RETURN" crtext="000000" font="default1"/>	
+		<button name="stockorder_trade.stock.single.risktest" tabstop="1"  skin="IDB_BT_RISKTEST" title="" pos="450,50" width="102" height="30" crtext="FFFFFF" />  
+		
+		<textbtn name="stockorder_trade.stock.command.paramset" tabstop="0" crtext='041998' crhover="091560" crpush='17236b' font="default5" pos="553,52" width="80" height="28"  title="参数定制" show="1" />
+		<img pos="553,79" width="80" height="1" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		---->
+	</div>

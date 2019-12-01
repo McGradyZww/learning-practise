@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="操作员" IsVisiblity="true" isTotalRow="false" Width="110" displayIndex="0" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" Width="109" displayIndex="1" />
+  <SingleColumn Content="交易组" IsVisiblity="true" isTotalRow="false" Width="114" displayIndex="2" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" Width="87" displayIndex="3" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" Width="95" displayIndex="4" />
+  <SingleColumn Content="订单方向" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="5" />
+  <SingleColumn Content="成交数量" IsVisiblity="true" isTotalRow="true" Width="91" displayIndex="6" />
+  <SingleColumn Content="成交金额" IsVisiblity="true" isTotalRow="true" Width="110" displayIndex="7" />
+  <SingleColumn Content="成交均价" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="8" />
+  <SingleColumn Content="行情成交数量" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="9" />
+  <SingleColumn Content="行情成交金额" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="10" />
+  <SingleColumn Content="行情成交均价" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="11" />
+  <SingleColumn Content="全部费用" IsVisiblity="true" isTotalRow="true" Width="87" displayIndex="12" />
+  <SingleColumn Content="印花税" IsVisiblity="true" isTotalRow="true" Width="72" displayIndex="13" />
+  <SingleColumn Content="过户费" IsVisiblity="true" isTotalRow="true" Width="58" displayIndex="14" />
+  <SingleColumn Content="经手费" IsVisiblity="true" isTotalRow="true" Width="58" displayIndex="15" />
+  <SingleColumn Content="证管费" IsVisiblity="true" isTotalRow="true" Width="58" displayIndex="16" />
+  <SingleColumn Content="其他费用" IsVisiblity="false" isTotalRow="true" Width="70" displayIndex="17" />
+  <SingleColumn Content="交易佣金" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="18" />
+  <SingleColumn Content="其他佣金" IsVisiblity="false" isTotalRow="true" Width="70" displayIndex="19" />
+  <SingleColumn Content="交易征费" IsVisiblity="false" isTotalRow="true" Width="70" displayIndex="20" />
+  <SingleColumn Content="交易费" IsVisiblity="false" isTotalRow="true" Width="58" displayIndex="21" />
+  <SingleColumn Content="交易系统使用费" IsVisiblity="false" isTotalRow="true" Width="106" displayIndex="22" />
+  <SingleColumn Content="股份交收费" IsVisiblity="false" isTotalRow="true" Width="82" displayIndex="23" />
+  <SingleColumn Content="债券计提利息" IsVisiblity="false" isTotalRow="true" Width="94" displayIndex="24" />
+  <SingleColumn Content="成交债券计提利息" IsVisiblity="false" isTotalRow="true" Width="118" displayIndex="25" />
+</ColumnSetClass>

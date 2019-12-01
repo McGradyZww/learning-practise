@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="0" />
+  <SingleColumn Content="订单方向" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="1" />
+  <SingleColumn Content="成交编号" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="2" />
+  <SingleColumn Content="成交时间" IsVisiblity="true" isTotalRow="false" Width="73.673333333333332" displayIndex="3" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="4" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="5" />
+  <SingleColumn Content="成交价格" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="6" />
+  <SingleColumn Content="成交数量" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="7" />
+  <SingleColumn Content="成交金额" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="8" />
+  <SingleColumn Content="全部费用" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="9" />
+  <SingleColumn Content="成本价" IsVisiblity="true" isTotalRow="false" Width="58" displayIndex="10" />
+  <SingleColumn Content="冲抵数量" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="11" />
+</ColumnSetClass>

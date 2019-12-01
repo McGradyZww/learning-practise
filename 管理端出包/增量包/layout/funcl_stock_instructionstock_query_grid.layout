@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_instructionstock_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <gridctrl name="grid.funcl_stock_instructionstock_query" pos="2,5,-2,-4" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="指令方向" width="100" align="center" key="command_dir" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="center" key="command_qty" data_type="T" />
+        <column title="指令金额" width="100" align="center" key="command_amt" data_type="T" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        
+    </gridctrl>
+ 
+ 
+  </div>

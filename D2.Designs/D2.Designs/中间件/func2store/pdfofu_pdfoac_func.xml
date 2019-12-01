@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfofuT.1.901" procedurename="prt_pdfoac_GetMarketBusiRecordNo" paras="12"/>
+    <func funcname="pdfofuT.1.40" procedurename="prt_pdfoac_CheckFoFutuAccoExists" paras="14"/>
+    <func funcname="pdfofuT.1.41" procedurename="prt_pdfoac_AddFoFutuAccoInfo" paras="20"/>
+    <func funcname="pdfofuT.1.42" procedurename="prt_pdfoac_ModiFoFutuAccoInfo" paras="20"/>
+    <func funcname="pdfofuT.1.43" procedurename="prt_pdfoac_DeleteFoFutuAccoInfo" paras="17"/>
+    <func funcname="pdfofuT.1.44" procedurename="prt_pdfoac_QueryFoFutuAccoInfo" paras="17"/>
+    <func funcname="pdfofuT.1.45" procedurename="prt_pdfoac_QueryFoFutuAccoInfoJour" paras="17"/>
+    <func funcname="pdfofuT.1.46" procedurename="prt_pdfoac_QueryFoFutuAccoInfoJour_His" paras="18"/>
+    <func funcname="pdfofuT.1.47" procedurename="prt_pdfoac_UpdateFoFutuAccoStatus" paras="17"/>
+    <func funcname="pdfofuT.1.48" procedurename="prt_pdfoac_CheckFoFutuAccoStatus" paras="14"/>
+    <func funcname="pdfofuT.1.51" procedurename="prt_pdfoac_QueryFoFutuAccoList" paras="9"/>
+    <func funcname="pdfotuT.1.61" procedurename="prt_pdfoac_DealProdFutuInit" paras="9"/>
+    <func funcname="pdfotuT.1.62" procedurename="prt_pdfoac_DealProdFutuClose" paras="9"/>
+</funcs>

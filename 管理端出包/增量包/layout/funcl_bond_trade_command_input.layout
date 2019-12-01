@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_bond_trade_command_input" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       <text crtext="000000" crmark="800000" align="left" pos="20,20,82,38" title="交易账户" font="default1" show="1" />
+       
+       <combobox name="stockorder_product_code" tabstop="0" skin="IDB_EDIT" pos="84,16" width="150" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	   	 </combobox>
+		 <combobox name="stockorder_unit_code" tabstop="0" skin="IDB_EDIT" pos="234,16" width="150" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	   	 </combobox>
+       <combobox name="stockorder_asset_account" tabstop="0" skin="IDB_EDIT" pos="384,16" width="60" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	   	 </combobox>
+       <text crtext="000000" crmark="800000" align="left" pos="20,50,82,68" title="证券代码" font="default1" show="1" />
+       <editex name="stockorder_stock_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,46" width="150" height="26" skinextern="IDB_EDITEX" leftwidth="75" crextern="255,255,255" entrer_selectall="1"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="6"
+               font="default" crtext="0,0,0" changednotify="1" stockcode="1"/>	   
+			   
+       <text crtext="000000" crmark="800000" align="left" pos="20,80,82,98" title="指令方向" font="default1" show="1" />
+	  <radiobtn name="stockorder_radiobtnbuy" tabstop="1" title="" skin="IDB_BUTTON_BUY" pos="84,77,144,103" crtext="cf0f0f" show="1" check="true" showfocus="0" group="1" shortcut="B" enabledirkey="1" font="default1"/>
+	  <radiobtn name="stockorder_radiobtnsell" tabstop="1" title="" skin="IDB_BUTTON_SELL" pos="154,77,214,103" crtext="174590" show="1"  showfocus="0" group="1" shortcut="S" enabledirkey="1" font="default1"/>
+		
+		<!----
+       
+       <edit name="stockorder_order_price" tabstop="1" skin="IDB_EDIT" pos="84,106" width="107" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+              entrer_selectall="1" font="default" crtext="0,0,0" double="1" shortcutadjust="1" minvalue="0" />
+		--->
+		<text crtext="000000" crmark="800000" align="left" pos="20,110,82,128" title="指令限价" font="default1" show="1" />
+		<editex name="stockorder_order_price" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,106" width="130" height="26" skinextern="IDB_EDITEX" leftwidth="65" crextern="255,255,255" entrer_selectall="1" multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="8"
+               font="default" crtext="0,0,0" changednotify="1" double="1" settitle_notify="1"/>	
+			   
+       <button name="stockorder_trade.stock.single.top" tabstop="0" skin="IDB_BT_ADD" pos="215,106" width="26" height="26" crtext="FFFFFF" />
+	   <button name="stockorder_trade.stock.single.bottom" tabstop="0" skin="IDB_BT_SUBTRACT"  pos="242,106" width="26" height="26" crtext="FFFFFF" />
+       <text crtext="000000" crmark="800000" align="left" pos="269,110,289,128" title="元" font="default1" show="1"/>                 
+     
+		<text crtext="000000" crmark="800000" align="left" pos="20,140" width="62" height="18"  title="可用总量" font="default1" show="1" />
+		<edit name="stockorder_available_total" tabstop="1" skin="IDB_EDIT" pos="84,136" width="130" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+              entrer_selectall="1" font="default" crtext="0,0,0" double="1" thousands_digital="1" shortcutadjust="1" minvalue="0" disable="1" />
+		<button name="stockorder_trade.trade.all" title="全部" tabstop="0" skin="IDB_BT_BIG" pos="215,136" width="52" height="26" crtext="000000" />		
+		<button name="stockorder_trade.trade.quickqty1" title="1/5" tabstop="0" skin="IDB_BT_BIG" pos="84,166" width="45" height="26" crtext="000000" />
+		<button name="stockorder_trade.trade.quickqty2" title="1/4" tabstop="0" skin="IDB_BT_BIG" pos="130,166" width="45" height="26" crtext="000000" />
+		<button name="stockorder_trade.trade.quickqty3" title="1/3" tabstop="0" skin="IDB_BT_BIG" pos="176,166" width="45" height="26" crtext="00000" />
+		<button name="stockorder_trade.trade.quickqty4" title="1/2" tabstop="0" skin="IDB_BT_BIG" pos="222,166" width="45" height="26" crtext="000000" />		
+		
+		<text name="stockorder_order_qty_type" crtext="000000" crmark="800000" align="left" pos="20,200" width="62" height="18"  title="指令数量" font="default1" show="1" />
+		<edit name="stockorder_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,196" width="130" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" entrer_selectall="1"
+               font="default" crtext="0,0,0" double="1" shortcutadjust="1" thousands_digital="1" />
+       <button name="stockorder_trade.stockqty.top" tabstop="0" skin="IDB_BT_ADD" title="" pos="215,196" width="26" height="26" shortcut="" crtext="FFFFFF" />
+       <button name="stockorder_trade.stockqty.bottom" tabstop="0" skin="IDB_BT_SUBTRACT" title="" pos="242,196" width="26" height="26" shortcut="" crtext="FFFFFF" />
+       <text name="stockorder_text_order_qtyunit"  crtext="000000" crmark="800000" align="left" pos="269,200" width="52" height="26" title="张" font="default1" show="1" />
+            
+       <text name="stockorder_text_order_qtyamt" crtext="000000" crmark="800000" align="left" pos="20,230" width="62" height="18" title="全价金额" font="default1" show="1" />
+       <text name="stockorder_command_amt" crtext="f02d36" crmark="800000" align="left" pos="84,230" width="150" height="18" title="" font="default1" show="1" />
+	   
+	     <text crtext="000000" crmark="800000" align="left" pos="20,260" width="62" height="18" title="交易员" font="default1" show="1" />
+       <combobox name="bond.bond_execute_operator" tabstop="0" skin="IDB_EDIT" pos="84,256" width="130" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	   	 </combobox>
+	   	 
+	   	 <button name="button_operator_lock.trade" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="220,260" width="14" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		   <button name="button_operator_unlock.trade" tabstop="0" skin="IDB_BT_LOCK" title="" pos="220,260" width="14" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />	
+       
+       <text crtext="000000" crmark="800000" align="left" pos="20,260" width="62" height="18"  title="可用金额" font="default1" show="0" />
+       <text name="stockorder_text_order_avilibleamt" crtext="f02d36" crmark="800000" align="left" pos="84,260" width="150" height="18" title="" font="default1" show="0" />
+		
+		<div name="bond_more_info" pos="500,10,1050,290" show="1">
+	       <text name="ins_multi_more" title="债券信息" crtext='041998' crhover="091560" show="1" crpush='17236b' pos="40,0,120,18" font="default1"/>    
+	       <img pos="0,9,30,10" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="100,9,-0,10" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="0,10,1,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="-1,10,-0,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="0,-1,-0,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+			<!--债券属性-->   
+			<text crtext="000000" crmark="800000" align="left" pos="20,20" width="99" height="26" title="债券类型" font="default1" show="1" />
+			<text name="bond_type" crtext="000000" crmark="800000" align="left" pos="100,20" width="99" height="26" title="" font="default1" show="1" />	
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,50" width="99" height="26" title="债券期限" font="default1" show="1" />
+			<text name="bond_maturity" crtext="000000" crmark="800000" align="left" pos="100,50" width="99" height="26" title="" font="default1" show="1" />	
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,80" width="99" height="26" title="结束日期" font="default1" show="1" />
+			<text name="end_date" crtext="000000" crmark="800000" align="left" pos="100,80" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,110" width="99" height="26" title="剩余期限" font="default1" show="1" />
+			<text name="remaining_maturity" crtext="000000" crmark="800000" align="left" pos="100,110" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,140" width="99" height="26" title="发行价" font="default1" show="1" />
+			<text name="issue_price" crtext="000000" crmark="800000" align="left" pos="100,140" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,170" width="99" height="26" title="净价标志" font="default1" show="1" />
+			<text name="netprice_kind" crtext="000000" crmark="800000" align="left" pos="100,170" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,200" width="99" height="26" title="质押比例" font="default1" show="1" />
+			<text name="impawn_ratio" crtext="000000" crmark="800000" align="left" pos="100,200" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="300,20" width="99" height="26" title="利率类型" font="default1" show="1" />
+			<text name="bond_rate_type_name" crtext="000000" crmark="800000" align="left" pos="380,20" width="99" height="26" title="" font="default1" show="1" />	
+			
+			<text crtext="000000" crmark="800000" align="left" pos="300,50" width="99" height="26" title="付息周期" font="default1" show="1" />
+			<text name="pay_inteval" crtext="000000" crmark="800000" align="left" pos="380,50" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="300,80" width="99" height="26" title="年利率" font="default1" show="1" />
+			<text name="interest_ratio" crtext="000000" crmark="800000" align="left" pos="380,80" width="99" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="300,110" width="99" height="26" title="百元利息" font="default1" show="1" />
+			<text name="bond_interest" crtext="000000" crmark="800000" align="left" pos="380,110" width="120" height="26" title="" font="default1" show="1" />
+			
+			<text crtext="000000" crmark="800000" align="left" pos="300,140" width="99" height="26" title="下次起息日" font="default1" show="1" />
+			<text name="next_value_date" crtext="000000" crmark="800000" align="left" pos="380,140" width="99" height="26" title="" font="default1" show="1" />
+			
+		</div>
+       
+       <button name="stockorder_trade.stock.single.risktest" tabstop="0" skin="IDB_BT_RISKTEST" title="" pos="50,-38,152,-8" shortcut="" crtext="FFFFFF" />        
+       <!--button name="stockorder_trade.stock.single.entrust" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="162,-38,242,-8" shortcut="" crtext="FFFFFF" action="dlg:dlg_stockorder_btok.xml"/-->
+       <button name="stockorder_trade.stock.single.entrust" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="162,-38,242,-8" shortcut="" crtext="FFFFFF" defaultbutton="1" font="default1"/>
+	   <button name="stockorder_trade.stock.single.cancel" tabstop="1" skin="IDB_BT_SMALL" title="[CANCEL]" pos="252,-38,332,-8" show="1" font="default1"/>
+   	   <textbtn name="bondtrade_command.paramset" tabstop="0" crtext='041998' crhover="091560" crpush='17236b' font="default1" pos="372,-30,452,-8" title="参数定制" />
+   </div>

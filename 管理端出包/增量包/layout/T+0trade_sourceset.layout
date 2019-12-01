@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="T+0trade_sourceset" title="" width="750" height="700"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="券源设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="T+0trade_sourceset.body" pos="0,30,-0,-0">
+    	<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			<gridctrl name="grid.T+0trade_sourceset" pos="5,3,-5,-70" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP" 
+        img-check="" img-colsep="skin:IDB_LINE_SPLIT"
+        img-count="12" image="skin:IDB_T0TRADE_LIST_IMG"
+        left-pos="0" row-height="30" header-height="38" bk-transparent="100"
+        font-title="big" font="default2" 
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+				<column title="证券代码" width="80" key="stock_code" />
+				<column title="快捷键" width="80" key="shortcut_key" />
+				<column title="默认开仓数量" width="120" key="default_openqty" />
+				<column title="数量变动单位" width="120" key="qty_unit" />
+				<column title="单笔持仓比例上限(%)" width="160" key="ratio_upperlimit" />
+				<column title="单笔数量上限" width="100" key="qty_upperlimit" />
+				<column title="单笔金额上限" width="100" key="price_upperlimit" />
+				<column title="隐藏" width="80" key="show_or_hide" />
+				<column title="产品编码" width="100" key="product_code" />
+				<column title="交易单元" width="100" key="unit_code" />
+				<column title="资产账户" width="100" key="asset_account" />
+			</gridctrl>
+			<edit name="temp_edit" tabstop="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+               number="0" readonly="0" maxchar="50" font="default2" crtext="0,0,0" />
+               
+			<!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" font="default3" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" font="default3" show="1" />
+		</div>
+	</body>
+</dlg>

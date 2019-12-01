@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.6.1" procedurename="prt_tdfutdif_DealClearStrikeRsp" paras="46"/>
+    <func funcname="tdfutuT.6.2" procedurename="prt_tdfutdif_UpdateOneStrikeClearFlag" paras="12"/>
+    <func funcname="tdfutuT.6.3" procedurename="prt_tdfutdif_UpdateAllStrikeClearFlag" paras="11"/>
+    <func funcname="tdfutuT.6.4" procedurename="prt_tdfutdif_GetStrikeTotal" paras="14"/>
+    <func funcname="tdfutuT.6.11" procedurename="prt_tdfutdif_DealClearOrder" paras="58"/>
+    <func funcname="tdfutuT.6.22" procedurename="prt_tdfutdif_UpdateOneOrderClearFlag" paras="12"/>
+    <func funcname="tdfutuT.6.23" procedurename="prt_tdfutdif_GetSwitchStrikeTotal" paras="12"/>
+    <func funcname="tdfutuT.6.24" procedurename="prt_tdfutdif_QueryStrikeRspId" paras="11"/>
+    <func funcname="tdfutuT.6.25" procedurename="prt_tdfutdif_AutoDealClearStrikeRsp" paras="46"/>
+</funcs>

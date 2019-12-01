@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.4.1" procedurename="prt_pdfupubif_GetFutuAccoNo" paras="14"/>
+    <func funcname="pdfutuT.4.2" procedurename="prt_pdfupubif_GetFutuAcco" paras="13"/>
+    <func funcname="pdfutuT.4.3" procedurename="prt_pdfupubif_CalcProdFutuCashAsset" paras="15"/>
+    <func funcname="pdfutuT.4.4" procedurename="prt_pdfupubif_CalcExchGroupFutuCashAsset" paras="16"/>
+    <func funcname="pdfutuT.4.5" procedurename="prt_pdfupubif_CalcProdFutuCashAssetValue" paras="16"/>
+    <func funcname="pdfutuT.4.6" procedurename="prt_pdfupubif_CalcExchGroupFutuCashAssetValue" paras="16"/>
+    <func funcname="pdfutuT.4.7" procedurename="prt_pdfupubif_GetContrcCodeLastPrice" paras="11"/>
+    <func funcname="pdfutuT.4.8" procedurename="prt_pdfupubif_UpdateFutuQuotLastPrice" paras="11"/>
+    <func funcname="pdfutuT.4.901" procedurename="prt_pdfupubif_QueryAsacCapital" paras="16"/>
+    <func funcname="pdfutuT.4.902" procedurename="prt_pdfupubif_QueryExgpCapital" paras="17"/>
+</funcs>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期初金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="计算金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="应付金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="利息积数" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="支付金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

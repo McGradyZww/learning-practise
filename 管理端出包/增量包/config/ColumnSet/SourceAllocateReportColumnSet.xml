@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" Width="50" displayIndex="0" />
+  <SingleColumn Content="交易组" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="1" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" Width="93" displayIndex="2" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="3" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" Width="123" displayIndex="4" />
+  <SingleColumn Content="交易市场" IsVisiblity="true" isTotalRow="false" Width="103" displayIndex="5" />
+  <SingleColumn Content="持仓数量" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="6" />
+  <SingleColumn Content="持仓市值" IsVisiblity="true" isTotalRow="true" Width="70" displayIndex="7" />
+  <SingleColumn Content="未分配券源数量" IsVisiblity="true" isTotalRow="true" Width="106" displayIndex="8" />
+  <SingleColumn Content="未分配券源市值" IsVisiblity="true" isTotalRow="true" Width="106" displayIndex="9" />
+  <SingleColumn Content="操作员名称" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="10" />
+  <SingleColumn Content="已分配券源数量" IsVisiblity="true" isTotalRow="true" Width="106" displayIndex="11" />
+  <SingleColumn Content="已分配券源市值" IsVisiblity="true" isTotalRow="true" Width="106" displayIndex="12" />
+</ColumnSetClass>

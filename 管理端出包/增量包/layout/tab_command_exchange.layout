@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_command_exchange" image="skin:IDB_TAB_ITEM" active="true" title="证券指令" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" />
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_command_exchange.low" pos="8,10,-8,-10" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >			
+					
+					<tab name="tab_command_exchange_single" image="skin:IDB_TAB_LOW_ITEM" title="个股指令" active="true" pos="0,30,-0,-0" menuno="61020101">					
+						<!--tabctrl name="tabctrl.command_query_info" pos="4,10,-4,-313" img-sep="" img-hover=""
+									img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+									font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+									<tab name="funcl_stock_instruction_query_grid_1" image="skin:IDB_TAB_INSIDE_ITEM" title="指令查询" active="true" pos="0,28,-0,-0" >
+									<div name="funcl_stock_instruction_query_grid_1" pos="0,0,-4,-0" placement="funcl_stock_instruction_query_grid_full"/>
+									</tab>			
+									<tab name="funcl_unitstock_query_grid_ins" image="skin:IDB_TAB_INSIDE_ITEM" title="持仓查询" pos="0,28,-0,-0" >
+									<div name="funcl_unitstock_query_grid_ins" pos="0,0,-4,-0" placement="funcl_unitstock_query_grid_ins"/>
+									</tab>										
+						</tabctrl-->
+						<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+						<layout name="tabctrl.command_query_info" layout-type="vertical" pos="4,10,-4,-313" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+							<layout-div name="layout-commandquery" div-pos="-650" min-pos="300">
+								<div name="funcl_stock_instruction_query_grid_1" pos="0,0,-0,-0" placement="funcl_stock_instruction_query_grid_full"/>
+							</layout-div>
+							<layout-div name="layout-commandholdquery" div-pos="-200" min-pos="100">
+								<div name="funcl_unitstock_query_grid_ins" pos="0,0,-0,-0" placement="funcl_unitstock_query_grid_ins"/>
+							</layout-div>
+						</layout>
+
+						<!--<div name="funcl_stock_instruction_query_grid" pos="4,10,-4,266" placement="funcl_stock_instruction_query_grid"/>
+						<div name="funcl_unitstock_query_grid_zl" pos="4,10,-4,266" placement="funcl_unitstock_query_grid_zl"/>-->
+						<div name="trade_stock.handicap" pos="4,-308,240,-0" placement="trade_stock_handicap"/>	
+						<div name="funcl_stock_instruction_input" pos="245,-308,-4,-0" placement="funcl_stock_instruction_input"/>
+						<!--div name="command_exchange_info" pos="4,305,304,-4" placement="funcl_stock_instruction_info"/-->
+
+					</tab>
+					
+					<tab name="tab_command_exchange_basket" image="skin:IDB_TAB_LOW_ITEM" title="平仓指令" pos="0,30,-0,-0" menuno="61020102" show="0">
+						<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+						<div name="funcl_unitstock_query_grid_insbasket" pos="4,10,-4,-300" placement="funcl_unitstock_query_grid_insbasket"/>
+					  <div name="funcl_stock_basketinstruction_input" pos="4,-300,300,-0" placement="funcl_stock_basketinstruction_input"/>
+					  <div name="funcl_stock_instruction_query_grid_basket" pos="300,-300,-4,-0" placement="funcl_stock_instruction_query_grid_basket"/>
+					</tab>
+					
+					<tab name="tab_command_exchange_multi" image="skin:IDB_TAB_LOW_ITEM" title="多账户个股指令" pos="0,30,-0,-0" menuno="61020103">
+						<!----
+						<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						----->	
+						<img pos="4,0,490,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" />							
+						<img pos="491,10,-4,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="1" show="1" response="0"/>	
+						<img pos="4,-360,-4,-350" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" />							
+						<!--
+						<layout name="split_multiunit" layout-type="horizontal" pos="0,0,-0,-0"
+						img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+							<layout-div name="layout-1" div-pos="-350" min-pos="180" >
+								<div name="funcl_ins_multiorder_unitquery" pos="0,10,-0,-0" placement="funcl_ins_multiorder_unitquery"/>
+							</layout-div>										
+							<layout-div name="layout-2" div-pos="-300" min-pos="200" >
+								<div name="trade_stock.handicap2" pos="4,0,200,-0" placement="trade_stock_handicap2"/>	
+								<div name="funcl_ins_multiorder_input" pos="205,0,485,-0" placement="funcl_ins_multiorder_input"/>
+								<div name="funcl_ins_multiorder_unitlist" pos="490,0,-0,-90" placement="funcl_ins_multiorder_unitlist"/>
+								<div name="funcl_ins_multiorder_confirm" pos="490,-90,-0,-0" placement="funcl_ins_multiorder_confirm"/>			
+							</layout-div>
+						</layout>
+						--->
+						<div name="funcl_ins_multiorder_unitquery" pos="4,10,-4,-360" placement="funcl_ins_multiorder_unitquery"/>
+						<div name="trade_stock.handicap2" pos="4,-350,200,-0" placement="trade_stock_handicap2"/>							
+						<div name="funcl_ins_multiorder_input" pos="205,-350,485,-0" placement="funcl_ins_multiorder_input"/>
+						<div name="funcl_ins_multiorder_unitlist" pos="490,-350,-4,-90" placement="funcl_ins_multiorder_unitlist"/>
+						<div name="funcl_ins_multiorder_confirm" pos="490,-90,-4,-0" placement="funcl_ins_multiorder_confirm"/>		
+						
+					</tab>
+				
+					<tab name="tab_command_exchange_manager" image="skin:IDB_TAB_LOW_ITEM" title="指令管理" pos="0,30,-0,-0" menuno="61020104">
+						<div name="funcl_stock_instruction_query_grid" pos="4,10,-4,-255" placement="funcl_stock_instruction_query_grid"/>
+
+						<tabctrl name="tabctrl.command_query_info" pos="4,-250,-4,-0" img-sep="" img-hover=""
+								img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+								font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+								<tab name="funcl_stock_instruction_query_info" image="skin:IDB_TAB_INSIDE_ITEM" title="指令信息" active="true" pos="0,24,-0,-0" >
+								<div name="funcl_stock_instruction_query_info" pos="0,0,-4,-0" placement="funcl_stock_instruction_query_info"/>
+								</tab>			
+								<tab name="funcl_stock_instructionstock_query_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="指令证券" pos="0,28,-0,-0" >
+								<div name="funcl_stock_instructionstock_query_grid" pos="0,0,-4,-0" placement="funcl_stock_instructionstock_query_grid"/>
+								</tab>
+								<tab name="funcl_stockeorder_query_grid_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令订单" pos="0,28,-0,-0" >
+								<div name="funcl_stockeorder_query_grid_tab" pos="0,0,-4,-0" placement="funcl_stockeorder_query_grid_tab"/>
+								</tab>
+								<tab name="funcl_stockbbusin_query_grid_ins" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交" pos="0,28,-0,-0" >
+								<div name="funcl_stockbbusin_query_grid_ins" pos="0,0,-4,-0" placement="funcl_stockbbusin_query_grid_ins"/>
+								</tab>				
+					</tabctrl>
+						
+					</tab>
+		</tabctrl>
+	</tab>
+</tabctrl>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockbbusin_query">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,11,-15,28" title="  成交查询" font="big" show="1" />-->
+    
+    <!--<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />-->
+    <gridctrl name="grid.funcl_stockbbusin_query" pos="2,5,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <!--<column title="机器日期" width="100" align="center" key="machine_date" />-->
+        <!--<column title="机构编号" width="100" align="center" key="company_no" />-->
+      
+        <column title="产品编码" width="100" align="center" key="product_code" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元" width="100" align="center" key="unit_code" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="申报日期" width="100" align="center" key="report_date" />
+        <column title="通道编号" width="100" align="center" key="channal_no" />
+        <column title="订单编号" width="100" align="center" key="order_no" data_type="N" />
+        <column title="订单日期" width="100" align="center" key="order_date" />
+        <column title="订单时间" width="100" align="center" key="order_time" data_type="N"/>
+        <column title="申报编号" width="100" align="center" key="report_no" />
+        <column title="资产账户" width="100" align="center" key="asset_account" />
+        <column title="股东代码" width="100" align="center" key="stock_account" />
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+        <column title="证券类型" width="100" align="center" key="stock_type" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="本币币种" width="100" align="center" key="currency_type" />
+        <column title="成交价格" width="100" align="center" key="execution_price" data_type="N" />
+        <column title="订单方向" width="100" align="center" key="order_dir" />
+        <column title="订单价格" width="100" align="center" key="order_price" data_type="N" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="成交日期" width="100" align="center" key="execution_date" />
+        <column title="成交时间" width="100" align="center" key="execution_time" data_type="N"/>
+         <column title="phao" width="100" align="center" key="batch_no" />
+        <column title="成交编号" width="100" align="center" key="execution_no" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <!--<column title="渠道税费" width="100" align="center" key="channel_fare" />-->
+        <column title="交易税费" width="100" align="center" key="brokerage_fare" data_type="T" />
+    </gridctrl>
+  </div>

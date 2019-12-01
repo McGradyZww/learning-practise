@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.9.1" procedurename="prt_pdsepobk_GetInFutuPosi" paras="23"/>
+    <func funcname="pdfutuT.9.2" procedurename="prt_pdfupobk_AddInFutuPosiCkeck" paras="32"/>
+    <func funcname="pdfutuT.9.3" procedurename="prt_pdfupobk_QueryFutuPosiDiff" paras="19"/>
+    <func funcname="pdfutuT.9.4" procedurename="prt_pdfupobk_DealFutuPosiDiff" paras="50"/>
+    <func funcname="pdfutuT.9.71" procedurename="prt_pdfupobk_QueryAsacPosi" paras="20"/>
+    <func funcname="pdfutuT.9.72" procedurename="prt_pdfupobk_QueryAsacPosi_His" paras="21"/>
+    <func funcname="pdfutuT.9.8" procedurename="prt_pdfupobk_GetOutPosiData" paras="31"/>
+    <func funcname="pdfutuT.9.9" procedurename="prt_pdfupobk_SynchronizedDiff" paras="33"/>
+    <func funcname="pdfutuT.9.10" procedurename="prt_pdfupobk_ClearOutPosiRecordDiffRecord" paras="11"/>
+</funcs>

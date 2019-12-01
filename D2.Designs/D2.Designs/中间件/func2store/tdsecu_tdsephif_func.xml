@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.9.1" procedurename="prt_tdsephif_GetCommInfo" paras="60"/>
+    <func funcname="tdsecuT.9.2" procedurename="prt_tdsephif_GetSumCommInfo" paras="69"/>
+    <func funcname="tdsecuT.9.3" procedurename="prt_tdsephif_GetTotalCommInfo" paras="122"/>
+    <func funcname="tdsecuT.9.11" procedurename="prt_tdsephif_GetExgpCashPosi" paras="48"/>
+    <func funcname="tdsecuT.9.12" procedurename="prt_tdsephif_GetAsacCashPosi" paras="47"/>
+    <func funcname="tdsecuT.9.13" procedurename="prt_tdsephif_GetCashPosi" paras="84"/>
+    <func funcname="tdsecuT.9.21" procedurename="prt_tdsephif_GetSumOrderStrike" paras="85"/>
+    <func funcname="tdsecuT.9.22" procedurename="prt_tdsephif_LoopGetOrderInfo" paras="57"/>
+    <func funcname="tdsecuT.9.23" procedurename="prt_tdsephif_LoopGetCancelInfo" paras="25"/>
+    <func funcname="tdsecuT.9.24" procedurename="prt_tdsephif_LoopGetCommInfo" paras="55"/>
+    <func funcname="tdsecuT.9.25" procedurename="prt_tdsephif_GetBatchOrderInfo" paras="11"/>
+    <func funcname="tdsecuT.9.26" procedurename="prt_tdsephif_GetBatchCommandInfo" paras="10"/>
+    <func funcname="tdsecuT.9.27" procedurename="prt_tdsephif_GetBatchCancelInfo" paras="10"/>
+    <func funcname="tdsecuT.9.28" procedurename="prt_tdsephif_GetCashImpawnPosi" paras="127"/>
+    <func funcname="tdsecuT.9.30" procedurename="prt_tdsephif_GetBondRepoInfo" paras="38"/>
+    <func funcname="tdsecuT.9.31" procedurename="prt_tdsephif_GetCash" paras="42"/>
+    <func funcname="tdsecuT.9.32" procedurename="prt_tdsephif_GetBatchAsacPosi" paras="13"/>
+    <func funcname="tdsecuT.9.33" procedurename="prt_tdsephif_GetBatchExgpPosi" paras="14"/>
+    <func funcname="tdsecuT.9.34" procedurename="prt_tdsephif_GetPendOrderInfo" paras="49"/>
+    <func funcname="tdsecuT.9.35" procedurename="prt_tdsephif_GetStockSourceInfo" paras="49"/>
+    <func funcname="tdsecuT.9.36" procedurename="prt_tdsephif_GetT0PosiDetail" paras="13"/>
+    <func funcname="tdsecuT.9.37" procedurename="prt_tdsephif_GetAccTotalInfo" paras="18"/>
+    <func funcname="tdsecuT.9.38" procedurename="prt_tdsephif_GetOpeatorAvailCapital" paras="14"/>
+    <func funcname="tdsecuT.9.39" procedurename="prt_tdsephif_GetOporTsholdSet" paras="39"/>
+    <func funcname="tdsecuT.9.40" procedurename="prt_tdsephif_GetT0SumPosi" paras="53"/>
+    <func funcname="tdsecuT.9.41" procedurename="prt_tdsephif_GetPreOrder" paras="48"/>
+    <func funcname="tdsecuT.9.42" procedurename="prt_tdsephif_GetComboTradeLog" paras="21"/>
+    <func funcname="tdsecuT.9.43" procedurename="prt_tdsephif_GetComboPosi" paras="39"/>
+    <func funcname="tdsecuT.9.44" procedurename="prt_tdsephif_GetComboIncome" paras="23"/>
+    <func funcname="tdsecuT.9.45" procedurename="prt_tdsephif_GetOrderInfo" paras="79"/>
+    <func funcname="tdsecuT.9.46" procedurename="prt_tdsephif_GetOporAllowExchGroupCapital" paras="31"/>
+    <func funcname="tdsecuT.9.47" procedurename="prt_tdsephif_GetOrderTotalInfo" paras="43"/>
+    <func funcname="tdsecuT.9.48" procedurename="prt_tdsephif_GetCancelInfo" paras="39"/>
+</funcs>

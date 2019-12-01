@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="操作员编号" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="股东代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易市场" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="券源数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="单笔限额数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易释放数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易占用数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="成交释放数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="成交占用数量" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="当日盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="隔夜盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计实现盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="总开仓费用" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="总平仓费用" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="外部交易释放数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="外部交易占用数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="外部成交释放数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="外部成交占用数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

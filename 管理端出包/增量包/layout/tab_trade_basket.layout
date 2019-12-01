@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_trade_basket" image="skin:IDB_TAB_ITEM" active="true" title="篮子委托" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<!--button name="button.command_query_float" title="" pos="-26,0" width="23" height="23" skin="IDB_BT_DRAGFLOAT" tip="浮动" show="1" /-->
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_trade_basket.third" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="tab_trade_basket.trade" image="skin:IDB_TAB_LOW_ITEM" title="篮子交易" active="true" pos="0,30,-0,-0" menuno="61030201">	
+						<div name="trade_stock.handicap" pos="4,10,240,308" placement="trade_stock_handicap"/>	
+						<div name="trade_basket_info" pos="4,314,240,-4" >
+						   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+				       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+				       <text pos="12,15" height="20" width="64" align="left" font="default1" crtext="191919" title="可用资金:" />
+				       <text name="available_amt" pos="80,15" height="20" width="100" align="right" font="default1" crtext="00a0ea" title="" />
+				       <text pos="12,45" height="20" width="64" align="left" font="default1" crtext="191919" title="价格类型:" />
+				       <text name="price_type" pos="80,45" height="20" width="100" align="right" font="default1" crtext="00a0ea" title="" />
+				       <text pos="12,75" height="20" width="64" align="left" font="default1" crtext="191919" title="订单笔数:" />
+				       <text name="row_count" pos="80,75" height="20" width="100" align="right" font="default1" crtext="00a0ea" title="" />
+				       <text pos="12,105" height="20" width="64" align="left" font="default1" crtext="191919" title="订单金额:" />
+				       <text name="current_amt" pos="80,105" height="20" width="100" align="right" font="default1" crtext="00a0ea" title="" />
+			       
+						</div>
+						<div name="basket_stockeorder_trade"  pos="244,10,-4,-4">
+					   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+							
+						 <text crtext="000000" crmark="800000" align="left" pos="20,10,86,28" title="交易账户:" font="default1" show="1" />
+				     <combobox name="stockorder_product_code" tabstop="0" skin="IDB_EDIT" pos="88,6" width="150" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128">
+				   	 </combobox>
+				     <combobox name="stockorder_unit_code" tabstop="0" skin="IDB_EDIT" pos="238,6" width="100" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128">
+				   	 </combobox>
+				     <combobox name="stockorder_asset_account" tabstop="0" skin="IDB_EDIT" pos="338,6" width="100" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128">
+				   	 </combobox>
+						 <text crtext="000000" crmark="800000" align="left" pos="450,10,486,28" title="篮子:" font="default1" show="1" />
+				     <combobox name="stockorder_basket" tabstop="0" skin="IDB_EDIT" pos="490,6" width="180" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128">
+				   	 </combobox>
+					 
+					 <button name="button_baseket_import_order" tabstop="1" skin="IDB_BT_BIG" title="导入篮子" pos="710,6,786,32" shortcut="RETURN" crtext="000000" font="default1"/>   
+					 
+					 
+	
+			       <text crtext="000000" crmark="800000" align="left" pos="20,40,82,58" title="订单方向" font="default1" show="1" />
+					   <radiobtn name="stockorder_radiobtnbuy" tabstop="1" title="买入" skin="IDB_radiobtn" pos="84,38,144,64" crtext="cf0f0f" show="1" check="true" showfocus="1" group="1" font="default1"/>
+					   <radiobtn name="stockorder_radiobtnsell" tabstop="1" title="卖出" skin="IDB_radiobtn" pos="154,38,214,64" crtext="174590" show="1"  showfocus="1" group="1" font="default1"/>
+
+						 <text crtext="000000" crmark="800000" align="left" pos="226,40,302,58" title="目标类型:" font="default1" show="1" />
+				     <combobox name="stockorder_basket_type" tabstop="0" skin="IDB_EDIT" pos="290,36" width="130" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="1" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="200"
+								font="default" crtext="0,0,0" crtip="128,128,128,128">
+				   	 </combobox>
+				   	 
+			       <edit name="stockorder_basket_qty" tabstop="1" skin="IDB_EDIT" pos="435,36" width="80" height="26"
+             multiline="0" autohscroll="1" autovscroll="1" double="1" readonly="0" maxchar="50"
+             font="default1" crtext="0,0,0" />
+						 <text name="basket_qty_unit" crtext="000000" crmark="800000" align="left" pos="520,40,552,58" font="default1" show="1" title="%" />
+						 <!--image="skins\default\editex.png"-->
+				   	 
+						 <button name="button_price_set" tabstop="1" skin="IDB_BT_BIG" title="价格参数" pos="560,36,635,62" shortcut="RETURN" crtext="0" font="default1"/>        
+						 <button name="button_calc_order" tabstop="1" skin="IDB_BT_BIG" title="计算" pos="645,36,701,62" shortcut="RETURN" crtext="0" font="default1"/>        
+						 <button name="button_baseket_order" tabstop="1" skin="IDB_BT_OK" title="订单下达" pos="710,36,786,62" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+						 <gridctrl name="grid.trade.stock.ordermsg" pos="792,36,-10,62" show="1"
+								        img-scroll="" img-scrollh="" img-sep=""
+								        img-check="" img-colsep=""
+								        img-count="2" image="skin:IDB_ORDERFLAG_LIST_IMG"
+								        left-pos="0" row-height="26" header-height="0" bk-transparent="100"
+								        font-title="big" font="default2"
+								        valign="middle" down-row="1" align="center"
+								        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254"  grid-tip="1">
+							      		<column title="标识" width="20" align="center" key="msg_index" />
+							      		<column title="信息" width="480" align="left" key="msg_info" />
+							      	 </gridctrl>		
+			       <img pos="1,70,-1,72" image="skins\default\line_split.png" mode="tile" show="1" response="0"/>
+			     	 <gridctrl name="grid.basketcompositionItem" pos="2,76,-2,-2" show="1"
+			        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+			        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+			        img-count="2" image="skin:IDB_PRICE_WARN_IMG" 
+			        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+			        font-title="big" font="default2" header-check="0"
+			        valign="middle" down-row="1" align="center"
+			        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+				        <column title="市场编号" width="120" align="center" key="exchange_no" />
+				        <column title="记录序号" width="0" align="center" key="row_id" />
+				        <column title="证券代码" width="100" align="center" key="stock_code" />
+				        <column title="证券名称" width="100" align="center" key="stock_name" />
+				        <column title="成分数量" width="100" align="center" key="composition_qty" />
+				        <column title=" 权  重 " width="100" align="center" key="composition_ratio" />
+				        <!--column title="替代代码" width="100" align="left" key="replace_stock_code" />
+				        <column title="替代名称" width="100" align="left" key="replace_stock_name" />
+				        <column title="替代数量" width="100" align="left" key="replace_qty" /-->
+						<column title="订单方向" width="100" align="center" key="order_dir" />
+				        <column title="订单价格" width="100" align="center" key="order_price" />
+				        <column title="订单数量" width="100" align="center" key="order_qty" />
+				        <column title="订单金额" width="100" align="center" key="order_amt" />
+			        
+				    	 </gridctrl>
+							
+						</div>
+				</tab>
+					
+					
+				<tab name="tab_trade_basket.ordermanage" image="skin:IDB_TAB_LOW_ITEM" title="篮子订单管理" pos="0,30,-0,-0" menuno="61030202">
+					<div name="funcl_stockorder_basket_grid" pos="4,10,-4,-373" placement="funcl_stockorder_basket_grid"/>
+					<div name="funcl_stockeorder_basket_composition_grid" pos="4,-368,-4,-0" placement="funcl_stockeorder_basket_composition_grid"/>
+				
+				</tab>
+								
+				<tab name="tab_trade_basket.businessquery" image="skin:IDB_TAB_LOW_ITEM" title="篮子成交查询" pos="0,30,-0,-0" menuno="61030203">
+					<div name="funcl_stockbbusin_query_grid" pos="4,10,-4,-4" placement="funcl_stockbbusin_query_grid"/>
+				</tab>
+		</tabctrl>
+	</tab>
+</tabctrl>

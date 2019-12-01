@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfofuT.5.2" procedurename="prt_pdfoclif_GetExgpNetAsset" paras="19"/>
+    <func funcname="pdfofuT.5.3" procedurename="prt_pdfoclif_GetAsacNetAsset" paras="19"/>
+    <func funcname="pdfofuT.5.55" procedurename="prt_pdfoclif_ClearCapitalRecorded" paras="20"/>
+    <func funcname="pdfofuT.5.56" procedurename="prt_pdfoclif_UndoClearCapitalRecorded" paras="14"/>
+    <func funcname="pdfofuT.5.57" procedurename="prt_pdfoclif_CoActionCapiatlRegDeal" paras="20"/>
+    <func funcname="pdfofuT.5.58" procedurename="prt_pdfoclif_UndoCoActionCapiatlReg" paras="13"/>
+    <func funcname="pdfofuT.5.59" procedurename="prt_pdfoclif_CoActionCapiatlRecordedDeal" paras="19"/>
+    <func funcname="pdfofuT.5.60" procedurename="prt_pdfoclif_FutuMarkedPandlAcco" paras="21"/>
+    <func funcname="pdfofuT.5.61" procedurename="prt_pdfoclif_UndoFutuMarkedPandlAcco" paras="13"/>
+    <func funcname="pdfofuT.5.74" procedurename="prt_pdfoclif_ClearPosiRecorded" paras="21"/>
+    <func funcname="pdfofuT.5.75" procedurename="prt_pdfoclif_UndoClearPosiRecorded" paras="13"/>
+    <func funcname="pdfofuT.5.76" procedurename="prt_pdfoclif_UpdatePosiSettInfo" paras="20"/>
+    <func funcname="pdfofuT.5.77" procedurename="prt_pdfoclif_UpdatePosiRealizePandl" paras="19"/>
+    <func funcname="pdfofuT.5.78" procedurename="prt_pdfoclif_GetAsacRegPosiQTY" paras="14"/>
+    <func funcname="pdfofuT.5.79" procedurename="prt_pdfoclif_GetAsacPosiInfo" paras="27"/>
+    <func funcname="pdfofuT.5.80" procedurename="prt_pdfoclif_AddDeli" paras="60"/>
+    <func funcname="pdfofuT.5.101" procedurename="prt_pdfoclif_ClearCapitalPosiRecorded" paras="26"/>
+    <func funcname="pdfofuT.5.102" procedurename="prt_pdfoclif_UndoClearCapitalPosiRecorded" paras="14"/>
+</funcs>

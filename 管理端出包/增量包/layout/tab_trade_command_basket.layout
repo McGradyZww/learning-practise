@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<tabctrl>
+	<tab name="tab_trade_command_basket" image="skin:IDB_TAB_ITEM" active="true" title="篮子指令交易" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0" />
+		<tabctrl name="tab_trade_command_basket.single" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0">
+			<tab name="tab_trade_stock.commandbakset" image="skin:IDB_TAB_LOW_ITEM" title="篮子指令交易" pos="0,30,-0,-0" active="true" menuno="61031101">
+				<img pos="4,7,-4,10" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />
+				
+				<layout name="tab_trade_command_basket.layout" layout-type="horizontal" pos="0,5,-0,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+				
+				
+				
+					<!--top layout-->
+					<layout-div name="tab_trade_command_basket_layout1" div-pos="-350" >
+						<layout name="tab_trade_command_basket_layout1.1" layout-type="vertical" pos="4,10,-4,-4" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+							<layout-div name="layout-orderquery" div-pos="-850" min-pos="300">
+								<div name="funcl_trade_command_basket_list" placement="funcl_trade_command_basket_list" pos="0,0,-0,-0" />
+							</layout-div>
+							<layout-div name="tab_trade_command_basket_layout1.2">
+								<div name="funcl_trade_command_basket_security_list" placement="funcl_trade_command_basket_security_list" pos="0,0,-0,-0" />
+							</layout-div>
+						</layout>
+					</layout-div>
+
+					
+					
+					
+					<!--bottom layout-->
+					<layout-div name="tab_trade_command_basket_layout2"  notify-scroll="1" min-pos="100">					
+						<!-- 期限 利率 百元利息
+						<div name="funcl_trade_command_more_bond_info" pos="4,-40,240,-0" placement="funcl_trade_command_more_bond_info" show="0" />
+						-->
+						<div name="funcl_trade_command_basket_input" pos="4,4,296,-0" placement="funcl_trade_command_basket_input" />		
+						<div name="trade_stock_handicap" pos="298,4,534,-0" placement="trade_stock_handicap" /> 
+					
+						<button name="buttonbasket.gird.shrink" pos="295,-30" width="25" height="25" skin="IDB_BT_SHRINK" tip="隐藏盘口" show="1" showfocus="0"/>
+						<button name="buttonbasket.gird.expand" pos="275,-30" width="25" height="25" skin="IDB_BT_EXPAND" tip="显示盘口" show="0" showfocus="0"/>
+						
+						<tabctrl name="tabctrl.command_query_info" pos="536,4,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+							<tab name="funcl_stockeorder_query_grid_ord_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="订单预览" active="true" pos="0,28,-0,-0">
+								<div name="funcl_trade_command_basket_preview" placement="funcl_trade_command_basket_preview" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_stockeorder_query_grid_batchsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令订单"  pos="0,28,-0,-0">
+								<div name="funcl_trade_command_basket_query" placement="funcl_trade_command_basket_query" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_stockbbusin_query_grid_sum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交汇总" div="funcl_stockeorder_query_grid_tab" pos="0,28,-0,-0">
+								<div name="funcl_trade_command_basket_tradingvolume" placement="funcl_trade_command_basket_tradingvolume" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_basketbusin_query_grid_allsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="成交汇总"  pos="0,28,-0,-0">
+								<div name="funcl_basketbusin_query_grid_allsum_tab" placement="funcl_basketbusin_query_grid_allsum_tab" pos="0,0,-0,-0" />
+							</tab>
+						</tabctrl>
+						
+					</layout-div>
+					
+				</layout>		
+			</tab>
+		
+		</tabctrl>
+	</tab>
+</tabctrl>

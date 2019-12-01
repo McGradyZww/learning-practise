@@ -1,0 +1,10 @@
+[2019-06-14 16:44:02:870]
+            LogID:[ldsdk] 3500[sdk初始化完成]
+            Level:INFO
+            Module:sdk
+            Message:sdk编译日期：Jan  2 2019  编译时间：12:19:24
+[2019-06-14 16:44:10:614]
+            LogID:[ldsdk] 3503[同步请求时间]
+            Level:WARNING
+            Module:sdk
+            Message:func：pubL.19.21  Time:15

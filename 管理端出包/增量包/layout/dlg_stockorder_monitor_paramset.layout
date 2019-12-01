@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_ins_btcustom" title="" width="400" height="350"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						
+	    	<text crtext="000000" crmark="800000" align="left" pos="20,25,212,45" title="监控持仓盈亏比例排序：" font="default1" show="1" />
+	  		<radiobtn name="stockehold_orderby_up" title="升序" skin="IDB_radiobtn" pos="177,22,237,45" crtext="191919" show="1" check="true" showfocus="0" group="1"/>
+	  		<radiobtn name="stockehold_orderby_down" title="降序" skin="IDB_radiobtn" pos="242,22,302,45" crtext="191919" show="1"  showfocus="0" group="1" />
+	   		  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,55,155,75" title="买入初始默认价格：" font="default1" show="1" disable="1"/>
+				<combobox name="stockmonitor.pricedefault.buy" tabstop="1" skin="IDB_EDIT" pos="160,52" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" disable="1">
+		  	</combobox>
+	  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,85,155,105" title="卖出初始默认价格：" font="default1" show="1" />
+				<combobox name="stockmonitor.pricedefault.sell" tabstop="1" skin="IDB_EDIT" pos="160,82" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128">
+		  	</combobox>
+	  		 
+			<text crtext="000000" crmark="800000" align="left" pos="20,115,286,135" title="订单限价二级调整按钮调整值（默认0.1)：" font="default1" show="1" />
+			<edit name="stockeorder_order_price" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,112" width="60" height="26" title="0.1"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+
+            <text crtext="000000" crmark="800000" align="left" pos="20,145,286,165" title="订单数量调整按钮调整值（默认100)：" font="default1" show="1" />
+			<edit name="stockeorder_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,142" width="60" height="26" title="100"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+               
+			<chkbtn name="stockeorder_checkbutton_sure" title="默认弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,180,236,200" crtext="191919" show="1" check="true" showfocus="0"/>
+	   		<text crtext="000000" crmark="800000" align="left" pos="40,205,192,225" title="二次确认框光标默认在：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_dlgsure_ok" title="确定" skin="IDB_radiobtn" pos="197,200,257,225" crtext="191919" show="1" showfocus="0" group="4"/>
+	  		<radiobtn name="stockeorder_dlgsure_cancel" title="取消" skin="IDB_radiobtn" pos="262,200,322,225" crtext="191919" show="1" check="true" showfocus="0" group="4"/>	
+	  		
+
+			<text crtext="000000" crmark="800000" align="left" pos="20,235,286,255" title="重新排序时间间隔秒数（默认10,最低1)：" font="default1" show="1" />
+			<edit name="stockeorder_order_interval" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,232" width="60" height="26" title="10"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+
+		    <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+		
+	</body>
+  
+</dlg>

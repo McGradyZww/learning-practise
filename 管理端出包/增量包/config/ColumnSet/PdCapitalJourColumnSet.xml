@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="业务标志" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="变动金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="变动后金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="流水变动字段" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="流水后信息" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作备注" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="创建日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="创建时间" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="更新日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="更新时间" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员编号" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作MAC" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作IP" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作信息" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作方式" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作功能" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

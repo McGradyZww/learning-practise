@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+  <tab name="tab_command_bondorder" image="skin:IDB_TAB_ITEM" active="true" title="债券指令" pos="0,33,-0,-0" canclose="1">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>	
+	<tabctrl name="tab_command_bondorder.all" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" 
+		tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0">
+		<tab name="tab_bond_command.trade" image="skin:IDB_TAB_LOW_ITEM" title="债券交易指令" pos="0,30,-0,-0" menuno="61020603" active="true" >			
+				<img pos="4,8,-4,11" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+				<tabctrl name="tab_trade_bondorder.trade_info" pos="4,15,-6,-331" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" 
+					tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0">		
+					<tab name="tab_trade_bondorder.hold_info" image="skin:IDB_TAB_LOW_ITEM" title="指令信息" pos="0,30,-0,-0" >	
+						<div name="funcl_bondorder_query_grid" placement="funcl_stock_instruction_query_grid_full" pos="0,0,-0,-0" />
+					</tab>
+					<tab name="tab_trade_bondorder.order_info" image="skin:IDB_TAB_LOW_ITEM" title="持仓信息" pos="0,30,-0,-0" >	
+						<div name="funcl_unitbond_query_grid" placement="funcl_unitstock_query_grid_ins" pos="0,0,-0,-0" />
+					</tab>
+				</tabctrl>
+				<div name="trade_stock.handicap" pos="4,-330,240,-0" placement="trade_stock_handicap" />
+				<div name="funcl_bond_trade_command_input" pos="245,-330,-4,-0" placement="funcl_bond_trade_command_input" />		
+		</tab>
+		<tab name="tab_command_bondorder.repurchase" image="skin:IDB_TAB_LOW_ITEM" title="债券回购指令" pos="0,30,-0,-0" menuno="61020601" >			
+			<layout name="repurchase.layout" layout-type="horizontal" pos="4,4,-4,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+				<layout-div name="layout-bondorder.first" div-pos="400" min-pos="100">
+					<layout name="split_bond_bondorder_list" layout-type="vertical" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+						<layout-div  div-pos="650" min-pos="530">
+							<div name="trade_stock.handicap" pos="4,4,240,-0" placement="trade_stock_handicap" />
+							<div name="funcl_bond_command_input" pos="245,4,-4,-0" placement="funcl_bond_command_input" />
+						</layout-div>
+						<layout-div  div-pos="650" min-pos="500">
+							<img pos="1,3,-1,6" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+							<div name="funcl_bond_stockinfo_query_grid" placement="funcl_bond_stockinfo_query_grid" pos="0,6,-0,-0" />
+						</layout-div>							
+					</layout>								
+				</layout-div>
+				<layout-div name="layout-bondorder.second" >
+					 <layout name="split_bond_bondorder_list" layout-type="vertical" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+					<layout-div  div-pos="650" min-pos="500">							
+						<div name="funcl_bond_order_list_grid_command" pos="4,10,-4,-4" placement="funcl_bond_order_list_grid_command" />
+					</layout-div>
+					<layout-div  div-pos="650" min-pos="500">
+						<div name="funcl_bond_command_query_grid" pos="4,10,-4,-4" placement="funcl_bond_command_query_grid" />
+					</layout-div>							
+					</layout>																
+				</layout-div>
+			</layout>			
+		 </tab>
+		 
+		 <tab name="tab_command_bondorder.collateral" image="skin:IDB_TAB_LOW_ITEM" title="债券质押指令" pos="0,30,-0,-0" menuno="61020602">			
+			<layout name="collateral.layout" layout-type="horizontal" pos="4,4,-4,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+			
+				<layout-div name="layout-orderquery" div-pos="500" min-pos="300">
+						<img pos="4,4,-4,7" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+						<div name="funcl_unit_bond_hold_query_grid_command" placement="funcl_unit_bond_hold_query_grid_command" pos="4,8,-52,-0" />
+						<div name="funcl_bond_collateral_command_input" pos="4,-50,-4,-0" placement="funcl_bond_collateral_command_input" />
+					</layout-div>
+					<layout-div  div-pos="650" min-pos="500">
+						<div name="funcl_bond_collateral_uint_list_command_grid" placement="funcl_bond_collateral_uint_list_command_grid" pos="4,4,820,-0" />
+						<img pos="821,0,824,-0" image="skins\default\line_split.png" mode="tile" show="1" response="0"/>	
+						<div name="funcl_bond_collateral_command_query_grid" placement="funcl_bond_collateral_command_query_grid" pos="825,4,-0,-0" />
+					</layout-div>	
+					
+				<!---	
+				<layout-div name="layout-bondorder.first" div-pos="400" min-pos="100">
+					<layout name="split_bond_bondorder_list" layout-type="vertical" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+						<layout-div  div-pos="650" min-pos="500">
+							<div name="funcl_bond_collateral_input" pos="4,4,-4,350" placement="funcl_bond_collateral_input" />
+							<div name="funcl_bond_collateral_uint_list_grid" pos="4,350,-4,-4" placement="funcl_bond_collateral_uint_list_grid" />
+						</layout-div>
+						<layout-div  div-pos="650" min-pos="500">
+							<img pos="1,3,-1,6" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+							<div name="funcl_bond_collateral_command_query_grid" placement="funcl_bond_collateral_command_query_grid" pos="0,6,-0,-0" />
+						</layout-div>							
+					</layout>								
+				</layout-div>
+				--->
+			</layout>			
+		 </tab>
+	</tabctrl>
+  </tab>
+</tabctrl>

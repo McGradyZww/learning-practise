@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_assets_query" image="skin:IDB_TAB_ITEM" active="true" title="资产查询" pos="0,33,-0,-0" canclose="1">
+	 <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/> 
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<!--button name="button.command_query_float" title="" pos="-26,0" width="23" height="23" skin="IDB_BT_DRAGFLOAT" tip="浮动" show="1" /-->
+		<!--三级菜单TabCtrl控件-->
+		<tabctrl name="tab_asset_query.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="tab_asset_query_product" image="skin:IDB_TAB_LOW_ITEM" title="产品资产查询" active="true" pos="0,30,-0,-0" menuno="61050101">		        	
+						<div name="funcl_queryproductcash_grid" pos="4,10,-4,-310" placement="funcl_queryproductcash_grid"/>   
+        	 	<tabctrl name="tabctrl.asset_query_info" pos="4,-300,-4,-0" img-sep="" img-hover=""
+						img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+						font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+							<tab name="funcl_queryproductposition_info" image="skin:IDB_TAB_INSIDE_ITEM" title="产品详情" active="true" pos="0,24,-0,-0" >
+								<div name="funcl_queryproductposition_info" pos="0,0,-4,-0" placement="funcl_queryproductposition_info"/>
+							</tab>	
+							<tab name="funcl_queryproductposition_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="重仓股" pos="0,28,-0,-0" >
+								<div name="funcl_queryproductposition_grid" pos="0,0,-4,-0" placement="funcl_queryproductposition_grid"/>
+							</tab>				
+							
+															
+						</tabctrl>					      	        
+				</tab>
+					
+				<tab name="tab_asset_query_unit" image="skin:IDB_TAB_LOW_ITEM" title="单元资产查询" pos="0,30,-0,-0" menuno="61050102">
+					<div name="funcl_queryunitasset_grid" pos="4,10,-4,-310" placement="funcl_queryunitasset_grid"/>		        		        	
+		        	<tabctrl name="tabctrl.unitasset_query_info" pos="4,-300,-4,-0" img-sep="" img-hover=""
+								img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+								font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+								<tab name="funcl_queryunitposition_info" image="skin:IDB_TAB_INSIDE_ITEM" title="单元详情" active="true" pos="0,24,-0,-0" >
+								<div name="funcl_queryunitposition_info" pos="0,0,-4,-0" placement="funcl_queryunitposition_info"/>
+								</tab>			
+						  	<tab name="funcl_queryunitposition_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="重仓股" pos="0,28,-0,-0" >
+								<div name="funcl_queryunitposition_grid" pos="0,0,-4,-0" placement="funcl_queryunitposition_grid"/>
+								</tab>
+						</tabctrl>				
+				</tab>												
+		</tabctrl>
+	</tab>
+</tabctrl>

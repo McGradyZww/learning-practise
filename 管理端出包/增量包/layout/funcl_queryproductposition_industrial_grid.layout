@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_queryproductposition_industrial_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    
+    <text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="" font="big" show="1" />
+    
+    <img pos="499,0,500,-1" image="skins\default\line_split.png" mode="tile" show="1" />	
+    
+  </div>

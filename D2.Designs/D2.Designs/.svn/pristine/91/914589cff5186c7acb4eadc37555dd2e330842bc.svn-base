@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.5.1" procedurename="prt_user_AddOperatorInfo" paras="27"/>
+    <func funcname="pubT.5.2" procedurename="prt_user_ModiOperatorInfo" paras="23"/>
+    <func funcname="pubT.5.3" procedurename="prt_user_GetOperatorInfo" paras="21"/>
+    <func funcname="pubT.5.4" procedurename="prt_user_QueryOperatorInfo" paras="16"/>
+    <func funcname="pubT.5.6" procedurename="prt_user_UpdateOperatorStatus" paras="14"/>
+    <func funcname="pubT.5.9" procedurename="prt_user_UpdateOperatorPassword" paras="13"/>
+    <func funcname="pubT.5.10" procedurename="prt_user_ResetOperatorPassword" paras="13"/>
+    <func funcname="pubT.5.11" procedurename="prt_user_QueryOperatorInfoJour" paras="13"/>
+    <func funcname="pubT.5.12" procedurename="prt_user_QueryOperatorInfoJour_His" paras="15"/>
+    <func funcname="pubT.5.13" procedurename="prt_user_CheckOperatorExists" paras="11"/>
+    <func funcname="pubT.5.14" procedurename="prt_user_GetOperatorNo" paras="11"/>
+    <func funcname="pubT.5.21" procedurename="prt_user_OperatorLogin" paras="26"/>
+    <func funcname="pubT.5.22" procedurename="prt_user_OperatorLogout" paras="9"/>
+    <func funcname="pubT.5.41" procedurename="prt_user_AddOporAllowCo" paras="14"/>
+    <func funcname="pubT.5.42" procedurename="prt_user_DeleteOporAllowCo" paras="14"/>
+    <func funcname="pubT.5.44" procedurename="prt_user_QueryOporAllowCo" paras="12"/>
+    <func funcname="pubT.5.65" procedurename="prt_user_QueryAllExchGroup" paras="13"/>
+    <func funcname="pubT.5.201" procedurename="prt_user_QueryAllOperatorInfo" paras="15"/>
+    <func funcname="pubT.5.202" procedurename="prt_user_GetOporExgpRightsStr" paras="9"/>
+    <func funcname="pubT.5.203" procedurename="prt_user_GetOporExgpRights" paras="9"/>
+    <func funcname="pubT.5.204" procedurename="prt_user_QueryOporAllowSetOpor" paras="13"/>
+    <func funcname="pubT.5.205" procedurename="prt_user_UpdateExchGroupForbidOrderDir" paras="15"/>
+    <func funcname="pubT.5.206" procedurename="prt_user_QueryExchGroupInfo" paras="16"/>
+</funcs>

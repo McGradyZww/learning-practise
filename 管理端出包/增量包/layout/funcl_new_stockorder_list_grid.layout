@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_new_stockorder_list_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <gridctrl name="grid.funcl_new_stockorder_list" pos="30,2,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="" header-check="1"
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1"  bCellColor="0"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="产品名称" width="100" align="center" key="product_name" deletable="0" />
+        <column title="交易单元" width="0" align="center" key="unit_name" deletable="0" />
+        <column title="交易单元" width="0" align="center" key="unit_code" deletable="0" />
+        <column title="产品编码" width="0" align="center" key="product_code" deletable="0" />
+        <column title="证券账户" width="0" align="center" key="asset_account" deletable="0" />
+        <column title="股东代码" width="100" align="center" key="stock_account" deletable="0" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="申购价格" width="100" align="center" key="fair_price" deletable="0" />
+        <column title="申购数量" width="100" align="center" key="apply_limit" data_type="N" />
+        <column title="证券市场" width="120" align="center" key="exchange_no" />
+        <column title="申购代码" width="0" align="center" key="stock_code" deletable="0" />
+        <column title="证券申购权益" width="100" align="center" key="market_limit" deletable="0" />
+        <column title="证券市场" width="0" align="center" key="exchange_no_v" />
+        </gridctrl>
+        <edit name="newstock.temp_edit" tabstop="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+               number="0" readonly="0" maxchar="50" font="default2" crtext="0,0,0" double="1" nochangednotify="1" />
+      
+  </div>

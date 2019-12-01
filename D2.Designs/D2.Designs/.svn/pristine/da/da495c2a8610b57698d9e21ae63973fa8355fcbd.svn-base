@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.7.1" procedurename="prt_perm_AddRole" paras="17"/>
+    <func funcname="pubT.7.2" procedurename="prt_perm_ModiRole" paras="14"/>
+    <func funcname="pubT.7.3" procedurename="prt_perm_DeleteRole" paras="13"/>
+    <func funcname="pubT.7.5" procedurename="prt_perm_QueryRoleList" paras="11"/>
+    <func funcname="pubT.7.6" procedurename="prt_perm_CheckRoleExists" paras="12"/>
+    <func funcname="pubT.7.13" procedurename="prt_perm_BatchAddRoleMenuFunc" paras="13"/>
+    <func funcname="pubT.7.14" procedurename="prt_perm_BatchDeleteRoleMenuFunc" paras="13"/>
+    <func funcname="pubT.7.15" procedurename="prt_perm_QueryRoleMenuFunc" paras="12"/>
+    <func funcname="pubT.7.4" procedurename="prt_perm_CopyRole" paras="16"/>
+    <func funcname="pubT.7.21" procedurename="prt_perm_QueryOperatorAllowRoleList" paras="9"/>
+    <func funcname="pubT.7.22" procedurename="prt_perm_AddOporRole" paras="13"/>
+    <func funcname="pubT.7.23" procedurename="prt_perm_DeleteOporRole" paras="13"/>
+    <func funcname="pubT.7.24" procedurename="prt_perm_QueryOporRoleList" paras="10"/>
+    <func funcname="pubT.7.27" procedurename="prt_perm_BatchAddOporMenuFunc" paras="14"/>
+    <func funcname="pubT.7.28" procedurename="prt_perm_BatchDeleteOporMenuFunc" paras="14"/>
+    <func funcname="pubT.7.33" procedurename="prt_perm_QueryAllMenu" paras="10"/>
+    <func funcname="pubT.7.34" procedurename="prt_perm_QueryAllMenuFunc" paras="10"/>
+    <func funcname="pubT.7.29" procedurename="prt_perm_QueryOporAllMenu" paras="11"/>
+    <func funcname="pubT.7.30" procedurename="prt_perm_QueryOporSpecMenu" paras="11"/>
+    <func funcname="pubT.7.31" procedurename="prt_perm_QueryOporAllMenuFunc" paras="11"/>
+    <func funcname="pubT.7.32" procedurename="prt_perm_QueryOporSpecMenuFunc" paras="11"/>
+    <func funcname="pubT.7.51" procedurename="prt_perm_WithdrawMenuFunc" paras="14"/>
+    <func funcname="pubT.7.52" procedurename="prt_perm_PushAuthorityCheck" paras="15"/>
+</funcs>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.10.1" procedurename="prt_pdfucabk_QueryFutuCapitalDiff" paras="19"/>
+    <func funcname="pdfutuT.10.2" procedurename="prt_pdfucabk_DealFutuCapitalDiff" paras="46"/>
+    <func funcname="pdfutuT.10.12" procedurename="prt_pdfucabk_CalcProdFutuAsset" paras="15"/>
+    <func funcname="pdfutuT.10.13" procedurename="prt_pdfucabk_CalcExchGroupFutuAsset" paras="17"/>
+    <func funcname="pdfutuT.10.14" procedurename="prt_pdfucabk_ClearOutCapitRecordDiffRecord" paras="11"/>
+    <func funcname="pdfutuT.10.15" procedurename="prt_pdfucabk_GetOutCapitalAsacInfo" paras="20"/>
+    <func funcname="pdfutuT.10.16" procedurename="prt_pdfucabk_SynchronizedDiff" paras="19"/>
+    <func funcname="pdfutuT.10.17" procedurename="prt_pdfucabk_GetDiffCapitalData" paras="13"/>
+</funcs>

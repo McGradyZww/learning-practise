@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<dlg name="dlg_main" title="[APP_NAME]" width="1024" height="768" translucent="255"
+	frame="skin:IDB_MAIN_FRAME" bkimg="" crbk="000000" appwin="1" resize="1"
+	width-lt="1" height-lt="30" width-rb="1" height-rb="30" >
+
+  <base>
+		<div name="win.caption" pos="0,0,-0,35" response="0" />
+		<img pos="15,10" width="143" height="19" image="skins\default\company_logo.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<text name="main.caption.vision" pos="-420,4,-300,26" crtext="FFFFFF" crmark="800000" align="left" title="" font="default1" show="1"/>
+		<text name="main.caption.user" pos="-300,4,-160,26" crtext="FFFFFF" crmark="800000" align="left" title="" font="default1" show="1"/>
+		<!---
+		<button name="button.syslog" pos="-174,0,-140,30" skin="IDB_BT_PWD" show="1" tip="测试日志" />
+		---->
+		<button name="button.relogin" pos="-139,0,-105,30" skin="IDB_BT_USER" show="1" tip="重新登陆" />
+		<button name="button.password" pos="-104,0,-70,30" skin="IDB_BT_PWD" tip="修改密码" show="1" />
+		<button name="button.min" pos="-69,0,-35,30" skin="IDB_BT_MIN" tip="最小化" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE_SQUARE" tip="关闭" show="1" shortcut="ESC"/>
+  </base>
+  
+  <body>
+		
+		<div name="main.ctrls" pos="0,40,210,-32">	
+			<img pos="0,0,-0,-0" image="skins\default\WindowsBack_x.png" mode="extrude" framesize="0" show="1" response="0"/>
+			<button name="button.shrink" pos="92,2,118,29" skin="IDB_BT_SHRINK" tip="菜单栏缩放" show="1" showfocus="0"/>
+			<button name="button.expand" pos="14,2,40,29" skin="IDB_BT_EXPAND" tip="菜单栏缩放" show="0" showfocus="0"/>
+
+			<treectrl name="treectrl.main" pos="10,36,-6,-4" show="1"
+					img-scroll="skin:IDB_SCROLL_V" img-sep="skins\rp_line.png--"
+					img-colsep=""
+					img-collapse="skin:IDB_TREE_COLLAPSE"
+					img-toggle="skin:IDB_TREE_TOGGLE"
+					img-count="6" image="skin:IDB_LIST_IMG"
+					left-pos="0" row-height="30" bk-transparent="10"
+					font-title="bold3" font="default2" valign="middle" down-row="1"
+					crtext="255,255,255,255" crhover="168,0,0" crpush="255,255,255"
+					crtitle="255,255,255" crsep="200,160,160,160" >
+					<column title="菜单项" width="160" />
+					<column title="Collapse" />
+					<node id="command" image="0" collapse="1" menuno="610200">		<!--collapse=“1” 表示该节点处于收缩状态-->
+						<item title="指令管理" font-title="1"/>
+						<item collapse="1" /><!--collapse=“1” 表示该节点可以收缩和展开子节点-->
+						
+						<!--<node id="command.modify">
+							<item title="指令修改" image="5" crtext="255,255,255" link="指令修改"/>
+						</node>-->
+						<node id="command.exchange" menuno="610201">
+							<item title="证券指令" image="5" crtext="255,255,255" link="证券指令" linkaction="add_tab:tab_command_exchange"/>
+						</node>
+						<!----
+						<node id="command.purchase" menuno="610205">
+							<item title="新股指令" image="5" crtext="255,255,255" link="新股指令" linkaction="add_tab:tab_command_newstockorder" />					
+						</node>
+							--->
+						<node id="command.repurchase" menuno="610206">
+							<item title="债券指令" image="5" crtext="255,255,255" link="债券指令" linkaction="add_tab:tab_command_bondorder" />				
+						</node>
+						<node id="command.query" menuno="610204">
+							<item title="指令查询" image="5" crtext="255,255,255" link="指令查询" linkaction="add_tab:tab_command_query"/>
+						</node>
+						<!----
+						<node id="command.futures" menuno="610202">
+							<item title="期货指令" image="5" crtext="255,255,255"/>
+						</node>
+						<node id="command.margin" menuno="610203">
+							<item title="融资融券指令" image="5" crtext="255,255,255"/>
+						</node>						
+						
+					
+						
+           --->
+            	<node id="command.baskettrading" menuno="610207">
+             	 <item title="篮子指令" image="5" crtext="255,255,255" link="篮子指令" linkaction="add_tab:tab_command_baskettrading"/>
+           		</node>	
+					</node>
+					<node id="trade" image="1" collapse="1" menuno="610300">
+						<item title="交易管理"  font-title="1" />
+						<item collapse="1" />
+						<node id="trade.stock" menuno="610301">
+							<item title="个股交易" image="5" crtext="255,255,255" link="个股交易" linkaction="add_tab:tab_trade_stock"/>
+						</node>
+						<node id="trade.command" menuno="610306">
+							<item title="指令交易" image="5" crtext="255,255,255" link="指令交易" linkaction="add_tab:tab_command_trade"/>
+						</node>
+						<node id="trade.basket" menuno="610302">
+							<item title="篮子委托" image="5" crtext="255,255,255" link="篮子委托" linkaction="add_tab:tab_trade_basket"/>
+						</node>
+					
+						<!---
+						<node id="trade.vote" menuno="610303">
+							<item title="投票" image="5" crtext="255,255,255"/>
+						</node>
+								<node id="trade.basket" menuno="610302">
+							<item title="篮子自由交易" image="5" crtext="255,255,255" link="篮子自由交易" linkaction="add_tab:tab_trade_freedom_baskettrading"/>
+						</node>
+						--->
+						<node id="trade.basket" menuno="610311">
+							<item title="篮子指令交易" image="5" crtext="255,255,255" link="篮子指令交易" linkaction="add_tab:tab_trade_command_basket"/>
+						</node>
+				
+						
+						<node id="trade.purchase" menuno="610304">
+							<item title="新股申购" image="5" crtext="255,255,255" link="新股申购" linkaction="add_tab:tab_trade_newstockorder" />					
+						</node>
+						<node id="trade.repurchase" menuno="610305">
+							<item title="债券交易" image="5" crtext="255,255,255" link="债券交易" linkaction="add_tab:tab_trade_bondorder" />				
+						</node>
+						<node id="trade.t+0change" menuno="610307">
+							<item title="增强交易" image="5" crtext="255,255,255" link="增强交易" linkaction="add_tab:tab_T+0trade_stock"/>
+						</node>
+						<node id="trade.T+0tradeReport" menuno="610308">
+							<item title="增强交易报表" image="5" crtext="255,255,255" link="增强交易报表" linkaction="add_tab:tab_T+0trade_stock_report" />
+						</node>
+						<node id="trade.PreOrder" menuno="610309">
+							<item title="条件预埋单" image="5" crtext="255,255,255" link="条件预埋单" linkaction="add_tab:tab_trade_PreOrder" />
+						</node>
+						<node id="trade.MonitorDown" menuno="610310">
+							<item title="监控止损" image="5" crtext="255,255,255" link="监控止损" linkaction="add_tab:tab_monitor_down" />
+						</node>
+					</node>
+					<node id="basket" image="2" collapse="1" menuno="610400">
+						<item title="交易设置管理" font-title="1" />
+						<item collapse="1" />
+						<node id="basket.add" menuno="610401">
+							<item title="篮子管理" image="5" crtext="255,255,255" link="篮子管理" linkaction="add_tab:tab_basket_set"/>
+						</node>		
+						<node id="unitgroup.add" menuno="610402">
+							<item title="账户组管理" image="5" crtext="255,255,255" link="账户组管理" linkaction="add_tab:tab_unitgroup_set"/>
+						</node>						
+						<!--node id="basket.modify" menuno="610402">
+							<item title="篮子修改" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="basket.delete" menuno="610403">
+							<item title="篮子删除" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="basket.stocksmodify" menuno="610404">
+							<item title="成分股修改" image="5" crtext="255,255,255"/>
+						</node-->						
+					</node>
+					<node id="query" image="3" collapse="1" menuno="610500">
+						<item title="查询" font-title="1" />
+						<item collapse="1" />
+						<node id="query.productassets" menuno="610501">
+							<item title="资产查询" image="5" crtext="255,255,255" link="资产查询" linkaction="add_tab:tab_assets_query"/>
+						</node>						
+						<node id="query.quities" menuno="610502">
+							<item title="持仓查询" image="5" crtext="255,255,255" link="持仓查询" linkaction="add_tab:tab_quities_query"/>
+						</node>						
+						<node id="query.jour" menuno="610503">
+							<item title="流水查询" image="5" crtext="255,255,255" link="流水查询" linkaction="add_tab:tab_jours_query"/>
+						</node>
+						<!--node id="query.productassets" menuno="610501">
+							<item title="产品资产查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.unitassets" menuno="610502">
+							<item title="资产单元资产查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.producthold" menuno="610503">
+							<item title="产品持仓查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.unithold" menuno="610504">
+							<item title="资产单元持仓查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.fundjourney" menuno="610505">
+							<item title="资金流水查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.stockjourney" menuno="610506">
+							<item title="证券流水查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.orderjourneydetail" menuno="610507">
+							<item title="委托流水明细查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.orderjourneysummary" menuno="610508">
+							<item title="委托流水汇总查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.dealjourneydetail" menuno="610509">
+							<item title="成交流水明细查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.dealjourneysummary" menuno="610510">
+							<item title="成交流水汇总查询" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="query.fundSecuriticesJourney" menuno="610511">
+							<item title="资金证券流水查询" image="5" crtext="255,255,255"/>
+						</node-->
+					</node>
+					<!--node id="system" image="4" collapse="1" menuno="-1">
+						<item title="系统" font-title="1" />
+						<item collapse="1" />
+						<node id="system.set" menuno="-1">
+							<item title="系统设置" image="5" crtext="255,255,255" link="系统设置" linkaction="dlg:dlg_system_set"/>
+						</node>						
+						<node id="system.Refresh" menuno="-1">
+							<item title="刷新缓存" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="system.MsgSend" menuno="-1">
+							<item title="发送消息" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="system.Update" menuno="-1">
+							<item title="在线升级" image="5" crtext="255,255,255"/>
+						</node>						
+						<node id="system.Help" menuno="-1">
+							<item title="帮助" image="5" crtext="255,255,255"/>
+						</node>					
+						<node id="system.Close" menuno="-1">
+							<item title="退出" image="5" crtext="255,255,255"/>
+						</node>						
+					</node-->
+			</treectrl>
+	
+		</div>
+		<tabctrl name="tabctrl.main" pos="210,40,-1,-32" image="skins\tab_image.png" img-sep="" img-hover="" img-close="skins\default\btn_tabclose.png"
+			img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+			font="bold3" item-width="110" tab-height="33" crtext="191919" crtexttDeactive="ffffff" animate="0" animate-count="10" >
+				<tab name="tab.welcome" image="skin:IDB_TAB_ITEM" img-index="0" img-count="3" title="首页" pos="0,30,-0,-0" active="true" show="true">
+					<img pos="0,0,-0,-0" image="skins\default\welcome.png" mode="frame" framesize="0" show="1" />
+					<text pos="226,176,776,218" crtext="000000" title="欢迎使用资产管理平台！" font="bigitalic" />					
+					<text pos="226,250,776,278" crtext="000000" title=" • 您上次登录IP :" font="bigbig" />			
+					<text name="last_login_ip" pos="370,250,800,278" crtext="000000" title="" font="bigbig" />					
+					<text pos="226,290,776,318" crtext="000000" title=" • 您上次登录的时间 :" font="bigbig" />
+					<text name="last_login_time" pos="400,290,800,318" crtext="000000" title="" font="bigbig" />						
+
+				</tab>
+		</tabctrl>
+	  <div name="main.statusbar" pos="0,-31,-0,-0">
+	    <text name="main.statusbar.connection_enable" pos="-318,-30,-300,-2" skin="IDB_BT_CONNECT_ENABLE"  align="right" title=""  show="1" tip="服务器已连接"/>
+	    <text name="main.statusbar.connection_disenable" pos="-318,-30,-300,-2" skin="IDB_BT_CONNECT_UNABLE"  align="right" title=""  show="0" tip="服务器连接断开"/>
+	    <text name="main.statusbar.connection_enableing" pos="-318,-30,-300,-2" skin="IDB_BT_CONNECT_UNABLE"  align="right" title="" show="0" tip="服务器正在连接中"/>
+	  	<text name="main.statusbar.sysdatetime" pos="-360,-30,-10,-2" crtext="FFFFFF" crmark="800000" align="right" title="" font="default1" show="1"/>
+	  </div>
+  </body>
+  
+</dlg>

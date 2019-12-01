@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_group_detail" title="" width="850" height="400"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		   <text crtext="000000" crmark="800000" align="left" pos="16,8,130,46" title="账号组名称：" font="default5" show="1" />
+       <text name="group.name" crtext="000000" crmark="800000" align="left" pos="135,8,236,46" title="增强一号" font="default5" show="1" />
+		   <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="确 定" pos="300,8,360,36" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+       <button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="400,8,460,36" shortcut="" crtext="0" font="default1"/>            
+ 			 
+ 			 <img pos="4,47,-4,49" image="skins\default\line_split.png" mode="tile" show="1" />
+     	 <gridctrl name="grid.allunitdetail" pos="2,50,240,-38" show="1" 
+	        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP" 
+	        img-check="skin:IDB_CHECK_BOX" img-colsep="" 
+	        img-count="6" image="skin:IDB_LIST_IMG" 
+	        left-pos="0" row-height="35" header-height="38" bk-transparent="10" 
+	        font-title="big" font="default2" 
+	        valign="middle" down-row="1" align="center" 
+	        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+		        <column title="产品" width="0" align="center" key="product_code" />
+		        <column title="产品序号" width="0" align="center" key="product_id" />
+		        <column title="产品" width="100" align="center" key="product_name" />
+		        <column title="交易单元序号" width="0" align="center" key="unit_id" />
+		        <column title="交易单元" width="100" align="center" key="unit_name" />
+		        <column title="交易单元" width="0" align="center" key="unit_code" />
+    	 </gridctrl>
+    	 
+    	 <img pos="250,47,252,-36" image="skins\default\line_split.png" mode="tile" show="1" />
+    	 <textbtn  name="groupdetail.addone" align="left" pos="270,110,320,138"  title=" >" font="bigger" show="1" />
+    	 <textbtn  name="groupdetail.addall" align="left" pos="270,150,320,178" title=">>" font="bigger" show="1" />
+    	 <textbtn  name="groupdetail.delone" align="left" pos="270,210,320,238"  title=" <" font="bigger" show="1" />
+    	 <textbtn  name="groupdetail.delall" align="left" pos="270,250,320,278"  title="<<" font="bigger" show="1" />
+     
+    	 <img pos="330,47,332,-36" image="skins\default\line_split.png" mode="tile" show="1" />
+    	 <gridctrl name="groupdetail.groupunitdetail" notify-scroll="1" pos="350,50,-2,-38" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">    
+          <column title="序号" width="50" align="center" key="row_id" />  
+	        <column title="产品" width="0" align="center" key="product_code" />
+	        <column title="产品序号" width="0" align="center" key="product_id" />
+	        <column title="产品" width="100" align="center" key="product_name" />
+	        <column title="交易单元序号" width="0" align="center" key="unit_id" />
+	        <column title="交易单元" width="100" align="center" key="unit_name" />
+	        <column title="交易单元" width="0" align="center" key="unit_code" />
+	        <column title="序号" width="0" align="center" key="group_id" />
+	        <column title="权重(%)" width="100" align="center" key="weight_percent" />
+	        <column title="备注说明" width="0" align="center" key="remark_info" />
+    	 </gridctrl>
+    	 	
+   
+    	   
+ 			 <img pos="4,-36,-4,-34" image="skins\default\line_split.png" mode="tile" show="1" />
+ 			 <edit name="groupdetail.tmpedit" notiyDown="1" nochangednotify="1" tabstop="1" number="0" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+                readonly="0" maxchar="50" font="default2" crtext="0,0,0" double="1" />		
+     </div>
+		
+	</body>
+  
+</dlg>

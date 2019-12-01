@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="原始金额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资金余额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="产品已分配资金" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="产品已授权资金" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="红冲蓝补金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应收金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应付金额" IsVisiblity="true" isTotalRow="true" />
+</ColumnSetClass>

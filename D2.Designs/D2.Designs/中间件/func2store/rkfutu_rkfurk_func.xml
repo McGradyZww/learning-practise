@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rkfutuT.3.1" procedurename="prt_rkfurk_AddFutuClientRiskRule" paras="38"/>
+    <func funcname="rkfutuT.3.2" procedurename="prt_rkfurk_DeleteFutuClientRiskRule" paras="15"/>
+    <func funcname="rkfutuT.3.3" procedurename="prt_rkfurk_QueryFutuClientRiskRule" paras="24"/>
+    <func funcname="rkfutuT.3.4" procedurename="prt_rkfurk_GetFutuClientRiskParam" paras="17"/>
+    <func funcname="rkfutuT.3.5" procedurename="prt_rkfurk_CheckCalcFutuClientRisk" paras="27"/>
+    <func funcname="rkfutuT.3.6" procedurename="prt_rkfurk_QuerySecuClientRiskTrig" paras="16"/>
+    <func funcname="rkfutuT.3.7" procedurename="prt_rkfurk_QueryPdExchGroupByModel" paras="13"/>
+    <func funcname="rkfutuT.3.8" procedurename="prt_rkfurk_QueryHisFutuClientRiskTrig" paras="17"/>
+    <func funcname="rkfutuT.3.9" procedurename="prt_rkfurk_CheckBatchCalcSecuClientRisk" paras="35"/>
+</funcs>

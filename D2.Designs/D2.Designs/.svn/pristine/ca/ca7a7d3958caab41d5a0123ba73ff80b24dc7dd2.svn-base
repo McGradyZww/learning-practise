@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.6.1" procedurename="prt_pdseexif_CheckStockAccoStatusAvail" paras="44"/>
+    <func funcname="pdsecuT.6.2" procedurename="prt_pdseexif_CheckStockAccoStatusBatchAvail" paras="41"/>
+    <func funcname="pdsecuT.6.3" procedurename="prt_pdseexif_GetStrikeRspPosiCost" paras="21"/>
+    <func funcname="pdsecuT.6.4" procedurename="prt_pdseexif_CheckStockAccoStatusGetPosiCost" paras="23"/>
+    <func funcname="pdsecuT.6.5" procedurename="prt_pdseexif_GetT0AuthExgpSumCashAvail" paras="18"/>
+    <func funcname="pdsecuT.6.6" procedurename="prt_pdseexif_UpdateTrdPosi" paras="17"/>
+    <func funcname="pdsecuT.6.7" procedurename="prt_pdseexif_UpdateTrdExgpPosi" paras="18"/>
+    <func funcname="pdsecuT.6.8" procedurename="prt_pdseexif_UpdateTrdCapital" paras="15"/>
+    <func funcname="pdsecuT.6.9" procedurename="prt_pdseexif_UpdateTrdExgpCapital" paras="16"/>
+    <func funcname="pdsecuT.6.10" procedurename="prt_pdseexif_InsertCombInfo" paras="17"/>
+    <func funcname="pdsecuT.6.11" procedurename="prt_pdseexif_UpdateCombInfo" paras="17"/>
+    <func funcname="pdsecuT.6.12" procedurename="prt_pdseexif_GetCombInfo" paras="18"/>
+    <func funcname="pdsecuT.6.13" procedurename="prt_pdseexif_DealInvalidCombExgpCapitPosi" paras="16"/>
+    <func funcname="pdsecuT.6.14" procedurename="prt_pdseexif_QueryExgpCapit" paras="11"/>
+    <func funcname="pdsecuT.6.15" procedurename="prt_pdseexif_QueryExgpPosi" paras="12"/>
+    <func funcname="pdsecuT.6.16" procedurename="prt_pdseexif_UpdateExgpPosiQtyCost" paras="50"/>
+    <func funcname="pdsecuT.6.17" procedurename="prt_pdseexif_UpdateTrdAsacBondPosi" paras="16"/>
+    <func funcname="pdsecuT.6.18" procedurename="prt_pdseexif_UpdateTrdExgpBondPosi" paras="17"/>
+    <func funcname="pdsecuT.6.19" procedurename="prt_pdsepo_ExgpPosiChange" paras="22"/>
+    <func funcname="pdsecuT.6.20" procedurename="prt_pdsepo_MissOrderGetExgpNum" paras="13"/>
+    <func funcname="pdsecuT.6.21" procedurename="prt_pdseexif_GetStockAcco" paras="13"/>
+    <func funcname="pdsecuT.6.22" procedurename="prt_pdseexif_CheckStockAccoStatusCapitalAvail" paras="28"/>
+</funcs>

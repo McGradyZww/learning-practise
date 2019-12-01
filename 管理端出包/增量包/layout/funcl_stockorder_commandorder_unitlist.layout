@@ -1,0 +1,10 @@
+﻿ <div name="funcl_stockorder_commandorder_unitlist"  img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" notify-scroll="1" scroll="1" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/> 
+	
+    <chkbtn name="commandorder_checkbutton_multiall" align="left" title="全选" skin="IDB_CHECK_BOX" pos="5,4,56,30" crtext="191919" show="1" check="false" showfocus="0"/>
+	    
+    <div name="funcl_stock_multiorder_unit_panel_command" pos="0,0,0,0" placement="funcl_stock_multiorder_unit_panel_command"/>  				
+  	<!--edit name="command.unitpanel.tmpedit" tabstop="1" number="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+                readonly="0" maxchar="50" font="biggest" settitle_notify="0" editfont="biggest" multiline="1" crtext="cf0f0f"  nochangednotify="1"/-->		
+			
+  </div>

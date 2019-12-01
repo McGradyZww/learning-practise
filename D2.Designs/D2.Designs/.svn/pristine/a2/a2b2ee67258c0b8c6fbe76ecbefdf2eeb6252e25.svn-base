@@ -1,0 +1,114 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LD.Client.Contract
+{
+   //逻辑_产品期货_资金运维_查询资产账户内外资金差异记录
+   public class FuncpdfutuL_10_1Model : BaseModel
+   {
+        /// <summary>
+        /// 记录序号
+        /// </summary>
+        public ulong row_id { get; set; }
+ 
+        /// <summary>
+        /// 初始化日期
+        /// </summary>
+        public int init_date { get; set; }
+ 
+        /// <summary>
+        /// 机构编号
+        /// </summary>
+        public int co_no { get; set; }
+ 
+        /// <summary>
+        /// 产品编号
+        /// </summary>
+        public int pd_no { get; set; }
+ 
+        /// <summary>
+        /// 资产账户编号
+        /// </summary>
+        public int asset_acco_no { get; set; }
+ 
+        /// <summary>
+        /// 通道编号
+        /// </summary>
+        public int pass_no { get; set; }
+ 
+        /// <summary>
+        /// 外部账号
+        /// </summary>
+        public String out_acco { get; set; }
+ 
+        /// <summary>
+        /// 本币币种
+        /// </summary>
+        public String crncy_type { get; set; }
+ 
+        /// <summary>
+        /// 账户当前金额
+        /// </summary>
+        public double acco_curr_amt { get; set; }
+ 
+        /// <summary>
+        /// 账户可用金额
+        /// </summary>
+        public double acco_avail_amt { get; set; }
+ 
+        /// <summary>
+        /// 账户占用保证金
+        /// </summary>
+        public double act_capt_margin { get; set; }
+ 
+        /// <summary>
+        /// 外部当前金额
+        /// </summary>
+        public double out_curr_amt { get; set; }
+ 
+        /// <summary>
+        /// 外部可用金额
+        /// </summary>
+        public double out_enable_amt { get; set; }
+ 
+        /// <summary>
+        /// 外部占用保证金
+        /// </summary>
+        public double out_capt_margin { get; set; }
+ 
+        /// <summary>
+        /// 账户当前金额差额
+        /// </summary>
+        public double acco_curr_amt_diff { get; set; }
+ 
+        /// <summary>
+        /// 账户可用金额差额
+        /// </summary>
+        public double acco_avail_amt_diff { get; set; }
+ 
+        /// <summary>
+        /// 账户占用保证金差额
+        /// </summary>
+        public double act_capt_margin_diff { get; set; }
+ 
+        /// <summary>
+        /// 处理标志
+        /// </summary>
+        public int deal_flag { get; set; }
+ 
+        /// <summary>
+        /// 资产是否同步
+        /// </summary>
+        public int asset_sync_flag { get; set; }
+ 
+        /// <summary>
+        /// 备注信息
+        /// </summary>
+        public String remark_info { get; set; }
+ 
+   }
+ 
+}

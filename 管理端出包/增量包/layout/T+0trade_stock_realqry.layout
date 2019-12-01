@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="T+0trade_stock_realqry">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<gridctrl name="grid.T+0trade.stock.realqry" pos="2,3,-2,-2" show="1"
+        img-scroll="" img-scrollh="" img-sep=""
+        img-check="" img-colsep=""
+        img-count="12" image="skin:IDB_T0TRADE_LIST_IMG"
+        left-pos="0" row-height="30" header-height="0" bk-transparent="100"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254" >
+      <column title="标识" width="40" align="center" key="subscribe_index" />
+      <column title="订阅串信息" width="480" align="left" key="subscribe_info" />
+		</gridctrl>
+	</div>

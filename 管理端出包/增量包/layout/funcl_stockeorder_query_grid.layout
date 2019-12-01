@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockeorder_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+	    
+    <gridctrl name="grid.funcl_stockeorder_query" pos="2,5,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="" editcolumn= "1"
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" grid-tip="1"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"  primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="序号" width="0" align="center" key="row_id" />
+        <column title="订单编号" width="80" align="center" key="order_no"  deletable="0" data_type="N" />       
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="订单状态" width="64" align="center" key="order_status" />
+        <column title="证券代码" width="64" align="center" key="stock_code"  deletable="0" />
+        <column title="证券名称" width="64" align="center" key="stock_name" />
+        <column title="订单方向" width="64" align="center" key="order_dir" />
+        <column title="订单价格" width="64" align="center" key="order_price" data_type="N" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />  
+        <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" />         
+        <column title="撤单数量" width="100" align="center" key="cancel_qty" data_type="T" />
+        <column title="订单冻结金额" width="100" align="center" key="order_frozen_amt" data_type="T" />  
+        <column title="订单时间" width="100" align="center" key="order_time" data_type="N"/>         
+        <column title="申报日期" width="100" align="center" key="report_date" />
+        <column title="申报时间" width="100" align="center" key="report_time" data_type="N"/>
+        <column title="资产账户" width="100" align="center" key="asset_account" deletable="0" />                     
+        <column title="交易佣金" width="100" align="center" key="brokerage_commission" />
+        <column title="印花税" width="100" align="center" key="stamp_tax" />
+        <column title="过户费" width="100" align="center" key="transfer_fare" />
+        <column title="经手费" width="100" align="center" key="brokerage" />
+        <column title="证管费" width="100" align="center" key="SEC_charges" />
+        <column title="其他费用" width="100" align="center" key="other_fare" />     
+        <column title="股东代码" width="100" align="center" key="stock_account" deletable="0" />
+        <column title="本币币种" width="100" align="center" key="currency_type" /> 
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+        <column title="废单原因" width="150" align="center" key="response_info"  />
+        <column title="资产类型" width="100" align="center" key="asset_type" />
+        <column title="证券类型" width="100" align="center" key="stock_type" />
+        <column title="操作方式" width="100" align="center" key="oper_kind" />
+        <column title="批号" width="100" align="center" key="batch_no" />
+         <column title="操作员名称" width="100" align="center" key="operator_name" />
+        <column title="交易单元" width="100" align="center" key="unit_code"  deletable="0" /> 
+        <column title="产品编码" width="100" align="center" key="product_code"   deletable="0" />  
+      </gridctrl>
+    <chkbtn name="check_show_cancel" title="已撤销" skin="IDB_CHECK_BOX" pos="5,-25" width="65" height="15" crtext="e30202" show="1" check="false" showfocus="0"/>
+		<chkbtn name="check_show_execution" title="已成交" skin="IDB_CHECK_BOX" pos="75,-25" width="65" height="15" crtext="0493a0" show="1" check="false" showfocus="0"/>
+				
+		<button name="stockeorder_button.refresh" title="" pos="-230,-30" width="50" height="25" skin="IDB_BT_SMALL" title="刷新" tip="刷新" show="1" />
+		<button name="stockeorder_button.revocation" title="" pos="-175,-30" width="70" height="25" skin="IDB_BT_revocation_small" tip="撤销" show="1" />
+		<button name="stockeorder_button.modify" title="" pos="-100,-30" width="70" height="25" skin="IDB_BT_BIG" title="撤补" tip="撤补" show="1" />
+	 <combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="355,-27" width="120" height="25" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" readonly="1" maxchar="50" show="0"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	
+  </div>

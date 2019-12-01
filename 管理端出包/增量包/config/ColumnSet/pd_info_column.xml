@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="产品编码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品全称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品管理人" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="成立日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品类型" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="募集币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期初资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品总份额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="昨日份额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="历史最高单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="昨日单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="境内托管人全名" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="境内托管账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="境内托管账户名" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品状态" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="基金备案编号" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

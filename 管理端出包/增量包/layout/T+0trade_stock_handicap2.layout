@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="T+0trade_stock_handicap2">
+		<img pos="0,0,-0,-0" image="skins\default\handicap_background.bmp" mode="tile" framesize="0" show="1" response="0"/>
+		<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<!--标题：证券代码 证券名称  最新价 涨幅  最高价 最低价-->
+		<text name="stockcode" crtext="808080" crmark="800000" align="left" pos="15,8,60,25" title="------" font="bold2" show="1" />
+		<text name="stockname" crtext="808080" crmark="800000" align="left" pos="70,8,130,25" title="--------" font="bold2" show="1" />
+		<text name="lastprice" crtext="808080" crmark="800000" align="left" pos="135,8,180,25" title="------" font="bold2" show="1" />
+		<text name="increaseamount" crtext="808080" crmark="800000" align="left" pos="195,8,240,25" title="------" font="bold2" show="1" />
+		<text name="highestprice" crtext="808080" crmark="800000" align="left" pos="255,8,330,25" title="最高------" font="bold2" show="1" />
+		<text name="lowestprice" crtext="808080" crmark="800000" align="left" pos="335,8,410,25" title="最低------" font="bold2" show="1" />
+		<img pos="1,33,-1,34" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--标题：卖盘 数量 买盘 数量 时间 价格 数量-->
+		<text crtext="000000" crmark="800000" align="left" pos="30,42,60,59" title="卖盘" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="85,42,115,59" title="数量" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="150,42,180,59" title="买盘" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="205,42,235,59" title="数量" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="260,42,290,59" title="时间" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="320,42,350,59" title="价格" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="380,42,410,59" title="数量" font="default2" show="1" />
+		<img pos="1,67,-1,68" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--十档卖价-->
+		<text crtext="000000" crmark="800000" align="left" pos="0,76,15,93" title="①" font="default1" show="1" />
+		<text name="sell1price" crtext="087502" crmark="800000" align="right" pos="15,76,60,93" title="--.--" font="default2" show="1" />
+		<text name="sell1qty" crtext="c8c100" crmark="800000" align="right" pos="78,76,118,93" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,98,15,115" title="②" font="default1" show="1" />
+		<text name="sell2price" crtext="087502" crmark="800000" align="right" pos="15,98,60,115" title="--.--" font="default2" show="1" />
+		<text name="sell2qty" crtext="c8c100" crmark="800000" align="right" pos="78,98,118,115" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,120,15,137" title="③" font="default1" show="1" />
+		<text name="sell3price" crtext="087502" crmark="800000" align="right" pos="15,120,60,137" title="--.--" font="default2" show="1" />
+		<text name="sell3qty" crtext="c8c100" crmark="800000" align="right" pos="78,120,118,137" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,142,15,159" title="④" font="default1" show="1" />
+		<text name="sell4price" crtext="087502" crmark="800000" align="right" pos="15,142,60,159" title="--.--" font="default2" show="1" />
+		<text name="sell4qty" crtext="c8c100" crmark="800000" align="right" pos="78,142,118,159" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,164,15,181" title="⑤" font="default1" show="1" />
+		<text name="sell5price" crtext="087502" crmark="800000" align="right" pos="15,164,60,181" title="--.--" font="default2" show="1" />
+		<text name="sell5qty" crtext="c8c100" crmark="800000" align="right" pos="78,164,118,181" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,186,15,203" title="⑥" font="default1" show="1" />
+		<text name="sell6price" crtext="087502" crmark="800000" align="right" pos="15,186,60,203" title="--.--" font="default2" show="1" />
+		<text name="sell6qty" crtext="c8c100" crmark="800000" align="right" pos="78,186,118,203" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,208,15,225" title="⑦" font="default1" show="1" />
+		<text name="sell7price" crtext="087502" crmark="800000" align="right" pos="15,208,60,225" title="--.--" font="default2" show="1" />
+		<text name="sell7qty" crtext="c8c100" crmark="800000" align="right" pos="78,208,118,225" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,230,15,247" title="⑧" font="default1" show="1" />
+		<text name="sell8price" crtext="087502" crmark="800000" align="right" pos="15,230,60,247" title="--.--" font="default2" show="1" />
+		<text name="sell8qty" crtext="c8c100" crmark="800000" align="right" pos="78,230,118,247" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,252,15,269" title="⑨" font="default1" show="1" />
+		<text name="sell9price" crtext="087502" crmark="800000" align="right" pos="15,252,60,269" title="--.--" font="default2" show="1" />
+		<text name="sell9qty" crtext="c8c100" crmark="800000" align="right" pos="78,252,118,269" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="0,274,15,291" title="⑩" font="default1" show="1" />
+		<text name="sell10price" crtext="087502" crmark="800000" align="right" pos="15,274,60,291" title="--.--" font="default2" show="1" />
+		<text name="sell10qty" crtext="c8c100" crmark="800000" align="right" pos="78,274,118,291" title="--" font="default2" show="1" />
+		<img pos="119,68,120,301" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--十档买价-->
+		<text crtext="000000" crmark="800000" align="left" pos="120,76,135,93" title="①" font="default1" show="1" />
+		<text name="buy1price" crtext="087502" crmark="800000" align="right" pos="135,76,180,93" title="--.--" font="default2" show="1" />
+		<text name="buy1qty" crtext="c8c100" crmark="800000" align="right" pos="198,76,238,93" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,98,135,115" title="②" font="default1" show="1" />
+		<text name="buy2price" crtext="087502" crmark="800000" align="right" pos="135,98,180,115" title="--.--" font="default2" show="1" />
+		<text name="buy2qty" crtext="c8c100" crmark="800000" align="right" pos="198,98,238,115" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,120,135,137" title="③" font="default1" show="1" />
+		<text name="buy3price" crtext="087502" crmark="800000" align="right" pos="135,120,180,137" title="--.--" font="default2" show="1" />
+		<text name="buy3qty" crtext="c8c100" crmark="800000" align="right" pos="198,120,238,137" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,142,135,159" title="④" font="default1" show="1" />
+		<text name="buy4price" crtext="087502" crmark="800000" align="right" pos="135,142,180,159" title="--.--" font="default2" show="1" />
+		<text name="buy4qty" crtext="c8c100" crmark="800000" align="right" pos="198,142,238,159" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,164,135,181" title="⑤" font="default1" show="1" />
+		<text name="buy5price" crtext="087502" crmark="800000" align="right" pos="135,164,180,181" title="--.--" font="default2" show="1" />
+		<text name="buy5qty" crtext="c8c100" crmark="800000" align="right" pos="198,164,238,181" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,186,135,203" title="⑥" font="default1" show="1" />
+		<text name="buy6price" crtext="087502" crmark="800000" align="right" pos="135,186,180,203" title="--.--" font="default2" show="1" />
+		<text name="buy6qty" crtext="c8c100" crmark="800000" align="right" pos="198,186,238,203" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,208,135,225" title="⑦" font="default1" show="1" />
+		<text name="buy7price" crtext="087502" crmark="800000" align="right" pos="135,208,180,225" title="--.--" font="default2" show="1" />
+		<text name="buy7qty" crtext="c8c100" crmark="800000" align="right" pos="198,208,238,225" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,230,135,247" title="⑧" font="default1" show="1" />
+		<text name="buy8price" crtext="087502" crmark="800000" align="right" pos="135,230,180,247" title="--.--" font="default2" show="1" />
+		<text name="buy8qty" crtext="c8c100" crmark="800000" align="right" pos="198,230,238,247" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,252,135,269" title="⑨" font="default1" show="1" />
+		<text name="buy9price" crtext="087502" crmark="800000" align="right" pos="135,252,180,269" title="--.--" font="default2" show="1" />
+		<text name="buy9qty" crtext="c8c100" crmark="800000" align="right" pos="198,252,238,269" title="--" font="default2" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="120,274,135,291" title="⑩" font="default1" show="1" />
+		<text name="buy10price" crtext="087502" crmark="800000" align="right" pos="135,274,180,291" title="--.--" font="default2" show="1" />
+		<text name="buy10qty" crtext="c8c100" crmark="800000" align="right" pos="198,274,238,291" title="--" font="default2" show="1" />
+		<img pos="239,68,240,301" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--成交情况-->
+		<text name="execution1_time" crtext="000000" crmark="800000" align="left" pos="240,76,300,93" title="--:--:--" font="default2" show="1" />
+		<text name="execution1_price" crtext="087502" crmark="800000" align="right" pos="320,76,360,93" title="--.--" font="default2" show="1" />
+		<text name="execution1_qty" crtext="c8c100" crmark="800000" align="right" pos="370,76,410,93" title="-- -" font="default2" show="1" />
+		<text name="execution2_time" crtext="000000" crmark="800000" align="left" pos="240,98,300,115" title="--:--:--" font="default2" show="1" />
+		<text name="execution2_price" crtext="087502" crmark="800000" align="right" pos="320,98,360,115" title="--.--" font="default2" show="1" />
+		<text name="execution2_qty" crtext="c8c100" crmark="800000" align="right" pos="370,98,410,115" title="-- -" font="default2" show="1" />
+		<text name="execution3_time" crtext="000000" crmark="800000" align="left" pos="240,120,300,137" title="--:--:--" font="default2" show="1" />
+		<text name="execution3_price" crtext="087502" crmark="800000" align="right" pos="320,120,360,137" title="--.--" font="default2" show="1" />
+		<text name="execution3_qty" crtext="c8c100" crmark="800000" align="right" pos="370,120,410,137" title="-- -" font="default2" show="1" />		
+		<text name="execution4_time" crtext="000000" crmark="800000" align="left" pos="240,142,300,159" title="--:--:--" font="default1" show="1" />
+		<text name="execution4_price" crtext="087502" crmark="800000" align="right" pos="320,142,360,159" title="--.--" font="default2" show="1" />
+		<text name="execution4_qty" crtext="c8c100" crmark="800000" align="right" pos="370,142,410,159" title="-- -" font="default2" show="1" />
+		<text name="execution5_time" crtext="000000" crmark="800000" align="left" pos="240,164,300,181" title="--:--:--" font="default1" show="1" />
+		<text name="execution5_price" crtext="087502" crmark="800000" align="right" pos="320,164,360,181" title="--.--" font="default2" show="1" />
+		<text name="execution5_qty" crtext="c8c100" crmark="800000" align="right" pos="370,164,410,181" title="-- -" font="default2" show="1" />
+		<text name="execution6_time" crtext="000000" crmark="800000" align="left" pos="240,186,300,203" title="--:--:--" font="default1" show="1" />
+		<text name="execution6_price" crtext="087502" crmark="800000" align="right" pos="320,186,360,203" title="--.--" font="default2" show="1" />
+		<text name="execution6_qty" crtext="c8c100" crmark="800000" align="right" pos="370,186,410,203" title="-- -" font="default2" show="1" />
+		<text name="execution7_time" crtext="000000" crmark="800000" align="left" pos="240,208,300,225" title="--:--:--" font="default1" show="1" />
+		<text name="execution7_price" crtext="087502" crmark="800000" align="right" pos="320,208,360,225" title="--.--" font="default2" show="1" />
+		<text name="execution7_qty" crtext="c8c100" crmark="800000" align="right" pos="370,208,410,225" title="-- -" font="default2" show="1" />
+		<text name="execution8_time" crtext="000000" crmark="800000" align="left" pos="240,230,300,247" title="--:--:--" font="default1" show="1" />
+		<text name="execution8_price" crtext="087502" crmark="800000" align="right" pos="320,230,360,247" title="--.--" font="default2" show="1" />
+		<text name="execution8_qty" crtext="c8c100" crmark="800000" align="right" pos="370,230,410,247" title="-- -" font="default2" show="1" />
+		<text name="execution9_time" crtext="000000" crmark="800000" align="left" pos="240,252,300,269" title="--:--:--" font="default1" show="1" />
+		<text name="execution9_price" crtext="087502" crmark="800000" align="right" pos="320,252,360,269" title="--.--" font="default2" show="1" />
+		<text name="execution9_qty" crtext="c8c100" crmark="800000" align="right" pos="370,252,410,269" title="-- -" font="default2" show="1" />
+		<text name="execution10_time" crtext="000000" crmark="800000" align="left" pos="240,274,300,291" title="--:--:--" font="default1" show="1" />
+		<text name="execution10_price" crtext="087502" crmark="800000" align="right" pos="320,274,360,291" title="--.--" font="default2" show="1" />
+		<text name="execution10_qty" crtext="c8c100" crmark="800000" align="right" pos="370,274,410,291" title="-- -" font="default2" show="1" />
+		
+	</div>

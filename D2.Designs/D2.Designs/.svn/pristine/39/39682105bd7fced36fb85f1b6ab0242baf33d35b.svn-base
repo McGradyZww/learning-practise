@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.41.1" procedurename="prt_base_test_add" paras="11"/>
+    <func funcname="pubT.41.2" procedurename="prt_base_test_del" paras="10"/>
+    <func funcname="pubT.41.3" procedurename="prt_base_test_up" paras="11"/>
+    <func funcname="pubT.41.4" procedurename="prt_base_test_sel" paras="12"/>
+</funcs>

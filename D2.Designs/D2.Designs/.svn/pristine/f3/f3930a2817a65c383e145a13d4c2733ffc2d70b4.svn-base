@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.3.1" procedurename="prt_pdcapit_AddPdCapital" paras="30"/>
+    <func funcname="prodT.3.7" procedurename="prt_pdcapit_DeductPdFee" paras="15"/>
+    <func funcname="prodT.3.4" procedurename="prt_pdcapit_QueryPdCapital" paras="15"/>
+    <func funcname="prodT.3.5" procedurename="prt_pdcapit_QueryPdCapital_Jour" paras="16"/>
+    <func funcname="prodT.3.6" procedurename="prt_pdcapit_QueryPdCapital_JourHis" paras="17"/>
+    <func funcname="prodT.3.8" procedurename="prt_pdcapit_ChgPdCapital" paras="43"/>
+    <func funcname="prodT.3.9" procedurename="prt_pdcapit_UpdatePdCapitalRecePayab" paras="30"/>
+    <func funcname="prodT.3.21" procedurename="prt_pdcapit_QueryPdAsset" paras="15"/>
+    <func funcname="prodT.3.22" procedurename="prt_pdcapit_QueryPdAsset_His" paras="17"/>
+    <func funcname="prodT.3.71" procedurename="prt_pdcapit_AddbkacCapital" paras="17"/>
+    <func funcname="prodT.3.72" procedurename="prt_pdcapit_ModibkacCapital" paras="19"/>
+    <func funcname="prodT.3.73" procedurename="prt_pdcapit_DeletebkacCapital" paras="15"/>
+    <func funcname="prodT.3.74" procedurename="prt_pdcapit_QuerybkacCapital" paras="16"/>
+    <func funcname="prodT.3.75" procedurename="prt_pdcapit_QuerybkacCapital_His" paras="18"/>
+    <func funcname="prodT.3.76" procedurename="prt_pdcapit_QuerybkacCapital_Jour" paras="17"/>
+    <func funcname="prodT.3.77" procedurename="prt_pdcapit_QuerybkacCapital_JourHis" paras="18"/>
+</funcs>

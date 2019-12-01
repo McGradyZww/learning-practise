@@ -1,0 +1,6 @@
+use db_rksecu;
+truncate tb_rksedm_index_type;
+INSERT INTO `db_rksecu`.`tb_rksedm_index_type` (`create_date`, `create_time`, `update_date`, `update_time`, `index_no`, `index_code`, `index_name`, `index_build_orgn`, `weight_type`, `remark_info`, `update_times`) VALUES (date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), 1,'HS300', '沪深300', '沪深证券交易所', "0", "", '1');
+INSERT INTO `db_rksecu`.`tb_rksedm_index_type` (`create_date`, `create_time`, `update_date`, `update_time`, `index_no`, `index_code`, `index_name`, `index_build_orgn`, `weight_type`, `remark_info`, `update_times`) VALUES (date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), 2,'ZZ500', '中证500', '中证指数有限公司', "0", "", '1');
+INSERT INTO `db_rksecu`.`tb_rksedm_index_type` (`create_date`, `create_time`, `update_date`, `update_time`, `index_no`, `index_code`, `index_name`, `index_build_orgn`, `weight_type`, `remark_info`, `update_times`) VALUES (date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), date_format(curdate(),'%Y%m%d'), date_format(curtime(),'%H%i%s'), 3,'SZ50', '上证50', '上海证券交易所', "0", "", '1');
+commit;

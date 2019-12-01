@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.3.11" procedurename="prt_dcsypse_SyncAsacPosi" paras="108"/>
+    <func funcname="dcsyncT.3.12" procedurename="prt_dcsypse_SyncAsacAsset" paras="108"/>
+    <func funcname="dcsyncT.3.13" procedurename="prt_dcsypse_Syncpdseac_secu_acco" paras="108"/>
+    <func funcname="dcsyncT.3.14" procedurename="prt_dcsypse_Syncpdseca_exgp_capit" paras="108"/>
+    <func funcname="dcsyncT.3.15" procedurename="prt_dcsypse_Syncpdseca_exgp_asset" paras="108"/>
+    <func funcname="dcsyncT.3.16" procedurename="prt_dcsypse_Syncpdseca_asac_capit" paras="108"/>
+    <func funcname="dcsyncT.3.17" procedurename="prt_dcsypse_Syncpdseca_out_asac_capit" paras="108"/>
+    <func funcname="dcsyncT.3.18" procedurename="prt_dcsypse_Syncpdseca_evalu_out_asac_capit" paras="108"/>
+    <func funcname="dcsyncT.3.19" procedurename="prt_dcsypse_Syncpdsepo_exgp_posi" paras="108"/>
+    <func funcname="dcsyncT.3.20" procedurename="prt_dcsypse_Syncpdsepo_exgp_bond_pledge" paras="108"/>
+    <func funcname="dcsyncT.3.21" procedurename="prt_dcsypse_Syncpdsepo_asac_posi" paras="108"/>
+    <func funcname="dcsyncT.3.22" procedurename="prt_dcsypse_Syncpdsepo_asac_bond_pledge" paras="108"/>
+    <func funcname="dcsyncT.3.23" procedurename="prt_dcsypse_Syncpdsepo_bond_repo" paras="108"/>
+    <func funcname="dcsyncT.3.24" procedurename="prt_dcsypse_Syncpdsepo_out_asac_posi" paras="108"/>
+    <func funcname="dcsyncT.3.25" procedurename="prt_dcsypse_Syncpdsepo_evalu_out_asac_posi" paras="108"/>
+    <func funcname="dcsyncT.3.26" procedurename="prt_dcsypse_Syncpdsepo_block_trade_posi" paras="108"/>
+</funcs>

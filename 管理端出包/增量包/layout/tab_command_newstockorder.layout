@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+  <tab name="tab_command_newstockorder" image="skin:IDB_TAB_ITEM" active="true" title="新股指令" pos="0,33,-0,-0" canclose="1" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>	
+			<tabctrl name="tab_orderjour_query.first" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="tab_trade_newstockorder.command" image="skin:IDB_TAB_LOW_ITEM" title="新股指令" active="true" pos="0,30,-0,-0" menuno="61020501">	        	
+					<layout name="tab_command_newstockorder.layout" layout-type="horizontal" pos="4,4,-4,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+					<layout-div name="layout-newstockinfo" div-pos="200" min-pos="100">
+						<div name="funcl_new_stockinfo_query_grid_ins" placement="funcl_new_stockinfo_query_grid_ins" pos="0,0,-2,-0" />
+					</layout-div>
+					<layout-div name="layout-newstockorder" >						     
+						<!--产品-->
+						<combobox name="newstock_order.product_code" tabstop="1" skin="IDB_EDIT" pos="30,0" width="120" height="30" tip="产品"
+							small-image="skin:IDB_DROP_DOWN_small"
+							multiline="0" readonly="1" maxchar="50" list-height="300"
+							font="default3" crtext="0,0,0" crtip="128,128,128">
+						</combobox>						
+						<text crtext="000000" crmark="800000" align="left" pos="340,5,410,26" title="交  易  员" font="default1" show="1" />
+						<combobox name="newstock_command_executor" tabstop="1" skin="IDB_EDIT" pos="410,0" width="120" height="26" tip=""
+						  small-image="skin:IDB_DROP_DOWN_small" list-height="200" img-scroll="skin:IDB_SCROLL_V"
+						  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+							font="default" crtext="0,0,0" crtip="128,128,128,128">
+						</combobox>    
+						
+						<button name="newstock_command.button" tabstop="1" skin="IDB_BT_OK" title="一键申购指令" pos="540,0" width="100" height="30" shortcut=	"RETURN" crtext="FFFFFF" defaultbutton="1"/>   
+						<button name="newstock_button.refresh" title="" pos="650,0" width="80" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+							<layout name="split_new_stockorder_list" layout-type="vertical" pos="0,20,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+								<layout-div  div-pos="800" min-pos="500">
+									<div name="funcl_new_stockorder_list_grid_ins" pos="4,10,-4,-4" placement="funcl_new_stockorder_list_grid_ins" />
+								</layout-div>
+								<layout-div  div-pos="660" min-pos="500">
+									<div name="funcl_new_stockorder_query_grid_ins" pos="4,10,-4,-4" placement="funcl_new_stockorder_query_grid_ins" />
+								</layout-div>
+								
+							</layout>																
+						</layout-div>
+					 </layout>			
+				</tab>
+				
+		
+			
+	</tabctrl>  
+  </tab>
+</tabctrl>

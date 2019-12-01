@@ -1,0 +1,13 @@
+2019-06-14 16:43:59:658:断开连接/
+2019-06-14 16:44:08:527:断开连接/
+2019-06-14 16:44:10:382:5207937037325299027admin
+2019-06-14 16:44:10:494:Execute调用功能号:pubL.19.21
+2019-06-14 16:44:10:615:Execute收到功能号:pubL.19.21应答
+2019-06-14 16:44:10:637:LdNet.ClientCore.CoreException: 功能号：pubL.19.21 错误信息：pubA.19.21.65 该操作员不存在！操作员编号=70030001 ---> System.Exception: 错误路径：
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 LdNet.ClientCore.Sdk.ApiHandler.Execute[T](IRequest`1 request, IOSMMessage inputOSMmsg, Action`1 packerAction, Func`2 unpackerAction, UInt32 timeout, Int32 systemNo, Int32 subSystemNo, Int32 branchNo, Int32 companyNo, Int32 menuId, Boolean isPackCommonFileds)
+   在 LdNet.ClientCore.Sdk.ApiHandler.Execute[T](IRequest`1 request, IOSMMessage osmmsg, Func`2 unpackerAction, UInt32 timeout, Int32 systemNo, Int32 subSystemNo, Int32 branchNo, Int32 companyNo, Int32 menuId)
+   在 LdNet.ClientCore.Sdk.ApiHandler.Execute[T](IRequest`1 request, UInt32 timeout, Int32 systemNo, Int32 subSystemNo, Int32 branchNo, Int32 companyNo, Int32 menuId)
+   在 LdNet.ClientSdk.Command.UserClientCommandManager.<get_pubL_19_21_Command>b__33_0(pubL_19_21_Request o)
+   在 LdNet.ClientCore.Threading.Working.TAP`2.<>c__DisplayClass3_0.<Handle>b__0(Object o)
+2019-06-14 16:44:10:639:功能号：pubL.19.21 错误信息：pubA.19.21.65 该操作员不存在！操作员编号=70030001

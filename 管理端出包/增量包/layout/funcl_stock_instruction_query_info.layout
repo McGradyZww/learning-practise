@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_instruction_query_info">
+     
+      <img pos="1,4,-1,-0" image="skins\default\MsgBack.png" mode="tile" show="1" response="0" />
+      <text pos="18,25" height="20" width="80" align="right" font="default1" crtext="191919" title="指令序号" />
+      <text name="command_id" pos="100,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="18,55" height="20" width="80" align="right" font="default1" crtext="191919" title="指令类型" />
+      <text name="command_type" pos="100,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="18,85" height="20" width="80" align="right" font="default1" crtext="191919" title="产品编码" />
+      <text name="product_code" pos="100,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="18,115" height="20" width="80" align="right" font="default1" crtext="191919" title="产品名称" />
+      <text name="product_name" pos="100,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" /> 
+      <text pos="18,145" height="20" width="80" align="right" font="default1" crtext="191919" title="交易单元" />
+      <text name="unit_code" pos="100,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="0,175" height="20" width="100" align="right" font="default1" crtext="191919" title="交易单元名称" />
+      <text name="unit_name" pos="100,175" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+         
+      
+      <text pos="280,25" height="20" width="80" align="right" font="default1" crtext="191919" title="证券代码" />
+      <text name="stock_code" pos="362,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="280,55" height="20" width="80" align="right" font="default1" crtext="191919" title="证券名称" />
+      <text name="stock_name" pos="362,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="280,85" height="20" width="80" align="right" font="default1" crtext="191919" title="指令方向" />
+      <text name="command_dir" pos="362,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="280,115" height="20" width="80" align="right" font="default1" crtext="191919" title="指令限价" />
+      <text name="limit_price" pos="362,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="280,145" height="20" width="80" align="right" font="default1" crtext="191919" title="价格方式" />
+      <text name="price_mode" pos="362,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="280,175" height="20" width="80" align="right" font="default1" crtext="191919" title="控制方式" />
+      <text name="target_type" pos="362,175" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      
+      
+      <text pos="542,25" height="20" width="80" align="right" font="default1" crtext="191919" title="指令数量" />
+      <text name="command_qty" thousands_digital="1" pos="624,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="542,55" height="20" width="80" align="right" font="default1" crtext="191919" title="订单数量" />
+      <text name="order_qty" thousands_digital="1" pos="624,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="542,85" height="20" width="80" align="right" font="default1" crtext="191919" title="成交数量" />
+      <text name="execution_qty" thousands_digital="1" pos="624,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />   
+      <text pos="542,115" height="20" width="80" align="right" font="default1" crtext="191919" title="指令金额" />
+      <text name="command_amt" thousands_digital="1" pos="624,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" /> 
+ 			<text pos="522,145" height="20" width="100" align="right" font="default1" crtext="191919" title="冻结金额" />
+      <text name="frozen_amt" thousands_digital="1" pos="624,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="542,175" height="20" width="80" align="right" font="default1" crtext="191919" title="成交金额" />
+      <text name="execution_amt" thousands_digital="1"  pos="624,175" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      
+      <text pos="804,25" height="20" width="80" align="right" font="default1" crtext="191919" title="指令状态" />
+      <text name="command_status" pos="886,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="804,55" height="20" width="80" align="right" font="default1" crtext="191919" title="成交状态" />
+      <text name="execution_status" pos="886,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="784,85" height="20" width="100" align="right" font="default1" crtext="191919" title="指令下达人" />
+      <text name="command_operator_name" pos="886,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="784,115" height="20" width="100" align="right" font="default1" crtext="191919" title="指令执行人" />
+      <text name="command_executor_name" pos="886,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />  
+      <text pos="804,145" height="20" width="80" align="right" font="default1" crtext="191919" title="指令日期" />
+      <text name="command_date" pos="886,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="804,175" height="20" width="80" align="right" font="default1" crtext="191919" title="指令时间" />
+      <text name="command_time" pos="886,175" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+	  
+	  <text pos="1066,25" height="20" width="80" align="right" font="default1" crtext="191919" title="审批状态" />
+      <text name="command_approve_status" pos="1148,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="1066,55" height="20" width="80" align="right" font="default1" crtext="191919" title="审批操作员" />
+      <text name="command_approve_operator" pos="1148,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="1046,85" height="20" width="100" align="right" font="default1" crtext="191919" title="审批日期" />
+      <text name="command_approve_date" pos="1148,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="1046,115" height="20" width="100" align="right" font="default1" crtext="191919" title="审批时间" />
+	  <text name="command_approve_time" pos="1148,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+            
+  </div>

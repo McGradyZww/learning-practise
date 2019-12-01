@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.10.31" procedurename="prt_tdsebk_QueryComm" paras="32"/>
+    <func funcname="tdsecuT.10.32" procedurename="prt_tdsebk_QueryComm_His" paras="33"/>
+    <func funcname="tdsecuT.10.41" procedurename="prt_tdsebk_QueryOrder" paras="30"/>
+    <func funcname="tdsecuT.10.42" procedurename="prt_tdsebk_QueryOrder_His" paras="31"/>
+    <func funcname="tdsecuT.10.51" procedurename="prt_tdsebk_QueryOrderRsp" paras="20"/>
+    <func funcname="tdsecuT.10.52" procedurename="prt_tdsebk_QueryStrikeRsp" paras="19"/>
+    <func funcname="tdsecuT.10.53" procedurename="prt_tdsebk_QueryStrikeDetail" paras="25"/>
+    <func funcname="tdsecuT.10.54" procedurename="prt_tdsebk_QueryStrikeDetail_His" paras="26"/>
+    <func funcname="tdsecuT.10.55" procedurename="prt_tdsebk_QueryConoOrder" paras="9"/>
+    <func funcname="tdsecuT.10.56" procedurename="prt_tdsebk_AppendOrderAssociatedOriginalOrder" paras="58"/>
+    <func funcname="tdsecuT.10.57" procedurename="prt_tdsebk_QueryConoExceptionOrder" paras="11"/>
+    <func funcname="tdsecuT.10.58" procedurename="prt_tdsebk_QuerySumCommCheck" paras="30"/>
+    <func funcname="tdsecuT.10.59" procedurename="prt_tdsebk_QuerySumCommCheck_His" paras="31"/>
+    <func funcname="tdsecuT.10.60" procedurename="prt_tdsebk_UpdateSumCommCheck" paras="21"/>
+    <func funcname="tdsecuT.10.61" procedurename="prt_tdsebk_QueryAllSumComm" paras="17"/>
+    <func funcname="tdsecuT.10.62" procedurename="prt_tdsebk_QueryBkOrderRsp" paras="23"/>
+    <func funcname="tdsecuT.10.63" procedurename="prt_tdsebk_QueryBkStrikeRsp" paras="21"/>
+    <func funcname="tdsecuT.10.64" procedurename="prt_tdsebk_QueryBkStrikeDetail" paras="28"/>
+    <func funcname="tdsecuT.10.65" procedurename="prt_tdsebk_QueryOfferInfo" paras="10"/>
+    <func funcname="tdsecuT.10.66" procedurename="prt_tdsebk_QueryBkCancelJour" paras="21"/>
+    <func funcname="tdsecuT.10.67" procedurename="prt_tdsebk_GetSetFuShFlow" paras="9"/>
+    <func funcname="tdsecuT.10.68" procedurename="prt_tdsebk_SyncOffSiteFundrSp" paras="26"/>
+    <func funcname="tdsecuT.10.69" procedurename="prt_tdsebk_QueryOffSiteFundrSp" paras="12"/>
+    <func funcname="tdsecuT.10.70" procedurename="prt_tdsebk_BackGetModiErrorOrderStrike" paras="64"/>
+    <func funcname="tdsecuT.10.71" procedurename="prt_tdsebk_BackModiErrorOrderStrike" paras="80"/>
+    <func funcname="tdsecuT.10.72" procedurename="prt_tdsebk_QueryAllExgpPosi" paras="19"/>
+    <func funcname="tdsecuT.10.73" procedurename="prt_tdsebk_BackModiErrorOrderCancel" paras="47"/>
+    <func funcname="tdsecuT.10.74" procedurename="prt_tdsebk_BackModiErrorOrderWaste" paras="47"/>
+</funcs>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.28.101" procedurename="prt_basesync_QueryNewStockTable" paras="9"/>
+    <func funcname="pubT.28.102" procedurename="prt_basesync_UpdateNewStockTable" paras="21"/>
+    <func funcname="pubT.28.111" procedurename="prt_basesync_QueryStockCodeTable" paras="9"/>
+    <func funcname="pubT.28.112" procedurename="prt_basesync_UpdateStockCodeTable" paras="36"/>
+    <func funcname="pubT.28.121" procedurename="prt_basesync_QueryBondInfoTable" paras="9"/>
+    <func funcname="pubT.28.122" procedurename="prt_basesync_UpdateBondInfoTable" paras="41"/>
+    <func funcname="pubT.28.131" procedurename="prt_basesync_QueryStockQuotTable" paras="9"/>
+    <func funcname="pubT.28.132" procedurename="prt_basesync_UpdateStockQuotTable" paras="45"/>
+    <func funcname="pubT.28.141" procedurename="prt_basesync_QueryCodeMapTable" paras="9"/>
+    <func funcname="pubT.28.142" procedurename="prt_basesync_UpdateCodeMapTable" paras="15"/>
+    <func funcname="pubT.28.151" procedurename="prt_basesync_QueryStockCodeOrderDirTable" paras="9"/>
+    <func funcname="pubT.28.152" procedurename="prt_basesync_UpdateStockCodeOrderDirTable" paras="19"/>
+    <func funcname="pubT.28.161" procedurename="prt_basesync_QueryHkExchRateTable" paras="9"/>
+    <func funcname="pubT.28.162" procedurename="prt_basesync_UpdateHkExchRateTable" paras="18"/>
+    <func funcname="pubT.28.171" procedurename="prt_basesync_UpdateAShareCapitalInfo" paras="15"/>
+    <func funcname="pubT.28.172" procedurename="prt_basesync_UpdateNewStockInfo" paras="20"/>
+    <func funcname="pubT.28.173" procedurename="prt_basesync_UpdateConvertibleBondIssueInfo" paras="20"/>
+    <func funcname="pubT.28.174" procedurename="prt_basesync_UpdateFundInfo" paras="22"/>
+    <func funcname="pubT.28.175" procedurename="prt_basesync_UpdateBondInfo" paras="30"/>
+    <func funcname="pubT.28.201" procedurename="prt_basesync_QueryAutoSyncSet" paras="12"/>
+    <func funcname="pubT.28.202" procedurename="prt_basesync_AddAutoSyncSet" paras="18"/>
+    <func funcname="pubT.28.203" procedurename="prt_basesync_EditAutoSyncSet" paras="17"/>
+    <func funcname="pubT.28.204" procedurename="prt_basesync_DeleteAutoSyncSet" paras="10"/>
+    <func funcname="pubT.28.205" procedurename="prt_basesync_UpdateDealFlag" paras="11"/>
+    <func funcname="pubT.28.106" procedurename="prt_basesync_QueryAutoSynclog" paras="11"/>
+    <func funcname="pubT.28.107" procedurename="prt_basesync_AddAutoSyncLog" paras="14"/>
+    <func funcname="pubT.28.108" procedurename="prt_basesync_ClearAutoSyncLog" paras="10"/>
+    <func funcname="pubT.28.109" procedurename="prt_basesync_QueryAutoSyncInnerCheck" paras="10"/>
+</funcs>

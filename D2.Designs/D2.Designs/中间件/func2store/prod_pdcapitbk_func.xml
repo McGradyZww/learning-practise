@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.4.1" procedurename="prt_pdcapitbk_QueryPdCapit" paras="15"/>
+    <func funcname="prodT.4.2" procedurename="prt_pdcapitbk_QueryPdCapit_His" paras="16"/>
+    <func funcname="prodT.4.5" procedurename="prt_pdcapitbk_QueryPdCapital_Jour" paras="15"/>
+    <func funcname="prodT.4.6" procedurename="prt_pdcapitbk_QueryPdCapital_JourHis" paras="16"/>
+    <func funcname="prodT.4.7" procedurename="prt_pdcapitbk_QueryPdAsset" paras="15"/>
+    <func funcname="prodT.4.8" procedurename="prt_pdcapitbk_QueryPdAsset_His" paras="16"/>
+</funcs>

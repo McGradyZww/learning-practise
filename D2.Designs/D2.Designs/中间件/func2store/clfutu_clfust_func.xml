@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="clfutuT.3.1" procedurename="prt_clfust_UpdateGetPosi" paras="31"/>
+    <func funcname="clfutuT.3.2" procedurename="prt_clfust_UpdateHoldMargin" paras="16"/>
+    <func funcname="clfutuT.3.3" procedurename="prt_clfust_GetPosi" paras="25"/>
+    <func funcname="clfutuT.3.31" procedurename="prt_clfust_DealSettle" paras="33"/>
+    <func funcname="clfutuT.3.40" procedurename="prt_clfust_UpdatePreEntryEntryStatus" paras="12"/>
+    <func funcname="clfutuT.3.41" procedurename="prt_clfust_UpdatePreEntryUndoStatus" paras="12"/>
+    <func funcname="clfutuT.3.42" procedurename="prt_clfust_UpdatePreEntry" paras="13"/>
+    <func funcname="clfutuT.3.43" procedurename="prt_clfust_UpdateGetPreEntry" paras="47"/>
+    <func funcname="clfutuT.3.44" procedurename="prt_clfust_UpdateGetUndoPreEntry" paras="79"/>
+    <func funcname="clfutuT.3.45" procedurename="prt_clfust_QueryPreEntry" paras="21"/>
+</funcs>

@@ -1,0 +1,44 @@
+<!--下单确认框：新股申购-->
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="funcl_new_stockorder_hint_ins" title="" width="840" height="550"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="新股申购" response="0" show="1" />
+	</base>
+	
+	<body>
+		<div name="funcl_stockorder_command_hint.body" pos="0,30,-0,-0">
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+
+      <img pos="10,2" width="36" height="36" image="skins\image\icon_info.png" mode="tile" show="1" response="0"/>
+			<text crtext="000000" crmark="800000" align="left" pos="60,10" width="80" height="36" title="新股申购" font="default4" show="1"/>
+			<text name="txtfail" crtext="FF0000" crmark="800000" align="right" pos="140,10" width="60" height="36" title="%d笔" font="default4" show="1" />
+			<text name="txtsuccess" crtext="000000" crmark="800000" align="left" pos="200,10" width="200" height="36" title="失败，%d笔成功" font="default4" show="1"/>
+						
+      <!--新股申购信息明细grid-->
+			<gridctrl name="grid.stockorder_command_hint.detail" pos="5,40,-5,-62" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="2" image="skin:IDB_ORDERFLAG_LIST_IMG" sort="0" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+        <column title="状态" width="40" key="order_status" />
+        <column title="下达结果" width="240" key="order_result" />
+				<column title="产品名称" width="120" key="product_name" />
+				<column title="股东代码" width="120" key="stock_account" />
+				<column title="证券名称" width="120" key="stock_name" />
+				<column title="申购数量" width="100" key="order_qty" />
+			</gridctrl>             
+     	
+     	<!--分割线-->
+      <img pos="1,-63,-1,-60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+       <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="-140,-50,-10,-10" font="default3" shortcut="RETURN" crtext="FFFFFF" show="1" defaultbutton="1"/>
+	  </div>
+	</body>
+</dlg>

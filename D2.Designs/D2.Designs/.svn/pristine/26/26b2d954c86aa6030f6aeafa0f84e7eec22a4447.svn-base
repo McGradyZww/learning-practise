@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfofuT.2.8" procedurename="prt_pdseca_DistrPdCapital" paras="17"/>
+    <func funcname="pdfofuT.2.9" procedurename="prt_pdseca_BackPdCapital" paras="17"/>
+    <func funcname="pdfofuT.2.10" procedurename="prt_pdseca_AuthPdCapital" paras="18"/>
+    <func funcname="pdfofuT.2.11" procedurename="prt_pdseca_BackAuthPdCapital" paras="18"/>
+    <func funcname="pdfofuT.2.32" procedurename="prt_pdfoca_FrozenExgpCapital" paras="19"/>
+    <func funcname="pdfofuT.2.33" procedurename="prt_pdfoca_UndoFrozenExgpCapital" paras="15"/>
+    <func funcname="pdfofuT.2.34" procedurename="prt_pdfoca_UnFrozenExgpCapital" paras="19"/>
+    <func funcname="pdfofuT.2.35" procedurename="prt_pdfoca_UndoUnFrozenExgpCapital" paras="15"/>
+    <func funcname="pdfofuT.2.36" procedurename="prt_pdfoca_ModiExgpCapital" paras="26"/>
+    <func funcname="pdfofuT.2.37" procedurename="prt_pdfoca_QueryExgpCapital" paras="17"/>
+    <func funcname="pdfofuT.2.38" procedurename="prt_pdfoca_QueryExgpCapital_His" paras="19"/>
+    <func funcname="pdfofuT.2.39" procedurename="prt_pdfoca_QueryExgpCapital_Jour" paras="18"/>
+    <func funcname="pdfofuT.2.40" procedurename="prt_pdfoca_QueryExgpCapital_JourHis" paras="19"/>
+    <func funcname="pdfofuT.2.41" procedurename="prt_pdfoca_QueryExgpCapitalFrozenJour" paras="20"/>
+    <func funcname="pdfofuT.2.42" procedurename="prt_pdfoca_QueryExgpCapitalFrozenJour_His" paras="20"/>
+    <func funcname="pdfofuT.2.43" procedurename="prt_pdfoca_GetExgpCapitalFrozenJour" paras="21"/>
+    <func funcname="pdfofuT.2.51" procedurename="prt_pdfoca_PatchAsacCapital" paras="17"/>
+    <func funcname="pdfofuT.2.52" procedurename="prt_pdfoca_FrozenAsacCapital" paras="18"/>
+    <func funcname="pdfofuT.2.53" procedurename="prt_pdfoca_UndoFrozenAsacCapital" paras="14"/>
+    <func funcname="pdfofuT.2.54" procedurename="prt_pdfoca_UnFrozenAsacCapital" paras="18"/>
+    <func funcname="pdfofuT.2.55" procedurename="prt_pdfoca_UndoUnFrozenAsacCapital" paras="14"/>
+    <func funcname="pdfofuT.2.56" procedurename="prt_pdfoca_ModiAsacCapital" paras="25"/>
+    <func funcname="pdfofuT.2.57" procedurename="prt_pdfoca_QueryAsacCapital" paras="16"/>
+    <func funcname="pdfofuT.2.58" procedurename="prt_pdfoca_QueryAsacCapital_His" paras="18"/>
+    <func funcname="pdfofuT.2.59" procedurename="prt_pdfoca_QueryAsacCapital_Jour" paras="17"/>
+    <func funcname="pdfofuT.2.60" procedurename="prt_pdfoca_QueryAsacCapital_JourHis" paras="18"/>
+    <func funcname="pdfofuT.2.61" procedurename="prt_pdfoca_QueryAsacCapitalFrozenJour" paras="19"/>
+    <func funcname="pdfofuT.2.62" procedurename="prt_pdfoca_QueryAsacCapitalFrozenJour_His" paras="19"/>
+    <func funcname="pdfofuT.2.63" procedurename="prt_pdfoca_GetAsacCapitalFrozenJour" paras="20"/>
+    <func funcname="pdfofuT.2.106" procedurename="prt_pdfoca_DealOutFoFutuCapitalJour" paras="21"/>
+    <func funcname="pdfofuT.2.107" procedurename="prt_pdfoca_GetOutFoFutuCapitalJour" paras="24"/>
+    <func funcname="pdfofuT.2.108" procedurename="prt_pdfoca_QueryOutFoFutuCapitalJour" paras="14"/>
+    <func funcname="pdfofuT.2.201" procedurename="prt_pdfoca_ClearCapitalDataTotal" paras="10"/>
+    <func funcname="pdfofuT.2.202" procedurename="prt_pdfoca_QueryClearCapitalTotalData" paras="16"/>
+</funcs>

@@ -1,0 +1,156 @@
+using LdNet.ClientCore.Sdk;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace LdNet.ClientSdk.Model
+{
+    public class pdfutuL_7_1_Info : ObservableObject
+    {
+
+        private int _co_no;
+        /// <summary>
+        /// 机构编号
+        /// </summary>
+        public int co_no
+        {
+            get { return _co_no; }
+
+            set
+            {
+                _co_no = value;
+                RaisePropertyChanged(() => co_no);
+            }
+        }
+
+        private int _pd_no;
+        /// <summary>
+        /// 产品编号
+        /// </summary>
+        public int pd_no
+        {
+            get { return _pd_no; }
+
+            set
+            {
+                _pd_no = value;
+                RaisePropertyChanged(() => pd_no);
+            }
+        }
+
+        private int _asset_acco_no;
+        /// <summary>
+        /// 资产账户编号
+        /// </summary>
+        public int asset_acco_no
+        {
+            get { return _asset_acco_no; }
+
+            set
+            {
+                _asset_acco_no = value;
+                RaisePropertyChanged(() => asset_acco_no);
+            }
+        }
+
+        private int _futu_acco_no;
+        /// <summary>
+        /// 交易编码编号
+        /// </summary>
+        public int futu_acco_no
+        {
+            get { return _futu_acco_no; }
+
+            set
+            {
+                _futu_acco_no = value;
+                RaisePropertyChanged(() => futu_acco_no);
+            }
+        }
+
+        private int _exch_no;
+        /// <summary>
+        /// 市场编号
+        /// </summary>
+        public int exch_no
+        {
+            get { return _exch_no; }
+
+            set
+            {
+                _exch_no = value;
+                RaisePropertyChanged(() => exch_no);
+            }
+        }
+
+        private String _futu_acco;
+        /// <summary>
+        /// 交易编码
+        /// </summary>
+        public String futu_acco
+        {
+            get { return _futu_acco; }
+
+            set
+            {
+                _futu_acco = value;
+                RaisePropertyChanged(() => futu_acco);
+            }
+        }
+
+        private String _futu_acco_name;
+        /// <summary>
+        /// 交易编码名称
+        /// </summary>
+        public String futu_acco_name
+        {
+            get { return _futu_acco_name; }
+
+            set
+            {
+                _futu_acco_name = value;
+                RaisePropertyChanged(() => futu_acco_name);
+            }
+        }
+
+        private String _futu_acco_status;
+        /// <summary>
+        /// 交易编码状态
+        /// </summary>
+        public String futu_acco_status
+        {
+            get { return _futu_acco_status; }
+
+            set
+            {
+                _futu_acco_status = value;
+                RaisePropertyChanged(() => futu_acco_status);
+            }
+        }
+    }
+
+    public class pdfutuL_7_11_Info : ObservableObject
+    {
+    }
+
+    public class pdfutuL_7_2_Info : ObservableObject
+    {
+
+        private int _futu_acco_no;
+        /// <summary>
+        /// 交易编码编号
+        /// </summary>
+        public int futu_acco_no
+        {
+            get { return _futu_acco_no; }
+
+            set
+            {
+                _futu_acco_no = value;
+                RaisePropertyChanged(() => futu_acco_no);
+            }
+        }
+    }
+
+}

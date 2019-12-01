@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="evaT.2.1" procedurename="prt_evadata_SyncPdAccoAsset" paras="10"/>
+    <func funcname="evaT.2.2" procedurename="prt_evadata_updateSecuPrice" paras="10"/>
+    <func funcname="evaT.2.11" procedurename="prt_evadata_AddPdSecuPosi" paras="18"/>
+    <func funcname="evaT.2.12" procedurename="prt_evadata_ModiPdSecuPosi" paras="20"/>
+    <func funcname="evaT.2.13" procedurename="prt_evadata_DelPdSecuPosi" paras="15"/>
+    <func funcname="evaT.2.14" procedurename="prt_evadata_QueryPdSecuPosi" paras="17"/>
+    <func funcname="evaT.2.15" procedurename="prt_evadata_QueryPdExgpSecuPosi" paras="18"/>
+    <func funcname="evaT.2.16" procedurename="prt_evadata_QueryPdFupoPosi" paras="16"/>
+    <func funcname="evaT.2.17" procedurename="prt_evadata_QueryPdSecuBlockPosi" paras="12"/>
+    <func funcname="evaT.2.21" procedurename="prt_evadata_AddPdAccoCapit" paras="15"/>
+    <func funcname="evaT.2.22" procedurename="prt_evadata_ModiPdAccoCapit" paras="15"/>
+    <func funcname="evaT.2.23" procedurename="prt_evadata_DelPdAccoCapit" paras="14"/>
+    <func funcname="evaT.2.24" procedurename="prt_evadata_QueryPdAccoCapit" paras="15"/>
+    <func funcname="evaT.2.25" procedurename="prt_evadata_QueryPdExgpAccoCapit" paras="16"/>
+    <func funcname="evaT.2.31" procedurename="prt_evadata_ImportPdSecuPosi" paras="12"/>
+    <func funcname="evaT.2.41" procedurename="prt_evadata_AddPdBankJour" paras="15"/>
+    <func funcname="evaT.2.42" procedurename="prt_evadata_ModiPdBankJour" paras="16"/>
+    <func funcname="evaT.2.43" procedurename="prt_evadata_DelPdBankJour" paras="14"/>
+    <func funcname="evaT.2.44" procedurename="prt_evadata_QueryPdBankJour" paras="14"/>
+    <func funcname="evaT.2.51" procedurename="prt_evadata_AddPdTransOut" paras="20"/>
+    <func funcname="evaT.2.52" procedurename="prt_evadata_ModiPdTransOut" paras="21"/>
+    <func funcname="evaT.2.53" procedurename="prt_evadata_DelPdTransOut" paras="13"/>
+    <func funcname="evaT.2.54" procedurename="prt_evadata_QueryPdTransOut" paras="15"/>
+</funcs>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.17.8" procedurename="prt_baseclient_GetMachDateTime" paras="11"/>
+    <func funcname="pubT.17.12" procedurename="prt_baseclient_ModiCoInfo" paras="20"/>
+    <func funcname="pubT.17.13" procedurename="prt_baseclient_UpdateCoBusiConfigStr" paras="16"/>
+    <func funcname="pubT.17.18" procedurename="prt_baseclient_QueryCoInfo" paras="10"/>
+    <func funcname="pubT.17.32" procedurename="prt_baseclient_QuerySysConfig" paras="13"/>
+    <func funcname="pubT.17.38" procedurename="prt_baseclient_QueryCoExchRate" paras="9"/>
+    <func funcname="pubT.17.117" procedurename="prt_baseclient_GetHKRate" paras="17"/>
+    <func funcname="pubT.17.118" procedurename="prt_baseclient_UpdateHKLimitInfo" paras="15"/>
+    <func funcname="pubT.17.119" procedurename="prt_baseclient_QueryHKLimitInfo" paras="10"/>
+    <func funcname="pubT.17.154" procedurename="prt_baseclient_LoginChannel" paras="10"/>
+    <func funcname="pubT.17.155" procedurename="prt_baseclient_LogoutChannel" paras="10"/>
+    <func funcname="pubT.17.180" procedurename="prt_baseclient_QueryDictionary" paras="15"/>
+    <func funcname="pubT.17.181" procedurename="prt_baseclient_QueryBusiFlag" paras="16"/>
+    <func funcname="pubT.17.120" procedurename="prt_baseclient_GetHKRatePurposely" paras="20"/>
+    <func funcname="pubT.17.121" procedurename="prt_baseclient_AddHKRatePurposely" paras="19"/>
+    <func funcname="pubT.17.122" procedurename="prt_baseclient_EditHKRatePurposely" paras="19"/>
+    <func funcname="pubT.17.123" procedurename="prt_baseclient_EditNewStockInfo" paras="15"/>
+    <func funcname="pubT.17.124" procedurename="prt_baseclient_EditConvertibleBbondInfo" paras="15"/>
+    <func funcname="pubT.17.125" procedurename="prt_baseclient_AddHedgingBasket" paras="24"/>
+    <func funcname="pubT.17.126" procedurename="prt_baseclient_QueryHedgingBasketList" paras="15"/>
+    <func funcname="pubT.17.127" procedurename="prt_baseclient_QueryHisHedgingBasketList" paras="16"/>
+    <func funcname="pubT.17.128" procedurename="prt_baseclient_ModiHedgingBasket" paras="13"/>
+    <func funcname="pubT.17.129" procedurename="prt_baseclient_QueryHedgingBasket" paras="26"/>
+    <func funcname="pubT.17.130" procedurename="prt_baseclient_ClearHedgingBasketCpoies" paras="26"/>
+</funcs>

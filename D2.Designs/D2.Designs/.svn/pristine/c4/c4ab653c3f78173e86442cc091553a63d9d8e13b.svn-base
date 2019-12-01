@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.27.1" procedurename="prt_riskif_QueryExchGroupByRisk" paras="15"/>
+    <func funcname="pubT.27.2" procedurename="prt_riskif_CalcSecuOrderFee" paras="18"/>
+    <func funcname="pubT.27.3" procedurename="prt_riskif_GetStockCodeInfoByRisk" paras="11"/>
+    <func funcname="pubT.27.4" procedurename="prt_riskif_GetFutuCodeInfoByRisk" paras="11"/>
+    <func funcname="pubT.27.5" procedurename="prt_riskif_GetHKRate" paras="17"/>
+    <func funcname="pubT.27.6" procedurename="prt_riskif_CalcOrderBatchFee" paras="16"/>
+    <func funcname="pubT.27.7" procedurename="prt_riskif_UpdateExchGroupSecuAsset" paras="18"/>
+    <func funcname="pubT.27.8" procedurename="prt_riskif_UpdateExchGroupFutuAsset" paras="18"/>
+    <func funcname="pubT.27.9" procedurename="prt_riskif_CalcFutuOrderBatchFee" paras="20"/>
+</funcs>

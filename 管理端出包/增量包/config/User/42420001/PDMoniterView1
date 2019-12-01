@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FontSize="12">
+  <SingleColumn Content="记录序号" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="0" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" Width="103" displayIndex="1" />
+  <SingleColumn Content="交易组" IsVisiblity="true" isTotalRow="false" Width="103" displayIndex="2" />
+  <SingleColumn Content="起始监控日期" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="3" />
+  <SingleColumn Content="监控角色" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="4" />
+  <SingleColumn Content="监控值方式" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="5" />
+  <SingleColumn Content="监控值类型" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="6" />
+  <SingleColumn Content="预警线" IsVisiblity="true" isTotalRow="false" Width="100" displayIndex="7" />
+  <SingleColumn Content="预警线触警操作" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="8" />
+  <SingleColumn Content="追加线" IsVisiblity="true" isTotalRow="false" Width="59" displayIndex="9" />
+  <SingleColumn Content="追加线触警操作" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="10" />
+  <SingleColumn Content="平仓线" IsVisiblity="true" isTotalRow="false" Width="100" displayIndex="11" />
+  <SingleColumn Content="平仓线触警操作" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="12" />
+  <SingleColumn Content="最大监控值" IsVisiblity="true" isTotalRow="false" Width="117" displayIndex="13" />
+  <SingleColumn Content="对比证券代码" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="14" />
+  <SingleColumn Content="对比交易市场" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="15" />
+  <SingleColumn Content="对比最大监控值" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="16" />
+  <SingleColumn Content="监控设置状态" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="17" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" Width="1000" displayIndex="18" />
+</ColumnSetClass>

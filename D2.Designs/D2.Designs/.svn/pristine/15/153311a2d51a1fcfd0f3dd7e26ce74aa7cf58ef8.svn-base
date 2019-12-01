@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.10.1" procedurename="prt_pdsecabk_QuerySecuCapitalDiff" paras="19"/>
+    <func funcname="pdsecuT.10.2" procedurename="prt_pdsecabk_DealSecuCapitalDiff" paras="48"/>
+    <func funcname="pdsecuT.10.3" procedurename="prt_pdsecabk_AddEvaluOutCash" paras="20"/>
+    <func funcname="pdsecuT.10.4" procedurename="prt_pdsecabk_QueryEvaluOutCash" paras="12"/>
+    <func funcname="pdsecuT.10.5" procedurename="prt_pdsecabk_QueryOutCash" paras="12"/>
+    <func funcname="pdsecuT.10.6" procedurename="prt_pdsecabk_SynchronizedDiff" paras="21"/>
+    <func funcname="pdsecuT.10.7" procedurename="prt_pdsecabk_GetOutCapitalData" paras="26"/>
+    <func funcname="pdsecuT.10.8" procedurename="prt_pdsecabk_ClearOutCapitRecordDiffRecord" paras="11"/>
+    <func funcname="pdsecuT.10.9" procedurename="prt_pdsecabk_GetDiffCapitalData" paras="15"/>
+    <func funcname="pdsecuT.10.11" procedurename="prt_pdsecabk_UpdateStockCodeInfoQuotRate" paras="20"/>
+    <func funcname="pdsecuT.10.12" procedurename="prt_pdsecabk_CalcProdSecuAsset" paras="20"/>
+    <func funcname="pdsecuT.10.13" procedurename="prt_pdsecabk_CalcExchGroupSecuAsset" paras="22"/>
+    <func funcname="pdsecuT.10.14" procedurename="prt_pdsecabk_CalcProdSecuAsset_New" paras="22"/>
+    <func funcname="pdsecuT.10.15" procedurename="prt_pdsecabk_CalcExchGroupSecuAsset_New" paras="24"/>
+    <func funcname="pdsecuT.10.16" procedurename="prt_pdsecabk_CalcProdAsset" paras="22"/>
+    <func funcname="pdsecuT.10.17" procedurename="prt_pdsecabk_CalcExchGroupAsset" paras="22"/>
+    <func funcname="pdsecuT.10.18" procedurename="prt_pdsecabk_GetOutCapitalAsacInfo" paras="20"/>
+    <func funcname="pdsecuT.10.19" procedurename="prt_pdsecabk_DealCapitalDiff" paras="48"/>
+    <func funcname="pdsecuT.10.20" procedurename="prt_pdsecabk_QueryExgpCapital" paras="16"/>
+    <func funcname="pdsecuT.10.21" procedurename="prt_pdsecabk_QueryChannelCapitalDiff" paras="22"/>
+    <func funcname="pdsecuT.10.22" procedurename="prt_pdsecabk_ResetInSecuCapital" paras="15"/>
+    <func funcname="pdsecuT.10.23" procedurename="prt_pdsecabk_GetInSecuCapital" paras="19"/>
+    <func funcname="pdsecuT.10.24" procedurename="prt_pdsecabk_AddInSecuCapitCkeck" paras="22"/>
+    <func funcname="pdsecuT.10.25" procedurename="prt_pdsecabk_QueryAsacCapital_Jour" paras="17"/>
+    <func funcname="pdsecuT.10.26" procedurename="prt_pdsecabk_QueryAsacCapital_JourHis" paras="18"/>
+</funcs>

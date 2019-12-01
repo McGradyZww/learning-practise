@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rksecuT.1.1" procedurename="prt_rksepb_QuerySecuRiskRule" paras="13"/>
+    <func funcname="rksecuT.1.2" procedurename="prt_rksepb_AddSecuRiskItem" paras="37"/>
+    <func funcname="rksecuT.1.3" procedurename="prt_rksepb_ModiSecuRiskItem" paras="39"/>
+    <func funcname="rksecuT.1.4" procedurename="prt_rksepb_DeleteSecuRiskItem" paras="13"/>
+    <func funcname="rksecuT.1.5" procedurename="prt_rksepb_QuerySecuRiskItem" paras="18"/>
+    <func funcname="rksecuT.1.6" procedurename="prt_rksepb_AddSecuRiskModel" paras="12"/>
+    <func funcname="rksecuT.1.7" procedurename="prt_rksepb_DeleteSecuRiskModel" paras="11"/>
+    <func funcname="rksecuT.1.8" procedurename="prt_rksepb_ModiSecuRiskModel" paras="13"/>
+    <func funcname="rksecuT.1.9" procedurename="prt_rksepb_QuerySecuRiskModel" paras="12"/>
+    <func funcname="rksecuT.1.10" procedurename="prt_rksepb_AddSecuRiskModelItem" paras="13"/>
+    <func funcname="rksecuT.1.11" procedurename="prt_rksepb_DeleteSecuRiskModelItem" paras="13"/>
+    <func funcname="rksecuT.1.12" procedurename="prt_rksepb_QuerySecuRiskModelItem" paras="15"/>
+    <func funcname="rksecuT.1.13" procedurename="prt_rksepb_UpdateFutuRiskItemFlag" paras="13"/>
+    <func funcname="rksecuT.1.14" procedurename="prt_rksepb_SecuDataToHis" paras="10"/>
+    <func funcname="rksecuT.1.15" procedurename="prt_rksepb_QuerySecuRiskItemTempl" paras="11"/>
+    <func funcname="rksecuT.1.16" procedurename="prt_rksepb_QueryPushSecuClientRiskRule" paras="10"/>
+</funcs>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rksecuT.3.1" procedurename="prt_rksedm_QueryIndexType" paras="9"/>
+    <func funcname="rksecuT.3.2" procedurename="prt_rksedm_QueryIndexStock" paras="10"/>
+    <func funcname="rksecuT.3.3" procedurename="prt_rksedm_QueryIndustryType" paras="9"/>
+    <func funcname="rksecuT.3.4" procedurename="prt_rksedm_QueryIndustryClassification" paras="10"/>
+    <func funcname="rksecuT.3.5" procedurename="prt_rksedm_QueryIndustryStock" paras="11"/>
+    <func funcname="rksecuT.3.6" procedurename="prt_rksedm_QueryCustomDimensionType" paras="9"/>
+    <func funcname="rksecuT.3.7" procedurename="prt_rksedm_QueryCustomDimensionStock" paras="10"/>
+    <func funcname="rksecuT.3.8" procedurename="prt_rksedm_InsertUserDimensionType" paras="16"/>
+    <func funcname="rksecuT.3.9" procedurename="prt_rksedm_UpdateUserDimensionType" paras="15"/>
+    <func funcname="rksecuT.3.10" procedurename="prt_rksedm_DeleteUserDimensionType" paras="12"/>
+    <func funcname="rksecuT.3.11" procedurename="prt_rksedm_QueryUserDimensionType" paras="10"/>
+    <func funcname="rksecuT.3.12" procedurename="prt_rksedm_InsertUserDimensionStock" paras="19"/>
+    <func funcname="rksecuT.3.13" procedurename="prt_rksedm_DeleteUserDimensionStock" paras="13"/>
+    <func funcname="rksecuT.3.14" procedurename="prt_rksedm_QueryUserDimensionStock" paras="11"/>
+    <func funcname="rksecuT.3.15" procedurename="prt_rksedm_QueryDimCodeByDimID" paras="10"/>
+    <func funcname="rksecuT.3.16" procedurename="prt_rksedm_QueryDimIDByDimCode" paras="14"/>
+    <func funcname="rksecuT.3.17" procedurename="prt_rksedm_CreateCustomDimensionStockService" paras="10"/>
+    <func funcname="rksecuT.3.24" procedurename="prt_rkserm_QueryStockCodeDimensionType" paras="10"/>
+    <func funcname="rksecuT.3.25" procedurename="prt_rksedm_ClearAndAddIndexStock" paras="16"/>
+</funcs>

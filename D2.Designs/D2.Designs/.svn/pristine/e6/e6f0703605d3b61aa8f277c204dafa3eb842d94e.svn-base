@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfofuT.3.1" procedurename="prt_pdfopo_UpdateExgpPosi" paras="20"/>
+    <func funcname="pdfofuT.3.2" procedurename="prt_pdfopo_FrozenExgpPosi" paras="21"/>
+    <func funcname="pdfofuT.3.3" procedurename="prt_pdfopo_UndoFrozenExgpPosi" paras="16"/>
+    <func funcname="pdfofuT.3.4" procedurename="prt_pdfopo_UnFrozenExgpPosi" paras="21"/>
+    <func funcname="pdfofuT.3.5" procedurename="prt_pdfopo_UndoUnFrozenExgpPosi" paras="16"/>
+    <func funcname="pdfofuT.3.21" procedurename="prt_pdfopo_QueryExgpPosi" paras="18"/>
+    <func funcname="pdfofuT.3.22" procedurename="prt_pdfopo_QueryExgpPosi_His" paras="20"/>
+    <func funcname="pdfofuT.3.31" procedurename="prt_pdfopo_QueryExgpPosiJour" paras="19"/>
+    <func funcname="pdfofuT.3.32" procedurename="prt_pdfopo_QueryExgpPosiJour_His" paras="20"/>
+    <func funcname="pdfofuT.3.33" procedurename="prt_pdfopo_GetExgpPosiFrozenJour" paras="24"/>
+    <func funcname="pdfofuT.3.34" procedurename="prt_pdfopo_QueryExgpPosiFrozenJour" paras="21"/>
+    <func funcname="pdfofuT.3.35" procedurename="prt_pdfopo_QueryExgpPosiFrozenJour_His" paras="21"/>
+    <func funcname="pdfofuT.3.51" procedurename="prt_pdfopo_UpdateAsacPosi" paras="19"/>
+    <func funcname="pdfofuT.3.52" procedurename="prt_pdfopo_FrozenAsacPosi" paras="20"/>
+    <func funcname="pdfofuT.3.53" procedurename="prt_pdfopo_UndoFrozenAsacPosi" paras="15"/>
+    <func funcname="pdfofuT.3.54" procedurename="prt_pdfopo_UnFrozenAsacPosi" paras="20"/>
+    <func funcname="pdfofuT.3.55" procedurename="prt_pdfopo_UndoUnFrozenAsacPosi" paras="15"/>
+    <func funcname="pdfofuT.3.71" procedurename="prt_pdfopo_QueryAsacPosi" paras="18"/>
+    <func funcname="pdfofuT.3.72" procedurename="prt_pdfopo_QueryAsacPosi_His" paras="20"/>
+    <func funcname="pdfofuT.3.81" procedurename="prt_pdfopo_QueryAsacPosiJour" paras="19"/>
+    <func funcname="pdfofuT.3.82" procedurename="prt_pdfopo_QueryAsacPosiJour_His" paras="20"/>
+    <func funcname="pdfofuT.3.83" procedurename="prt_pdfopo_GetAsacPosiFrozenJour" paras="23"/>
+    <func funcname="pdfofuT.3.84" procedurename="prt_pdfopo_QueryAsacPosiFrozenJour" paras="21"/>
+    <func funcname="pdfofuT.3.85" procedurename="prt_pdfopo_QueryAsacPosiFrozenJour_His" paras="21"/>
+    <func funcname="pdfofuT.3.101" procedurename="prt_pdfopo_AddOutPosiJour" paras="25"/>
+    <func funcname="pdfofuT.3.105" procedurename="prt_pdfopo_QueryOutPosiJour" paras="17"/>
+    <func funcname="pdfofuT.3.111" procedurename="prt_pdfopo_AddOutOrder" paras="30"/>
+    <func funcname="pdfofuT.3.115" procedurename="prt_pdfopo_QueryOutOrder" paras="20"/>
+    <func funcname="pdfofuT.3.121" procedurename="prt_pdfopo_AddOutBusi" paras="30"/>
+    <func funcname="pdfofuT.3.125" procedurename="prt_pdfopo_QueryOutBusi" paras="21"/>
+    <func funcname="pdfofuT.3.131" procedurename="prt_pdfopo_AddOutDeliJour" paras="47"/>
+    <func funcname="pdfofuT.3.135" procedurename="prt_pdfopo_QueryOutDeliJour" paras="17"/>
+    <func funcname="pdfofuT.3.145" procedurename="prt_pdfopo_QueryDeli" paras="20"/>
+    <func funcname="pdfofuT.3.146" procedurename="prt_pdfopo_QueryDeliHis" paras="21"/>
+</funcs>

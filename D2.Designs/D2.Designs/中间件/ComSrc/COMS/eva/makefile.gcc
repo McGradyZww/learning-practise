@@ -1,0 +1,62 @@
+##########################################################################
+##
+##  makefile.gcc
+##
+##  模块：业务组件编译脚本
+##  -----------------------------------------------
+##  Copyright (C) 2016-2017 .
+##
+##
+##  修改记录:
+##
+##########################################################################
+#(1)变量定义
+LD_HOME   = ../..
+#库文件输出目录
+OUTDIR        = $(LD_HOME)/Lib/linux
+#其他依赖库路径
+LIBPATH       = $(LD_HOME)/Lib/linux
+#附加头文件路径
+INCDIR        = $(LD_HOME)
+
+TARGET_NAME = TrdSecuTrd
+#目标文件后缀名
+TO            = o
+SUFFIXES  =
+LIB_PRE=lib
+LIB_EXT=.so
+EXES      = $(TARGET_NAME)$(SUFFIXES)
+EXPS=
+#清除文件命令
+RM = rm -f
+COM1=EvaBasic
+COM2=EvaData
+COM3=EvaTotal
+
+#(2)编译器参数设置
+CC = g++
+LD = $(CC)
+
+#自定义编译(不同平台对同一模块可能有不同编译选项):
+DEFS = -c -g -Wall -fPIC
+
+CFLAGS = $(DEFS) -DNDEBUG -O2 -fvisibility=hidden
+LFLAGS = -shared
+LIBPATH=$(OUTDIR)
+
+#debug版本
+ifdef _DEBUG
+CFLAGS = $(DEFS) -D_DEBUG
+SUFFIXES = _d
+endif
+
+#(3)要连接的标准库和自定义库
+STDLIBS= -lc -lnsl  -ldl  -lm   -lstdc++ -lrt
+DEFLIBS= -L$LIBPATH
+
+#(4)文件操作命令
+RMOBJ     = -$(RM) *.$(TO)
+RMALL     = -$(RM) $(OUTDIR)/$(EXES)
+
+#(5)包含通用编译项
+include makefile.inc

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.7.1" procedurename="prt_pdfuacbk_QueryAllFutuAcco" paras="14"/>
+    <func funcname="pdfutuT.7.11" procedurename="prt_pdfuacbk_BackUpPdFutuData" paras="10"/>
+</funcs>

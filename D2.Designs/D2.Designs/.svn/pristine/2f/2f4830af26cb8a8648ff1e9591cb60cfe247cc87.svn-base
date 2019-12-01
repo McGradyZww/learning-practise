@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.11.1" procedurename="prt_msage_UpdateObjectVerInfo" paras="18"/>
+    <func funcname="pubT.11.2" procedurename="prt_msage_QueryObjectVerInfoJour" paras="13"/>
+    <func funcname="pubT.11.3" procedurename="prt_msage_QueryObjectVerInfoJourHis" paras="14"/>
+    <func funcname="pubT.11.6" procedurename="prt_msage_UpdateTask" paras="22"/>
+    <func funcname="pubT.11.7" procedurename="prt_msage_QueryTask" paras="12"/>
+    <func funcname="pubT.11.11" procedurename="prt_msage_UpdateTaskEx" paras="22"/>
+    <func funcname="pubT.11.12" procedurename="prt_msage_QueryTaskEx" paras="12"/>
+    <func funcname="pubT.11.21" procedurename="prt_msage_QueryOperLog" paras="16"/>
+    <func funcname="pubT.11.22" procedurename="prt_msage_QueryOperLogHis" paras="17"/>
+    <func funcname="pubT.11.30" procedurename="prt_msage_QueryOperTaskTipsInfo" paras="11"/>
+    <func funcname="pubT.11.31" procedurename="prt_msage_AddOperTaskTipsInfo" paras="16"/>
+    <func funcname="pubT.11.32" procedurename="prt_msage_ModOperTaskTipsInfo" paras="17"/>
+    <func funcname="pubT.11.33" procedurename="prt_msage_DelOperTaskTipsInfo" paras="11"/>
+    <func funcname="pubT.11.40" procedurename="prt_msage_QueryMoniSevrInfo" paras="18"/>
+    <func funcname="pubT.11.41" procedurename="prt_msage_AddMoniSevrInfo" paras="17"/>
+    <func funcname="pubT.11.42" procedurename="prt_msage_ModMoniSevrInfo" paras="12"/>
+    <func funcname="pubT.11.43" procedurename="prt_msage_QueryOperLogHis" paras="16"/>
+</funcs>

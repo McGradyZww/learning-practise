@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_bond_collateral_command_input" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="0,-40,-0,-0" image="skins\default\TabBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+     <!--交易员-->
+	 <text crtext="000000" crmark="800000" align="right" pos="0,-30" width="64" height="30" title="交易员:" show="1"/>
+	 <combobox name="bond.collateral.command.operator" tabstop="1" skin="IDB_EDIT" pos="70,-35" width="120" height="30" tip="交易员"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+			   
+	<!--质押代码-->
+	  <radiobtn name="bond.collateral.command.commit" tabstop="1" title="质押提交" skin="IDB_radiobtn" pos="200,-35" width="80" height="30" crtext="cf0f0f" show="1" check="true" showfocus="1" group="1" shortcut="B" enabledirkey="1" font="default1"/>
+	  <radiobtn name="bond.collateral.command.turnback" tabstop="1" title="质押转回" skin="IDB_radiobtn" pos="290,-35" width="80" height="30" crtext="00ff00" show="1"  showfocus="1" group="1" shortcut="S" enabledirkey="1" font="default1"/>
+	  
+	 <button name="bond.collateral.command.clac" tabstop="1" skin="IDB_BT_BIG" title="计算" pos="380,-35"  width="80" height="30" />
+	 <button name="bond.collateral.command.ok" tabstop="1" skin="IDB_BT_BIG" title="确定" pos="470,-35"  width="80" height="30" shortcut="RETURN" />
+	 <button name="bond.collateral.command.cancel" tabstop="0" skin="IDB_BT_BIG" title="取消" pos="560,-35" width="80" height="30" shortcut="" />
+	<!--单元-->
+	<text crtext="000000" crmark="800000" align="right" pos="-500,-30" width="64" height="25" title="交易单元:"  show="1"/>
+    <combobox name="command_unit_bond_hold.unit_code" tabstop="1" skin="IDB_EDIT" pos="-436,-35" width="120" height="30" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  
+	<!--债券代码-->
+	<text crtext="000000" crmark="800000" align="right" pos="-315,-30" width="64" height="25" title="债券代码:" show="1"/>
+	<edit name="command_unit_bond_hold.stock_code" tabstop="1" skin="IDB_EDIT" pos="-250,-35" width="80" height="30"
+               multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1" maxchar="6"/>
+	 
+	  
+	<button name="unit_bond_hold_command.query" title="" pos="-165,-35" width="80" height="30" skin="IDB_BT_BIG" title="查询" tip="查询" show="1" />
+	<button name="unit_bond_hold_command.refresh" title="" pos="-80,-35" width="50" height="30" skin="IDB_BT_SMALL" title="刷新" tip="刷新" show="1" />	
+ 	  
+   </div>

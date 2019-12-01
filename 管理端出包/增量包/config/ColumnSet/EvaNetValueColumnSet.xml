@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="交易日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品当前份额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="总资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="净资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="银行存款" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="备付金余额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="股票资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="基金资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="债券资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期货资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期权资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="其他资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="应收利息" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="应付费用" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="申购应收金额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="赎回应付金额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="体外应收金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="体外应付金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计单位净值" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

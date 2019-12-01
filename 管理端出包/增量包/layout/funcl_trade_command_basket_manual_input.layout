@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_trade_command_basket_manual_input" >
+     <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+	 <img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+     <!--证券代码-->
+		<text crtext="000000" crmark="800000" align="left" pos="20,25" width="100" height="26" title="证券代码" font="default1" show="1" />		 
+		<editex name="stockorder_stock_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="100,20" width="160" height="26"  skinextern="IDB_EDITEX" leftwidth="81" crextern="255,255,255" entrer_selectall="1"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="6"
+               font="default" crtext="0,0,0" changednotify="1" stockcode="1" disable="1"/>
+
+		<!--订单方向-->          
+		<text crtext="000000" crmark="800000" align="left" pos="20,55" width="100" height="26" title="订单方向" font="default1" show="1" />
+		<radiobtn name="stockorder_radiobtnbuy" tabstop="1" title="" skin="IDB_radiobtn_buy" pos="100,50" width="60" height="26" crtext="ff0000" show="1" check="true" shortcut="B" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+		<radiobtn name="stockorder_radiobtnsell" tabstop="1" title="" skin="IDB_radiobtn_sell" pos="100,50" width="60" height="26" crtext="00ff00" show="1" shortcut="S" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+				<!--订单价格-->   
+		<text crtext="000000" crmark="800000" align="left" pos="20,85" width="100" height="26"  title="订单价格" font="default1" show="1" />
+			
+		<edit name="stockorder_order_price" tabstop="1" skin="IDB_EDIT" double="1" shortcutadjust="1" pos="100,80"
+		entrer_selectall="1" width="106" height="26" multiline="0" autohscroll="1" autovscroll="1" number="0" minvalue="0" crtext="0,0,0" /> 
+			   
+		 <numbtn name="ftcbmi_bt_order_price_add" edit_ctrl="stockorder_order_price" add="1" tabstop="0" skin="IDB_BT_ADD" pos="207,80" width="26" height="26"  shortcut="" crtext="FFFFFF" />
+		 <numbtn name="ftcbmi_bt_order_price_subtract" edit_ctrl="stockorder_order_price"  tabstop="0" skin="IDB_BT_SUBTRACT" pos="234,80" width="26" height="26"  shortcut="" crtext="FFFFFF" />				
+		   
+		 <!--指令剩余-->
+		 <text crtext="000000" crmark="800000" align="left" pos="20,115" width="100" height="26" title="指令剩余" font="default1" show="1" />
+		 <edit name="ftcbmi_command_residue" tabstop="1" skin="IDB_EDIT" double="1" shortcutadjust="1" pos="100,110"
+		entrer_selectall="1" width="106" height="26" multiline="0" autohscroll="1" autovscroll="1" number="0" minvalue="0" crtext="0,0,0" /> 
+		<button name="button_ftcbmi_all" tabstop="1" skin="IDB_BT_OK" title="全部" pos="207,110" width="53" height="26"  crtext="ffffff" font="default1"/>	
+		
+		<button name="stockorder_trade.stock.single.Qty1" tabstop="0"  skin="IDB_BT_SMALL" title="1/2"  crtext="1E1E1E" pos="100,140" width="40" height="26"/>
+		<button name="stockorder_trade.stock.single.Qty2" tabstop="0"  skin="IDB_BT_SMALL" title="1/3"  crtext="1E1E1E" pos="140,140" width="40" height="26"/>
+		<button name="stockorder_trade.stock.single.Qty3" tabstop="0"  skin="IDB_BT_SMALL" title="1/4"  crtext="1E1E1E" pos="180,140" width="40" height="26"/>
+		<button name="stockorder_trade.stock.single.Qty4" tabstop="0"  skin="IDB_BT_SMALL" title="1/5"  crtext="1E1E1E" pos="220,140" width="40" height="26"/>       
+		
+		 <!--订单数量-->
+		<text crtext="000000" crmark="800000" align="left" pos="20,175" width="100" height="26"  title="订单数量" font="default1" show="1" />			
+		<edit name="stockorder_order_qty" tabstop="1" skin="IDB_EDIT" double="1" shortcutadjust="1" pos="100,170"
+			entrer_selectall="1" width="106" height="26" multiline="0" autohscroll="1" autovscroll="1" number="0" minvalue="0" crtext="0,0,0" /> 			   
+	  <numbtn name="button_tcbi_order_qty_add" edit_ctrl="stockorder_order_qty" add="1" tabstop="0" skin="IDB_BT_ADD" pos="207,170" width="26" height="26"  shortcut="" crtext="FFFFFF" />
+		<numbtn name="button_tcbi_order_qty_subtract" edit_ctrl="stockorder_order_qty"  tabstop="0" skin="IDB_BT_SUBTRACT" pos="234,170" width="26" height="26"  shortcut="" crtext="FFFFFF" />		
+		
+		 
+			<!--订单下达-->
+		<button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="订单下达" pos="100,240" width="100" height="26" shortcut="RETURN" crtext="ffffff" font="default1"/>	
+		<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取消" pos="220,240" width="50" height="26" shortcut="RETURN"  font="default1"/>	
+	
+		
+		
+	 
+   </div>

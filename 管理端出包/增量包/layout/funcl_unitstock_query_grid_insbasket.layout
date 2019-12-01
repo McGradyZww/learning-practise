@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_unitstock_query_grid_insbasket">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    
+    <gridctrl name="grid.funcl_unitstock_query_insbasket" pos="2,2,-2,-70" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="" 
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1"  header-check="0" 
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+            <column title="交易单元名称" width="120" align="center" key="unit_name" /> 
+        <column title="产品名称" width="120" align="center" key="product_name"  deletable="0" />      
+        <column title="证券代码" width="80" align="center" key="stock_code" deletable="0" />
+        <column title="证券名称" width="80" align="center" key="stock_name" />
+       
+        <column title="当前数量" width="120" align="right" key="current_qty" data_type="T" sum_column="1" />
+        <column title="可用数量" width="120" align="right" key="command_available_qty" data_type="T" sum_column="1" />
+        <column title="分配数量" width="120" align="right" key="command_qty" data_type="T" sum_column="1"  />
+        <column title="持仓市值" width="150" align="right" key="holding_amt" data_type="T" sum_column="1" />
+        <column title="浮动盈亏" width="100" align="right" key="float_pandl" data_type="T" sum_column="1" />
+        <column title="盈亏比例" width="100" align="right" key="pandl_ratio" data_type="N"/>
+        <column title="当前价格" width="100" align="center" key="last_price" data_type="N" />
+        <column title="成本价格" width="100" align="center" key="cost_price" data_type="N" />             
+        <column title="资产账户" width="0" align="center" key="asset_account"  deletable="0" />  
+        <column title="股东代码" width="0" align="center" key="stock_account"  deletable="0" />  
+        <column title="市场" width="0" align="center" key="exchange_no"  deletable="0" />    
+            <column title="交易单元" width="0" align="center" key="unit_code" /> 
+        <column title="产品" width="0" align="center" key="product_code"  deletable="0" />    
+      <column title="" width="0" align="center" key="row_id" /> 
+   
+    </gridctrl>
+     <gridctrl name="grid.funcl_unitstock_query_insbasket_total" pos="2,-70,-2,-45" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-sep="skin:IDB_LINE_RP"
+        img-colsep=""
+        left-pos="0" row-height="25" header-height="25"  bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1"  
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="合计" width="0" align="center" key="row_id" /> 
+        <column title="" width="120" align="center" key="unit_name" /> 
+        <column title="" width="120" align="center" key="product_name"  deletable="0" />      
+        <column title="" width="80" align="center" key="stock_code" deletable="0" />
+        <column title="" width="80" align="center" key="stock_name" />
+       
+        <column title="" width="120" align="center" key="current_qty" data_type="T" />
+        <column title="" width="120" align="center" key="command_available_qty" data_type="T" />
+        <column title="" width="120" align="center" key="command_qty" data_type="T" />
+        <column title="" width="150" align="center" key="holding_amt" data_type="T" />
+        <column title="" width="100" align="center" key="float_pandl" data_type="T" />
+        <column title="" width="100" align="center" key="pandl_ratio" />
+        <column title="" width="100" align="center" key="last_price" data_type="N" />
+        <column title="" width="100" align="center" key="cost_price" data_type="N" />             
+        <column title="" width="100" align="center" key="asset_account"  deletable="0" />  
+        <column title="" width="0" align="center" key="stock_account"  deletable="0" />  
+        <column title="" width="0" align="center" key="exchange_no"  deletable="0" />    
+         <column title="" width="120" align="center" key="unit_code" /> 
+        <column title="" width="120" align="center" key="product_code"  deletable="0" />      
+    </gridctrl>
+     <text crtext="000000" crmark="800000" align="right" pos="20,-23" width="64" height="25" title="证券代码:" font="bold" show="1"/>
+	  <edit name="stockeorder_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="90,-27" width="80" height="25"
+               multiline="0" number="0" readonly="0" entrer_selectall="1" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1" maxchar="6"/>
+	 
+	   <!--单元-->
+	   <text crtext="000000" crmark="800000" align="right" pos="180,-23" width="64" height="25" title="交易单元:" font="bold" show="1"/>
+    <combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="254,-27" width="120" height="25" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"  list-height="220"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+    <button name="stockeorder_button.query" title="查询" pos="380,-27" width="70" height="25" skin="IDB_BT_BIG" tip="查询" show="1" />
+  </div>

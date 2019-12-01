@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_quitiessum_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<!--市场编号-->
+		<text crtext="000000" crmark="800000" align="right" pos="10,20,90,40" title="市场编号:" font="bold3" show="1"/>
+		<combobox name="quitiessum_query.exchange_no" tabstop="1" skin="IDB_EDIT" pos="90,12" width="120" height="36" tip="市场编号"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+	
+		<!--证券代码-->
+		<text crtext="000000" crmark="800000" align="right" pos="210,20,290,40" title="证券代码:" font="bold3" show="1"/>
+	  <editex name="quitiessum_query.stock_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="290,12" width="160" height="36" skinextern="IDB_EDITEX" leftwidth="80" crextern="255,255,255"
+			   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="6"
+			   crtext="0,0,0" changednotify="1" stockcode="1" entrer_selectall="1" />   
+		<!--日期-->
+		<text crtext="000000" crmark="800000" align="right" pos="630,20,680,40" title="日期:" font="bold3" show="1"/>
+		<nativewnd name="queryquitiessum.begin_date" tabstop="1" skin="IDB_EDIT" pos="680,12" width="120" height="36"
+			   multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+		<text crtext="000000" crmark="800000" align="right" pos="800,20,820,40" title="——" font="bold3" show="1"/>
+		<nativewnd name="queryquitiessum.end_date" tabstop="1" skin="IDB_EDIT" pos="820,12" width="120" height="36"
+			   multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+			   
+    <button name="queryquitiessum_button.query" title="" pos="950,15" width="80" height="30" skin="IDB_BT_QUERY" tip="查询" show="1" shortcut="F5" enabledirkey="1"/>
+    <button name="stocksum_button.refresh" title="" pos="-186,15" width="70" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="0" />
+	  <button name="query_button.export" title="" pos="-106,15" width="70" height="30" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+	<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />
+   <!--结果集grid-->
+    <gridctrl name="grid.funcl_quitiessum_query" pos="2,60,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG" editcolumn="1"  
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" img-colsep="skin:IDB_LINE_SPLIT"  
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="初始化日期" width="100" align="center" key="init_date"   />             
+        <column title="证券代码" width="64" align="center" key="stock_code"  />
+        <column title="证券名称" width="64" align="center" key="stock_name" />
+        <column title="当前数量" width="100" align="right" key="current_qty" data_type="T" sum_column="1" />
+        <column title="持仓市值" width="100" align="right" key="holding_amt" data_type="T"  sum_column="1" />
+        <column title="浮动盈亏" width="100" align="right" key="float_pandl" data_type="T"  sum_column="1" />
+        <column title="实现盈亏" width="100" align="right" key="realize_pandl" data_type="T"  sum_column="1" />
+        <column title="盈亏比例" width="100" align="right" key="pandl_ratio" data_type="N"/>
+        <column title="当前价格" width="100" align="center" key="last_price" data_type="N" />
+        <column title="成本价格" width="100" align="center" key="cost_price" data_type="N" />             
+        <column title="当前成本金额" width="100" align="right" key="current_cost_amt" data_type="T"  sum_column="1" />     
+        <column title="成交占用数量" width="100" align="right" key="execution_capture_qty" data_type="T"  sum_column="1" />
+        <column title="成交释放数量" width="100" align="right" key="execution_release_qty" data_type="T"  sum_column="1" />
+        <column title="证券类型" width="100" align="right" key="stock_type"/>
+        <column title="债券应收利息" width="100" align="right" key="bond_receivable_amt" data_type="T"  sum_column="1" />
+        <column title="质押数量" width="100" align="right" key="impawn_qty" data_type="T"  sum_column="1" />
+        <column title="全价持仓市值" width="100" align="right" key="full_holding_amt" data_type="T"  sum_column="1" />
+        <column title="冻结数量" width="100" align="right" key="frozen_qty" data_type="T"  sum_column="1" />
+        <column title="解冻数量" width="100" align="right" key="unfrozen_qty" data_type="T"  sum_column="1" />
+        <column title=" 市  场 " width="120" align="center" key="exchange_no" />
+        <column title="期初数量" width="100" align="right" key="begin_qty"  sum_column="1" />
+        <column title="利息成本金额" width="100" align="right" key="interest_cost_amt" data_type="T" sum_column="1"  />
+        <column title="利息收益" width="100" align="right" key="interest_pandl" data_type="T" sum_column="1"  />    
+    </gridctrl>
+	
+	<gridctrl name="grid.funcl_quitiessum_query_total" pos="2,-30,-2,-0" show="1"
+         img-sep="skin:IDB_LINE_RP" 
+         modify-column-width="1" column-sep="1" 
+        img-colsep="skin:IDB_LINE_SPLIT"       
+        left-pos="0" row-height="30" header-height="30" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">		
+		<column title="合计" width="100" align="center" key="init_date"   />             
+        <column title="" width="64" align="right" key="stock_code"  />
+        <column title="" width="64" align="right" key="stock_name" />
+        <column title="" width="100" align="right" key="current_qty" data_type="T" sum_column="1" />
+        <column title="" width="100" align="right" key="holding_amt" data_type="T"  sum_column="1" />
+        <column title="" width="100" align="right" key="float_pandl" data_type="T"  sum_column="1" />
+        <column title="" width="100" align="right" key="realize_pandl" data_type="T"  sum_column="1" />
+        <column title="" width="100" align="right" key="pandl_ratio" />
+          <column title="" width="100" align="right" key="stock_type"/>
+        <column title="" width="100" align="right" key="bond_receivable_amt"  sum_column="1" />
+        <column title="" width="100" align="right" key="impawn_qty"   sum_column="1" />
+        <column title="" width="100" align="right" key="full_holding_amt"  sum_column="1" />       
+ 
+        <column title="" width="100" align="right" key="last_price" data_type="N" />
+        <column title="" width="100" align="right" key="cost_price" data_type="N" />             
+        <column title="" width="100" align="right" key="current_cost_amt" data_type="T"  sum_column="1" />     
+        <column title="" width="100" align="right" key="execution_capture_qty" data_type="N"  sum_column="1" />
+        <column title="" width="100" align="right" key="execution_release_qty" data_type="N"  sum_column="1" />
+        <column title="" width="100" align="right" key="frozen_qty" data_type="N"  sum_column="1" />
+        <column title="" width="100" align="right" key="unfrozen_qty" data_type="N"  sum_column="1" />
+        <column title="" width="120" align="right" key="exchange_no" />
+        <column title="" width="100" align="right" key="begin_qty"  sum_column="1" />
+        <column title="" width="100" align="right" key="interest_cost_amt" data_type="T" sum_column="1"  />
+        <column title="" width="100" align="right" key="interest_pandl" data_type="T" sum_column="1"  />     
+    </gridctrl>
+    
+  </div>

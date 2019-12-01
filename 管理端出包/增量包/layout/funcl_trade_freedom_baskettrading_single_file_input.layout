@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_trade_freedom_baskettrading_single_file_input" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+     
+	   <!--Row 0-->
+		<text crtext="000000" crmark="800000" align="left" pos="10,20,72,38"   title="交易账户" font="default1" show="1" />	
+		<combobox name="sbftrade_file_product_code" tabstop="0" skin="IDB_EDIT" pos="73,16" width="192" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+	   	<button name="button_sbftrade_file_product_code_lock" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="275,20" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+	    <button name="button_sbftrade_file_product_code_unlock" tabstop="0" skin="IDB_BT_LOCK" title="" pos="275,20" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />
+	   
+	   
+	    <!--Row 1-->
+	   <text crtext="000000" crmark="800000" align="left" pos="10,50,72,68"   title="导入文件" font="default1" show="1" />	
+		            
+       <edit name="sbftrade_file_file_excel" tabstop="1" skin="IDB_EDIT" small-image="" pos="73,46" width="112" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" double="1" entrer_selectall="1"/>
+        <button name="button_sbftrade_file_browse" tabstop="0"  skin="IDB_BT_SMALL" title="浏览"  crtext="1E1E1E" pos="188,46" width="38" height="26"/> 
+        <button name="button_sbftrade_file_import" tabstop="0"  skin="IDB_BT_SMALL" title="导入"  crtext="1E1E1E" pos="226,46" width="38" height="26"/> 
+
+        <!--Row 2-->
+  		  <!--Row 3-->
+        <!--买价格-->
+        <text crtext="b41d23" crmark="800000" align="left" pos="10,80,72,128" title="买价格" font="default1" show="1" />
+		<combobox name="sbftrade_file_buying_price" tabstop="0" skin="IDB_EDIT" pos="73,76" width="82" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" 
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+						<item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+		</combobox>
+		<edit name="sbftrade_file_buy_quantity" tabstop="1" skin="IDB_EDIT" small-image="" pos="156,76" width="55" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"  
+               font="default" crtext="0,0,0" double="1" entrer_selectall="1"/>
+			   
+	    <button name="button_sbftrade_file_buy_quantity_ADD" tabstop="0" skin="IDB_BT_ADD" title="" pos="215,77" width="24" height="24"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_sbftrade_file_buy_quantity_SUBTRACT" tabstop="0" skin="IDB_BT_SUBTRACT" title="" pos="240,77" width="24" height="24"  shortcut="" crtext="ffffff" font="default1" show="1" />
+			   
+        <button name="button_sbftrade_file_buy_price_lock" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="275,80" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_sbftrade_file_buy_price_unlock" tabstop="0" skin="IDB_BT_LOCK" title="" pos="275,80" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />
+          
+		<!--Row 4-->
+        <!--卖价格-->
+        <text crtext="03d830" crmark="800000" align="left" pos="10,110,82,128" title="卖价格" font="default1" show="1" />
+		<combobox name="sbftrade_file_sell_price" tabstop="0" skin="IDB_EDIT" pos="73,106" width="82" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" 
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+					<item name="不限价" value="0" />
+					<item name="最新价" value="1" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+						<item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+		</combobox>
+		
+		<edit name="sbftrade_file_sell_price_quantity" tabstop="1" skin="IDB_EDIT" small-image="" pos="156,106" width="55" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"  
+               font="default" crtext="0,0,0" double="1" entrer_selectall="1"/>
+			   
+	    <button name="button_sbftrade_file_sell_price_quantity_ADD" tabstop="0" skin="IDB_BT_ADD" title="" pos="215,107" width="24" height="24"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_sbftrade_file_sell_price_quantity_SUBTRACT" tabstop="0" skin="IDB_BT_SUBTRACT" title="" pos="240,107" width="24" height="24"  shortcut="" crtext="ffffff" font="default1" show="1" />
+
+        <button name="button_sbftrade_file_sell_price_quantity_lock" tabstop="0" skin="IDB_BT_UNLOCK" title="" pos="275,110" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="1" />
+		<button name="button_sbftrade_file_sell_price_quantity_unlock" tabstop="0" skin="IDB_BT_LOCK" title="" pos="275,110" width="16" height="16"  shortcut="" crtext="ffffff" font="default1" show="0" />
+	    <!--Row 3   h 110 -->
+       
+      
+      
+      
+		<!--Row 4   130  -->
+     
+          
+        <!--Row 5 -->
+
+             
+ 	
+        <text crtext="b41d23" crmark="800000" align="left" pos="10,180,102,200" title="可用金额：" font="default1" show="1" />
+        <text name="sbftrade_file_text_order_avilibleamt" crtext="b41d23" crmark="800000" align="left" pos="73,180,230,200" title="5000,000,000.00" font="default1" show="1" />
+        <!--Row 8 -->   
+		<text crtext="b41d23" crmark="800000" align="left" pos="10,210,102,230" title="产品净值：" font="default1" show="1" />	  
+        <text name="sbftrade_file_netvalue" crtext="b41d23" crmark="800000" align="left" pos="73,210,230,230" title="510,480,000.00" font="default1" show="1" />	
+   
+        <!--Row 9    -->   
+
+		<text crtext="03d830" crmark="800000" align="left" pos="10,240,102,260" title="买卖金额" font="default1" show="1" />	  
+        <text name="sbftrade_file_actualamount" crtext="03d830" crmark="800000" align="left" pos="73,240,230,260" title="510,480,000.00" font="default1" show="1" />	
+				
+     	  <!--Row 10    -->   
+		  
+		<button name="button_sbftrade_file_order_calculate" tabstop="0" skin="IDB_BT_SMALL" title="计算"  pos="73,306" width="100" height="26" crtext="1E1E1E" /> 
+   		<button name="button_sbftrade_file_order_do" tabstop="1" skin="IDB_BT_OK" title="订单下达" pos="180,306" width="100" height="26" shortcut="RETURN" crtext="ffffff" font="default1"/>	
+   		<button name="button_sbftrade_file_order_multiriskcalc" tabstop="0"  skin="IDB_BT_SMALL" title="风险试算"  crtext="1E1E1E" pos="73,336" width="100" height="26"/> 
+		<textbtn name="button_risk_assessment" crtext='041998' tabstop="0" crhover="091560" crpush='17236b' pos="200,340,320,364" font="default1" title="参数定制"/>
+   
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.7.2" procedurename="prt_pdclif_PdCapitalRecorded" paras="22"/>
+    <func funcname="prodT.7.33" procedurename="prt_pdclif_GetAssetAccoSplitFareStr" paras="11"/>
+    <func funcname="prodT.7.41" procedurename="prt_pdclif_GetProdCostCalcType" paras="11"/>
+    <func funcname="prodT.7.42" procedurename="prt_pdclif_GetAssetAccoInfo" paras="11"/>
+    <func funcname="prodT.7.43" procedurename="prt_pdclif_GetFinaLoanIntrstRate" paras="14"/>
+</funcs>

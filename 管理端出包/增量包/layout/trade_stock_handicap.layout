@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="trade_stock_handicap">
+		<img pos="0,0,-0,-0" image="skins\default\handicap_background.bmp" mode="tile" framesize="0" show="1" response="0"/>
+		<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<text name="stockcodename" crtext="808080" crmark="800000" align="left" pos="10,8,160,25" title="------  --------" font="bold3" show="1" />
+		<text name="increaseamount" crtext="af0100" crmark="800000" align="left" pos="160,8,-10,25" title="------" font="bold2" show="1" />
+	
+		<img pos="10,33,-10,34" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		<gridctrl name="grid.tradestock.sell.offers" pos="10,38,-0,131" show="1"
+        img-scroll="" disable-scroll="1" img-scrollh="" img-sep="skin:IDB_WHILELINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="17" header-height="0" bk-transparent="0"
+        font-title="big" font="default2"
+        valign="middle" down-row="0" align="right" readonly="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crsep="0"  crhead="ffffff" crtitle="00a0e9" crrowhover="e1effc">
+        <column title="" width="40" align="right" key="sell_position" />
+				<column title="卖盘" width="64" align="right" key="sell_price" />
+				<column title="数量" width="64" align="right" key="sell_qty" />
+				<column title="挂单量" width="54" align="right" key="frozen_qty" />
+		</gridctrl>
+		<img pos="10,135,-10,136" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		<!--买盘档口-->
+		<gridctrl name="grid.tradestock.buy.offers" pos="10,140,-0,233" show="1"
+        img-scroll="" disable-scroll="1" img-scrollh="" img-sep="skin:IDB_WHILELINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="17" header-height="0" bk-transparent="0"
+        font-title="big" font="default2"
+        valign="middle" down-row="0" align="right" readonly="1"
+        crtext="000000" crhover="000000"  crpush="e1effc" crhead="ffffff" crtitle="00a0e9" crrowhover="e1effc">
+        <column title="" width="40" align="right" key="buy_position" />
+				<column title="买盘" width="64" align="right" key="buy_price" />
+				<column title="数量" width="64" align="right" key="buy_qty" />
+				<column title="挂单量" width="54" align="right" key="frozen_qty" />
+				<item title="买①" content="" />
+				<item title="买②" content="" />
+				<item title="买③" content="" />
+				<item title="买④" content="" />
+				<item title="买⑤" content="" />
+		</gridctrl>
+		
+		<img pos="10,237,-10,238" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		<text crtext="000000" crmark="800000" align="left" pos="23,242,57,259" title="最新" font="default1" show="1" />
+		<text name="lastprice" crtext="087502" crmark="800000" align="right" pos="58,242,110,259" title="--.--" font="default1" show="1" notiyDown="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="122,242,156,259" title="均价" font="default1" show="1" />
+		<text name="avgprice" crtext="cf0f0f" crmark="800000" align="right" pos="-68,242,-15,259" title="--.--" font="default1" show="1" notiyDown="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="23,261,57,278" title="总手" font="default1" show="1" />
+		<text name="totalqty" crtext="c8c100" crmark="800000" align="right" pos="48,261,110,278" title="--万" font="default1" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="122,261,156,278" title="金额" font="default1" show="1" />
+		<text name="totalamount" crtext="c8c100" crmark="800000" align="right" pos="-68,261,-15,278" title="--亿" font="default1" show="1" />
+		<text crtext="000000" crmark="800000" align="left" pos="23,280,57,297" title="涨停" font="default1" show="1" />
+		<text name="uplimitprice" crtext="cf0f0f" crmark="800000" align="right" pos="58,280,110,297" title="--.--" font="default1" show="1" notiyDown="1"  />
+		<text crtext="000000" crmark="800000" align="left" pos="122,280,156,297" title="跌停" font="default1" show="1" />
+		<text name="downlimitprice" crtext="087502" crmark="800000" align="right" pos="-68,280,-15,297" title="--.--" font="default1" show="1"  notiyDown="1"  />
+		
+	</div>

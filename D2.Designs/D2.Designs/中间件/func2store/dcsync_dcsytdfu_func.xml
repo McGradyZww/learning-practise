@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.6.12" procedurename="prt_dcsytdfu_Synctdfuac_exgp_busi_capit" paras="108"/>
+    <func funcname="dcsyncT.6.13" procedurename="prt_dcsytdfu_Synctdfuac_asac_busi_capit" paras="108"/>
+    <func funcname="dcsyncT.6.14" procedurename="prt_dcsytdfu_Synctdfuac_exgp_busi_posi" paras="108"/>
+    <func funcname="dcsyncT.6.15" procedurename="prt_dcsytdfu_Synctdfuac_asac_busi_posi" paras="108"/>
+    <func funcname="dcsyncT.6.16" procedurename="prt_dcsytdfu_Synctdfuac_exgp_posi_detail" paras="108"/>
+</funcs>

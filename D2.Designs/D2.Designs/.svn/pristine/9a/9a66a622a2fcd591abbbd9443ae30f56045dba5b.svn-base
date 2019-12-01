@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.8.1" procedurename="prt_pdfurkif_QueryExgpCapitalByRisk" paras="11"/>
+    <func funcname="pdfutuT.8.2" procedurename="prt_pdfurkif_QueryAsacCapitalByRisk" paras="11"/>
+    <func funcname="pdfutuT.8.3" procedurename="prt_pdfurkif_QueryExgpPosiByRisk" paras="11"/>
+    <func funcname="pdfutuT.8.4" procedurename="prt_pdfurkif_QueryAsacPosiByRisk" paras="11"/>
+    <func funcname="pdfutuT.8.5" procedurename="prt_pdfurkif_UpdateExchGroupAsset" paras="15"/>
+</funcs>

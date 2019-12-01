@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_stockorder_addorder" title="" width="880" height="500"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="订单补单" response="0" show="1" />
+	</base>
+	<body>
+		<div name="addorder.body" pos="0,32,-3,-3">	
+			<img pos="0,0,-0,-0" image="skins\default\dlg_bg.png" show="1" response="0"/>
+		<img pos="3,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <gridctrl name="grid.funcl_addorder_stockeorder_query" pos="10,5,-2,-65" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"      
+        left-pos="30" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"  sort="1" header-check="1"
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+  			<column title="批号" width="80" align="center" key="batch_no" /> 			
+  			<column title="证券代码" width="80" align="center" key="stock_code" />
+				<column title="证券名称" width="80" align="center" key="stock_name" />  
+  			<column title="订单方向" width="80" align="center" key="order_dir" />  			
+  			<column title="新价格" width="100" align="center" key="modify_price" data_type="N"/>
+				<column title="新数量" width="100" align="right" key="modify_qty" data_type="T"/>
+  			<column title="订单价格" width="100" align="center" key="order_price" data_type="N"/>
+				<column title="订单数量" width="100" align="right" key="order_qty" data_type="T"/>
+				<column title="成交数量" width="100" align="right" key="execution_qty" data_type="T"/>
+				<column title="撤单数量" width="100" align="right" key="cancel_qty" data_type="T"/>
+				<column title="产品名称" width="100" align="center" key="product_name" />
+				<column title="单元名称" width="120" align="center" key="unit_name" /> 
+				<column title="订单编号" width="80" align="center" key="order_no" />      
+		</gridctrl>
+		<!--分割线-->
+		<img pos="1,-63,-1,-60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+        <edit name="stockorder_order_addorder" tabstop="1" skin="IDB_EDIT" pos="-0,-0" width="0" height="0" 
+		               			multiline="0" autohscroll="1" autovscroll="1"   nochangednotify="1"  double="1" maxchar="50" font="default3"  editfont="default3"   />
+         <chkbtn name="stockeorder_check.price_all" align="left" title="同一代码同方向订单，价格联动修改" skin="IDB_CHECK_BOX" pos="10,-45" width="240" height="16" crtext="191919" show="1" check="true" showfocus="0" />
+		    <button name="dlg_button.order.modifyprice" tabstop="0" skin="IDB_BT_OK" title="改单" pos="300,-50,440,-10" shortcut="RETURN" font="bigger1" show="0"  />        
+		  	
+		    <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="-200,-50,-120,-10" shortcut="RETURN" show="1" crtext="FFFFFF" />
+	  		
+	  		<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取消" shortcut="ESC" pos="-70,-50,-10,-10" show="1" />
+		    
+		</div>
+		
+	</body>
+  
+</dlg>

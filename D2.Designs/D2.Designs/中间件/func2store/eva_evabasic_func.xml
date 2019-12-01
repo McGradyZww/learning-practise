@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="evaT.1.1" procedurename="prt_evabasic_AddFinaName" paras="17"/>
+    <func funcname="evaT.1.2" procedurename="prt_evabasic_ModiFinaName" paras="17"/>
+    <func funcname="evaT.1.3" procedurename="prt_evabasic_DelFinaName" paras="12"/>
+    <func funcname="evaT.1.4" procedurename="prt_evabasic_QueryFinaName" paras="14"/>
+    <func funcname="evaT.1.11" procedurename="prt_evabasic_AddEvaPdInfo" paras="15"/>
+    <func funcname="evaT.1.12" procedurename="prt_evabasic_ModiEvaPdInfo" paras="19"/>
+    <func funcname="evaT.1.13" procedurename="prt_evabasic_DelEvaPdInfo" paras="11"/>
+    <func funcname="evaT.1.14" procedurename="prt_evabasic_QueryEvaPdInfo" paras="13"/>
+    <func funcname="evaT.1.15" procedurename="prt_evabasic_GetEvaPdInfo" paras="16"/>
+    <func funcname="evaT.1.16" procedurename="prt_evabasic_GetEvaPdPushConfig" paras="14"/>
+    <func funcname="evaT.1.17" procedurename="prt_evabasic_QueryPdMailConfig" paras="13"/>
+    <func funcname="evaT.1.21" procedurename="prt_evabasic_addPdFee" paras="18"/>
+    <func funcname="evaT.1.22" procedurename="prt_evabasic_modifyPdFee" paras="18"/>
+    <func funcname="evaT.1.23" procedurename="prt_evabasic_deletePdFee" paras="12"/>
+    <func funcname="evaT.1.24" procedurename="prt_evabasic_queryPdFee" paras="14"/>
+    <func funcname="evaT.1.31" procedurename="prt_evabasic_addPdRate" paras="17"/>
+    <func funcname="evaT.1.32" procedurename="prt_evabasic_modifyPdRate" paras="17"/>
+    <func funcname="evaT.1.33" procedurename="prt_evabasic_deletePdRate" paras="13"/>
+    <func funcname="evaT.1.34" procedurename="prt_evabasic_queryPdRate" paras="15"/>
+    <func funcname="evaT.1.41" procedurename="prt_evabasic_addPdShareJour" paras="17"/>
+    <func funcname="evaT.1.42" procedurename="prt_evabasic_modifyPdShareJour" paras="18"/>
+    <func funcname="evaT.1.43" procedurename="prt_evabasic_deletePdShareJour" paras="14"/>
+    <func funcname="evaT.1.44" procedurename="prt_evabasic_queryPdShareJour" paras="15"/>
+    <func funcname="evaT.1.51" procedurename="prt_evabasic_addPdTotalNetConfig" paras="17"/>
+    <func funcname="evaT.1.52" procedurename="prt_evabasic_editPdTotalNetConfig" paras="18"/>
+    <func funcname="evaT.1.53" procedurename="prt_evabasic_delPdTotalNetConfig" paras="14"/>
+    <func funcname="evaT.1.54" procedurename="prt_evabasic_queryPdTotalNetConfig" paras="16"/>
+    <func funcname="evaT.1.55" procedurename="prt_evabasic_addPdVatConfig" paras="14"/>
+    <func funcname="evaT.1.56" procedurename="prt_evabasic_editPdVatConfig" paras="15"/>
+    <func funcname="evaT.1.57" procedurename="prt_evabasic_delPdVatConfig" paras="12"/>
+    <func funcname="evaT.1.58" procedurename="prt_evabasic_queryPdVatConfig" paras="13"/>
+</funcs>

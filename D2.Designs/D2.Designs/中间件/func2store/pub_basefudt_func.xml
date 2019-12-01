@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.13.101" procedurename="prt_basefudt_GetContrcCodeNo" paras="13"/>
+    <func funcname="pubT.13.112" procedurename="prt_basefudt_ModiContrcType" paras="28"/>
+    <func funcname="pubT.13.114" procedurename="prt_basefudt_QueryContrcType" paras="15"/>
+    <func funcname="pubT.13.115" procedurename="prt_basefudt_QueryContrcTypeJour" paras="15"/>
+    <func funcname="pubT.13.116" procedurename="prt_basefudt_QueryContrcTypeJour_His" paras="16"/>
+    <func funcname="pubT.13.124" procedurename="prt_basefudt_QueryContrcTypeOrderDir" paras="15"/>
+    <func funcname="pubT.13.131" procedurename="prt_basefudt_InitFutuCodeInfo" paras="22"/>
+    <func funcname="pubT.13.132" procedurename="prt_basefudt_UpdateFutuQuote" paras="21"/>
+    <func funcname="pubT.13.133" procedurename="prt_basefudt_QueryContractList" paras="10"/>
+    <func funcname="pubT.13.134" procedurename="prt_basefudt_QueryFutuTmplat" paras="14"/>
+    <func funcname="pubT.13.141" procedurename="prt_basefudt_AddContrcCodeInfo" paras="45"/>
+    <func funcname="pubT.13.142" procedurename="prt_basefudt_ModiContrcCodeInfo" paras="44"/>
+    <func funcname="pubT.13.144" procedurename="prt_basefudt_QueryContrcCodeInfo" paras="27"/>
+    <func funcname="pubT.13.148" procedurename="prt_basefudt_QueryClientContrcCodeInfo" paras="13"/>
+    <func funcname="pubT.13.145" procedurename="prt_basefudt_GetContrcCodeInfo" paras="43"/>
+    <func funcname="pubT.13.146" procedurename="prt_basefudt_QueryContrcCodeInfoJour" paras="14"/>
+    <func funcname="pubT.13.147" procedurename="prt_basefudt_QueryContrcCodeInfoJour_His" paras="15"/>
+    <func funcname="pubT.13.149" procedurename="prt_basefudt_QueryContrcCodeInfoList" paras="11"/>
+    <func funcname="pubT.13.151" procedurename="prt_basefudt_AddContrcCodeOrderDir" paras="20"/>
+    <func funcname="pubT.13.152" procedurename="prt_basefudt_ModiContrcCodeOrderDir" paras="20"/>
+    <func funcname="pubT.13.153" procedurename="prt_basefudt_DeleteContrcCodeOrderDir" paras="15"/>
+    <func funcname="pubT.13.154" procedurename="prt_basefudt_QueryContrcCodeOrderDir" paras="15"/>
+    <func funcname="pubT.13.155" procedurename="prt_basefudt_QueryContrcCodeOrderDirJour" paras="15"/>
+    <func funcname="pubT.13.156" procedurename="prt_basefudt_QueryContrcCodeOrderDirJour_His" paras="16"/>
+    <func funcname="pubT.13.157" procedurename="prt_basefudt_AddDeliParam" paras="12"/>
+    <func funcname="pubT.13.158" procedurename="prt_basefudt_ModiDeliParam" paras="12"/>
+    <func funcname="pubT.13.159" procedurename="prt_basefudt_DeleteDeliParam" paras="11"/>
+    <func funcname="pubT.13.160" procedurename="prt_basefudt_QueryDeliParam" paras="13"/>
+    <func funcname="pubT.13.161" procedurename="prt_basefudt_QueryGroupMargin" paras="14"/>
+    <func funcname="pubT.13.170" procedurename="prt_basefudt_AddCustomQuote" paras="14"/>
+    <func funcname="pubT.13.171" procedurename="prt_basefudt_DeleteCustomQuote" paras="10"/>
+    <func funcname="pubT.13.172" procedurename="prt_basefudt_QueryCustomQuote" paras="13"/>
+    <func funcname="pubT.13.173" procedurename="prt_basefudt_QueryFutuQuote" paras="13"/>
+    <func funcname="pubT.13.174" procedurename="prt_funcl_basefudt_UpdateFutuQuoteSettlePrice" paras="12"/>
+</funcs>

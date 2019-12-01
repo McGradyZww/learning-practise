@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_stock_multiorder_unit_panel_command" notiymouse="1">
+     <img pos="0,0,-0,-0" image="skins\default\UnitBack.png" mode="extrude" framesize="2" width-lt="5"  height-lt="5"  width-rb="5"  height-rb ="5"  show="1" response="0"/>
+		 <chkbtn name="command.unitpanel.checkbutton" align="left" title="" skin="IDB_CHECK_BOX" pos="0,0,18,18" crtext="191919" show="1" check="true" showfocus="0"/>
+	  
+	   <text name="command.unitpanel.code" crtext="000000" crmark="800000" align="left" pos="20,5,-0,28" title="51800811" font="default1" show="0" />
+     <text name="command.unitpanel.name" crtext="000000" crmark="800000" align="left" pos="20,5,-0,-0" title="缺省交易单元" font="default1" show="1" />
+     <text name="command.unitpanel.stockact" crtext="000000" crmark="800000" align="right" pos="120,5,-0,28" title="A000001" font="default1" show="0" />
+     
+	    <!--资金小提示-->
+     <text name="command.unitpanel.img.money" crtext="000000" crmark="800000" align="center" pos="-10,0,-0,10" image="skins\default\MONEY_BIG.png"  title="" tip="" font="default1" show="0" />   
+     <text name="command.unitpanel.img.nomoney" crtext="000000" crmark="800000" align="center" pos="-10,0,-0,10" image="skins\default\NO_MONEY_BIG.png"  title="" tip="" font="default1" show="0" />   
+     <text name="command.unitpanel.img.nohold" crtext="000000" crmark="800000" align="center" pos="-10,0,-0,10" image="skins\default\NO_HOLD_BIG.png"  title="" tip="" font="default1" show="0" />   
+ 		 <text name="command.unitpanel.img.hold" crtext="000000" crmark="800000" align="center" pos="-10,0,-0,10" image="skins\default\HOLD_BIG.png"  title="" tip="" font="default1" show="0" />   
+ 		 
+ 		 <text name="command.unitpanel.amt" crtext="000000" crmark="800000" align="left" pos="20,25,-5,45" title="" font="default1" show="1" />
+   
+ 		 <text name="command.unitpanel.qty" notiyDown="1" crtext="cf0f0f" crmark="800000" align="left" pos="20,45,-0,82" title="5000" font="biggest" show="1" />
+   
+     <progress name="command_progress_percent" skin="IDB_PROGRESS" img-front="skins\default\progress_frontground_icon.png"  img-back="skins\default\progress_background_icon.png" img-fore="skins\default\progress_foreground_icon.png" show-text="1" crtext="000000" title=""
+			 pos="4,80,-4,-4"       run="false" show="1"
+			tip="执行进度" />
+
+   </div>

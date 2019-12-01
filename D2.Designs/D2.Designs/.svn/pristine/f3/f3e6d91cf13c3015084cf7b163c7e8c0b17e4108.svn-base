@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.4.1" procedurename="prt_pdsepubif_GetStockAccoNo" paras="13"/>
+    <func funcname="pdsecuT.4.2" procedurename="prt_pdsepubif_GetStockAcco" paras="13"/>
+    <func funcname="pdsecuT.4.3" procedurename="prt_pdsepubif_CheckExchGroupCancel" paras="12"/>
+    <func funcname="pdsecuT.4.4" procedurename="prt_pdsepubif_CancelExchGroupTransferCapitalPosi" paras="16"/>
+    <func funcname="pdsecuT.4.5" procedurename="prt_pdsepubif_UpEvaluUpdateTotalRece" paras="56"/>
+    <func funcname="pdsecuT.4.6" procedurename="prt_pdsepubif_GetExgpCapit" paras="33"/>
+    <func funcname="pdsecuT.4.101" procedurename="prt_pdsepubif_CheckStockAccoStatus" paras="16"/>
+    <func funcname="pdsecuT.4.102" procedurename="prt_pdsepubif_CheckStockAccoStatusAvailAmt" paras="18"/>
+    <func funcname="pdsecuT.4.103" procedurename="prt_pdsepubif_TransactionCommit" paras="9"/>
+    <func funcname="pdsecuT.4.104" procedurename="prt_pdsepubif_AddBankTransferRecord" paras="28"/>
+    <func funcname="pdsecuT.4.105" procedurename="prt_pdsepubif_DealBankTransferCapit" paras="58"/>
+    <func funcname="pdsecuT.4.106" procedurename="prt_pdsepubif_GetBlockTradeposi" paras="25"/>
+    <func funcname="pdsecuT.4.107" procedurename="prt_pdsepubif_GetBlockTradeposiFairPrice" paras="11"/>
+    <func funcname="pdsecuT.4.108" procedurename="prt_pdsepubif_CancelExchGroupRollBackAsacCapitalPosi" paras="20"/>
+    <func funcname="pdsecuT.4.109" procedurename="prt_pdsepubif_QueryExgpCapitInfo" paras="13"/>
+    <func funcname="pdsecuT.4.110" procedurename="prt_pdsepubif_QueryExgpPosiInfo" paras="12"/>
+    <func funcname="pdsecuT.4.111" procedurename="prt_pdsepubif_QueryAsacCapitInfo" paras="13"/>
+    <func funcname="pdsecuT.4.112" procedurename="prt_pdsepubif_QueryAsacPosiInfo" paras="12"/>
+    <func funcname="pdsecuT.4.113" procedurename="prt_pdsepubif_QueryExgpBlockTradePosi" paras="12"/>
+    <func funcname="pdsecuT.4.114" procedurename="prt_pdsepubif_AsacGetStockAccoNo" paras="12"/>
+    <func funcname="pdsecuT.4.115" procedurename="prt_pdsepubif_BatchUpdateExgpPosiCost" paras="56"/>
+    <func funcname="pdsecuT.4.116" procedurename="prt_pdsepubif_GetCancelStockAccoStr" paras="12"/>
+    <func funcname="pdsecuT.4.117" procedurename="prt_pdsepubif_QueryDefaultExgpBlockTradePosi" paras="12"/>
+    <func funcname="pdsecuT.4.118" procedurename="prt_pdsepubif_EvaUpdateBlockTradeposiFairPrice" paras="16"/>
+    <func funcname="pdsecuT.4.119" procedurename="prt_pdsepubif_QueryProdBlockTradePosi" paras="11"/>
+</funcs>

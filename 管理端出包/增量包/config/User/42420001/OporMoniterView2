@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FontSize="12">
+  <SingleColumn Content="记录序号" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="0" />
+  <SingleColumn Content="操作员" IsVisiblity="true" isTotalRow="false" Width="58" displayIndex="1" />
+  <SingleColumn Content="起始监控日期" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="2" />
+  <SingleColumn Content="监控角色" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="3" />
+  <SingleColumn Content="监控值方式" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="4" />
+  <SingleColumn Content="监控值类型" IsVisiblity="true" isTotalRow="false" Width="82" displayIndex="5" />
+  <SingleColumn Content="监控结果" IsVisiblity="true" isTotalRow="false" Width="93" displayIndex="6" />
+  <SingleColumn Content="监控结果状态" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="7" />
+  <SingleColumn Content="预警线" IsVisiblity="true" isTotalRow="false" Width="69" displayIndex="8" />
+  <SingleColumn Content="追加线" IsVisiblity="true" isTotalRow="false" Width="69" displayIndex="9" />
+  <SingleColumn Content="平仓线" IsVisiblity="true" isTotalRow="false" Width="62" displayIndex="10" />
+  <SingleColumn Content="最大监控值" IsVisiblity="true" isTotalRow="false" Width="93" displayIndex="11" />
+  <SingleColumn Content="当前监控值" IsVisiblity="true" isTotalRow="false" Width="93" displayIndex="12" />
+  <SingleColumn Content="最大回撤监控值" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="13" />
+  <SingleColumn Content="对比证券代码" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="14" />
+  <SingleColumn Content="对比交易市场" IsVisiblity="true" isTotalRow="false" Width="94" displayIndex="15" />
+  <SingleColumn Content="对比最大监控值" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="16" />
+  <SingleColumn Content="对比当前监控值" IsVisiblity="true" isTotalRow="false" Width="106" displayIndex="17" />
+  <SingleColumn Content="对比最大回撤监控值" IsVisiblity="true" isTotalRow="false" Width="130" displayIndex="18" />
+  <SingleColumn Content="现金资产" IsVisiblity="true" isTotalRow="false" Width="103" displayIndex="19" />
+  <SingleColumn Content="基金资产" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="20" />
+  <SingleColumn Content="债券资产" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="21" />
+  <SingleColumn Content="股票资产" IsVisiblity="true" isTotalRow="false" Width="103" displayIndex="22" />
+  <SingleColumn Content="回购资产" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="23" />
+  <SingleColumn Content="净资产" IsVisiblity="true" isTotalRow="false" Width="110" displayIndex="24" />
+  <SingleColumn Content="A股资产占比" IsVisiblity="true" isTotalRow="false" Width="91" displayIndex="25" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" Width="70" displayIndex="26" />
+</ColumnSetClass>

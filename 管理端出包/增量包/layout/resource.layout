@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!--系统配置-->
+    <res type="cfg" name="defaultStyle" value="" />
+    <res type="cfg" name="logfile" value="log\Hspiceui.log" />
+    <res type="cfg" name="loglevel" value="1" />
+    <res type="cfg" name="appMutex" value="MUTEX_Hspice" />
+    <res type="cfg" name="enableDragFile" value="1" />
+    <res type="cfg" name="trayDbClickMsg" value="0" />
+    <res type="cfg" name="defaultMetricsX" value="1366" />
+    <res type="cfg" name="defaultMetricsY" value="768" />
+    
+
+    <!--风格设置-->
+    <res type="style" name="default" value="" />
+    <res type="style" name="qq" value="qq" />
+
+    <!--XML资源-->
+    <res type="res" lang="zh-cn" file="xml\def_string_zh-cn.xml" />
+    <res type="res" lang="en-us" file="xml\def_string_en-us.xml" />
+
+    <!--XML资源-默认风格-->	
+		<res type="xml" name="dlg_gird_set" file="layout\dlg_gird_set.layout"/>
+		<res type="xml" name="dlg_relogin" file="layout\dlg_relogin.layout"/>
+		<res type="xml" name="dlg_login" file="layout\dlg_login.layout"/>
+		<res type="xml" name="dlg_main" file="layout\dlg_main.layout"/>	
+		<res type="xml" name="dlg_msgbox" file="layout\dlg_msgbox.layout"/>
+		<res type="xml" name="dlg_container" file="layout\dlg_container.layout"/>	
+		<res type="xml" name="dlg_system_set" file="layout\dlg_system_set.layout"/>
+		<res type="xml" name="dlg_net_set" file="layout\dlg_net_set.layout"/>
+		<res type="xml" name="dlg_operator_password" file="layout\dlg_operator_password.layout"/>
+		<res type="xml" name="tab_command_query" file="layout\tab_command_query.layout"/>
+		<res type="xml" name="tab_command_exchange" file="layout\tab_command_exchange.layout"/>
+		<res type="xml" name="tab_command_stock_info" file="layout\tab_command_stock_info.layout"/>
+		<res type="xml" name="tab_command_entrust_info" file="layout\tab_command_entrust_info.layout"/>
+		<res type="xml" name="tab_command_execution_info" file="layout\tab_command_execution_info.layout"/>
+		<res type="xml" name="tab_command_modify_detail" file="layout\tab_command_modify_detail.layout"/>
+		<res type="xml" name="tab_command_cancel_detail" file="layout\tab_command_cancel_detail.layout"/>
+		<res type="xml" name="tab_command_risk_info" file="layout\tab_command_risk_info.layout"/>
+		<res type="xml" name="tab_trade_stock" file="layout\tab_trade_stock.layout"/>
+		<res type="xml" name="trade_stock_handicap" file="layout\trade_stock_handicap.layout"/>
+		<res type="xml" name="trade_stock_hold" file="layout\trade_stock_hold.layout"/>
+		<res type="xml" name="trade_stock_doentrust" file="layout\trade_stock_doentrust.layout"/>
+		<res type="xml" name="command_exchange_info" file="layout\command_exchange_info.layout"/>
+		<res type="xml" name="funcl_unitstock_query_grid" file="layout\funcl_unitstock_query_grid.layout"/>	
+		<res type="xml" name="funcl_unitstock_query_grid_zl" file="layout\funcl_unitstock_query_grid_zl.layout"/>	
+    <res type="xml" name="funcl_stockeorder_query_grid" file="layout\funcl_stockeorder_query_grid.layout"/>
+    <!--<res type="xml" name="funcl_stockeorder_query_grid_all" file="layout\funcl_stockeorder_query_grid_all.layout"/>	-->
+    <res type="xml" name="funcl_stockeorder_query_grid_all" file="layout\funcl_stockeorder_query_grid_all.layout"/>	
+		<res type="xml" name="funcl_stock_order_input" file="layout\funcl_stock_order_input.layout"/>	
+		<res type="xml" name="funcl_stock_instruction_query_jy_grid" file="layout\funcl_stock_instruction_query_jy_grid.layout"/>
+		<res type="xml" name="funcl_stockbbusin_query_grid" file="layout\funcl_stockbbusin_query_grid.layout"/>
+		<res type="xml" name="funcl_stockbbusin_query_grid_tab" file="layout\funcl_stockbbusin_query_grid_tab.layout"/>
+		<res type="xml" name="funcl_stock_instruction_query_grid" file="layout\funcl_stock_instruction_query_grid.layout"/>		
+		<res type="xml" name="funcl_stock_instruction_query_grid_full" file="layout\funcl_stock_instruction_query_grid_full.layout"/>	
+		<res type="xml" name="funcl_stock_instruction_query_info" file="layout\funcl_stock_instruction_query_info.layout"/>
+
+   
+ 		<!--动态控件/-->
+		<res type="xml" name="progress_ctrol" file="layout\progress_ctrol.layout"/>
+		<res type="xml" name="dlg_autoupdate" file="layout\dlg_autoupdate.layout"/>
+		<res type="xml" name="dlg_doupdate" file="layout\dlg_doupdate.layout"/>
+		<res type="xml" name="combobox_ctrl" file="layout\combobox_ctrl.layout"/>
+ 		
+    <!--字体资源-->
+    <res type="font" lang="zh-cn" name="default" font="微软雅黑" size="12" bold="false" />
+		<res type="font" lang="zh-cn" name="default1" font="微软雅黑" size="13" bold="false" />
+		<res type="font" lang="zh-cn" name="default2" font="微软雅黑" size="14" />
+		<res type="font" lang="zh-cn" name="default3" font="微软雅黑" size="15" />
+		<res type="font" lang="zh-cn" name="default4" font="微软雅黑" size="16" />
+		<res type="font" lang="zh-cn" name="default5" font="微软雅黑" size="17" />
+		<res type="font" lang="zh-cn" name="bold" font="微软雅黑" size="12" bold="true" />
+		<res type="font" lang="zh-cn" name="bold1" font="微软雅黑" size="13" bold="true" />
+		<res type="font" lang="zh-cn" name="bold2" font="微软雅黑" size="14" bold="true" />
+		<res type="font" lang="zh-cn" name="bold3" font="微软雅黑" size="15" bold="true" />
+		<res type="font" lang="zh-cn" name="big" font="微软雅黑" size="14" bold="true" italic="false" strikeout="false" />
+		<res type="font" lang="zh-cn" name="bigbig" font="微软雅黑" size="18" />
+		<res type="font" lang="zh-cn" name="bigger" font="微软雅黑" size="24" />
+		<res type="font" lang="zh-cn" name="bigger1" font="微软雅黑" size="26" />
+		<res type="font" lang="zh-cn" name="biggest" font="微软雅黑" size="30" />
+		<res type="font" lang="zh-cn" name="boldbig" font="微软雅黑" size="18" bold="true"/>
+		<res type="font" lang="zh-cn" name="italic" font="微软雅黑" size="12" bold="false" italic="true" />
+		<res type="font" lang="zh-cn" name="underline" font="微软雅黑" size="12" bold="false" underline="true" />
+		<res type="font" lang="zh-cn" name="strikeout" font="微软雅黑" size="12" bold="false" strikeout="true" />
+		<res type="font" lang="zh-cn" name="bigitalic" font="微软雅黑" size="30" italic="true"/>
+
+    <!--图片资源-默认风格-->
+	<res type="img" name="IDB_BT_GRID_COLUMN_ADD" file="skins\default\BT_GRID_COLUMN_ADD.png" />
+	<res type="img" name="IDB_BT_GRID_COLUMN_DELETE" file="skins\default\BT_GRID_COLUMN_DELETE.png" />
+	<res type="img" name="IDB_BT_GRID_COLUMN_UP" file="skins\default\BT_GRID_COLUMN_UP.png" />
+	<res type="img" name="IDB_BT_GRID_COLUMN_DOWN" file="skins\default\BT_GRID_COLUMN_DOWN.png" />
+    <res type="img" name="IDB_TRAY_ICON" file="skins\icon\logo.ico" />
+    <res type="img" name="IDB_MAIN_FRAME" file="skins\default\WindowsBack.png" />
+    <res type="img" name="IDB_TAB_FRAME" file="skins\default\TabBack.png" />
+    <res type="img" name="IDB_BT_PWD" file="skins\default\BT_PASSWORD.png" />
+	<res type="img" name="IDB_BT_USER" file="skins\default\BT_USER.png" />
+    <res type="img" name="IDB_BT_CLOSE" file="skins\default\BT_CLOSE.png" />
+    <res type="img" name="IDB_BT_CLOSE_SQUARE" file="skins\default\BT_CLOSE_SQUARE.png" />
+    <res type="img" name="IDB_BT_MIN" file="skins\default\BT_MIN.png" />
+    <res type="img" name="IDB_BT_MAX" file="skins\BT_MAX.png" />
+		<res type="img" name="IDB_BK_LOGIN" file="skins\login.png" />
+		<res type="img" name="IDB_BT_DEFAULT" file="skins\BT_DEFAULT.png" />
+		<res type="img" name="IDB_BT_OK" file="skins\ok.png" />
+		<res type="img" name="IDB_BT_CANCEL" file="skins\cancel.png" />
+    <res type="img" name="IDB_EDIT" file="skins\default\EDIT.png" />
+    <res type="img" name="IDB_EDITEX" file="skins\default\editex.png" />
+    <res type="img" name="IDB_DROP_DOWN" file="skins\default\BT_DROP_DOWN.png" />
+    <res type="img" name="IDB_DROP_DOWN_small" file="skins\default\BT_DROP_DOWN_small.png" />
+    <res type="img" name="IDB_TOP" file="skins\default\BT_TOP.png" />
+    <res type="img" name="IDB_BOTTOM" file="skins\default\BT_BOTTOM.png" />
+    <res type="img" name="IDB_USERNAME" file="skins\simage\username.png" />
+    <res type="img" name="IDB_EDIT_PWD" file="skins\simage\password.png" />
+    <res type="img" name="IDB_COMBO_ITEM" file="skins\default\COMBO_ITEM.png" />
+    <res type="img" name="IDB_COMBO_ITEM_CLOSE" file="skins\default\COMBO_ITEM_CLOSE.png" />
+		<res type="img" name="IDB_ICON_INFO" file="skins\image\icon_info.png" />
+		<res type="img" name="IDB_BT_SETUP" file="skins\default\BT_SETUP.png" />
+		<res type="img" name="IDB_SCROLL_V" file="skins\default\SCROLL_V.png" />
+		<res type="img" name="IDB_SCROLL_H" file="skins\default\SCROLL_H.png" />		
+		<res type="img" name="IDB_CHECK_BOX" file="skins\default\CHECK_BOX.png" />
+		<res type="img" name="IDB_TREE_COLLAPSE" file="skins\default\tree_collapse.png" />
+		<res type="img" name="IDB_TREE_TOGGLE" file="skins\default\tree_toggle.png" />
+		<res type="img" name="IDB_LIST_IMG" file="skins\default\list_img.png" />
+		<res type="img" name="IDB_T0TRADE_LIST_IMG" file="skins\default\T0Trade_list.png" />
+		<res type="img" name="IDB_TREE_IMG" file="skins\default\tree_img.png" />		
+		<res type="img" name="IDB_TAB_HOVER" file="skins\default\toolbar_hover.png" />
+		<res type="img" name="IDB_TAB_SEPERATOR" file="skins\default\Tab_seperator.png" />
+		<res type="img" name="IDB_TAB_ITEM" file="skins\default\Tab.png" />
+		<res type="img" name="IDB_TAB_LOW_ITEM" file="skins\default\Tab_low.png" />
+		<res type="img" name="IDB_TAB_INSIDE_ITEM" file="skins\default\Tab_inside.png" />
+		<res type="img" name="IDB_TAB_BACK" file="skins\default\tab_background.png" />
+		<res type="img" name="IDB_MSG_FRAME" file="skins\default\MsgBack.png" />
+		<res type="img" name="IDB_MSG_FRAME_BLACK" file="skins\default\MsgBack_Black.png" />
+		<res type="img" name="IDB_MSG_FRAME_DEEPBLUE" file="skins\default\MsgBack_DeepBlue.png" />
+		<res type="img" name="IDB_BT_SHRINK" file="skins\default\bt_shrink.png" />
+		<res type="img" name="IDB_BT_EXPAND" file="skins\default\bt_expand.png" />
+		<res type="img" name="IDB_BT_QUERY" file="skins\default\BT_QUERY.png" />
+		<res type="img" name="IDB_BT_REFRESH" file="skins\default\BT_REFRESH.png" />
+		<res type="img" name="IDB_BT_PRINT" file="skins\default\BT_PRINT.png" />
+		<res type="img" name="IDB_BT_EXPORT" file="skins\default\BT_EXPORT.png" />
+		<res type="img" name="IDB_HEADER_SEP" file="skins\default\headerctrl_Sperator.bmp" />
+		<res type="img" name="IDB_HEADER_ITEM" file="skins\default\headctrl.bmp" />
+		<res type="img" name="IDB_BT_DRAGFLOAT" file="skins\default\dragfloat.png" />
+		<res type="img" name="IDB_LINE_RP" file="skins\default\rp_line.png" />
+		<res type="img" name="IDB_LINE_RP1" file="skins\default\rp_line1.png" />
+		<res type="img" name="IDB_BT_cancellation" file="skins\default\BT_cancellation.png" />
+		<res type="img" name="IDB_BT_cancellations" file="skins\default\BT_cancellations.png" />
+		<res type="img" name="IDB_BT_RISKTEST" file="skins\default\BT_risktest.png" />
+		<res type="img" name="IDB_BT_modify" file="skins\default\BT_modify.png" />
+		<res type="img" name="IDB_BT_revocation" file="skins\default\BT_revocation.png" />
+		<res type="img" name="IDB_BT_TOP_DOUBLE" file="skins\default\BT_TOP_DOUBLE.png" /> 
+		<res type="img" name="IDB_BT_BOTTOM_DOUBLE" file="skins\default\BT_BOTTOM_DOUBLE.png" /> 	
+		<res type="img" name="IDB_radiobtn" file="skins\default\radiobtn.png" /> 
+		<res type="img" name="IDB_BT_revocation2" file="skins\default\BT_revocation2.png" /> 
+		<res type="img" name="IDB_BT_revocation_small" file="skins\default\BT_revocation_small.png" /> 
+    <res type="img" name="IDB_BT_COMPLETE" file="skins\default\BT_COMPLETE.png" />  
+    <res type="img" name="IDB_BT_MARKETPRICE" file="skins\default\BT_MARKETPRICE.png" /> 
+    <res type="img" name="IDB_BT_QUERY_small" file="skins\default\BT_QUERY_small.png" />
+    <res type="img" name="IDB_BT_modify_small" file="skins\default\BT_modify_small.png" />
+    <res type="img" name="IDB_BT_revocation_small2" file="skins\default\BT_revocation_small2.png" />
+		<res type="img" name="IDB_BT_BUY" file="skins\default\buy.png" />
+		<res type="img" name="IDB_BT_SELL" file="skins\default\sell.png" />
+		<res type="img" name="IDB_PROGRESS" file="skins\default\Progress.png" />
+		<res type="img" name="IDB_SPLIT_HORI" file="skins\default\split_hori.png" />
+		<res type="img" name="IDB_SPLIT_VERT" file="skins\default\split_vert.png" />
+		<res type="img" name="IDB_SPLIT_THUMB_HORI" file="skins\default\split_thumb_hori.jpg" />
+		<res type="img" name="IDB_SPLIT_THUMB_VERT" file="skins\default\split_thumb_vert.jpg" />
+		<res type="img" name="IDB_BT_CHAGEPRICE" file="skins\default\BT_CAGEPRICE.png" />
+		<res type="img" name="IDB_BT_CALC" file="skins\default\BT_CALC.png" />
+		<res type="img" name="IDB_SPLIT_THUMB_UP" file="skins\default\split_thumb_up.png" />
+		<res type="img" name="IDB_SPLIT_THUMB_DOWN" file="skins\default\split_thumb_down.png" />
+		<res type="img" name="IDB_WHILELINE_RP" file="skins\default\rp_WHILEline.png" />
+		<res type="img" name="IDB_ORDERFLAG_LIST_IMG" file="skins\default\orderflag_list_msg.png" />
+		<res type="img" name="IDB_BT_REFRESH_small" file="skins\default\BT_REFRESH_small.png" />
+    <!--字符串资源-->
+
+
+    <res type="str" lang="zh-cn" name="APP_NAME" value="络町增强交易系统(机构版)" />
+
+    <res type="str" lang="zh-cn" name="APP_VER" value="1.0.0.1" />
+    <res type="str" lang="zh-cn" name="OK" value="确 定" />
+    <res type="str" lang="zh-cn" name="CANCEL" value="取 消" />
+		<res type="str" lang="zh-cn" name="RESET" value="重置" />
+    <res type="str" lang="zh-cn" name="YES" value="是" />
+    <res type="str" lang="zh-cn" name="NO" value="否" />
+    <res type="str" lang="zh-cn" name="LOGIN" value="登  录" />
+		<res type="str" lang="zh-cn" name="EXIT" value="退  出" />
+		<res type="str" lang="zh-cn" name="QUERY" value="查询" />
+		<res type="str" lang="zh-cn" name="REFRESH" value="刷新" />
+		<res type="str" lang="zh-cn" name="EXPORT" value="导出" />
+		<res type="str" lang="zh-cn" name="PRINT" value="打印" />
+		<res type="str" lang="zh-cn" name="MSGTIP" value="提示" />
+		
+
+
+</root>

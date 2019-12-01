@@ -1,0 +1,61 @@
+using LdNet.ClientSdk.Model;
+using LdNet.ClientSdk.Request;
+using LdNet.ClientCore.Sdk;
+using LdNet.ClientCore.Threading;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+
+namespace LdNet.ClientSdk.Command
+{
+    public partial class ProductFutuAccoBackCommandManager : BaseCommand
+    {
+
+        /// <summary>
+        /// 逻辑_产品期货_账户运维_查询全部期货账户
+        /// </summary>
+        public IWorkCommand<pdfutuL_7_1_Request, ObservableCollection<pdfutuL_7_1_Info>> pdfutuL_7_1_Command
+        {
+            get
+            {
+                return new WorkCommand<pdfutuL_7_1_Request, ObservableCollection<pdfutuL_7_1_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdfutuL_7_1_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品期货_账户运维_归档产品期货数据
+        /// </summary>
+        public IWorkCommand<pdfutuL_7_11_Request, ObservableCollection<pdfutuL_7_11_Info>> pdfutuL_7_11_Command
+        {
+            get
+            {
+                return new WorkCommand<pdfutuL_7_11_Request, ObservableCollection<pdfutuL_7_11_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdfutuL_7_11_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品期货_账户运维_新增期货账户信息
+        /// </summary>
+        public IWorkCommand<pdfutuL_7_2_Request, ObservableCollection<pdfutuL_7_2_Info>> pdfutuL_7_2_Command
+        {
+            get
+            {
+                return new WorkCommand<pdfutuL_7_2_Request, ObservableCollection<pdfutuL_7_2_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdfutuL_7_2_InfoList;
+                });
+            }
+        }
+
+    }
+}

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.8.1" procedurename="prt_tdserkif_QueryExgpCash" paras="16"/>
+    <func funcname="tdsecuT.8.2" procedurename="prt_tdserkif_QueryAsacCash" paras="15"/>
+    <func funcname="tdsecuT.8.3" procedurename="prt_tdserkif_QueryExgpPosi" paras="18"/>
+    <func funcname="tdsecuT.8.4" procedurename="prt_tdserkif_QueryAsacPosi" paras="17"/>
+    <func funcname="tdsecuT.8.5" procedurename="prt_tdserkif_QueryOrder" paras="15"/>
+    <func funcname="tdsecuT.8.6" procedurename="prt_tdserkif_QueryComm" paras="15"/>
+    <func funcname="tdsecuT.8.10" procedurename="prt_tdserkif_QueryExgpBusiPosiDebtList" paras="11"/>
+    <func funcname="tdsecuT.8.7" procedurename="prt_tdserkif_QueryAsacBusiPosiDebtList" paras="11"/>
+    <func funcname="tdsecuT.8.11" procedurename="prt_tdserkif_QueryExgpBusiCapitalDebt" paras="11"/>
+</funcs>

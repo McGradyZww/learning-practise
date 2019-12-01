@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_command_baskettrading_management">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="  订单查询" font="big" show="1" />  header-check="0" -->
+   
+    <gridctrl name="grid.funcl_command_baskettrading_management" pos="2,5,-2,-55" show="1"			
+		img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" 
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" sort="1" editcolumn="1"
+        left-pos="30" row-height="35" header-height="38" bk-transparent="1"
+        font-title="big" font="default2" grid-tip="1" 
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">    
+		<column title="       状态" width="100" align="center" key="command_status"  />		
+		<column title="篮子名称" width="100" align="center" key="basket_name"  />		
+		<column title="成交进度" width="100" align="right" key="business_proc" data_type="N" />
+		<column title="指令数量" width="100" align="right" key="command_qty" data_type="T" />	
+		
+		<column title="成交数量" width="100" align="right" key="execution_qty" data_type="T" />	
+		<column title="撤单数量" width="100" align="right" key="cancel_qty" data_type="T" />	
+		<column title="指令金额" width="100" align="right" key="command_amt" data_type="T" />
+		<column title="成交金额" width="100" align="right" key="execution_amt" data_type="T" />
+		<column title="产品" width="100" align="center" key="product_name" />
+		<column title="交易单元" width="100" align="center" key="unit_name" />
+		<column title="指令批号" width="100" align="center" key="batch_no" data_type="N" />
+		<column title="下单人" width="100" align="center" key="command_operator"  />
+		<column title="执行人" width="100" align="center" key="command_executor"  />
+		<column title="下达时间" width="100" align="center" key="command_time" data_type="N" />
+		<column title="结束时间" width="100" align="center" key="command_end_time" data_type="N" />		
+		<column title="开始时间" width="100" align="center" key="command_begin_time" data_type="N" />		
+
+    </gridctrl>
+     <!--证券代码-->
+	<text crtext="000000" crmark="800000" align="left" pos="10,-26" width="60" height="25" title="篮子:" show="1"/>
+	<combobox name="command_basket.basket_name" tabstop="1" skin="IDB_EDIT" pos="70,-30" width="120" height="25" tip="篮子"
+				  small-image="skin:IDB_DROP_DOWN_small" autohscroll="1" autovscroll="1"
+				  multiline="0" readonly="1" maxchar="50" list-height="100"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	</combobox>
+	<text crtext="000000" crmark="800000" align="right" pos="200,-26" width="60" height="25" title="交易账户:" show="1"/>
+	<combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="260,-30" width="120" height="25" tip="交易账户"
+				  small-image="skin:IDB_DROP_DOWN_small" autohscroll="1" autovscroll="1"
+				  multiline="0" readonly="1" maxchar="50" list-height="100"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	</combobox> 
+	 <button name="command_basket_button.refresh" title="" pos="390,-30" width="80" height="25" skin="IDB_BT_STANDARD" title="刷新" tip="刷新" show="1" /> 
+ 
+    <button name="command_basket_button.modification" title="" pos="490,-30" width="80" height="25" skin="IDB_BT_STANDARD" title="修改" tip="修改" show="1" />
+	<button name="command_basket_button.cancelrevocation" title="" pos="580,-30" width="80" height="25" skin="IDB_BT_STANDARD" title="撤销" tip="撤销" show="1" /> 
+  
+ 
+    <chkbtn name="check_show_cancel" title="已撤" skin="IDB_CHECK_BOX" pos="-162,-30" width="65" height="15" crtext="e30202" show="1" check="false" showfocus="0"/>
+	<chkbtn name="check_show_deal" title="全部成交" skin="IDB_CHECK_BOX" pos="-100,-30" width="80" height="15" crtext="0493a0" show="1" check="false" showfocus="0"/>
+</div>

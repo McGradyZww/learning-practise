@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_ipoorder_paramset" title="" width="350" height="200"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="30,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="dlg_stockorder_multi_paramset.body" pos="0,30,-0,-0">	
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+		<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>				
+		<chkbtn name="checkbutton_ipo_entrust_before_hint" title="新股申购订单下达前弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,30" width="240" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>		
+      <!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+	</body>
+</dlg>

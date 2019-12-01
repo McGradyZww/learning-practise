@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="" pos="-472,376,-6,-4">
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="机构编号" font="default1" show="1" />
+       <edit name="company_no" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="操作员编号" font="default1" show="1" />
+       <edit name="operator_no" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="操作员密码" font="default1" show="1" />
+       <edit name="operator_pwd" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="操作站点" font="default1" show="1" />
+       <edit name="oper_station" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="操作方式" font="default1" show="1" />
+       <edit name="oper_kind" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="菜单编号" font="default1" show="1" />
+       <edit name="menu_no" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="功能编码" font="default1" show="1" />
+       <edit name="function_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="指令类型" font="default1" show="1" />
+       <edit name="command_type" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="指令序号" font="default1" show="1" />
+       <edit name="command_id" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="产品编码" font="default1" show="1" />
+       <edit name="product_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="产品名称" font="default1" show="1" />
+       <edit name="product_name" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="交易单元" font="default1" show="1" />
+       <edit name="unit_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="交易单元名称" font="default1" show="1" />
+       <edit name="unit_name" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="指令下达人" font="default1" show="1" />
+       <edit name="command_operator" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="指令执行人" font="default1" show="1" />
+       <edit name="command_executor" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="市场编号" font="default1" show="1" />
+       <edit name="exchange_no" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="证券类型" font="default1" show="1" />
+       <edit name="stock_type" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="证券代码" font="default1" show="1" />
+       <edit name="stock_code" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="订单方向" font="default1" show="1" />
+       <edit name="order_dir" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="指令状态" font="default1" show="1" />
+       <edit name="command_status" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="成交状态" font="default1" show="1" />
+       <edit name="execution_status" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,35,82,53" title="资产类型" font="default1" show="1" />
+       <edit name="asset_type" tabstop="1" skin="IDB_EDIT" small-image="" pos="84,33" width="150" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+   </div>

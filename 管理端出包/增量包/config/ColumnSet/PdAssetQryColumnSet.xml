@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品总份额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="净资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="昨日单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="净值波动率" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="现金资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="股票资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="债券资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="基金资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="回购资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期货资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="港股通资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="其他资产" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="当日盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="当日收益率" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="可提现金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="股票资产占比" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券占比" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="累计应收金额" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="累计应付金额" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_instruction_query" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="指令查询" font="big" show="1" />
+    <gridctrl name="grid.funcl_stock_instruction_query" pos="2,27,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1"  editcolumn="1" 
+        valign="middle" down-row="1" align="center" primary-key="command_id" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="机构编号" width="100" align="center" key="company_no" data_type="N" />
+        <column title="指令序号" width="100" align="center" key="command_id"  deletable="0" data_type="N"/>
+        <column title="指令类型" width="100" align="center" key="command_type" />
+        <column title="产品编码" width="100" align="center" key="product_code" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元" width="100" align="center" key="unit_code" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="指令批号" width="100" align="center" key="batch_no" data_type="N" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+        <column title="资产类型" width="100" align="center" key="asset_type" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="指令方向" width="100" align="center" key="command_dir" />
+          <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="价格模式" width="100" align="center" key="price_mode" />
+        <column title="目标类型" width="100" align="center" key="target_type" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="center" key="command_qty" data_type="T" />
+        <column title="指令金额" width="100" align="center" key="command_amt" data_type="T" />
+        <column title="指令状态" width="100" align="center" key="command_status" />
+        <!--column title="指令开始日期" width="100" align="center" key="command_begin_date" />
+        <column title="指令开始时间" width="100" align="center" key="command_begin_time" data_type="N"/>
+        <column title="指令结束日期" width="100" align="center" key="command_end_date" />
+        <column title="指令结束时间" width="100" align="center" key="command_end_time" />-->
+        <column title="指令下达人" width="100" align="center" key="command_operator" />
+        <column title="指令执行人" width="100" align="center" key="command_executor" />
+        <column title="指令日期" width="100" align="center" key="command_date" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N"/>
+         <column title="指令完成时间" width="100" align="center" key="command_complete_time" data_type="N"/>
+        <column title="订单冻结金额" width="100" align="center" key="order_frozen_amt" data_type="T" />
+       
+        <column title="成交状态" width="100" align="center" key="execution_status" />
+    </gridctrl>
+  </div>

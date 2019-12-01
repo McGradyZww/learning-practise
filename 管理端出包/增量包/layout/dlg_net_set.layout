@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dlg name="dlg_net_set" title="网络设置" width="428" height="274" translucent="255" frame="" bkimg="" crbk="" resize="0">
+  
+  <base>
+  	<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+  	<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="网络设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE_SQUARE" tip="关闭" show="1" shortcut="ESC"/>
+  </base>
+  	
+  <body>
+  	<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+  	<tabctrl name="tabctrl.net.set" pos="0,35,-0,-40" img-sep="" img-hover=""
+			img-tabbtn="" tabbtnpos="" font="default2" item-width="125" tab-height="30" crtext="ffffff" crtexttDeactive="191919" 
+			animate="0" animate-count="0" >
+				
+				<tab name="tab.tradeserver.set" title="交易服务器" image="skin:IDB_TAB_LOW_ITEM" pos="0,30,-0,-0" active="true" show="true">
+						<img pos="5,2,-5,-2" image="skins\default\MsgBack.png" mode="tile" framesize="0" show="1" response="0"/>
+						<gridctrl name="tradeserver.set.gridctrl" pos="5,2,-5,-2" show="1"
+							img-scroll="skin:IDB_SCROLL_V" img-sep="skin:IDB_LINE_RP"
+							img-check="skin:IDB_CHECK_BOX" img-colsep=""
+							img-count="" image=""
+							left-pos="17" row-height="30" header-height="30" bk-transparent="100"
+							font-title="big" font="default" valign="middle" align="center" down-row="1"
+							crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+							<column title="站点" width="120" />
+							<column title="交易服务器" width="170" />
+							<column title="端口" width="128"/>
+						</gridctrl>
+				</tab>
+				<tab name="tab.hqserver.set" title="行情服务器" image="skin:IDB_TAB_LOW_ITEM" pos="0,30,-0,-0" show="true">
+						<img pos="5,2,-5,-2" image="skins\default\MsgBack.png" mode="tile" framesize="0" show="1" response="0"/>
+						<gridctrl name="hqserver.set.gridctrl" pos="5,2,-5,-2" show="1"
+							img-scroll="skin:IDB_SCROLL_V" img-sep="skin:IDB_LINE_RP"
+							img-check="skin:IDB_CHECK_BOX" img-colsep=""
+							img-count="" image=""
+							left-pos="17" row-height="30" header-height="30" bk-transparent="100"
+							font-title="big" font="default" valign="middle" align="center" down-row="1"
+							crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+							<column title="站点" width="120" />
+							<column title="行情服务器" width="170" />
+							<column title="端口" width="128"/>
+						</gridctrl>
+				</tab>
+				
+		</tabctrl>		
+		<button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="-195,-35" width="80" height="30" show="1" crtext="FFFFFF" font="default2" />
+		<button name="button.cancel" tabstop="1" skin="IDB_BT_CANCEL" title="[CANCEL]" pos="-85,-35" width="80" height="30" show="1" font="default2" shortcut="ESC" />
+  </body>
+  
+</dlg>

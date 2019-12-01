@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_t0_trade_pop" title="[APP_NAME]" width="955" height="300"  appwin="1" resize="1" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<img pos="0,0,-0,30" name="image.title" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big" pos="50,4" width="120" height="21" title="[APP_NAME]" response="0" show="1" drag="1"/>
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+
+	<body>
+			<div name="to_trade_pop.body" pos="0,32,-0,-0">	
+				<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			  <img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+				<!--交易策略区-->
+		    <div name="T+0trade_stock_exchange_pop" pos="10,2,380,-10" placement="T+0trade_stock_exchange_pop"/>
+		    <!--分割线-->
+        <img pos="378,0,381,-3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		    <tabctrl name="tab_t0_trade_pop" pos="384,2,-3,-3" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+					<tab name="t0_trade_pop_order" image="skin:IDB_TAB_LOW_ITEM" title="订单" active="true" pos="0,30,-0,-0">	
+					   <!--订单信息区-->
+						 <div name="T+0trade_stock_orderqry" pos="0,0,-0,-0" placement="T+0trade_stock_orderqry"/>
+					</tab>
+					<tab name="t0_trade_pop_hold" image="skin:IDB_TAB_LOW_ITEM" title="持仓" active="false" pos="0,30,-0,-0">	
+					   <!--当前仓位区-->
+						 <div name="T+0trade_stock_holdqry_pop" pos="0,0,-0,-0" placement="T+0trade_stock_holdqry_pop"/>		
+					</tab>
+				</tabctrl>
+			</div>
+	</body>
+  
+</dlg>

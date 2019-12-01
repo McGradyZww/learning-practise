@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.1.901" procedurename="prt_pdfuac_GetMarketBusiRecordNo" paras="12"/>
+    <func funcname="pdfutuT.1.40" procedurename="prt_pdfuac_CheckFutuAccoExists" paras="15"/>
+    <func funcname="pdfutuT.1.41" procedurename="prt_pdfuac_AddFutuAccoInfo" paras="21"/>
+    <func funcname="pdfutuT.1.42" procedurename="prt_pdfuac_ModiFutuAccoInfo" paras="19"/>
+    <func funcname="pdfutuT.1.43" procedurename="prt_pdfuac_DeleteFutuAccoInfo" paras="17"/>
+    <func funcname="pdfutuT.1.44" procedurename="prt_pdfuac_QueryFutuAccoInfo" paras="18"/>
+    <func funcname="pdfutuT.1.45" procedurename="prt_pdfuac_QueryFutuAccoInfoJour" paras="17"/>
+    <func funcname="pdfutuT.1.46" procedurename="prt_pdfuac_QueryFutuAccoInfoJour_His" paras="18"/>
+    <func funcname="pdfutuT.1.47" procedurename="prt_pdfuac_UpdateFutuAccoStatus" paras="17"/>
+    <func funcname="pdfutuT.1.48" procedurename="prt_pdfuac_CheckFutuAccoStatus" paras="15"/>
+    <func funcname="pdfutuT.1.51" procedurename="prt_pdfuac_QueryFutuAccoList" paras="9"/>
+    <func funcname="pdfutuT.1.501" procedurename="prt_pdfuac_QueryFutuAccoByTrans" paras="10"/>
+</funcs>

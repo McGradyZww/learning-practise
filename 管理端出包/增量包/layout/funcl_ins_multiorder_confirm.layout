@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_ins_multiorder_confirm" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,2" image="skins\default\line_split.png" mode="tile" show="1" response="0"/>			   
+		       
+       <text crtext="000000" crmark="800000" align="left" pos="10,10" width="62" height="18" title="指令数量" font="default1" show="1" />
+       <text name="stock.multiorder.info.qtytotal" crtext="000000" crmark="800000" align="left" pos="73,10"  width="102" height="18" title="0" font="default1"  />	
+       <text name="stock.multiorder.info.qtytotal_zh" crtext="000000" crmark="800000" align="left" pos="73,29" width="150" height="18" title="零" font="default1"  />	
+       
+	   <text crtext="000000" crmark="800000" align="left" pos="250,10"  width="62" height="18" title="指令价格" font="default1" show="1" />       
+	   <text name="stock.multiorder.info.orderprice" crtext="000000" crmark="800000" align="left" pos="313,10" width="102" height="18" title="0.00" font="default1"  />	
+	   
+	   <text crtext="000000" crmark="800000" align="left" pos="450,10"  width="62" height="18" title="指令金额" font="default1" show="1" />
+       <text name="stock.multiorder.info.amttotal" crtext="000000" crmark="800000" align="left" pos="513,10" width="102" height="18" title="0.00" font="default1"  />	
+	   <text name="stock.multiorder.info.amttotal_zh" crtext="000000" crmark="800000" align="left" pos="513,29" width="120" height="18" title="零" font="default1"  />	
+	   
+		
+		<text crtext="000000" crmark="800000" align="left" pos="10,55" width="62" height="18" title="交 易 员" font="default1" show="1" />
+        <combobox name="ins_command_executor" tabstop="0" skin="IDB_EDIT" pos="73,50" width="102" height="30" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="200"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+
+		<button name="button_executor_lock" tabstop="1" skin="IDB_BT_UNLOCK" title="" pos="181,58" width="14" height="16"  shortcut="RETURN" crtext="ffffff" font="default1" show="1" />
+		<button name="button_executor_unlock" tabstop="1" skin="IDB_BT_LOCK" title="" pos="181,58" width="14" height="16"  shortcut="RETURN" crtext="ffffff" font="default1" show="0" />			
+	
+		<button name="button_order_multiriskcalc" tabstop="1"  skin="IDB_BT_BIG" title="风险试算" font="default2" pos="210,50" width="102" height="30" crtext="000000" />  
+		<button name="button_order_multicancel" tabstop="1" skin="IDB_BT_SMALL" title="取消" font="default2" pos="323,50" width="50" height="30"  shortcut="RETURN" crtext="000000" font="default2"/>	
+	
+		<!--参数定制-->
+		<textbtn name="ins_custom_paramset" tabstop="0" crtext='041998' crhover="091560" crpush='17236b' font="default2" pos="400,58" width="80" height="28"  title="参数定制" show="1" />
+		<img pos="400,79" width="60" height="1" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		
+	</div>

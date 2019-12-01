@@ -1,0 +1,721 @@
+using LdNet.ClientSdk.Model;
+using LdNet.ClientSdk.Request;
+using LdNet.ClientCore.Sdk;
+using LdNet.ClientCore.Threading;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+
+namespace LdNet.ClientSdk.Command
+{
+    public partial class ProductSecuCapitalCommandManager : BaseCommand
+    {
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_分配产品资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_8_Request, ObservableCollection<pdsecuL_2_8_Info>> pdsecuL_2_8_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_8_Request, ObservableCollection<pdsecuL_2_8_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_8_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_回收产品资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_9_Request, ObservableCollection<pdsecuL_2_9_Info>> pdsecuL_2_9_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_9_Request, ObservableCollection<pdsecuL_2_9_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_9_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_授权产品资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_10_Request, ObservableCollection<pdsecuL_2_10_Info>> pdsecuL_2_10_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_10_Request, ObservableCollection<pdsecuL_2_10_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_10_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_回收授权产品资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_11_Request, ObservableCollection<pdsecuL_2_11_Info>> pdsecuL_2_11_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_11_Request, ObservableCollection<pdsecuL_2_11_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_11_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_冻结交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_32_Request, ObservableCollection<pdsecuL_2_32_Info>> pdsecuL_2_32_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_32_Request, ObservableCollection<pdsecuL_2_32_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_32_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_取消冻结交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_33_Request, ObservableCollection<pdsecuL_2_33_Info>> pdsecuL_2_33_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_33_Request, ObservableCollection<pdsecuL_2_33_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_33_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_解冻交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_34_Request, ObservableCollection<pdsecuL_2_34_Info>> pdsecuL_2_34_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_34_Request, ObservableCollection<pdsecuL_2_34_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_34_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_取消解冻交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_35_Request, ObservableCollection<pdsecuL_2_35_Info>> pdsecuL_2_35_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_35_Request, ObservableCollection<pdsecuL_2_35_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_35_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_37_Request, ObservableCollection<pdsecuL_2_37_Info>> pdsecuL_2_37_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_37_Request, ObservableCollection<pdsecuL_2_37_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_37_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_38_Request, ObservableCollection<pdsecuL_2_38_Info>> pdsecuL_2_38_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_38_Request, ObservableCollection<pdsecuL_2_38_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_38_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询交易组资金流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_39_Request, ObservableCollection<pdsecuL_2_39_Info>> pdsecuL_2_39_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_39_Request, ObservableCollection<pdsecuL_2_39_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_39_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史交易组资金流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_40_Request, ObservableCollection<pdsecuL_2_40_Info>> pdsecuL_2_40_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_40_Request, ObservableCollection<pdsecuL_2_40_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_40_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询交易组资金冻结解冻流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_41_Request, ObservableCollection<pdsecuL_2_41_Info>> pdsecuL_2_41_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_41_Request, ObservableCollection<pdsecuL_2_41_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_41_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史交易组资金冻结解冻流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_42_Request, ObservableCollection<pdsecuL_2_42_Info>> pdsecuL_2_42_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_42_Request, ObservableCollection<pdsecuL_2_42_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_42_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_更新交易组资金累计应收应付
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_43_Request, ObservableCollection<pdsecuL_2_43_Info>> pdsecuL_2_43_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_43_Request, ObservableCollection<pdsecuL_2_43_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_43_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询交易组资产
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_44_Request, ObservableCollection<pdsecuL_2_44_Info>> pdsecuL_2_44_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_44_Request, ObservableCollection<pdsecuL_2_44_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_44_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_红冲蓝补资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_51_Request, ObservableCollection<pdsecuL_2_51_Info>> pdsecuL_2_51_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_51_Request, ObservableCollection<pdsecuL_2_51_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_51_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_冻结资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_52_Request, ObservableCollection<pdsecuL_2_52_Info>> pdsecuL_2_52_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_52_Request, ObservableCollection<pdsecuL_2_52_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_52_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_取消冻结资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_53_Request, ObservableCollection<pdsecuL_2_53_Info>> pdsecuL_2_53_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_53_Request, ObservableCollection<pdsecuL_2_53_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_53_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_解冻资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_54_Request, ObservableCollection<pdsecuL_2_54_Info>> pdsecuL_2_54_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_54_Request, ObservableCollection<pdsecuL_2_54_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_54_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_取消解冻资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_55_Request, ObservableCollection<pdsecuL_2_55_Info>> pdsecuL_2_55_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_55_Request, ObservableCollection<pdsecuL_2_55_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_55_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_57_Request, ObservableCollection<pdsecuL_2_57_Info>> pdsecuL_2_57_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_57_Request, ObservableCollection<pdsecuL_2_57_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_57_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_58_Request, ObservableCollection<pdsecuL_2_58_Info>> pdsecuL_2_58_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_58_Request, ObservableCollection<pdsecuL_2_58_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_58_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询资产账户资金流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_59_Request, ObservableCollection<pdsecuL_2_59_Info>> pdsecuL_2_59_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_59_Request, ObservableCollection<pdsecuL_2_59_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_59_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史资产账户资金流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_60_Request, ObservableCollection<pdsecuL_2_60_Info>> pdsecuL_2_60_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_60_Request, ObservableCollection<pdsecuL_2_60_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_60_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询资产账户资金冻结解冻流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_61_Request, ObservableCollection<pdsecuL_2_61_Info>> pdsecuL_2_61_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_61_Request, ObservableCollection<pdsecuL_2_61_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_61_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询历史资产账户资金冻结解冻流水
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_62_Request, ObservableCollection<pdsecuL_2_62_Info>> pdsecuL_2_62_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_62_Request, ObservableCollection<pdsecuL_2_62_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_62_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_更新资产账户资金累计应收应付
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_63_Request, ObservableCollection<pdsecuL_2_63_Info>> pdsecuL_2_63_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_63_Request, ObservableCollection<pdsecuL_2_63_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_63_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_外部证券资金流水记录处理
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_101_Request, ObservableCollection<pdsecuL_2_101_Info>> pdsecuL_2_101_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_101_Request, ObservableCollection<pdsecuL_2_101_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_101_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询外部证券资金流水记录
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_103_Request, ObservableCollection<pdsecuL_2_103_Info>> pdsecuL_2_103_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_103_Request, ObservableCollection<pdsecuL_2_103_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_103_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_转入外部资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_171_Request, ObservableCollection<pdsecuL_2_171_Info>> pdsecuL_2_171_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_171_Request, ObservableCollection<pdsecuL_2_171_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_171_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_资产账户资金应收应付变动
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_64_Request, ObservableCollection<pdsecuL_2_64_Info>> pdsecuL_2_64_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_64_Request, ObservableCollection<pdsecuL_2_64_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_64_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_新增银证转账记录
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_65_Request, ObservableCollection<pdsecuL_2_65_Info>> pdsecuL_2_65_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_65_Request, ObservableCollection<pdsecuL_2_65_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_65_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_导入资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_66_Request, ObservableCollection<pdsecuL_2_66_Info>> pdsecuL_2_66_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_66_Request, ObservableCollection<pdsecuL_2_66_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_66_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_获取交易组对应资产账户
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_67_Request, ObservableCollection<pdsecuL_2_67_Info>> pdsecuL_2_67_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_67_Request, ObservableCollection<pdsecuL_2_67_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_67_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_交易组资金划转
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_68_Request, ObservableCollection<pdsecuL_2_68_Info>> pdsecuL_2_68_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_68_Request, ObservableCollection<pdsecuL_2_68_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_68_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询交易组收益情况
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_69_Request, ObservableCollection<pdsecuL_2_69_Info>> pdsecuL_2_69_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_69_Request, ObservableCollection<pdsecuL_2_69_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_69_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_删除交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_70_Request, ObservableCollection<pdsecuL_2_70_Info>> pdsecuL_2_70_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_70_Request, ObservableCollection<pdsecuL_2_70_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_70_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_同步场外基金外部基金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_71_Request, ObservableCollection<pdsecuL_2_71_Info>> pdsecuL_2_71_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_71_Request, ObservableCollection<pdsecuL_2_71_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_71_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_转入外部资产账户资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_72_Request, ObservableCollection<pdsecuL_2_72_Info>> pdsecuL_2_72_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_72_Request, ObservableCollection<pdsecuL_2_72_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_72_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_转入外部资产
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_73_Request, ObservableCollection<pdsecuL_2_73_Info>> pdsecuL_2_73_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_73_Request, ObservableCollection<pdsecuL_2_73_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_73_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_根据操作员查询交易组资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_80_Request, ObservableCollection<pdsecuL_2_80_Info>> pdsecuL_2_80_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_80_Request, ObservableCollection<pdsecuL_2_80_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_80_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_申赎产品资金
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_81_Request, ObservableCollection<pdsecuL_2_81_Info>> pdsecuL_2_81_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_81_Request, ObservableCollection<pdsecuL_2_81_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_81_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_删除产品申赎流水记录
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_82_Request, ObservableCollection<pdsecuL_2_82_Info>> pdsecuL_2_82_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_82_Request, ObservableCollection<pdsecuL_2_82_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_82_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询产品申赎流水记录
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_83_Request, ObservableCollection<pdsecuL_2_83_Info>> pdsecuL_2_83_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_83_Request, ObservableCollection<pdsecuL_2_83_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_83_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询产品申赎流水历史记录
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_84_Request, ObservableCollection<pdsecuL_2_84_Info>> pdsecuL_2_84_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_84_Request, ObservableCollection<pdsecuL_2_84_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_84_InfoList;
+                });
+            }
+        }
+
+
+        /// <summary>
+        /// 逻辑_产品证券_资金_查询外部转入资产
+        /// </summary>
+        public IWorkCommand<pdsecuL_2_74_Request, ObservableCollection<pdsecuL_2_74_Info>> pdsecuL_2_74_Command
+        {
+            get
+            {
+                return new WorkCommand<pdsecuL_2_74_Request, ObservableCollection<pdsecuL_2_74_Info>>((o) =>
+                {
+                    return ApiInstance.Execute(o).pdsecuL_2_74_InfoList;
+                });
+            }
+        }
+
+    }
+}

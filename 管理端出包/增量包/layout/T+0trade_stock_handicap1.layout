@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="T+0trade_stock_handicap1">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack_Black.png" mode="tile" framesize="0" show="1" response="0"/>
+		<!--标题：证券代码 证券名称  最新价 涨幅  最高价 最低价-->
+		<text name="stockcode" crtext="ffffff" crmark="800000" align="left" pos="5,8,65,25" title="------" font="bold2" show="1" />
+		<text name="stockcodename" crtext="ffffff" crmark="800000" align="left" pos="70,8,150,25" title="--------" font="bold2" show="1" />
+		<text name="lastprice" crtext="af0100" crmark="800000" align="left" pos="160,8,210,25" title="------" font="bold2" show="1" />
+		<text name="increaseamount" crtext="af0100" crmark="800000" align="left" pos="220,8,280,25" title="------" font="bold2" show="1" />
+		<text crtext="ffffff" crmark="800000" align="left" pos="280,8,320,25" title="最高" font="bold2" show="1" />
+		<text name="highestprice" crtext="ff0000" crmark="800000" align="left" pos="320,8,370,25" title="------" font="bold2" show="1" />
+		<text crtext="ffffff" crmark="800000" align="left" pos="375,8,415,25" title="最低" font="bold2" show="1" />
+		<text name="lowestprice" crtext="00ff00" crmark="800000" align="left" pos="415,8,465,25" title="------" font="bold2" show="1" />
+		
+		<img pos="1,33,-1,34" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<img pos="1,69,-1,70" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		<!--卖盘档口-->
+		<gridctrl name="grid.T+0trade.sell.offers" pos="0,35,129,300" show="1"
+        img-scroll="" disable-scroll="1" img-scrollh="" img-sep="skin:IDB_LINE_RP1"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="23" header-height="35" bk-transparent="0"
+        font-title="big" font="default2"
+        valign="middle" down-row="0" align="right" readonly="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="ffffff" crtitle="00a0e9" crrowhover="e1effc">
+        <column title="" width="19" align="right" key="sell_position" />
+				<column title="卖盘" width="55" align="right" key="sell_price" />
+				<column title="数量" width="55" align="right" key="sell_qty" />
+		</gridctrl>
+		<img pos="129,70,130,301" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--买盘档口-->
+		<gridctrl name="grid.T+0trade.buy.offers" pos="130,35,259,300" show="1"
+        img-scroll="" disable-scroll="1" img-scrollh="" img-sep="skin:IDB_LINE_RP1"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="23" header-height="35" bk-transparent="0"
+        font-title="big" font="default2"
+        valign="middle" down-row="0" align="right" readonly="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="ffffff" crtitle="00a0e9" crrowhover="e1effc">
+        <column title="" width="19" align="right" key="buy_position" />
+				<column title="买盘" width="55" align="right" key="buy_price" />
+				<column title="数量" width="55" align="right" key="buy_qty" />
+		</gridctrl>
+		<img pos="259,70,260,301" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+		<!--成交档口-->
+		<gridctrl name="grid.T+0trade.stock.execution" pos="260,35,476,300" show="1"
+        img-scroll="" img-scrollh="" img-sep="skin:IDB_LINE_RP1"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="23" header-height="35" bk-transparent="0"
+        font-title="big" font="default2"
+        valign="middle" down-row="0" align="right" readonly="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="ffffff" crtitle="00a0e9" crrowhover="e1effc">
+        <column title="时间" width="70" align="right" key="execution_time" />
+				<column title="价格" width="60" align="right" key="execution_price" />
+				<column title="数量" width="60" align="right" key="execution_count" />
+				<column title="" width="18" align="right" key="execution_direct" />
+		</gridctrl>
+
+	</div>

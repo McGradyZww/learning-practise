@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.16.1" procedurename="prt_sequotser_InitStockCode" paras="16"/>
+    <func funcname="pubT.16.2" procedurename="prt_sequotser_UpdateStockCodeQuot" paras="42"/>
+    <func funcname="pubT.16.3" procedurename="prt_sequotser_AfterMarketUpdateStockCodeQuot" paras="41"/>
+</funcs>

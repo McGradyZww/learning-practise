@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="交易日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品当前份额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="总资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="净资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="当日收益率" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="现金余额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="账户余额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="股票市值" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="基金资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="债券资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="期货资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="期权资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="其他资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应收" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应付" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="交易应收" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计单位净值" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

@@ -1,0 +1,176 @@
+using LdNet.ClientCore.Sdk;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace LdNet.ClientSdk.Model
+{
+    public class pdsecuL_7_1_Info : ObservableObject
+    {
+
+        private int _co_no;
+        /// <summary>
+        /// 机构编号
+        /// </summary>
+        public int co_no
+        {
+            get { return _co_no; }
+
+            set
+            {
+                _co_no = value;
+                RaisePropertyChanged(() => co_no);
+            }
+        }
+
+        private int _pd_no;
+        /// <summary>
+        /// 产品编号
+        /// </summary>
+        public int pd_no
+        {
+            get { return _pd_no; }
+
+            set
+            {
+                _pd_no = value;
+                RaisePropertyChanged(() => pd_no);
+            }
+        }
+
+        private int _asset_acco_no;
+        /// <summary>
+        /// 资产账户编号
+        /// </summary>
+        public int asset_acco_no
+        {
+            get { return _asset_acco_no; }
+
+            set
+            {
+                _asset_acco_no = value;
+                RaisePropertyChanged(() => asset_acco_no);
+            }
+        }
+
+        private int _stock_acco_no;
+        /// <summary>
+        /// 股东代码编号
+        /// </summary>
+        public int stock_acco_no
+        {
+            get { return _stock_acco_no; }
+
+            set
+            {
+                _stock_acco_no = value;
+                RaisePropertyChanged(() => stock_acco_no);
+            }
+        }
+
+        private int _exch_no;
+        /// <summary>
+        /// 市场编号
+        /// </summary>
+        public int exch_no
+        {
+            get { return _exch_no; }
+
+            set
+            {
+                _exch_no = value;
+                RaisePropertyChanged(() => exch_no);
+            }
+        }
+
+        private String _stock_acco;
+        /// <summary>
+        /// 股东代码
+        /// </summary>
+        public String stock_acco
+        {
+            get { return _stock_acco; }
+
+            set
+            {
+                _stock_acco = value;
+                RaisePropertyChanged(() => stock_acco);
+            }
+        }
+
+        private String _stock_acco_name;
+        /// <summary>
+        /// 股东代码名称
+        /// </summary>
+        public String stock_acco_name
+        {
+            get { return _stock_acco_name; }
+
+            set
+            {
+                _stock_acco_name = value;
+                RaisePropertyChanged(() => stock_acco_name);
+            }
+        }
+
+        private String _stock_acco_status;
+        /// <summary>
+        /// 股东代码状态
+        /// </summary>
+        public String stock_acco_status
+        {
+            get { return _stock_acco_status; }
+
+            set
+            {
+                _stock_acco_status = value;
+                RaisePropertyChanged(() => stock_acco_status);
+            }
+        }
+
+        private String _stock_acco_apoint_status;
+        /// <summary>
+        /// 股东指定状态
+        /// </summary>
+        public String stock_acco_apoint_status
+        {
+            get { return _stock_acco_apoint_status; }
+
+            set
+            {
+                _stock_acco_apoint_status = value;
+                RaisePropertyChanged(() => stock_acco_apoint_status);
+            }
+        }
+    }
+
+    public class pdsecuL_7_11_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_12_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_13_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_14_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_15_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_16_Info : ObservableObject
+    {
+    }
+
+    public class pdsecuL_7_17_Info : ObservableObject
+    {
+    }
+
+}

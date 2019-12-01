@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.7.1" procedurename="prt_pdseacbk_QueryAllSecuAcco" paras="14"/>
+    <func funcname="pdsecuT.7.11" procedurename="prt_pdseacbk_BackUpPdSecuData" paras="10"/>
+    <func funcname="pdsecuT.7.12" procedurename="prt_pdseacbk_GetCapitEntryJourCalcStatRecord" paras="18"/>
+    <func funcname="pdsecuT.7.13" procedurename="prt_pdseacbk_UpdateHKCashAvailDate" paras="11"/>
+    <func funcname="pdsecuT.7.14" procedurename="prt_pdseacbk_UpdateCashAvailAmt" paras="10"/>
+    <func funcname="pdsecuT.7.15" procedurename="prt_pdseacbk_UpdateHKPreEntryRecord" paras="12"/>
+    <func funcname="pdsecuT.7.16" procedurename="prt_pdseacbk_UpdateQuoteRate" paras="14"/>
+    <func funcname="pdsecuT.7.17" procedurename="prt_pdseacbk_UpdatePdInfo" paras="13"/>
+    <func funcname="pdsecuT.7.18" procedurename="prt_pdseacbk_ClearPdInfo" paras="9"/>
+    <func funcname="pdsecuT.7.19" procedurename="prt_pdseacbk_DealBlockTradePosi" paras="23"/>
+    <func funcname="pdsecuT.7.20" procedurename="prt_pdseacbk_QueryBlockTradePosi" paras="10"/>
+    <func funcname="pdsecuT.7.21" procedurename="prt_pdseacbk_UpdateStockCodeInfo" paras="22"/>
+    <func funcname="pdsecuT.7.22" procedurename="prt_pdseacbk_ResetLastPriceToCalcAsset" paras="11"/>
+    <func funcname="pdsecuT.7.23" procedurename="prt_pdseacbk_ClearBeginTradeAppStockPosi" paras="13"/>
+</funcs>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="trade_stock_hold" pos="245,10,-6,372">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="持仓列表" font="big" show="1" />
+		<gridctrl name="grid.trade.stock.hold" pos="2,27,-2,-2" show="1"
+			img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+			img-check="skin:IDB_CHECK_BOX" img-colsep=""
+			img-count="6" image="skin:IDB_LIST_IMG"
+			left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+			font-title="big" font="default2"
+			valign="middle" down-row="0" align="center"
+			crtext="255,64,64,64" crhover="125,0,0" crpush="0,112,235" crhead="0,160,234"
+			crtitle="32,32,32" crsep="200,160,160,160" crrowhover="50,125,125,125" >
+			<column title="资产账户" width="100" align="left" key="asset_account" />
+			<column title="资产单元" width="100" align="left" key="unit_id" />
+			<column title="证券代码" width="100" align="left" key="stock_code" />
+			<column title="证券名称" width="100" align="left" key="stock_name" />
+			<column title="持仓数量" width="100" align="right" key="current_qty" />
+			<column title="可用数量" width="100" align="right" key="enable_qty" />
+			<column title=" 成本价 " width="100" align="right" key="cost_price" />
+			<row>
+				<item title="2" />
+				<item title="20000001" />
+				<item title="600568" />
+				<item title="恒生电子" />
+				<item title="1000" />
+				<item title="1000" />
+				<item title="110.23" />									
+			</row>
+			<row>
+				<item title="2" />
+				<item title="20000001" />
+				<item title="600000" />
+				<item title="浦发银行" />
+				<item title="1000" />
+				<item title="1000" />
+				<item title="11.09" />									
+			</row>
+		</gridctrl>
+	</div>

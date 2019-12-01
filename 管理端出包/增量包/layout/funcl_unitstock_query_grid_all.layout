@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_unitstock_query">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="持仓查询" font="big" show="1" />
+    <gridctrl name="grid.funcl_unitstock_query" pos="2,27,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG" sort="1" 
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="初始化日期" width="100" align="center" key="init_date"  />
+        <column title="机构编号" width="100" align="center" key="company_no" />
+        <column title="产品序号" width="100" align="center" key="product_id" data_type="N" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元" width="100" align="center" key="unit_code" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="当前数量" width="100" align="center" key="current_qty" data_type="T" />
+        <column title="当前成本金额" width="100" align="center" key="current_cost_amt" data_type="T" />
+        <column title="持仓市值" width="100" align="center" key="product_market_value" data_type="T" />
+        <column title="本币币种" width="100" align="center" key="currency_type" />
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+        <column title="冻结数量" width="100" align="center" key="forzen_qty" data_type="T" />
+        <column title="解冻数量" width="100" align="center" key="unforzen_qty" data_type="T" />
+        <column title="停牌标志" width="100" align="center" key="stop_status" />
+        <column title="备注信息" width="100" align="center" key="remark_info" />
+        <column title="错误编码" width="100" align="center" key="error_code" />
+        <column title="错误信息" width="100" align="center" key="error_info" />
+    </gridctrl>
+  </div>

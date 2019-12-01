@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.15.1" procedurename="prt_tdsesyn_GetSyncTime" paras="14"/>
+    <func funcname="tdsecuT.15.2" procedurename="prt_tdsesyn_UpdateSyncTime" paras="14"/>
+    <func funcname="tdsecuT.15.12" procedurename="prt_tdsesyn_Synctdseac_exgp_busi_capit" paras="113"/>
+    <func funcname="tdsecuT.15.13" procedurename="prt_tdsesyn_Synctdseac_asac_busi_capit" paras="113"/>
+    <func funcname="tdsecuT.15.14" procedurename="prt_tdsesyn_Synctdseac_exgp_busi_posi" paras="113"/>
+    <func funcname="tdsecuT.15.15" procedurename="prt_tdsesyn_Synctdseac_asac_busi_posi" paras="113"/>
+    <func funcname="tdsecuT.15.16" procedurename="prt_tdsesyn_Synctdseac_exgp_bond_impawn" paras="113"/>
+    <func funcname="tdsecuT.15.17" procedurename="prt_tdsesyn_Synctdseac_asac_bond_impawn" paras="113"/>
+    <func funcname="tdsecuT.15.18" procedurename="prt_tdsesyn_Synctdseap_command" paras="113"/>
+    <func funcname="tdsecuT.15.19" procedurename="prt_tdsesyn_Synctdseap_command_jour" paras="113"/>
+    <func funcname="tdsecuT.15.20" procedurename="prt_tdsesyn_Synctdseap_command_dispense" paras="113"/>
+    <func funcname="tdsecuT.15.21" procedurename="prt_tdsesyn_Synctdseap_command_approve" paras="113"/>
+    <func funcname="tdsecuT.15.22" procedurename="prt_tdsesyn_Synctdsetd_order" paras="113"/>
+    <func funcname="tdsecuT.15.23" procedurename="prt_tdsesyn_Synctdsetd_channelorder" paras="113"/>
+    <func funcname="tdsecuT.15.24" procedurename="prt_tdsesyn_Synctdsetd_purchaseorder" paras="113"/>
+    <func funcname="tdsecuT.15.25" procedurename="prt_tdsesyn_Synctdsetd_cancel" paras="113"/>
+    <func funcname="tdsecuT.15.26" procedurename="prt_tdsesyn_Synctdsetd_preorder" paras="113"/>
+    <func funcname="tdsecuT.15.27" procedurename="prt_tdsesyn_Synctdsetd_basketorder" paras="113"/>
+    <func funcname="tdsecuT.15.28" procedurename="prt_tdsesyn_Synctdsetd_modifyorder" paras="113"/>
+    <func funcname="tdsecuT.15.29" procedurename="prt_tdsesyn_Synctdsetd_pendorder" paras="113"/>
+    <func funcname="tdsecuT.15.30" procedurename="prt_tdsesyn_Synctdserp_orderrsp" paras="113"/>
+    <func funcname="tdsecuT.15.31" procedurename="prt_tdsesyn_Synctdserp_strikersp" paras="113"/>
+    <func funcname="tdsecuT.15.32" procedurename="prt_tdsesyn_Synctdserp_strike" paras="113"/>
+    <func funcname="tdsecuT.15.33" procedurename="prt_tdsesyn_Synctdset0_opor_tshold_set" paras="113"/>
+    <func funcname="tdsecuT.15.34" procedurename="prt_tdsesyn_Synctdset0_opor_param_set" paras="113"/>
+    <func funcname="tdsecuT.15.35" procedurename="prt_tdsesyn_Synctdset0_stock_posi_detail" paras="113"/>
+    <func funcname="tdsecuT.15.36" procedurename="prt_tdsesyn_Synctdset0_close_posi_strike_detail" paras="113"/>
+    <func funcname="tdsecuT.15.37" procedurename="prt_tdsesyn_Synctdset0_opor_stock_source" paras="113"/>
+    <func funcname="tdsecuT.15.38" procedurename="prt_tdsesyn_Synctdset0_stock_posi_sum" paras="113"/>
+</funcs>

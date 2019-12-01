@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="初始化日期" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易市场" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="股东代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期初持仓" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="持仓数量" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="冻结数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="解冻数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="待交收数量" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="成本金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="实现盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="持仓均价" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="最新价" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="市值" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="浮动盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="利息成本金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="利息收益" IsVisiblity="true" isTotalRow="true" />
+</ColumnSetClass>

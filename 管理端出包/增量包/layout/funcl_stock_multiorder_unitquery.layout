@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_stock_multiorder_unitquery" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/> 
+		<layout name="split_multiorderquery" layout-type="vertical" pos="0,0,-0,-0"
+			img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+		<layout-div name="layout-multisumorder" div-pos="600" min-pos="100" >	
+      <chkbtn name="check_show_multi.deal" title="已成交" skin="IDB_CHECK_BOX"  pos="5,15,70,30" crtext="810000" show="1" check="false" />
+      <chkbtn name="check_show_multi.cancel" title="已撤销" skin="IDB_CHECK_BOX"  pos="75,15,140,30" crtext="e30202" show="1" check="false"/>		
+      	<chkbtn name="check_show_multi.waste" title="废单" skin="IDB_CHECK_BOX"  pos="145,15,210,30" crtext="810000" show="1" check="true" />
+	   <button name="button_order_multi.add" tabstop="1" skin="IDB_BT_DEFAULT" title="" title="补单" pos="-380,5" width="80" height="30"   tip="补单" show="1"/>        
+		
+			<button name="button_order_multi.chgeprice" tabstop="1" skin="IDB_BT_CHAGEPRICE" title="" pos="-290,5" width="80" height="30"   tip="撤补" show="1"/>        
+			<button name="button_order_multi.cancel" tabstop="1"  title="" pos="-200,5" width="80" height="30" skin="IDB_BT_cancellation" tip="撤单" show="1" />        	
+			<button name="button_order_multi.refresh" title="" pos="-100,5" width="80" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+	    <gridctrl name="grid.funcl_stock_multiordersum_query" pos="2,35,-2,-5" show="1"
+			img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+			img-check="skin:IDB_CHECK_BOX" grid-tip="1"  
+			img-count="8" image="skin:IDB_ORDER_STATUS_IMG" header-check="0"   editcolumn= "1"   
+			left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+			font-title="big" font="default1" font-title="default1" sort="1" 
+			valign="middle" down-row="1" align="center"  primary-key="batch_no"
+			crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+			<column title="-" width="40" align="center" key="order_status_img" /> 
+				<column title="批号" width="80" align="center" key="batch_no" data_type="N" deletable="0"/>
+				<column title="证券代码" width="60" align="center" key="stock_code" />
+				<column title="证券名称" width="60" align="center" key="stock_name" />
+				<column title="方向" width="40" align="center" key="order_dir" />
+				<column title="价格" width="40" align="center" key="order_price" data_type="N" />
+				<column title="成交进度" width="110" align="center" key="business_proc" data_type="N" />  						       
+				<column title="成交均价" width="60" align="center" key="execution_price" data_type="N" />						        
+				<column title="成交金额" width="80" align="center" key="execution_amt" data_type="T" deletable="0" />
+				<column title="订单数量" width="60" align="center" key="order_qty" data_type="T" deletable="0" />						       
+				<column title="成交数量" width="60" align="center" key="execution_qty" data_type="T" deletable="0" />
+				<column title="未成交数量" width="80" align="center" key="without_execution_qty" data_type="T" />
+				<column title="撤单数量" width="100" align="center" key="cancel_qty" data_type="T" deletable="0" />
+ 				<column title="状态" width="80" align="center" key="order_status" />
+ 				
+			</gridctrl>
+		</layout-div>
+					     
+		<layout-div name="layout-multisingelorder"  min-pos="100" >
+			<tabctrl name="tabctrl.multiorder_query_info" pos="2,0,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+				<tab name="funcl_stockeorder_query_grid_batchsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="订单查询" active="true" pos="0,28,-0,-0">
+						<gridctrl name="grid.funcl_stock_multiorder_query" pos="0,5,-0,-0" show="1"
+				        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+				        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"  
+				        img-count="8" image="skin:IDB_ORDER_STATUS_IMG"     editcolumn= "1"
+				        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+				        font-title="big" font="default1" font-title="default1" sort="1" 
+				        valign="middle" down-row="1" align="center" grid-tip="1"
+				        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">					        
+				       
+				        <column title="-" width="100" align="center" key="order_status_img" /> 
+						<column title="成交均价" width="80" align="center" key="execution_price" data_type="N" deletable="0" />	
+						<column title="订单价格" width="80" align="center" key="order_price" data_type="N" />	
+				        <column title="成交金额" width="80" align="right" key="execution_amt" data_type="T" deletable="0" />
+						<column title="订单数量" width="80" align="right" key="order_qty" data_type="T" deletable="0" />
+				        <column title="成交数量" width="80" align="right" key="execution_qty" data_type="T" deletable="0" />	
+				        <column title="状态" width="60" align="center" key="order_status" /> 
+				        <column title="产品名称" width="60" align="center" key="product_name" />
+				        <column title="产品编码" width="60" align="center" key="product_code" />
+				        <column title="交易单元名称" width="80" align="center" key="unit_name" />       				       
+				        <column title="撤单数量" width="80" align="right" key="cancel_qty" data_type="T" />
+				        <column title="编号" width="60" align="center" key="order_no" data_type="N" />
+				        <column title="废单原因" width="150" align="center" key="response_info"  />
+				    </gridctrl> 						
+				</tab>
+				<tab name="funcl_stockbbusin_query_grid_multi_sum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="成交汇总" div="funcl_stockeorder_query_grid_tab" pos="0,28,-0,-0">
+					<div name="funcl_stockbbusin_query_grid_multi_sum_tab" placement="funcl_stockbbusin_query_grid_multi_sum_tab" pos="0,0,-0,-0" />
+				</tab>
+			</tabctrl>								     
+		</layout-div>
+		</layout>					 		 				      				     		  					
+  </div>

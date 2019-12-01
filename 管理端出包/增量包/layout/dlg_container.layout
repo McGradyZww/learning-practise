@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_container" title="[APP_NAME]" width="677" height="338"  appwin="1" resize="1" frame="" bkimg="">
+	<base>
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="10,4,200,25" title="[APP_NAME]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+		<button name="button.min" pos="-69,0,-35,30" skin="IDB_BT_MIN" show="1" tip="最小化" />
+	</base>
+
+	<body>
+			<div name="container.body" pos="0,32,-0,-0">	
+				<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			</div>
+	</body>
+  
+</dlg>

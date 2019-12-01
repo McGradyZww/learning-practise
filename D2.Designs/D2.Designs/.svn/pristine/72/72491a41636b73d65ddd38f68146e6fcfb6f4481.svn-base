@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.30.1" procedurename="prt_pubsyn_GetSyncTime" paras="14"/>
+    <func funcname="pubT.30.2" procedurename="prt_pubsyn_UpdateSyncTime" paras="14"/>
+    <func funcname="pubT.30.11" procedurename="prt_pubsyn_Syncbasesedt_stock_tmplat" paras="113"/>
+    <func funcname="pubT.30.12" procedurename="prt_pubsyn_Syncbasesedt_stock_type" paras="113"/>
+    <func funcname="pubT.30.13" procedurename="prt_pubsyn_Syncbasesedt_stock_type_order_dir" paras="113"/>
+    <func funcname="pubT.30.14" procedurename="prt_pubsyn_Syncbasesedt_stock_code_info" paras="113"/>
+    <func funcname="pubT.30.15" procedurename="prt_pubsyn_Syncbasesedt_stock_quot" paras="113"/>
+    <func funcname="pubT.30.16" procedurename="prt_pubsyn_Syncbasesedt_bond_info" paras="113"/>
+    <func funcname="pubT.30.17" procedurename="prt_pubsyn_Syncbase_sys_info" paras="113"/>
+    <func funcname="pubT.30.18" procedurename="prt_pubsyn_Syncbase_co_info" paras="113"/>
+    <func funcname="pubT.30.19" procedurename="prt_pubsyn_Syncbase_market_busi_record_no" paras="113"/>
+    <func funcname="pubT.30.20" procedurename="prt_pubsyn_Syncbase_dictionary" paras="113"/>
+    <func funcname="pubT.30.21" procedurename="prt_pubsyn_Syncbase_hk_exch_rate" paras="113"/>
+    <func funcname="pubT.30.22" procedurename="prt_pubsyn_Syncuser_opor_info" paras="113"/>
+    <func funcname="pubT.30.23" procedurename="prt_pubsyn_Syncuser_opor_allow_co" paras="113"/>
+    <func funcname="pubT.30.24" procedurename="prt_pubsyn_Syncuser_opor_allow_prod" paras="113"/>
+    <func funcname="pubT.30.25" procedurename="prt_pubsyn_Syncuser_exch_group_info" paras="113"/>
+    <func funcname="pubT.30.26" procedurename="prt_pubsyn_Syncuser_exch_group_asset" paras="113"/>
+    <func funcname="pubT.30.27" procedurename="prt_pubsyn_Syncuser_opor_exch_group" paras="113"/>
+    <func funcname="pubT.30.28" procedurename="prt_pubsyn_Syncbasefudt_futu_quot" paras="113"/>
+</funcs>

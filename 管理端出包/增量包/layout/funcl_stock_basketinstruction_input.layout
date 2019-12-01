@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_stock_basketinstruction_input" >
+       <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+	   
+		<text crtext="000000" crmark="800000" align="left" pos="20,20,82,38" title="交易账户" font="default1" show="0" />
+		<combobox name="ins_product_code" tabstop="0" skin="IDB_EDIT" pos="100,16" width="150" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220" show="0"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+		<combobox name="ins_unit_code" tabstop="0" skin="IDB_EDIT" pos="255,16" width="150" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220" show="0"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>       
+		<combobox name="ins_asset_account" tabstop="0" skin="IDB_EDIT" pos="384,16" width="60" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="220"  show="0"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	   	</combobox>
+    
+		<!--订单方向-->          
+		<text crtext="000000" crmark="800000" align="left" pos="20,20" width="100" height="26" title="指令方向" font="default1" show="1" />
+		
+	
+		<radiobtn name="ins_radiobtnsell" tabstop="1" title="" skin="IDB_radiobtn_sell" pos="100,16" width="60" height="26" crtext="ff0000" show="1" check="true" shortcut="B" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+		<radiobtn name="ins_radiobtnbuy" tabstop="1" title="" skin="IDB_radiobtn_buy" pos="155,16" width="60" height="26" crtext="00ff00" show="0"  shortcut="S" enabledirkey="1" showfocus="0" group="1" font="default1"/>
+				
+	    <!--指令价格-->   
+		<text crtext="000000" crmark="800000" align="left" pos="20,50" width="99" height="26"  title="指令价格" font="default1" show="0" />
+		<edit name="ins_limit_price" text="0" tabstop="1" skin="IDB_EDIT" double="1" shortcutadjust="1" pos="100,46" width="106"  show="0" height="26" multiline="0" autohscroll="1" autovscroll="1" number="0" minvalue="0" crtext="0,0,0" />
+			   
+		<button name="ins_trade.stock.single.top" tabstop="0" skin="IDB_BT_ADD" pos="207,46" width="26" height="26"  show="0" shortcut="" crtext="FFFFFF" />
+		<button name="ins_trade.stock.single.bottom" tabstop="0" skin="IDB_BT_SUBTRACT" pos="234,46" width="26" height="26" show="0"  shortcut="" crtext="FFFFFF" />			
+		
+
+		
+		<!--数量策略-->
+		<text name="stockorder_multi_qtytype_txt" crtext="000000" crmark="800000" align="left" pos="20,50" width="100" height="26" title="数量策略" font="default1" show="1" />   
+		<combobox name="basketins_qtytype" tabstop="0" skin="IDB_EDIT" pos="100,50" width="160" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small" tabstop="1"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50" 
+							  crtext="0,0,0" crtip="128,128,128,128" shortcutadjust="1">
+					<item name="输入总数量按平均分配" value="0" />
+				  <item name="持仓百分比" value="1" />
+		</combobox>			 
+		
+		<!--数量参数-->   
+		<text name="stockorder_multi_qty_txt" crtext="000000" crmark="800000" align="left" pos="20,90" width="100" height="26"  title="数量参数" font="default1" show="1" />
+		<edit name="basketins_qty" tabstop="1" skin="IDB_EDIT" pos="100,90" width="95" height="26" entrer_selectall="1"
+               multiline="0" autohscroll="1" autovscroll="1" double="1" number="0" maxchar="9" minvalue="0"
+               crtext="0,0,0"  nochangednotify="1" changednotify="1" shortcutadjust="1" thousands_digital="1" />
+		
+		<text name="basketins_suffix" crtext="000000" crmark="800000" align="left" pos="192,90" width="30" height="26" title="股" font="default1" show="1" />
+		
+		<button name="ins_trade.stock.basket.qty_add" tabstop="0" skin="IDB_BT_ADD" pos="207,90" width="26" height="26"  shortcut="RETURN" crtext="FFFFFF" />
+		<button name="ins_trade.stock.basket.qty_subtract" tabstop="0" skin="IDB_BT_SUBTRACT" pos="234,90" width="26" height="26"  shortcut="RETURN" crtext="FFFFFF" />		
+		
+	   
+		
+		 <div name="instruction_input_more" pos="10,125,270,200" show="1">
+	       <text name="ins_multi_more" title="高级 > " crtext='041998' crhover="091560" show="1" crpush='17236b' pos="40,0,90,18" font="default1"/>    
+	       <img pos="0,9,30,10" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="100,9,-0,10" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="0,10,1,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="-1,10,-0,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+	       <img pos="0,-1,-0,-0" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>
+		
+			<!--有效起始时间-->   
+			<text crtext="000000" crmark="800000" align="left" pos="10,20" width="99" height="26" title="起始时间" font="default1" show="1" />
+			 <nativewnd name="basketcommand_begin_time" skin="IDB_EDIT" pos="90,16" width="160" height="26"
+				multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+	            font="default" crtext="0,0,0" show="1" />			
+			
+			<!--有效结束时间-->   
+			<text crtext="000000" crmark="800000" align="left" pos="10,50" width="99" height="26"  title="结束时间" font="default1" show="1" />
+			 <nativewnd name="basketcommand_end_time" skin="IDB_EDIT" pos="90,46" width="160" height="26"
+				multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+	            font="default" crtext="0,0,0" show="1" />
+		</div>
+		
+	  <text crtext="000000" crmark="800000" align="left" pos="10,210" width="62" height="18" title="交 易 员" font="default1" show="1" />
+        <combobox name="ins_command_executor" tabstop="0" skin="IDB_EDIT" pos="100,210" width="102" height="30" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="200"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+		</combobox>
+
+		<button name="button_executor_lock" tabstop="1" skin="IDB_BT_UNLOCK" title="" pos="201,215" width="14" height="16"  shortcut="RETURN" crtext="ffffff" font="default1" show="1" />
+		<button name="button_executor_unlock" tabstop="1" skin="IDB_BT_LOCK" title="" pos="201,215" width="14" height="16"  shortcut="RETURN" crtext="ffffff" font="default1" show="0" />			
+		
+		<button name="button_basketins_calc" tabstop="1" skin="IDB_BT_SMALL" title="计算" font="default1" pos="20,-38" width="100" height="30"  shortcut="RETURN" crtext="000000" />
+			
+		
+   <button name="ins_trade.stock.basketins.entrust" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="152,-38,232,-8" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1" font="default1"/>
+	 <button name="ins_trade.stock.basketins.clean" tabstop="0" skin="IDB_BT_SMALL" title="取消" font="default1" pos="242,-38" width="50" height="30"  shortcut="RETURN" crtext="000000" />			
+	 	</div>

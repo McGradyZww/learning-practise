@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.2.1" procedurename="prt_tdfuac_CalcExgpCashAvail" paras="17"/>
+    <func funcname="tdfutuT.2.2" procedurename="prt_tdfuac_CalcAsacCashAvail" paras="16"/>
+    <func funcname="tdfutuT.2.3" procedurename="prt_tdfuac_CalcExgpPosiAvail" paras="23"/>
+    <func funcname="tdfutuT.2.4" procedurename="prt_tdfuac_CalcAsacPosiAvail" paras="22"/>
+    <func funcname="tdfutuT.2.5" procedurename="prt_tdfuac_QueryExgpCash" paras="17"/>
+    <func funcname="tdfutuT.2.6" procedurename="prt_tdfuac_QueryAsacCash" paras="16"/>
+    <func funcname="tdfutuT.2.7" procedurename="prt_tdfuac_QueryExgpPosi" paras="21"/>
+    <func funcname="tdfutuT.2.8" procedurename="prt_tdfuac_QueryAsacPosi" paras="18"/>
+    <func funcname="tdfutuT.2.9" procedurename="prt_tdfuac_QueryExgpPosiDetail" paras="21"/>
+    <func funcname="tdfutuT.2.11" procedurename="prt_tdfuac_GetExgpAsacCash" paras="52"/>
+    <func funcname="tdfutuT.2.12" procedurename="prt_tdfuac_GetExgpAsacPosi" paras="54"/>
+    <func funcname="tdfutuT.2.13" procedurename="prt_tdfuac_GetExgpPosiDetail" paras="22"/>
+    <func funcname="tdfutuT.2.14" procedurename="prt_tdfuac_GetMarginInfo" paras="35"/>
+    <func funcname="tdfutuT.2.20" procedurename="prt_tdfuac_CalcAsacPosiQty" paras="21"/>
+    <func funcname="tdfutuT.2.21" procedurename="prt_tdfuac_CalcExgpPosiQty" paras="22"/>
+    <func funcname="tdfutuT.2.22" procedurename="prt_tdfuac_CalcAsacCashAvailToPd" paras="16"/>
+    <func funcname="tdfutuT.2.23" procedurename="prt_tdfuac_CalcExgpCashAvailToPd" paras="17"/>
+    <func funcname="tdfutuT.2.24" procedurename="prt_tdfuac_QueryExgpCashHis" paras="19"/>
+    <func funcname="tdfutuT.2.49" procedurename="prt_funca_tdfuac_AddMargin" paras="17"/>
+</funcs>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_unitgroup_set" image="skin:IDB_TAB_ITEM" active="true" title="账户组管理" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+
+		<!--button name="button.command_query_float" title="" pos="-26,0" width="23" height="23" skin="IDB_BT_DRAGFLOAT" tip="浮动" show="1" /-->
+		<!--三级菜单TabCtrl控件-->
+		<div name="baskets_tree" pos="4,4,268,-4" >	
+		   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+			<treectrl name="treectrl.groups" pos="6,6,-6,-48" show="1"
+					img-scroll="skin:IDB_SCROLL_V" img-sep="skins\rp_line.png--"
+					img-colsep=""
+					img-collapse="skin:IDB_TREE_COLLAPSE"
+					img-toggle="skin:IDB_TREE_TOGGLE"
+					img-count="2" image="skin:IDB_TREE_IMG"
+					left-pos="0" row-height="30" bk-transparent="10"
+					font-title="bold3" font="default2" valign="middle" down-row="1"
+					crtext="191919" crhover="091560" crpush="0078ff"
+					crtitle="191919" crsep="200,160,160,160" >					
+					<column title="菜单项" width="160" />
+					<column title="Collapse" />
+			</treectrl>
+			<button name="button_new_group" tabstop="1" skin="IDB_BT_DEFAULT" title="新 建" pos="2,-38,82,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+			<button name="button_modify_group" tabstop="1" skin="IDB_BT_DEFAULT" title="修 改" pos="90,-38,172,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+			<button name="button_del_group" tabstop="1" skin="IDB_BT_DEFAULT" title="删 除" pos="180,-38,262,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+
+		</div>
+		<div name="group_detail" pos="272,4,-4,-4" >	
+		   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       <button name="button_group_addunit_t" tabstop="1" skin="IDB_BT_DEFAULT" title="添 加" pos="10,12,92,42" shortcut="RETURN" crtext="0" font="default1"/>        
+       <button name="button_group_addunit" tabstop="1" skin="IDB_BT_DEFAULT" title="设置" pos="10,12,92,42" shortcut="RETURN" crtext="0" font="default1"/>        
+       <button name="button_group_delunit" tabstop="1" skin="IDB_BT_DEFAULT" title="清空" pos="100,12,182,42" show="1" shortcut="RETURN" crtext="0" font="default1"/>        
+       <img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />
+
+     	 <gridctrl name="groupdetail.groupunitdetail" pos="2,62,-2,-48" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+          <column title="序号" width="50" align="center" key="row_id" />
+          <column title="产品" width="0" align="center" key="product_code" />
+	        <column title="产品序号" width="0" align="center" key="product_id" />
+	        <column title="产品" width="100" align="center" key="product_name" />
+	        <column title="交易单元序号" width="0" align="center" key="unit_id" />
+	        <column title="交易单元" width="100" align="center" key="unit_name" />
+	        <column title="交易单元" width="0" align="center" key="unit_code" />
+	        <column title="序号" width="0" align="center" key="group_id" />
+	        <column title="权重(%)" width="100" align="center" key="weight_percent" />
+	        <column title="备注说明" width="100" align="center" key="remark_info" />
+         
+    	 </gridctrl>
+    	
+       <!--button name="button_basket_save" tabstop="1" skin="IDB_BT_OK" title="保 存" pos="-182,-38,-100,-8" shortcut="RETURN" crtext="ffffff" font="default1"/-->
+       <!--button name="button_basket_cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-92,-38,-10,-8" shortcut="RETURN" crtext="0" font="default1"/-->
+      
+		</div>
+	</tab>
+</tabctrl>

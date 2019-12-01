@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_bond_order_list_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <gridctrl name="grid.funcl_bond_order_list" pos="4,2,-2,-35" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG" header-check="1"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="产品名称" width="100" align="center" key="product_name"  />
+        <column title="交易单元名称" width="100" align="center" key="unit_name"  /> 
+        <column title="资产账户" width="100" align="center" key="asset_account"  />
+        <column title="可用资金(万)" width="100" align="center" key="available_amt" data_type="" />
+		<column title="可用标准券" width="100" align="center" key="target_code_available_qty" data_type="T" />
+        <column title="回购金额(万)" width="100" align="center" key="repo_amt" data_type="T" />      
+        
+		<column title="上海股东代码" width="0" align="center" key="sh_stock_account" />		
+		<column title="深圳股东代码" width="0" align="center" key="sz_stock_account" />            
+        <column title="交易单元" width="0" align="center" key="unit_code"  />
+        <column title="产品编码" width="0" align="center" key="product_code"  />		
+        </gridctrl>
+        <edit name="bondstock.temp_edit" tabstop="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+               number="1" readonly="0" maxchar="50" font="default2" crtext="0,0,0" double="1" nochangednotify="1" />
+       <button name="bondaccount_button.refresh" title="" pos="-106,-28" width="70" height="26" skin="IDB_BT_REFRESH_small" tip="刷新" show="1" />
+	
+  </div>

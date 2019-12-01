@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<combobox name="global_combobox_ctrl" tabstop="1" skin="IDB_EDIT" pos="0,0" width="80" height="30" tip=""
+						  small-image="skin:IDB_DROP_DOWN_small"
+						  multiline="0" readonly="1" maxchar="50"
+							font="default" crtext="0,0,0" crtip="128,128,128">
+	</combobox>

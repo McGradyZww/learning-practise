@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_trade_command_basket_revocation_replenish_confirm" title="" width="400" height="300"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="42,5,200,25" title="快速撤补二次确认" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+
+			<text crtext="000000" crmark="800000" align="left" pos="30,60" width="48" height="26" title="确认对" font="default3" show="1" />
+			<text name="dcbrrc_stock_code" crtext="000000" crmark="800000" align="left" pos="78,58" width="100" height="26" title="600036" font="bold5" show="1" />
+			<text crtext="000000" crmark="800000" align="left" pos="150,60" title="所有" width="40" height="26" font="default3" show="1" />
+			<!--  买入 -->
+			<text name="dcbrrc_buy" crtext="f30534" crmark="800000" align="left" pos="180,50" width="60" height="26" title="买入" font="bigger" show="1" />			
+			<text name="dcbrrc_sell" crtext="42f803" crmark="03d830" align="left" pos="180,50" width="60" height="26" title="卖出" font="bigger" show="1" />
+	
+			<text crtext="000000" crmark="800000" align="left" pos="230,60" title="订单进行撤补吗？" width="140" height="26" font="default3" show="1" />
+			<text crtext="000000" crmark="800000" align="left" pos="30,110" width="78" height="26" title="撤补价格：" font="default3" show="1" />
+			<text name="dcbrrc_rr_price" crtext="000000" crmark="800000" align="left" pos="108,100" width="160" height="26" title="对手5" font="bigger" show="1" />
+			
+			
+ 			<img pos="4,-36,-4,-34" image="skins\default\line_split.png" mode="tile" show="1" />
+       <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="确 定" pos="-150,-32,-80,-6" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+       <button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-76,-32,-6,-6" shortcut="" crtext="0" font="default1"/>        
+		</div>
+		
+	</body>
+  
+</dlg>

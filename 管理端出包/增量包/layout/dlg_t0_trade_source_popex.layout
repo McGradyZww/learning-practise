@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_t0_trade_source_popex" title="[APP_NAME]" width="1410" height="345"  appwin="1" resize="1" frame="" bkimg="" crbk="3c5680">
+	<base>
+			<img pos="0,0,-0,30" name="image.title" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+			<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big" pos="50,4" width="120" height="21" title="增强交易-券源" response="0" show="1" drag="1"/>
+			<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+
+	<body>
+
+		<div name="to_trade_pop.body" pos="0,32,-0,-0">
+			  <img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			  <img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			  <div name="T+0trade_stock_source" pos="5,2,-3,-3" placement="T+0trade_stock_source"/>
+		</div>
+	</body>
+  
+</dlg>

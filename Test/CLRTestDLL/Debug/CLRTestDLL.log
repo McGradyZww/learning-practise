@@ -1,0 +1,18 @@
+﻿生成启动时间为 2019.07.29 15:27:45。
+     1>项目“D:\learning\Test\CLRTestDLL\CLRTestDLL.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /I..\include\ /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MFCComFunc.cpp
+         MFCComFunc.cpp
+       Link:
+         E:\Software\VS系列\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\learning\Test\Bin\Debug\CLRTestDLL.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\lib\ /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"E:\Software\VS系列\VS2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\learning\Test\Bin\Debug\CLRTestDLL.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
+         Debug\AssemblyInfo.obj
+         Debug\CLRTestDLL.obj
+         Debug\MFCComFunc.obj
+         Debug\Stdafx.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         CLRTestDLL.vcxproj -> D:\learning\Test\Bin\Debug\CLRTestDLL.dll
+     1>已完成生成项目“D:\learning\Test\CLRTestDLL\CLRTestDLL.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.47

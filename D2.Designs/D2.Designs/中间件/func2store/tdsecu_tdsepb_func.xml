@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.1.901" procedurename="prt_tdsepb_GetCoBusiRecordNo" paras="12"/>
+    <func funcname="tdsecuT.1.1" procedurename="prt_tdsepb_offer_update" paras="12"/>
+    <func funcname="tdsecuT.1.3" procedurename="prt_tdsepb_GetCommOperNo" paras="12"/>
+    <func funcname="tdsecuT.1.11" procedurename="prt_tdsepb_AddBasket" paras="17"/>
+    <func funcname="tdsecuT.1.12" procedurename="prt_tdsepb_ModiBasket" paras="16"/>
+    <func funcname="tdsecuT.1.13" procedurename="prt_tdsepb_DropBasket" paras="10"/>
+    <func funcname="tdsecuT.1.14" procedurename="prt_tdsepb_QueryBasket" paras="12"/>
+    <func funcname="tdsecuT.1.21" procedurename="prt_tdsepb_AddBasketComposition" paras="18"/>
+    <func funcname="tdsecuT.1.22" procedurename="prt_tdsepb_ModiBasketComposition" paras="18"/>
+    <func funcname="tdsecuT.1.23" procedurename="prt_tdsepb_DropBasketCompostion" paras="12"/>
+    <func funcname="tdsecuT.1.24" procedurename="prt_tdsepb_QueryBasketComposition" paras="12"/>
+    <func funcname="tdsecuT.1.51" procedurename="prt_tdsepb_DataToHis" paras="11"/>
+    <func funcname="tdsecuT.1.52" procedurename="prt_tdsepb_InitTrade" paras="10"/>
+    <func funcname="tdsecuT.1.54" procedurename="prt_tdsepb_TradeArchive" paras="13"/>
+    <func funcname="tdsecuT.1.31" procedurename="prt_tdsepb_AddCombo" paras="22"/>
+    <func funcname="tdsecuT.1.32" procedurename="prt_tdsepb_ModiCombo" paras="21"/>
+    <func funcname="tdsecuT.1.33" procedurename="prt_tdsepb_DelCombo" paras="10"/>
+    <func funcname="tdsecuT.1.34" procedurename="prt_tdsepb_QueryCombo" paras="12"/>
+    <func funcname="tdsecuT.1.35" procedurename="prt_tdsepb_GetSingleCombo" paras="25"/>
+    <func funcname="tdsecuT.1.36" procedurename="prt_tdsepb_AddComboStock" paras="17"/>
+    <func funcname="tdsecuT.1.37" procedurename="prt_tdsepb_ModiComboStock" paras="16"/>
+    <func funcname="tdsecuT.1.38" procedurename="prt_tdsepb_DelComboStock" paras="11"/>
+    <func funcname="tdsecuT.1.39" procedurename="prt_tdsepb_QueryComboStock" paras="13"/>
+    <func funcname="tdsecuT.1.40" procedurename="prt_tdsepb_GetSingleComboStock" paras="19"/>
+    <func funcname="tdsecuT.1.41" procedurename="prt_tdsepb_TransactionCommit" paras="9"/>
+    <func funcname="tdsecuT.1.42" procedurename="prt_tdsepb_QueryGetT0Company" paras="9"/>
+    <func funcname="tdsecuT.1.43" procedurename="prt_tdsepb_BackUpUpdateT0Capit" paras="13"/>
+    <func funcname="tdsecuT.1.44" procedurename="prt_tdsepb_AddCommAutoDistributeRule" paras="21"/>
+    <func funcname="tdsecuT.1.45" procedurename="prt_tdsepb_ModiCommAutoDistributeRule" paras="21"/>
+    <func funcname="tdsecuT.1.46" procedurename="prt_tdsepb_DelCommAutoDistributeRule" paras="10"/>
+    <func funcname="tdsecuT.1.47" procedurename="prt_tdsepb_QueryCommAutoDistributeRule" paras="12"/>
+    <func funcname="tdsecuT.1.48" procedurename="prt_tdsepb_GetSingleCommAutoDistributeRule" paras="24"/>
+    <func funcname="tdsecuT.1.60" procedurename="prt_tdsepb_FinaLoanArchive" paras="10"/>
+    <func funcname="tdsecuT.1.61" procedurename="prt_tdsepb_ComboArchive" paras="11"/>
+    <func funcname="tdsecuT.1.62" procedurename="prt_tdsepb_StrategyArchive" paras="10"/>
+    <func funcname="tdsecuT.1.63" procedurename="prt_tdsepb_T0Archive" paras="11"/>
+    <func funcname="tdsecuT.1.64" procedurename="prt_tdsepb_CapitPosiArchive" paras="11"/>
+    <func funcname="tdsecuT.1.65" procedurename="prt_tdsepb_StrikeArchive" paras="10"/>
+    <func funcname="tdsecuT.1.66" procedurename="prt_tdsepb_OrderArchive" paras="11"/>
+    <func funcname="tdsecuT.1.67" procedurename="prt_tdsepb_CommArchive" paras="13"/>
+</funcs>

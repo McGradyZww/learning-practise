@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_ins_multiorder_unitquery" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/> 
+	<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>	
+		<layout name="split_multiorderquery" layout-type="vertical" pos="0,0,-0,-0"
+									img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+							  	<layout-div name="layout-multisumorder" div-pos="800" min-pos="100" >
+							  	  	 <!--订单价格-->   
+			                 <text crtext="000000" crmark="800000" align="left" pos="5,10" width="62" height="18"  title="撤补价格" font="default1" show="0" />
+		                   <edit name="stockorder_order_chgeprice" tabstop="1" skin="IDB_EDIT" pos="74,5" width="87" height="26"
+		               			multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+		              		  font="default" crtext="0,0,0" double="1" show="0" />
+            
+							      	<button name="button_order_multi.chgeprice" tabstop="1" skin="IDB_BT_CHAGEPRICE" title="" pos="170,5" width="80" height="30"   tip="撤补" show="0"/>        
+												
+	    								 <!--gridctrl name="grid.trade.stock.ordermsg" pos="435,5,-2,35" show="1"
+								        img-scroll="" img-scrollh="" img-sep=""
+								        img-check="" img-colsep=""
+								        img-count="2" image="skin:IDB_ORDERFLAG_LIST_IMG"
+								        left-pos="0" row-height="30" header-height="0" bk-transparent="100"
+								        font-title="big" font="default2"
+								        valign="middle" down-row="1" align="center"
+								        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254"  grid-tip="1">
+							      		<column title="标识" width="20" align="center" key="msg_index" />
+							      		<column title="信息" width="480" align="left" key="msg_info" />
+							      	 </gridctrl-->			
+	    							<gridctrl name="grid.funcl_ins_multicommandsum_query" pos="2,2,-2,-40" show="1"
+							        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+							        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+							        img-count="2" image="skin:IDB_COMMAND_OUT_PRICE" editcolumn= "1"
+							        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+							        font-title="big" font="default2" sort="1" 
+							        valign="middle" down-row="1" align="center"  primary-key="batch_no"
+							        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+							        <column title="序号" width="0" align="center" key="row_id" />
+							        <column title="批号" width="60" align="center" key="batch_no" data_type="N" deletable="0"/>
+							        <column title="证券代码" width="80" align="center" key="stock_code" deletable="0" />
+							        <column title="证券名称" width="100" align="center" key="stock_name" deletable="0" />
+							        <column title="指令方向" width="100" align="center" key="command_dir" />
+        							<column title="指令限价" width="100" align="center" key="limit_price" data_type="N" deletable="0" />
+									<column title="指令数量" width="100" align="center" key="command_qty" data_type="T" deletable="0" />
+							        <column title="成交进度" width="110" align="center" key="business_proc" data_type="T" />  
+							        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />						       
+							        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+							        <column title="撤单数量" width="100" align="center" key="cancel_qty" data_type="T" />
+							        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+							        <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" /> 
+							        <column title="有效均价" width="100" align="center" key="average_price1" data_type="N" /> 
+							        <column title="全天有效均价" width="100" align="center" key="average_price2" data_type="N" /> 
+							        <column title="执行价差(%)" width="100" align="center" key="command_diff_price1" data_type="N"/>
+							        <column title="全天执行价差(%)" width="120" align="center" key="command_diff_price2" data_type="N"/>
+							        <column title="有效占比(%)" width="120" align="center" key="execution_ratio2" data_type="N"/>
+							        <column title="全天有效占比(%)" width="120" align="center" key="execution_ratio4" data_type="N"/>
+							        <column title="有效数量" width="100" align="center" key="execution_qty2" data_type="T"/>
+							        <column title="全天有效数量" width="100" align="center" key="execution_qty4" data_type="T"/>
+							        <column title="市场总成交量" width="100" align="center" key="execution_qty1" data_type="T"/>
+							        <column title="执行人名称" width="100" align="center" key="command_executor_name" />
+        							<column title="下达人名称" width="100" align="center" key="command_operator_name" />
+									<column title="起始日期" width="100" align="center" key="command_begin_date" />
+									<column title="起始时间" width="100" align="center" key="command_begin_time" data_type="N"/>
+									<column title="结束日期" width="100" align="center" key="command_end_date" />
+									<column title="结束时间" width="100" align="center" key="command_end_time" data_type="N"/>
+									<column title="审批状态" width="100" align="center" key="command_approve_status" />
+									<column title="审批操作员" width="100" align="center" key="command_approve_operator" />
+									<column title="审批日期" width="100" align="center" key="command_approve_date" />
+									<column title="审批时间" width="100" align="center" key="command_approve_time" data_type="N"/>
+							        </gridctrl>
+									 
+									<chkbtn name="check_show_multi.cancel" title="已撤销" skin="IDB_CHECK_BOX" pos="5,-20,70,-5" crtext="174590" show="1" check="false" showfocus="0"/>
+									<chkbtn name="check_show_multi.execution" title="全部执行" skin="IDB_CHECK_BOX" pos="75,-20,150,-5" crtext="e30202" show="1" check="false" showfocus="0"/>
+									<chkbtn name="check_show_multi.deal" title="全部成交" skin="IDB_CHECK_BOX" pos="155,-20,230,-5" crtext="0493a0" show="1" check="false" showfocus="0"/>			
+									<button name="button_order_multi.modify" tabstop="1"  title="" pos="-280,-35" width="80" height="30" skin="IDB_BT_STANDARD" title="指令修改" font="default2" tip="指令修改" show="1" />        
+									<button name="button_order_multi.cancel" tabstop="1"  title="" pos="-190,-35" width="80" height="30" skin="IDB_BT_STANDARD" title="撤销" font="default2" tip="撤销" show="1" />        	
+			 						<button name="button_order_multi.refresh" title="" pos="-100,-35" width="80" height="30" skin="IDB_BT_STANDARD" title="刷新" font="default2" tip="刷新" show="1" />	
+						     </layout-div>
+					     
+						     <layout-div name="layout-multisingelorder"  min-pos="100" >
+						      <gridctrl name="grid.trade.stock.ordermsg" pos="5,5,-2,35" show="1"
+								        img-scroll="" img-scrollh="" img-sep=""
+								        img-check="" img-colsep=""
+								        img-count="2" image="skin:IDB_ORDERFLAG_LIST_IMG"
+								        left-pos="0" row-height="30" header-height="0" bk-transparent="100"
+								        font-title="big" font="default2" 
+								        valign="middle" down-row="1" align="center"
+								        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254"  grid-tip="1">
+							      		<column title="标识" width="20" align="center" key="msg_index" />
+							      		<column title="信息" width="480" align="left" key="msg_info" />
+							      	 </gridctrl>		
+	    							 <gridctrl name="grid.funcl_ins_multicommand_query" pos="2,2,-2,-5" show="1"
+						        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+						        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+						        img-count="6" image="skin:IDB_LIST_IMG"      
+						        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+						        font-title="big" font="default2"  editcolumn= "1"
+						        valign="middle" down-row="1" align="center" sort="1" 
+						        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">					        
+						        <column title="状态" width="80" align="center" key="command_status" /> 
+						        <column title="产品名称" width="100" align="center" key="product_name" />
+						        <column title="产品编码" width="0" align="center" key="product_code" />
+						        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+						         <column title="指令数量" width="100" align="center" key="command_qty" data_type="T" />
+						        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+						        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+						        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />					       
+						        <column title="撤单数量" width="0" align="center" key="cancel_qty" data_type="T" />
+						        <column title="编号" width="60" align="center" key="command_id" data_type="N" />
+						        </gridctrl> 
+						     </layout-div>
+		</layout>
+					 		 
+				       
+
+   	<edit name="multil.unitpanel.tmpedit" tabstop="1" number="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1"
+                readonly="0" maxchar="50" font="biggest" editfont="biggest" multiline="1" crtext="cf0f0f"  nochangednotify="1"/>		
+			  					
+  </div>

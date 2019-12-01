@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_gird_set" title="[APP_NAME]" width="370" height="400"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3" pos="50,5,200,25" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="dlg_gird_set.body" pos="0,30,-0,-0">
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>	
+			
+			<gridctrl name="dlg_gird_set.all_cloumn" pos="5,5,125,-50" show="1"
+			img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP" 
+			img-check="" img-colsep=""
+			img-count="12" image="skin:IDB_T0TRADE_LIST_IMG"
+			left-pos="0" row-height="30" header-height="38" bk-transparent="100"
+			font-title="big" font="default2" 
+			valign="middle" down-row="1" align="center" grid-tip="1"
+			crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+				<column title="隐藏列" width="120" key="column_name" />
+			</gridctrl>
+			
+			<button name="dlg_gird_set.button.add_column" pos="170,90,200,120" skin="IDB_BT_GRID_COLUMN_ADD" show="1" tip="显示"  />
+			<button name="dlg_gird_set.button.delete_column" pos="170,130,200,160" skin="IDB_BT_GRID_COLUMN_DELETE" show="1" tip="隐藏"  />
+			<button name="dlg_gird_set.button.move_up" pos="170,170,200,200" skin="IDB_BT_GRID_COLUMN_UP" show="1" tip="上移"  />
+			<button name="dlg_gird_set.button.move_down" pos="170,210,200,240" skin="IDB_BT_GRID_COLUMN_DOWN" show="1" tip="下移"  />
+			
+			<gridctrl name="dlg_gird_set.active_cloumn" pos="245,5,365,-50" show="1"
+			img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP" 
+			img-check="" img-colsep=""
+			img-count="12" image="skin:IDB_T0TRADE_LIST_IMG"
+			left-pos="0" row-height="30" header-height="38" bk-transparent="100"
+			font-title="big" font="default2" 
+			valign="middle" down-row="1" align="center" grid-tip="1"
+			crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+				<column title="显示列" width="120" key="column_name" />
+			</gridctrl>
+			<!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" font="default3" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" font="default3" show="1" />
+		</div>
+	</body>
+</dlg>

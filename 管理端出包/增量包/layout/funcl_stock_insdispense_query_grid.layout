@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_insdispense_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="0,1,-0,4" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <button name="stockeins_button.condition" title="" pos="16,14" width="80" height="30" skin="IDB_BT_QUERY" tip="查询" show="0" />
+	<combobox name="ins_command_executor" tabstop="0" skin="IDB_EDIT" pos="10,14" width="150" height="30" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small" list-height="200" img-scroll="skin:IDB_SCROLL_V"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128">
+	</combobox>  	
+    <button name="stockeins_button.dispense" title="" pos="161,14" width="80" height="30" skin="IDB_BT_DISPENSE" tip="转发" show="1" />
+	<chkbtn name="check_sum_mode" title="以汇总方式显示指令" font="default4" skin="IDB_CHECK_BOX" pos="250,15" width="200" height="30" crtext="000000" show="1" check="false" showfocus="0"/>
+
+	
+		<button name="stockeins_button.refresh" title="" pos="-180,14" width="80" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+		<button name="button.export" title="" pos="-96,14" width="80" height="30" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+		<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />
+    <gridctrl name="grid.funcl_stock_insdispense_grid" pos="2,62,-2,-5" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG" 
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" header-check="0"
+        valign="middle" down-row="1" align="center" primary-key="row_id"  
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <!--<column title="机构编号" width="100" align="center" key="company_no" />-->        
+        <column title="批号" width="120" align="center" key="batch_no" data_type="N" />         
+        <column title="产品名称" width="100" align="center" key="product_name" /> 
+         <column title="执行人名称" width="100" align="center" key="command_executor_name" />
+        <column title="下达人名称" width="100" align="center" key="command_operator_name" />               
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="指令方向" width="100" align="center" key="command_dir" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="center" key="command_qty" data_type="T" />
+        <column title="指令金额" width="100" align="center" key="command_amt" data_type="T" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="指令状态" width="100" align="center" key="command_status" />
+        <column title="成交状态" width="100" align="center" key="execution_status" />
+        <column title="指令执行人" width="100" align="center" key="command_executor" />       
+        <column title="交易单元" width="100" align="center" key="unit_code" />             
+        <column title="市场编号" width="100" align="center" key="exchange_no" data_type="N" />        
+        <column title="指令日期" width="100" align="center" key="command_date" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N"/>                  
+		<column title="交易单元名称" width="100" align="center" key="unit_name" />
+		<column title="产品编码" width="100" align="center" key="product_code" />	
+		<column title="指令序号" width="100" align="center" key="command_id" />    
+		<column title="序号" width="0" align="center" key="row_id" />  
+		<column title="指令起始日期" width="100" align="center" key="command_begin_date" />
+		<column title="指令起始时间" width="100" align="center" key="command_begin_time" data_type="N"/>
+		<column title="指令结束日期" width="100" align="center" key="command_end_date" />
+		<column title="指令结束时间" width="100" align="center" key="command_end_time" data_type="N"/>
+        
+    </gridctrl>
+    
+  
+		<chkbtn name="check_show_cancel" title="已撤销" skin="IDB_CHECK_BOX" pos="16,-20,136,-5" crtext="174590" show="0" check="false" showfocus="0"/>
+		<chkbtn name="check_show_execution" title="全部执行" skin="IDB_CHECK_BOX" pos="166,-20,286,-5" crtext="e30202" show="0" check="false" showfocus="0"/>
+		<chkbtn name="check_show_deal" title="全部成交" skin="IDB_CHECK_BOX" pos="336,-20,456,-5" crtext="0493a0" show="0" check="false" showfocus="0"/>
+ 
+ 		
+  </div>

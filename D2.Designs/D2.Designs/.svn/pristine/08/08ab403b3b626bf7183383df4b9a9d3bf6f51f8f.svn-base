@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.3.1" procedurename="prt_pdfupo_UpdateExgpPosi" paras="56"/>
+    <func funcname="pdfutuT.3.2" procedurename="prt_pdfupo_FrozenExgpPosi" paras="37"/>
+    <func funcname="pdfutuT.3.3" procedurename="prt_pdfupo_UndoFrozenExgpPosi" paras="32"/>
+    <func funcname="pdfutuT.3.4" procedurename="prt_pdfupo_UnFrozenExgpPosi" paras="37"/>
+    <func funcname="pdfutuT.3.5" procedurename="prt_pdfupo_UndoUnFrozenExgpPosi" paras="32"/>
+    <func funcname="pdfutuT.3.21" procedurename="prt_pdfupo_QueryExgpPosi" paras="20"/>
+    <func funcname="pdfutuT.3.22" procedurename="prt_pdfupo_QueryExgpPosi_His" paras="22"/>
+    <func funcname="pdfutuT.3.31" procedurename="prt_pdfupo_QueryExgpPosiJour" paras="21"/>
+    <func funcname="pdfutuT.3.32" procedurename="prt_pdfupo_QueryExgpPosiJour_His" paras="22"/>
+    <func funcname="pdfutuT.3.33" procedurename="prt_pdfupo_GetExgpPosiFrozenJour" paras="24"/>
+    <func funcname="pdfutuT.3.34" procedurename="prt_pdfupo_QueryExgpPosiFrozenJour" paras="23"/>
+    <func funcname="pdfutuT.3.35" procedurename="prt_pdfupo_QueryExgpPosiFrozenJour_His" paras="23"/>
+    <func funcname="pdfutuT.3.51" procedurename="prt_pdfupo_UpdateAsacPosi" paras="40"/>
+    <func funcname="pdfutuT.3.52" procedurename="prt_pdfupo_FrozenAsacPosi" paras="52"/>
+    <func funcname="pdfutuT.3.53" procedurename="prt_pdfupo_UndoFrozenAsacPosi" paras="31"/>
+    <func funcname="pdfutuT.3.54" procedurename="prt_pdfupo_UnFrozenAsacPosi" paras="52"/>
+    <func funcname="pdfutuT.3.55" procedurename="prt_pdfupo_UndoUnFrozenAsacPosi" paras="31"/>
+    <func funcname="pdfutuT.3.71" procedurename="prt_pdfupo_QueryAsacPosi" paras="20"/>
+    <func funcname="pdfutuT.3.72" procedurename="prt_pdfupo_QueryAsacPosi_His" paras="22"/>
+    <func funcname="pdfutuT.3.81" procedurename="prt_pdfupo_QueryAsacPosiJour" paras="21"/>
+    <func funcname="pdfutuT.3.82" procedurename="prt_pdfupo_QueryAsacPosiJour_His" paras="22"/>
+    <func funcname="pdfutuT.3.83" procedurename="prt_pdfupo_GetAsacPosiFrozenJour" paras="23"/>
+    <func funcname="pdfutuT.3.84" procedurename="prt_pdfupo_QueryAsacPosiFrozenJour" paras="23"/>
+    <func funcname="pdfutuT.3.85" procedurename="prt_pdfupo_QueryAsacPosiFrozenJour_His" paras="23"/>
+    <func funcname="pdfutuT.3.171" procedurename="prt_pdfupo_AddOutFutuPosi" paras="31"/>
+    <func funcname="pdfutuT.3.172" procedurename="prt_pdfupo_ClearOutRecord" paras="12"/>
+    <func funcname="pdfutuT.3.201" procedurename="prt_pdfupo_DealCloseFrozenUnfrozen" paras="10"/>
+    <func funcname="pdfutuT.3.301" procedurename="prt_pdfupo_UpdateTrdPosi" paras="21"/>
+    <func funcname="pdfutuT.3.302" procedurename="prt_pdfupo_UpdateTrdExgpPosi" paras="22"/>
+    <func funcname="pdfutuT.3.173" procedurename="prt_pdfupo_ClearOutPosiRecord" paras="12"/>
+</funcs>

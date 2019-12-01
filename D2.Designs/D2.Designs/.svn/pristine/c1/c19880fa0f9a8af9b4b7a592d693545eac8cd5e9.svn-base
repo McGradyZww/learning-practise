@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.11.1" procedurename="prt_tdsest_StrategePluginOnline" paras="11"/>
+    <func funcname="tdsecuT.11.2" procedurename="prt_tdsest_StrategePluginOffline" paras="11"/>
+    <func funcname="tdsecuT.11.4" procedurename="prt_tdsest_GetStrategyOrder" paras="60"/>
+    <func funcname="tdsecuT.11.11" procedurename="prt_tdsest_AddStrategyOrder" paras="86"/>
+    <func funcname="tdsecuT.11.12" procedurename="prt_tdsest_PauseStrategyOrder" paras="59"/>
+    <func funcname="tdsecuT.11.13" procedurename="prt_tdsest_ResumeStrategyOrder" paras="59"/>
+    <func funcname="tdsecuT.11.14" procedurename="prt_tdsest_CancelStrategyOrder" paras="60"/>
+    <func funcname="tdsecuT.11.15" procedurename="prt_tdsest_UpdateStrategyOrderExecution" paras="59"/>
+    <func funcname="tdsecuT.11.16" procedurename="prt_tdsest_UpdateStrategyOrderStatus" paras="56"/>
+    <func funcname="tdsecuT.11.101" procedurename="prt_tdsest_QueryStrategyOrder" paras="34"/>
+    <func funcname="tdsecuT.11.102" procedurename="prt_tdsest_PluginQueryStrategyOrder" paras="31"/>
+    <func funcname="tdsecuT.11.103" procedurename="prt_tdsest_QueryStrategyOrderSum" paras="33"/>
+    <func funcname="tdsecuT.11.104" procedurename="prt_tdsest_QuerySingleStrategyOrderSum" paras="58"/>
+    <func funcname="tdsecuT.11.105" procedurename="prt_tdsest_ResetCommStrategyQty" paras="11"/>
+</funcs>

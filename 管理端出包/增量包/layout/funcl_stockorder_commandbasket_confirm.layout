@@ -1,0 +1,64 @@
+<!--下单二次确认框：指令交易-->
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="funcl_stockorder_commandbasket_confirm" title="" width="650" height="550"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="订单二次确认" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	
+	<body>
+		<div name="funcl_stockorder_command_confirm.body" pos="0,30,-0,-0">
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			
+			<!--订单信息汇总grid-->
+			<gridctrl name="grid.stockorder_command_confirm.total" pos="5,2,-5,80" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image="" sort="1" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+				<column title="产品名称" width="120" key="product_name" />
+				<column title="单元名称" width="120" key="unit_name" />
+				<column title="订单数量" width="80" key="command_qty" data_type="T" />
+				<column title="订单金额" width="0" key="command_amt" data_type="T" />
+			</gridctrl>
+      
+      <!--分割线-->
+      <img pos="1,103,-1,106" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+      <!--指令信息明细grid-->
+			<gridctrl name="grid.stockorder_command_confirm.detail" pos="5,110,-5,-62" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image="" sort="1" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+		
+				<column title="证券代码" width="80" key="stock_code" />
+				<column title="证券名称" width="80" key="stock_name" />
+				<column title="订单价格" width="100" key="order_price" data_type="N" />
+				<column title="订单方向" width="80" key="order_dir" />
+				<column title="订单数量" width="100" key="order_qty" data_type="T" />
+				<column title="订单金额" width="120" key="order_amt" data_type="T" />
+				<!----
+				<column title="序号" width="100" key="row_id" />
+				--->
+			</gridctrl>             
+     	
+     	<!--分割线-->
+      <img pos="1,-63,-1,-60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       
+      <!--提示文字、确认、取消按钮-->
+      <text name="show_order_count_text" crtext="000000" crmark="800000" align="left" pos="5,-45,300,-15" title="" font="default4" show="1" />
+      <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="[OK]" pos="-205,-50,-75,-10" font="default3" crtext="FFFFFF" show="1" defaultbutton="1"/>
+	  	<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-70,-50,-10,-10" font="default3" show="1" defaultbutton="1"/>
+		</div>
+	</body>
+</dlg>

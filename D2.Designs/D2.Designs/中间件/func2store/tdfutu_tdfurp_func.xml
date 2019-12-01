@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.5.1" procedurename="prt_tdfurp_DealOrderRsp" paras="77"/>
+    <func funcname="tdfutuT.5.11" procedurename="prt_tdfurp_DealCancelRsp" paras="74"/>
+    <func funcname="tdfutuT.5.21" procedurename="prt_tdfurp_DealStrikeRsp" paras="88"/>
+    <func funcname="tdfutuT.5.22" procedurename="prt_tdfurp_AddMissOrder" paras="61"/>
+    <func funcname="tdfutuT.5.31" procedurename="prt_tdfurp_CheckStrikeRspGetOrderInfo" paras="43"/>
+    <func funcname="tdfutuT.5.101" procedurename="prt_tdfurp_QueryOrderRsp" paras="20"/>
+    <func funcname="tdfutuT.5.121" procedurename="prt_tdfurp_QueryStrikeRsp" paras="19"/>
+    <func funcname="tdfutuT.5.122" procedurename="prt_tdfurp_QueryStrikeDetail" paras="24"/>
+    <func funcname="tdfutuT.5.123" procedurename="prt_tdfurp_QueryStrikeDetailHis" paras="25"/>
+    <func funcname="tdfutuT.5.130" procedurename="prt_tdfurp_GetOrderInfo" paras="34"/>
+</funcs>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.2.12" procedurename="prt_dcsypro_Syncpdacco_pd_info" paras="108"/>
+    <func funcname="dcsyncT.2.13" procedurename="prt_dcsypro_Syncpdacco_pd_limit" paras="108"/>
+    <func funcname="dcsyncT.2.14" procedurename="prt_dcsypro_Syncpdacco_asset_acco" paras="108"/>
+    <func funcname="dcsyncT.2.15" procedurename="prt_dcsypro_Syncpdacco_asset_acco_ch" paras="108"/>
+    <func funcname="dcsyncT.2.16" procedurename="prt_dcsypro_Syncpdcapit_pd_capit" paras="108"/>
+    <func funcname="dcsyncT.2.17" procedurename="prt_dcsypro_Syncpdcapit_pd_asset" paras="108"/>
+</funcs>

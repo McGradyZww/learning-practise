@@ -1,0 +1,10 @@
+D:\learning\Test\Bin\Debug\Test.exe.config
+D:\learning\Test\Bin\Debug\Test.exe
+D:\learning\Test\Bin\Debug\Test.pdb
+D:\learning\Test\GGInterCodeHandler\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.BaseClass.MainFormBase.resources
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.MainForm.resources
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.Properties.Resources.resources
+D:\learning\Test\GGInterCodeHandler\obj\Debug\Test.csproj.GenerateResource.Cache
+D:\learning\Test\GGInterCodeHandler\obj\Debug\Test.exe
+D:\learning\Test\GGInterCodeHandler\obj\Debug\Test.pdb

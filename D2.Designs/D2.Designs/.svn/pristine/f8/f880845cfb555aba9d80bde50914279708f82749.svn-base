@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.5.12" procedurename="prt_dcsytdse_Synctdseac_exgp_busi_capit" paras="108"/>
+    <func funcname="dcsyncT.5.13" procedurename="prt_dcsytdse_Synctdseac_asac_busi_capit" paras="108"/>
+    <func funcname="dcsyncT.5.14" procedurename="prt_dcsytdse_Synctdseac_exgp_busi_posi" paras="108"/>
+    <func funcname="dcsyncT.5.15" procedurename="prt_dcsytdse_Synctdseac_asac_busi_posi" paras="108"/>
+    <func funcname="dcsyncT.5.16" procedurename="prt_dcsytdse_Synctdseac_exgp_bond_impawn" paras="108"/>
+    <func funcname="dcsyncT.5.17" procedurename="prt_dcsytdse_Synctdseac_asac_bond_impawn" paras="108"/>
+    <func funcname="dcsyncT.5.18" procedurename="prt_dcsytdse_Synctdseap_command" paras="108"/>
+    <func funcname="dcsyncT.5.19" procedurename="prt_dcsytdse_Synctdseap_command_jour" paras="108"/>
+    <func funcname="dcsyncT.5.20" procedurename="prt_dcsytdse_Synctdseap_command_dispense" paras="108"/>
+    <func funcname="dcsyncT.5.21" procedurename="prt_dcsytdse_Synctdseap_command_approve" paras="108"/>
+    <func funcname="dcsyncT.5.22" procedurename="prt_dcsytdse_Synctdsetd_order" paras="108"/>
+    <func funcname="dcsyncT.5.23" procedurename="prt_dcsytdse_Synctdsetd_channelorder" paras="108"/>
+    <func funcname="dcsyncT.5.24" procedurename="prt_dcsytdse_Synctdsetd_purchaseorder" paras="108"/>
+    <func funcname="dcsyncT.5.25" procedurename="prt_dcsytdse_Synctdsetd_cancel" paras="108"/>
+    <func funcname="dcsyncT.5.26" procedurename="prt_dcsytdse_Synctdsetd_preorder" paras="108"/>
+    <func funcname="dcsyncT.5.27" procedurename="prt_dcsytdse_Synctdsetd_basketorder" paras="108"/>
+    <func funcname="dcsyncT.5.28" procedurename="prt_dcsytdse_Synctdsetd_modifyorder" paras="108"/>
+    <func funcname="dcsyncT.5.29" procedurename="prt_dcsytdse_Synctdsetd_pendorder" paras="108"/>
+    <func funcname="dcsyncT.5.30" procedurename="prt_dcsytdse_Synctdserp_orderrsp" paras="108"/>
+    <func funcname="dcsyncT.5.31" procedurename="prt_dcsytdse_Synctdserp_strikersp" paras="108"/>
+    <func funcname="dcsyncT.5.32" procedurename="prt_dcsytdse_Synctdserp_strike" paras="108"/>
+    <func funcname="dcsyncT.5.33" procedurename="prt_dcsytdse_Synctdset0_opor_tshold_set" paras="108"/>
+    <func funcname="dcsyncT.5.34" procedurename="prt_dcsytdse_Synctdset0_opor_param_set" paras="108"/>
+    <func funcname="dcsyncT.5.35" procedurename="prt_dcsytdse_Synctdset0_stock_posi_detail" paras="108"/>
+    <func funcname="dcsyncT.5.36" procedurename="prt_dcsytdse_Synctdset0_close_posi_strike_detail" paras="108"/>
+    <func funcname="dcsyncT.5.37" procedurename="prt_dcsytdse_Synctdset0_opor_stock_source" paras="108"/>
+    <func funcname="dcsyncT.5.38" procedurename="prt_dcsytdse_Synctdset0_stock_posi_sum" paras="108"/>
+</funcs>

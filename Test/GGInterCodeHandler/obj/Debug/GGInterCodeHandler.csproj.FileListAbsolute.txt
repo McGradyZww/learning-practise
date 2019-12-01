@@ -1,0 +1,12 @@
+D:\learning\Test\GGInterCodeHandler\bin\Debug\GGInterCodeHandler.exe.config
+D:\learning\Test\GGInterCodeHandler\bin\Debug\GGInterCodeHandler.exe
+D:\learning\Test\GGInterCodeHandler\bin\Debug\GGInterCodeHandler.pdb
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.csproj.GenerateResource.Cache
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.exe
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.pdb
+D:\learning\Test\Bin\Debug\GGInterCodeHandler.exe.config
+D:\learning\Test\Bin\Debug\GGInterCodeHandler.exe
+D:\learning\Test\Bin\Debug\GGInterCodeHandler.pdb
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.BaseClass.MainFormBase.resources
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.MainForm.resources
+D:\learning\Test\GGInterCodeHandler\obj\Debug\GGInterCodeHandler.Properties.Resources.resources

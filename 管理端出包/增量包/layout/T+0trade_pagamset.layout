@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="T+0trade_pagamset" title="" width="460" height="700"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="T+0trade_pagamset.body" pos="0,30,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+
+      <tabctrl name="tab_T+0trade_pagamset.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+        <tab name="T+0trade_pagamset_strategyset" image="skin:IDB_TAB_LOW_ITEM" title="策略参数" active="true" pos="0,30,-0,-0">
+          <!--券源开平设置-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,15,165,40" title="券源开平设置:" font="default5" show="1" />
+          <chkbtn name="T0trade.holdposition.closefirst" title="有持仓时优先平仓" skin="IDB_CHECK_BOX" pos="30,40,190,60" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+		  <chkbtn name="T0trade.handicap.dbclickorder" title="双击行情直接下单" skin="IDB_CHECK_BOX" pos="190,40,350,60" crtext="191919" show="1" font="default3" check="false" showfocus="0"/>
+          <radiobtn name="T0trade.bears.first" title="优先开空仓" skin="IDB_radiobtn" pos="30,63,140,87" crtext="191919" show="1" check="true" showfocus="0" font="default3" group="1"/>
+          <radiobtn name="T0trade.bulls.first" title="优先开多仓" skin="IDB_radiobtn" pos="190,63,300,87" crtext="191919" show="1" check="false" showfocus="0" font="default3" group="1"/>
+          
+          <!--价格策略-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,105,115,130" title="价格策略:" font="default5" show="1" />
+          <text crtext="000000" crmark="800000" align="left" pos="30,135,80,155" title="买入:" font="default3" show="1" />
+          <combobox name="T0trade.pricedirect.buy" tabstop="1" skin="IDB_EDIT" pos="70,132" width="120" height="26"
+              small-image="skin:IDB_DROP_DOWN_small"
+              multiline="0" readonly="1" maxchar="50"
+              font="default2" crtext="0,0,0" crtip="128,128,128">
+          </combobox>
+          <text crtext="000000" crmark="800000" align="right" pos="220,135,270,155" title="卖出:" font="default3" show="1" />
+          <combobox name="T0trade.pricedirect.sell" tabstop="1" skin="IDB_EDIT" pos="270,132" width="120" height="26"
+              small-image="skin:IDB_DROP_DOWN_small"
+              multiline="0" readonly="1" maxchar="50"
+              font="default2" crtext="0,0,0" crtip="128,128,128">
+          </combobox>
+
+          <!--数量策略-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,180,115,205" title="数量策略:" font="default5" show="1" />
+          <chkbtn name="T0trade.HoldPosition.precedence" title="持仓优先" skin="IDB_CHECK_BOX" pos="30,210,130,230" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+          <text crtext="000000" crmark="800000" align="right" pos="190,210,270,230" title="默认数量:" font="default3" show="1" />
+          <combobox name="T0trade.stockqty.default" tabstop="1" skin="IDB_EDIT" pos="270,205" width="160" height="26"
+              small-image="skin:IDB_DROP_DOWN_small"
+              multiline="0" readonly="1" maxchar="50"
+              font="default2" crtext="0,0,0" crtip="128,128,128">
+          </combobox>
+          
+          <!--单笔委托管控-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,255,145,280" title="单笔委托限制:" font="default5" show="1" />
+          <text crtext="000000" crmark="800000" align="righ" pos="30,285,200,305" title="单笔所占券源比例上限:" font="default3" show="1" />
+          <edit name="T0trade.singleorder.ratio.upperlimit" tabstop="1" skin="IDB_EDIT" pos="200,283" width="40" height="24" title="0"
+                   number="1" readonly="0" maxchar="3" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="left" pos="240,285,270,305" title="%" font="default3" show="1" />
+          <text crtext="000000" crmark="800000" align="left" pos="30,310,180,330" title="单笔委托数量上限:" font="default3" show="1" />
+          <edit name="T0trade.singleorder.qty.upperlimit" tabstop="1" skin="IDB_EDIT" pos="180,308" width="60" height="24" title="1000"
+                   number="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="left" pos="30,335,180,355" title="单笔委托金额上限:" font="default3" show="1" />
+          <edit name="T0trade.singleorder.price.upperlimit" tabstop="1" skin="IDB_EDIT" pos="180,333" width="80" height="24" title="50000"
+                   number="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          
+          <!--融资买入-->
+          <text name="txt.T0trade.financing.buy" crtext="ff0000" crmark="800000" align="left" pos="15,380,115,405" title="融资功能:" font="default5" show="1" />
+          <chkbtn name="T0trade.financing.buy" title="增加融资买入" skin="IDB_CHECK_BOX" pos="30,410,180,430" crtext="191919" show="1" font="default3" check="false" showfocus="0"/>
+
+          <!--快捷数量-->
+          <text name="txt.T0trade.quick.amount" crtext="ff0000" crmark="800000" align="left" pos="15,450,115,475" title="快捷数量:" font="default5" show="1" />
+
+          <radiobtn name="T0trade.radiobtn.amount.fixed1" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="30,475" width="120" height="24"
+          crtext="191919" show="1" check="true" showfocus="1" group="3" font="default1"/>
+          <radiobtn name="T0trade.radiobtn.amount.ratio1" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="130,475" width="120" height="24"
+          crtext="191919" show="1"  showfocus="1" group="3" font="default1"/>
+          <edit name="T0trade.edit.amount.value1" tabstop="1" skin="IDB_EDIT" pos="240,475" width="80" height="24" title="0" number="1" double="1"
+          minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text name="txt.T0trade.unit1" crtext="000000" crmark="800000" align="left" pos="325,476,400,501" title="" font="default3" show="1" />
+
+          <radiobtn name="T0trade.radiobtn.amount.fixed2" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="30,500" width="120" height="24" 
+          crtext="191919" show="1" check="true" showfocus="1" group="4" font="default1"/>
+          <radiobtn name="T0trade.radiobtn.amount.ratio2" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="130,500" width="120" height="24" 
+          crtext="191919" show="1"  showfocus="1" group="4" font="default1"/>
+          <edit name="T0trade.edit.amount.value2" tabstop="1" skin="IDB_EDIT" pos="240,500" width="80" height="24" title="0" number="1" double="1" 
+          minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text name="txt.T0trade.unit2" crtext="000000" crmark="800000" align="left" pos="325,501,400,526" title="" font="default3" show="1" />
+
+          <radiobtn name="T0trade.radiobtn.amount.fixed3" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="30,525" width="120" height="24" 
+          crtext="191919" show="1" check="true" showfocus="1" group="5" font="default1"/>
+          <radiobtn name="T0trade.radiobtn.amount.ratio3" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="130,525" width="120" height="24" 
+          crtext="191919" show="1"  showfocus="1" group="5" font="default1"/>
+          <edit name="T0trade.edit.amount.value3" tabstop="1" skin="IDB_EDIT" pos="240,525" width="80" height="24" title="0" number="1" double="1"  
+          minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text name="txt.T0trade.unit3" crtext="000000" crmark="800000" align="left" pos="325,526,400,551" title="" font="default3" show="1" />
+        </tab>
+        
+        <tab name="T+0trade_pagamset_remindset" image="skin:IDB_TAB_LOW_ITEM" title="提醒参数" pos="0,30,-0,-0">
+          <!--委托提醒-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,15,115,40" title="委托提醒:" font="default5" show="1" />
+          <chkbtn name="T0trade.entrust.doublecheck_dialog" title="显示委托二次确认框" skin="IDB_CHECK_BOX" pos="30,45,210,65" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+          <chkbtn name="T0trade.entrust.confirm_dialog" title="显示委托下达确认框" skin="IDB_CHECK_BOX" pos="30,70,210,90" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+         
+          <!--行情提醒-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,110,115,135" title="行情提醒:" font="default5" show="1" />
+          <chkbtn name="T0trade.sourceHQ.remind" title="开启券源行情提醒" skin="IDB_CHECK_BOX" pos="30,140,190,160" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+          <chkbtn name="T0trade.closepositionHQ.remind" title="开启平仓行情提醒" skin="IDB_CHECK_BOX" pos="30,165,190,185" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+          <chkbtn name="T0trade.link.ths" title="联动行情软件" skin="IDB_CHECK_BOX" pos="30,190,190,210" crtext="191919" show="1" font="default3" check="false" showfocus="0"/>
+        </tab>
+             
+        <tab name="T+0trade_pagamset_otherset" image="skin:IDB_TAB_LOW_ITEM" title="其他参数" pos="0,30,-0,-0">
+
+          <!--券源设置-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,15,115,40" title="券源设置:" font="default5" show="1" />
+          <button name="button.source.set" skin="IDB_BT_DEFAULT" title="券源设置" pos="15,45,115,75" font="default3" show="1" />
+
+          <!--持仓明细设置-->
+          <!--text crtext="ff0000" crmark="800000" align="left" pos="15,85,115,110" title="持仓设置:" font="default5" show="1" /-->
+          <!--chkbtn name="T0trade.disable.openPositionPrice" title="隐藏成本价" skin="IDB_CHECK_BOX" pos="30,115,190,135" crtext="191919" show="1" font="default3" check="true" showfocus="0"/-->
+
+          <!--预估费率-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,85,115,110" title="预估费率:" font="default5" show="1" />
+          <text crtext="000000" crmark="800000" align="right" pos="30,115,210,135" title="买入: 预估佣金费率 万分之" font="default3" show="1" />
+          <edit name="T0trade.buy.estimate.rate" tabstop="1" skin="IDB_EDIT" pos="210,113" width="40" height="24" title="3"
+                   number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="right" pos="250,115,330,135" title="最低费用" font="default3" show="1" />
+          <edit name="T0trade.buy.lowest.price" tabstop="1" skin="IDB_EDIT" pos="330,113" width="40" height="24" title="5"
+                   number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="left" pos="370,115,390,135" title="元" font="default3" show="1" />
+
+          <text crtext="000000" crmark="800000" align="right" pos="30,145,210,165" title="卖出: 预估佣金费率 万分之" font="default3" show="1" />
+          <edit name="T0trade.sell.estimate.rate" tabstop="1" skin="IDB_EDIT" pos="210,143" width="40" height="24" title="3"
+                   number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="right" pos="250,145,330,165" title="最低费用" font="default3" show="1" />
+          <edit name="T0trade.sell.lowest.price" tabstop="1" skin="IDB_EDIT" pos="330,143" width="40" height="24" title="6"
+                   number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+          <text crtext="000000" crmark="800000" align="left" pos="370,145,390,165" title="元" font="default3" show="1" />
+          
+          <!--浮窗功能-->
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,175,115,195" title="浮窗功能:" font="default5" show="1" />
+          <radiobtn name="T0trade.PopType0" title="委托+持仓" skin="IDB_radiobtn" pos="30,200,130,220" crtext="191919" show="1" check="true" showfocus="0" font="default3" group="1"/>
+          <radiobtn name="T0trade.PopType1" title="行情+委托" skin="IDB_radiobtn" pos="140,200,240,220" crtext="191919" show="1" check="false" showfocus="0" font="default3" group="1"/>
+          <radiobtn name="T0trade.PopType2" title="委托" skin="IDB_radiobtn" pos="250,200,310,220" crtext="191919" show="1" check="false" showfocus="0" font="default3" group="1"/>
+          <chkbtn name="T0trade.noWndTop" title="浮窗非最前端显示" skin="IDB_CHECK_BOX" pos="30,230,190,250" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>
+		  
+		  <!--快捷键-->
+		  <text crtext="ff0000" crmark="800000" align="left" pos="15,260,260,280" title="下单按钮快捷键:" font="default5" show="1" />
+		  <text crtext="000000" crmark="800000" align="left" pos="30,290,80,310" title="买入:" font="default3" show="1" />
+          <combobox name="T0trade.shortcutkey.buy" tabstop="1" skin="IDB_EDIT" pos="70,287" width="120" height="26"
+              small-image="skin:IDB_DROP_DOWN_small"
+              multiline="0" readonly="1" maxchar="50"
+              font="default2" crtext="0,0,0" crtip="128,128,128">
+			 <item name="A" value="A" />
+			 <item name="B" value="B" />
+			 <item name="C" value="C" />
+			 <item name="D" value="D" />
+			 <item name="E" value="E" />
+			 <item name="F" value="F" />
+			 <item name="G" value="G" />
+			 <item name="H" value="H" />
+			 <item name="I" value="I" />
+			 <item name="J" value="J" />
+			 <item name="K" value="K" />
+			 <item name="L" value="L" />
+			 <item name="M" value="M" />
+			 <item name="N" value="N" />
+			 <item name="O" value="O" />
+			 <item name="P" value="P" />
+			 <item name="Q" value="Q" />
+			 <item name="R" value="R" />
+			 <item name="S" value="S" />
+			 <item name="T" value="T" />
+			 <item name="U" value="U" />
+			 <item name="V" value="V" />
+			 <item name="W" value="W" />
+			 <item name="X" value="X" />
+			 <item name="Y" value="Y" />
+			 <item name="0" value="0" />
+			 <item name="1" value="1" />
+			 <item name="2" value="2" />
+			 <item name="3" value="3" />
+			 <item name="4" value="4" />
+			 <item name="5" value="5" />
+			 <item name="6" value="6" />
+			 <item name="7" value="7" />
+			 <item name="8" value="8" />
+			 <item name="9" value="9" />
+          </combobox>
+		  <text crtext="000000" crmark="800000" align="right" pos="220,290,270,310" title="卖出:" font="default3" show="1" />
+          <combobox name="T0trade.shortcutkey.sell" tabstop="1" skin="IDB_EDIT" pos="270,287" width="120" height="26"
+              small-image="skin:IDB_DROP_DOWN_small"
+              multiline="0" readonly="1" maxchar="50"
+              font="default2" crtext="0,0,0" crtip="128,128,128">
+			 <item name="A" value="A" />
+			 <item name="B" value="B" />
+			 <item name="C" value="C" />
+			 <item name="D" value="D" />
+			 <item name="E" value="E" />
+			 <item name="F" value="F" />
+			 <item name="G" value="G" />
+			 <item name="H" value="H" />
+			 <item name="I" value="I" />
+			 <item name="J" value="J" />
+			 <item name="K" value="K" />
+			 <item name="L" value="L" />
+			 <item name="M" value="M" />
+			 <item name="N" value="N" />
+			 <item name="O" value="O" />
+			 <item name="P" value="P" />
+			 <item name="Q" value="Q" />
+			 <item name="R" value="R" />
+			 <item name="S" value="S" />
+			 <item name="T" value="T" />
+			 <item name="U" value="U" />
+			 <item name="V" value="V" />
+			 <item name="W" value="W" />
+			 <item name="X" value="X" />
+			 <item name="Y" value="Y" />
+			 <item name="0" value="0" />
+			 <item name="1" value="1" />
+			 <item name="2" value="2" />
+			 <item name="3" value="3" />
+			 <item name="4" value="4" />
+			 <item name="5" value="5" />
+			 <item name="6" value="6" />
+			 <item name="7" value="7" />
+			 <item name="8" value="8" />
+          </combobox>
+
+          <text crtext="ff0000" crmark="800000" align="left" pos="15,320,260,340" title="显示:" font="default5" show="1" /> 
+          <chkbtn name="T0trade.showdealdata" title="显示行情区成交明细数据" skin="IDB_CHECK_BOX" pos="30,350,350,370" crtext="191919" show="1" font="default3" check="true" showfocus="0"/>  
+        </tab>
+      </tabctrl>    
+
+
+     
+      <!--确认、取消按钮-->      
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" font="default3" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" font="default3" show="1" />
+		</div>
+	</body>
+</dlg>

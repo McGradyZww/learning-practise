@@ -1,0 +1,90 @@
+using LD.Client.Commom;
+using LD.Client.Contract;
+using LDsdkDefine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LD.Client.Contract
+{
+
+    public static class ProductFutuCapitalBack
+    {
+        //逻辑_产品期货_资金运维_查询资产账户内外资金差异记录
+        public static List<FuncpdfutuL_10_1Model> GetFuncpdfutuL_10_1Models(ReqBaseDTO req, LDsdkDefine.LDPackerAdapter packer)
+        {
+            var FuncpdfutuL_10_1Models = new List<FuncpdfutuL_10_1Model>();
+            var rowCount = packer.GetRowCount();
+            for (int i = 0; i < rowCount; i++)
+            {
+                var reqCommand = new FuncpdfutuL_10_1Model();
+                reqCommand.OperatorID = req.OperatorID;
+                reqCommand.row_id = packer.GetInt64byName("row_id", i);
+                reqCommand.init_date = packer.GetIntbyName("init_date", i);
+                reqCommand.co_no = packer.GetIntbyName("co_no", i);
+                reqCommand.pd_no = packer.GetIntbyName("pd_no", i);
+                reqCommand.asset_acco_no = packer.GetIntbyName("asset_acco_no", i);
+                reqCommand.pass_no = packer.GetIntbyName("pass_no", i);
+                reqCommand.out_acco = packer.GetStrbyName("out_acco", i);
+                reqCommand.crncy_type = packer.GetStrbyName("crncy_type", i);
+                reqCommand.acco_curr_amt = packer.GetDoublebyName("acco_curr_amt", i);
+                reqCommand.acco_avail_amt = packer.GetDoublebyName("acco_avail_amt", i);
+                reqCommand.act_capt_margin = packer.GetDoublebyName("act_capt_margin", i);
+                reqCommand.out_curr_amt = packer.GetDoublebyName("out_curr_amt", i);
+                reqCommand.out_enable_amt = packer.GetDoublebyName("out_enable_amt", i);
+                reqCommand.out_capt_margin = packer.GetDoublebyName("out_capt_margin", i);
+                reqCommand.acco_curr_amt_diff = packer.GetDoublebyName("acco_curr_amt_diff", i);
+                reqCommand.acco_avail_amt_diff = packer.GetDoublebyName("acco_avail_amt_diff", i);
+                reqCommand.act_capt_margin_diff = packer.GetDoublebyName("act_capt_margin_diff", i);
+                reqCommand.deal_flag = packer.GetIntbyName("deal_flag", i);
+                reqCommand.asset_sync_flag = packer.GetIntbyName("asset_sync_flag", i);
+                reqCommand.remark_info = packer.GetStrbyName("remark_info", i);
+ 
+                FuncpdfutuL_10_1Models.Add(reqCommand);
+            }
+            return FuncpdfutuL_10_1Models;
+        }
+ 
+        //逻辑_产品期货_资金运维_查询资产账户内外资金差异记录
+        public static List<FuncpdfutuL_10_1Model> GetFuncpdfutuL_10_1Models(ReqBaseDTO req, LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var FuncpdfutuL_10_1Models = new List<FuncpdfutuL_10_1Model>();
+            LDsdkDefineEx.LDGroupAdapter lpGroup = fastMsg.GetGroup(LDBizTagDefine.LDSdkTag.LDTAG_NO_RESULTSET);
+            if (lpGroup != null)
+            {
+                var rowCount = lpGroup.GetRecordCount();
+                for (int i = 0; i < rowCount; i++)
+                {
+                    var reqCommand = new FuncpdfutuL_10_1Model();
+                    var lpRecord =lpGroup.GetRecord(i);
+                    reqCommand.OperatorID = req.OperatorID;
+                    reqCommand.row_id = lpRecord.GetInt64(LDBizTagDefine.LDBizTag.LDBIZ_ROW_ID_INT64);
+                    reqCommand.init_date = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_INIT_DATE_INT);
+                    reqCommand.co_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT);
+                    reqCommand.pd_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_PD_NO_INT);
+                    reqCommand.asset_acco_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ASSET_ACCO_NO_INT);
+                    reqCommand.pass_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_PASS_NO_INT);
+                    reqCommand.out_acco = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_OUT_ACCO_STR);
+                    reqCommand.crncy_type = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_CRNCY_TYPE_STR);
+                    reqCommand.acco_curr_amt = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACCO_CURR_AMT_FLOAT);
+                    reqCommand.acco_avail_amt = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACCO_AVAIL_AMT_FLOAT);
+                    reqCommand.act_capt_margin = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACT_CAPT_MARGIN_FLOAT);
+                    reqCommand.out_curr_amt = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_OUT_CURR_AMT_FLOAT);
+                    reqCommand.out_enable_amt = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_OUT_ENABLE_AMT_FLOAT);
+                    reqCommand.out_capt_margin = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_OUT_CAPT_MARGIN_FLOAT);
+                    reqCommand.acco_curr_amt_diff = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACCO_CURR_AMT_DIFF_FLOAT);
+                    reqCommand.acco_avail_amt_diff = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACCO_AVAIL_AMT_DIFF_FLOAT);
+                    reqCommand.act_capt_margin_diff = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ACT_CAPT_MARGIN_DIFF_FLOAT);
+                    reqCommand.deal_flag = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_DEAL_FLAG_INT);
+                    reqCommand.asset_sync_flag = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ASSET_SYNC_FLAG_INT);
+                    reqCommand.remark_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_REMARK_INFO_STR);
+                    FuncpdfutuL_10_1Models.Add(reqCommand);
+                }
+            }
+            return FuncpdfutuL_10_1Models;
+        }
+ 
+    }
+}

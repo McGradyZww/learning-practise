@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<progress name="grid_progress_percent" skin="IDB_PROGRESS" show-text="1" crtext="808080" title=""
+	pos="0,10" width="110" height="15" value="0" run="false" show="1"
+	tip="完成进度" />

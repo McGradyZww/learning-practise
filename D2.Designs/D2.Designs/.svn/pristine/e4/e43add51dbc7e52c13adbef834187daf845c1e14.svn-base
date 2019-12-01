@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.15.1" procedurename="prt_pdsyn_GetSyncTime" paras="14"/>
+    <func funcname="prodT.15.2" procedurename="prt_pdsyn_UpdateSyncTime" paras="14"/>
+    <func funcname="prodT.15.12" procedurename="prt_pdsyn_Syncpdacco_pd_info" paras="113"/>
+    <func funcname="prodT.15.13" procedurename="prt_pdsyn_Syncpdacco_pd_limit" paras="113"/>
+    <func funcname="prodT.15.14" procedurename="prt_pdsyn_Syncpdacco_asset_acco" paras="113"/>
+    <func funcname="prodT.15.15" procedurename="prt_pdsyn_Syncpdacco_asset_acco_ch" paras="113"/>
+    <func funcname="prodT.15.16" procedurename="prt_pdsyn_Syncpdcapit_pd_capit" paras="113"/>
+    <func funcname="prodT.15.17" procedurename="prt_pdsyn_Syncpdcapit_pd_asset" paras="113"/>
+</funcs>

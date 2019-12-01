@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_basket_set" image="skin:IDB_TAB_ITEM" active="true" title="篮子管理" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+
+		<!--button name="button.command_query_float" title="" pos="-26,0" width="23" height="23" skin="IDB_BT_DRAGFLOAT" tip="浮动" show="1" /-->
+		<!--三级菜单TabCtrl控件-->
+		<div name="baskets_tree" pos="4,4,268,-4" >	
+		   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+			<treectrl name="treectrl.baskets" pos="6,6,-6,-48" show="1"
+					img-scroll="skin:IDB_SCROLL_V" img-sep="skins\rp_line.png--"
+					img-colsep=""
+					img-collapse="skin:IDB_TREE_COLLAPSE"
+					img-toggle="skin:IDB_TREE_TOGGLE"
+					img-count="2" image="skin:IDB_TREE_IMG"
+					left-pos="0" row-height="30" bk-transparent="10"
+					font-title="bold3" font="default2" valign="middle" down-row="1"
+					crtext="191919" crhover="091560" crpush="0078ff"
+					crtitle="191919" crsep="200,160,160,160" >					
+					<column title="菜单项" width="160" />
+					<column title="Collapse" />
+			</treectrl>
+			<button name="button_new_basket" tabstop="1" skin="IDB_BT_DEFAULT" title="新 建" pos="2,-38,82,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+			<button name="button_modify_basket" tabstop="1" skin="IDB_BT_DEFAULT" title="修 改" pos="90,-38,172,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+			<button name="button_del_basket" tabstop="1" skin="IDB_BT_DEFAULT" title="删 除" pos="180,-38,262,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+
+		</div>
+		<div name="baskets_detail" pos="272,4,-4,-4" >	
+		   <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+       <button name="button_basket_addstock" tabstop="1" skin="IDB_BT_DEFAULT" title="添 加" pos="10,12,92,42" shortcut="RETURN" crtext="0" font="default1"/>        
+       <button name="button_basket_delstock" tabstop="1" skin="IDB_BT_DEFAULT" title="删 除" pos="100,12,182,42" shortcut="RETURN" crtext="0" font="default1"/>        
+       <button name="button_basket_import" tabstop="1" skin="IDB_BT_DEFAULT" title="导 入" pos="-182,12,-100,42" shortcut="RETURN" crtext="0" font="default1"/>        
+       <button name="button_basket_export" tabstop="1" skin="IDB_BT_DEFAULT" title="导 出" pos="-92,12,-10,42" shortcut="RETURN" crtext="0" font="default1"/>        
+ 			 <img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />
+
+     	 <gridctrl name="grid.Querybasketcomposition" pos="2,62,-2,-48" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+	        <column title="记录序号" width="0" align="center" key="row_id" />
+	        <column title=" 市  场 " width="100" align="center" key="exchange_no" />
+	        <column title="证券代码" width="100" align="center" key="stock_code" />
+	        <column title="证券名称" width="100" align="center" key="stock_name" />
+	        <column title="成分数量" width="100" align="center" key="composition_qty" />
+	        <column title=" 权  重 " width="100" align="center" key="composition_ratio" />
+	        <column title="替代代码" width="100" align="center" key="replace_stock_code" />
+	        <column title="替代名称" width="100" align="center" key="replace_stock_name" />
+	        <column title="替代数量" width="100" align="center" key="replace_qty" />
+        
+    	 </gridctrl>
+    	 <text crtext="000000" crmark="800000" align="left" pos="10,-34,72,-8" title="权重方式" font="default1" show="1" />
+       <combobox name="basket_weight" tabstop="0" skin="IDB_EDIT" pos="74,-36" width="90" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default1" crtext="0,0,0" crtip="128,128,128,128" value="1">
+				<item name="自定义" value="0" />
+				<item name="平均" value="1" />
+	   	 </combobox>
+       <button name="button_basket_calc" tabstop="1" skin="IDB_BT_DEFAULT" title="计 算" pos="172,-38,252,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+
+       <button name="button_basket_save" tabstop="1" disable="1" skin="IDB_BT_OK" title="保 存" pos="-182,-38,-100,-8" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+       <button name="button_basket_cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-92,-38,-10,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+      
+		</div>
+	</tab>
+</tabctrl>

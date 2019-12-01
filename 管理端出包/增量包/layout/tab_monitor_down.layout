@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<tabctrl>
+	<tab name="tab_monitor_down" image="skin:IDB_TAB_ITEM" active="true" title="监控止损" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0" />
+		<tabctrl name="tab_monitor_down.main" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0">
+			<tab name="tab_monitor_down.position" image="skin:IDB_TAB_LOW_ITEM" title="持仓监控" pos="0,30,-0,-0" menuno="61031001" active="true">
+				<div name="funcl_monitor_down_position_grid" pos="0,2,-2,-280" placement="funcl_monitor_down_position_grid" />				
+				<div name="trade_stock.handicap" pos="4,-308,240,-2" placement="trade_stock_handicap"/>	
+				<img pos="241,-308,242,-2" image="skins\default\line_split.png" mode="tile" show="1" />
+				<div name="funcl_stock_order_input_simple" pos="243,-308,580,-2" placement="funcl_stock_order_input_simple"/>
+				<img pos="550,-308,551,-2" image="skins\default\line_split.png" mode="tile" show="1" />
+				<div name="funcl_stockeorder_query_grid_monitor_tab" pos="552,-308,-2,-2" placement="funcl_stockeorder_query_grid_monitor_tab" />
+			</tab>
+			<tab name="tab_monitor_down.rsk" image="skin:IDB_TAB_LOW_ITEM" title="风险监控" pos="0,30,-0,-0" menuno="61031002">
+				<layout name="split_monitor_down_rsk" layout-type="vertical" pos="0,1,-2,-2" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+					<layout-div name="layout-monitquery" div-pos="540" min-pos="540">
+						<div name="funcl_monitor_down_productquery_grid" placement="funcl_monitor_down_productquery_grid" pos="0,0,-2,-400" />
+						<div name="funcl_monitor_down_stockquery_grid" placement="funcl_monitor_down_stockquery_grid" pos="0,-410,-0,-0" />
+					</layout-div>
+					<layout-div name="layout-holdorderquery" div-pos="-700" min-pos="540">
+						<div name="funcl_monitor_down_productholdquery_grid" placement="funcl_monitor_down_productholdquery_grid" pos="0,0,-2,-410" />
+						<div name="funcl_monitor_down_stockholdquery_grid" placement="funcl_monitor_down_stockholdquery_grid" pos="0,-410,-2,-225" />
+						<div name="funcl_monitor_down_monitor_orderquery_grid" placement="funcl_monitor_down_monitor_orderquery_grid" pos="0,-220,-0,-0" />
+					</layout-div>
+				</layout>	
+			</tab>
+			<tab name="tab_monitor_down.rskset" image="skin:IDB_TAB_LOW_ITEM" title="风险监控设置" pos="0,30,-0,-0" menuno="61031003">
+				<layout name="split_monitor_down_rsk" layout-type="horizontal" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+					<layout-div name="layout-product_monitor_set" div-pos="320" min-pos="280">
+						<div name="funcl_monitor_down_product_monitor_set_grid" pos="0,0,-4,-0" placement="funcl_monitor_down_product_monitor_set_grid" />	
+					</layout-div>
+					<!--<img pos="0,-400,2,-401" image="skins\default\line_split.png" mode="tile" show="1" />-->
+					<layout-div name="layout-stock_monitor_set" div-pos="-320" min-pos="300">
+						<div name="funcl_monitor_down_stock_monitor_set_grid" pos="0,0,-4,-0" placement="funcl_monitor_down_stock_monitor_set_grid" />	
+					</layout-div>
+				</layout>
+			</tab>
+		</tabctrl>
+	</tab>
+</tabctrl>

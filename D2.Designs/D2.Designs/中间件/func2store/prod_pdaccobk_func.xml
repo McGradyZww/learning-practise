@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.5.1" procedurename="prt_pdaccobk_QueryAllProduct" paras="12"/>
+    <func funcname="prodT.5.2" procedurename="prt_pdaccobk_QueryAllAssetAcco" paras="15"/>
+    <func funcname="prodT.5.4" procedurename="prt_pdaccobk_QueryProductInfo" paras="15"/>
+    <func funcname="prodT.5.5" procedurename="prt_pdaccobk_UpdateProdBusiConfigStr" paras="17"/>
+    <func funcname="prodT.5.6" procedurename="prt_pdaccobk_QueryAssetAccoInfo" paras="15"/>
+    <func funcname="prodT.5.7" procedurename="prt_pdaccobk_UpdateAseetAccoBusiConfigStr" paras="18"/>
+    <func funcname="prodT.5.8" procedurename="prt_pdaccobk_QueryAssetAccoInfoBySecuSync" paras="13"/>
+    <func funcname="prodT.5.11" procedurename="prt_pdaccobk_BackUpProdData" paras="10"/>
+    <func funcname="prodT.5.21" procedurename="prt_pdaccobk_UpdateProdEvaluAsset" paras="33"/>
+    <func funcname="prodT.5.71" procedurename="prt_pdaccobk_SetAssetAccoChannel" paras="19"/>
+    <func funcname="prodT.5.74" procedurename="prt_pdaccobk_QueryAssetAccoChannel" paras="14"/>
+    <func funcname="prodT.5.75" procedurename="prt_pdaccobk_UpdateAssetAccoStatus" paras="16"/>
+    <func funcname="prodT.5.76" procedurename="prt_pdaccobk_QueryProductAccordToAsacType" paras="13"/>
+    <func funcname="prodT.5.77" procedurename="prt_pdaccobk_UpdateProductStatus" paras="19"/>
+    <func funcname="prodT.5.78" procedurename="prt_pdaccobk_ModiProductLimit" paras="23"/>
+    <func funcname="prodT.5.79" procedurename="prt_pdaccobk_UpdatePdForbidOrderDir" paras="13"/>
+    <func funcname="prodT.5.80" procedurename="prt_pdaccobk_QueryProductLimit" paras="13"/>
+    <func funcname="prodT.5.81" procedurename="prt_pdaccobk_SetAssetAccoChReadFlag" paras="11"/>
+</funcs>

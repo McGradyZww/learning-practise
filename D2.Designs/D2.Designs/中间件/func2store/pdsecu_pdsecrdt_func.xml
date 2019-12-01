@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.21.1" procedurename="prt_pdsecrdt_QueryAsacPosiDebt" paras="19"/>
+    <func funcname="pdsecuT.21.2" procedurename="prt_pdsecrdt_QueryExgpPosiDebt" paras="20"/>
+    <func funcname="pdsecuT.21.3" procedurename="prt_pdsecrdt_QueryExgpCapitalDebt" paras="15"/>
+    <func funcname="pdsecuT.21.4" procedurename="prt_pdsecrdt_QueryAsacCapitalDebt" paras="14"/>
+    <func funcname="pdsecuT.21.5" procedurename="prt_pdsecrdt_QueryAsacDebtDetail" paras="19"/>
+    <func funcname="pdsecuT.21.6" procedurename="prt_pdsecrdt_QueryExgpDebtDetail" paras="20"/>
+    <func funcname="pdsecuT.21.21" procedurename="prt_pdsecrdt_BackUpPdSecuCrdtData" paras="10"/>
+    <func funcname="pdsecuT.21.22" procedurename="prt_pdsecrdt_InitPdSecuCrdtData" paras="10"/>
+    <func funcname="pdsecuT.21.23" procedurename="prt_pdsecrdt_UpdateCrdtDebtIntrstRate" paras="15"/>
+    <func funcname="pdsecuT.21.101" procedurename="prt_pdsecrdt_QueryRiskAsacPosiDebt" paras="11"/>
+    <func funcname="pdsecuT.21.102" procedurename="prt_pdsecrdt_QueryRiskExgpPosiDebt" paras="11"/>
+    <func funcname="pdsecuT.21.103" procedurename="prt_pdsecrdt_QueryRiskExgpCapitalDebt" paras="11"/>
+    <func funcname="pdsecuT.21.104" procedurename="prt_pdsecrdt_QueryRiskAsacCapitalDebt" paras="11"/>
+    <func funcname="pdsecuT.21.105" procedurename="prt_pdsecrdt_QueryRiskAsacDebtDetail" paras="11"/>
+    <func funcname="pdsecuT.21.106" procedurename="prt_pdsecrdt_QueryRiskExgpDebtDetail" paras="11"/>
+    <func funcname="pdsecuT.21.107" procedurename="prt_pdsecrdt_UpdateExgpPosiDebt" paras="30"/>
+</funcs>

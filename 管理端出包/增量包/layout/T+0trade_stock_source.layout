@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="T+0trade_stock_source">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<gridctrl name="grid.T+0trade.stock.source" pos="5,3,-0,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="12" image="skin:IDB_T0TRADE_LIST_IMG"
+        left-pos="0" row-height="30" header-height="38" bk-transparent="100"
+        font-title="big" font="default2" shortcut="SPACE" sort="1" editcolumn="1"
+        valign="middle" down-row="1" align="center"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+      <column title=" - " width="30" key="shortcut_key" deletable="0"/>
+			<column title="证券代码" width="80" key="stock_code" deletable="0"/>
+			<column title="证券名称" width="80" key="stock_name" deletable="0"/>
+			<column title="券源数量" width="80" key="source_stock_qty" deletable="0" data_type="N"/>
+			<column title="买入可用" width="80" key="buy_available_qty" deletable="0" data_type="N"/>
+			<column title="卖出可用" width="80" key="sell_available_qty" deletable="0" data_type="N"/>
+			<column title="持仓数量" width="80" key="holding_qty" deletable="0" data_type="N"/>
+			<column title="实现盈亏" width="100" key="daily_pandl" deletable="0" data_type="N"/>
+			<column title="产品编码" width="100" key="product_code" deletable="0"/>
+			<!--<column title="产品名称" width="0" key="product_name" deletable="0"/>-->
+			<!--<column title="产品序号" width="0" key="product_id" deletable="0"/>-->
+			<column title="交易单元" width="100" key="unit_code" deletable="0"/>
+			<!--<column title="交易单元序号" width="0" key="unit_id" deletable="0"/>-->
+			<!--<column title="交易单元名称" width="0" key="unit_name" deletable="0"/>-->
+			<column title="资产账户" width="100" key="asset_account" deletable="0"/>
+			<column title="市场编号" width="0" key="exchange_no" deletable="0"/>
+
+			<column title="体外买入数量" width="120" key="out_order_release_qty" deletable="0"/>
+			<column title="体外卖出数量" width="120" key="out_order_capture_qty" deletable="0"/>
+			<column title="体外买成数量" width="120" key="out_execution_release_qty" deletable="0"/>
+			<column title="体外卖成数量" width="120" key="out_execution_capture_qty" deletable="0"/>
+		</gridctrl>
+		<chkbtn name="T0trade.auto.hide.stockcode" title="自动隐藏零可用券源" skin="IDB_CHECK_BOX" pos="5,-28,180,-2" crtext="191919" show="1" font="default4" check="false" showfocus="0"/>
+		<chkbtn name="T0trade.show.all.stocksource" title="显示所有账户券源" skin="IDB_CHECK_BOX" pos="190,-28,390,-2" crtext="191919" show="1" font="default4" check="false" showfocus="0"/>
+		<button name="T0Trade.Source.Pop" img-btn="skins\default\flow.png" tip="浮动"  pos="-25,-28" width="25" height="23"/>
+	</div>

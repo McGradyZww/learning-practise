@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.7.1" procedurename="prt_tdfurkif_QueryExgpCash" paras="11"/>
+    <func funcname="tdfutuT.7.2" procedurename="prt_tdfurkif_QueryAsacCash" paras="11"/>
+    <func funcname="tdfutuT.7.3" procedurename="prt_tdfurkif_QueryExgpPosi" paras="11"/>
+    <func funcname="tdfutuT.7.4" procedurename="prt_tdfurkif_QueryAsacPosi" paras="11"/>
+    <func funcname="tdfutuT.7.5" procedurename="prt_tdfurkif_QueryMarginCtrlInfo" paras="11"/>
+    <func funcname="tdfutuT.7.6" procedurename="prt_tdfurkif_QueryExgpPosiDetail" paras="11"/>
+</funcs>

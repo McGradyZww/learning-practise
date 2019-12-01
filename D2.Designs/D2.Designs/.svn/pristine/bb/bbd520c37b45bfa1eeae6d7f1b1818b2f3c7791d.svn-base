@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.23.11" procedurename="prt_feeseclient_AddSecuFeeTmplat" paras="16"/>
+    <func funcname="pubT.23.12" procedurename="prt_feeseclient_ModiSecuFeeTmplat" paras="15"/>
+    <func funcname="pubT.23.13" procedurename="prt_feeseclient_DeleteSecuFeeTmplat" paras="13"/>
+    <func funcname="pubT.23.14" procedurename="prt_feeseclient_QuerySecuFeeTmplat" paras="14"/>
+    <func funcname="pubT.23.15" procedurename="prt_feeseclient_QuerySecuFeeTmplatJour" paras="14"/>
+    <func funcname="pubT.23.16" procedurename="prt_feeseclient_QuerySecuFeeTmplatJour_His" paras="15"/>
+    <func funcname="pubT.23.17" procedurename="prt_feeseclient_CopySecuFeeTmplat" paras="15"/>
+    <func funcname="pubT.23.21" procedurename="prt_feeseclient_AddStockTypeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.23.22" procedurename="prt_feeseclient_ModiStockTypeFeeTmplatDetail" paras="22"/>
+    <func funcname="pubT.23.23" procedurename="prt_feeseclient_DeleteStockTypeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.23.24" procedurename="prt_feeseclient_QueryStockTypeFeeTmplatDetail" paras="15"/>
+    <func funcname="pubT.23.25" procedurename="prt_feeseclient_QueryStockTypeFeeTmplatDetailJour" paras="15"/>
+    <func funcname="pubT.23.26" procedurename="prt_feeseclient_QueryStockTypeFeeTmplatDetailJour_His" paras="16"/>
+    <func funcname="pubT.23.31" procedurename="prt_feeseclient_AddStockCodeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.23.32" procedurename="prt_feeseclient_ModiStockCodeFeeTmplatDetail" paras="22"/>
+    <func funcname="pubT.23.33" procedurename="prt_feeseclient_DeleteStockCodeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.23.34" procedurename="prt_feeseclient_QueryStockCodeFeeTmplatDetail" paras="15"/>
+    <func funcname="pubT.23.35" procedurename="prt_feeseclient_QueryStockCodeFeeTmplatDetailJour" paras="15"/>
+    <func funcname="pubT.23.36" procedurename="prt_feeseclient_QueryStockCodeFeeTmplatDetailJour_His" paras="16"/>
+    <func funcname="pubT.23.71" procedurename="prt_feeseclient_AddAsacSecuFeeTmplat" paras="16"/>
+    <func funcname="pubT.23.72" procedurename="prt_feeseclient_ModiAsacSecuFeeTmplat" paras="16"/>
+    <func funcname="pubT.23.73" procedurename="prt_feeseclient_DeleteAsacSecuFeeTmplat" paras="13"/>
+    <func funcname="pubT.23.74" procedurename="prt_feeseclient_QueryAsacSecuFeeTmplat" paras="16"/>
+    <func funcname="pubT.23.75" procedurename="prt_feeseclient_QueryAsacSecuFeeTmplatJour" paras="13"/>
+    <func funcname="pubT.23.76" procedurename="prt_feeseclient_QueryAsacSecuFeeTmplatJour_His" paras="14"/>
+    <func funcname="pubT.23.104" procedurename="prt_feeseclient_QuerySysStockTypeFee" paras="14"/>
+    <func funcname="pubT.23.114" procedurename="prt_feeseclient_QuerySysStockCodeFee" paras="14"/>
+    <func funcname="pubT.23.161" procedurename="prt_feeseclient_AddProdFare" paras="21"/>
+    <func funcname="pubT.23.162" procedurename="prt_feeseclient_ModiProdFare" paras="21"/>
+    <func funcname="pubT.23.163" procedurename="prt_feeseclient_DeleteProdFare" paras="15"/>
+    <func funcname="pubT.23.164" procedurename="prt_feeseclient_QueryProdFare" paras="14"/>
+    <func funcname="pubT.23.165" procedurename="prt_feeseclient_QueryProdFareJour" paras="15"/>
+    <func funcname="pubT.23.166" procedurename="prt_feeseclient_QueryProdFareJour_His" paras="16"/>
+    <func funcname="pubT.23.302" procedurename="prt_feeseclient_QueryFeeNo" paras="13"/>
+</funcs>

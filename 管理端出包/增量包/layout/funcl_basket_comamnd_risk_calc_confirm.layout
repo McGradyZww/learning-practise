@@ -1,0 +1,85 @@
+<!--风险计算确认框：篮子指令-->
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dlg name="funcl_basket_command_risk_calc_confirm" title="" width="700" height="550"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="风险计算确认" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	
+	<body>
+		<div name="funcl_multi_order_risk_calc_confirm.body" pos="0,30,-0,-0">
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			<img pos="10,2" width="36" height="36" image="skins\image\icon_info.png" mode="tile" show="1" response="0"/>
+			<text crtext="000000" crmark="800000" align="left" pos="60,10" width="120" height="36" title="指令风险试算" font="default4" show="1"/>
+			<text name="txtfail" crtext="FF0000" crmark="800000" align="right" pos="200,10" width="60" height="36" title="%d笔" font="default4" show="1" />
+			<text name="txtsuccess" crtext="000000" crmark="800000" align="left" pos="260,10" width="200" height="36" title="触警，%d笔通过" font="default4" show="1"/>
+			
+			<!--指令信息汇总grid-->
+			<gridctrl name="grid.stockorder_command_hint.total" pos="5,38,-5,-62" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image=""
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+				<column title="证券代码" width="80" key="stock_code" />
+				<column title="证券名称" width="80" key="stock_name" />
+				<column title="指令价格" width="100" key="command_price" />
+				<column title="指令数量" width="80" key="command_qty" />
+				<column title="指令金额" width="100" key="command_amt" />
+				<!--column title="交易员" width="100" key="command_operator" /-->
+			</gridctrl>
+      
+      <!--分割线-->
+      <img pos="1,120,-1,123" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+      <!--指令信息明细grid-->
+			<gridctrl name="grid.stockorder_command_hint.detail" pos="5,125,-5,325" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image="" sort="1" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+        <column title="风控状态" width="120" key="risk_status" />
+				<column title="产品名称" width="120" key="product_name" />
+				<column title="单元名称" width="120" key="unit_name" />
+				<column title="指令方向" width="80" key="order_dir" />
+				<column title="指令数量" width="100" key="order_qty" />
+				<column title="指令金额" width="120" key="order_amt" />
+			</gridctrl>    
+			
+			<!--分割线-->
+      <img pos="1,326,-1,329" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+      <!--指令信息明细grid-->
+			<gridctrl name="grid.stockorder_command_hint.risk" pos="5,330,-5,-62" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep=""
+        img-count="" image="" sort="1" 
+        left-pos="0" row-height="30" header-height="45" bk-transparent="100"
+        font-title="bold3" font="default2" shortcut="SPACE"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+        <column title="合规触警序号" width="120" key="compliance_trigger_id" />
+				<column title="合规设置序号" width="120" key="compliance_set_id" />
+				<column title="合规条目编码" width="120" key="compliance_code" />
+				<column title="合规类型" width="80" key="compliance_trigger_type" />
+				<column title="合规触发信息" width="250" key="compliance_trigger_remark" />
+			</gridctrl>                 
+     	
+     	<!--分割线-->
+      <img pos="1,-63,-1,-60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+      
+      <!--提示文字、确认、取消按钮-->
+      <text crtext="000000" crmark="800000" align="left" pos="5,-45,500,-15" title="点击【返回】退回指令界面，点击【下单】直接下达订单。" font="default4" show="1" />
+      <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="下单" pos="-205,-50,-75,-10" font="default3" crtext="FFFFFF" show="1" defaultbutton="1"/>
+	  	<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="返回" pos="-70,-50,-10,-10" font="default3" show="1" defaultbutton="1"/>	  	
+		</div>
+	</body>
+</dlg>

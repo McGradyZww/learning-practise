@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组编码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组状态" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="默认组标志" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期初资产" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="交易组产品份额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="允许投资市场" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="允许操作类型" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="备注信息" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

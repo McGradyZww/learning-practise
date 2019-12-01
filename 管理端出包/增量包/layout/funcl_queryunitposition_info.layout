@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_queryunitposition_info">
+     
+      <img pos="1,4,-1,-0" image="skins\default\MsgBack.png" mode="tile" show="1" response="0" />
+      <piechart name="unitchart" pos="2,5,498,-1" title="单元资产分布" font-title="boldbig" crback="255,255,255" crtitle="255,0,0" maxchart="8" font="default1">
+      	<chartitem id="1" clrItem="47,171,233"/>
+      	<chartitem id="2" clrItem="250,186,60"/>
+      	<chartitem id="3" clrItem="200,96,39"/>
+      	<chartitem id="4" clrItem="128,128,0"/>
+      	<chartitem id="5" clrItem="220,20,60"/>
+      	<chartitem id="6" clrItem="0,100,0"/>
+      	<chartitem id="7" clrItem="255,140,0"/>
+      	<chartitem id="8" clrItem="0,0,255"/>      	
+      </piechart>
+      <img pos="499,4,500,-1" image="skins\default\line_split.png" mode="tile" show="1" />
+      
+      
+      <text pos="542,25" height="20" width="80" align="right" font="default1" crtext="191919" title="单元份额：" />
+      <text name="queryunitposition_product_share" pos="624,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" thousands_digital="1"/>
+      <text pos="532,55" height="20" width="90" align="right" font="default1" crtext="191919" title="净资产：" />
+      <text name="queryunitposition_netassets" pos="624,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" thousands_digital="1"/>
+      <text pos="498,85" height="20" width="125" align="right" font="default1" crtext="191919" title="单元单位净值：" />
+      <text name="queryunitposition_unitenetassets" pos="624,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />   
+      <text pos="542,115" height="20" width="80" align="right" font="default1" crtext="191919" title="昨日净值：" />
+      <text name="queryunitposition_yesterdaynet" pos="624,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" /> 
+ 	  	<text pos="522,145" height="20" width="100" align="right" font="default1" crtext="191919" title="净值波动：" />
+      <text name="queryunitposition_fluctuationsnet" pos="624,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      
+      
+      <!--text pos="844,25" height="20" width="100" align="right" font="default1" crtext="191919" title="沪深可用头寸：" />
+      <text name="queryproductposition_CSIpositions" pos="886,25" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="804,55" height="20" width="140" align="right" font="default1" crtext="191919" title="银行间T+0可用头寸：" />
+      <text name="queryproductposition_interbankpositions_zero" pos="886,55" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="804,85" height="20" width="140" align="right" font="default1" crtext="191919" title="银行间T+1可用头寸：" />
+      <text name="queryproductposition_interbankpositions_one" pos="886,85" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />
+      <text pos="844,115" height="20" width="100" align="right" font="default1" crtext="191919" title="期货合约市值：" />
+      <text name="queryproductposition_futurescontracts" pos="886,115" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" />  
+      <text pos="824,145" height="20" width="120" align="right" font="default1" crtext="191919" title="期货可用保证金：" />
+      <text name="queryproductposition_futuresmargin" pos="886,145" height="20" width="100" align="left" font="default1" crtext="00a0ea" title="" /-->
+      
+  </div>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<tabctrl>
+	<tab name="tab_command_trade" image="skin:IDB_TAB_ITEM" active="true" title="指令交易" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0" />
+		<tabctrl name="tab_command_trade.single" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0">
+			
+			<tab name="tab_trade_stock.command" image="skin:IDB_TAB_LOW_ITEM" title="指令交易" pos="0,30,-0,-0" menuno="61030601">
+				<img pos="4,7,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0" />
+				<layout name="split_commandtrade" layout-type="horizontal" pos="0,5,-0,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+					<layout-div name="layout-commandorder" div-pos="-350" >
+						<layout name="split_multiorderquery" layout-type="vertical" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+							<layout-div name="layout-multisumorder" div-pos="-430" min-pos="500">
+								<div name="funcl_stock_instruction_query_jy_grid" pos="4,0,-4,-4" placement="funcl_stock_instruction_query_jy_grid" />
+							</layout-div>
+							<layout-div name="layout-multisumorder-list">
+								<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+								<div name="funcl_stockorder_commandorder_unitlist" pos="0,4,-0,-51" placement="funcl_stockorder_commandorder_unitlist" />
+								<div name="funcl_stock_command_confirm" pos="0,-50,-0,-0" placement="funcl_stock_command_confirm" />
+							</layout-div>
+						</layout>
+					</layout-div>
+					<layout-div name="layout-2"  notify-scroll="1" min-pos="100">					
+						<div name="trade_stock.handicap" pos="4,4,240,-40" placement="trade_stock_handicap" />		
+						<div name="funcl_trade_command_more_bond_info" pos="4,-40,240,-0" placement="funcl_trade_command_more_bond_info" show="0" />
+						<div name="funcl_stock_order_input_command" pos="244,4,526,-0" placement="funcl_stock_order_input_command" />
+						<tabctrl name="tabctrl.command_query_info" pos="530,4,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+							<tab name="funcl_stockeorder_query_grid_ord_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="订单明细查询" active="true" pos="0,28,-0,-0">
+								<div name="funcl_stockeorder_query_grid_ord_tab" placement="funcl_stockeorder_query_grid_ord_tab" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_stockeorder_query_grid_batchsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="订单查询" active="true" pos="0,28,-0,-0">
+								<div name="funcl_stockeorder_query_grid_batchsum_tab" placement="funcl_stockeorder_query_grid_batchsum_tab" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_stockbbusin_query_grid_sum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交汇总" div="funcl_stockeorder_query_grid_tab" pos="0,28,-0,-0">
+								<div name="funcl_stockbbusin_query_grid_sum_tab" placement="funcl_stockbbusin_query_grid_sum_tab" pos="0,0,-0,-0" />
+							</tab>
+							<tab name="funcl_stockbbusin_query_grid_allsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="成交汇总" pos="0,28,-0,-0">
+								<div name="funcl_stockbbusin_query_grid_allsum_tab" placement="funcl_stockbbusin_query_grid_allsum_tab" pos="0,0,-0,-0" />
+							</tab>
+						</tabctrl>
+					</layout-div>
+				</layout>
+				<edit name="command.unitpanel.tmpedit" settitle_notify="0" tabstop="1" number="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1" readonly="0" maxchar="50" font="bigger1" editfont="bigger1" multiline="1" crtext="cf0f0f" entrer_selectall="1" nochangednotify="1" />
+			</tab>
+			<tab name="tab_command_stock.dispense" image="skin:IDB_TAB_LOW_ITEM" title="指令转发" pos="0,30,-0,-0" menuno="61030602">
+				<img pos="4,7,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0" />
+				<div name="funcl_stock_insdispense_query_grid" pos="4,4,-4,-0" placement="funcl_stock_insdispense_query_grid"/>
+			</tab>
+			
+			<tab name="tab_command_stock.externalcommand" image="skin:IDB_TAB_LOW_ITEM" title="手工指令" pos="0,30,-0,-0" menuno="61030604">
+				<img pos="4,7,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0" />
+				<div name="funcl_stock_instruction_query_external_grid" pos="4,4,-4,-352" placement="funcl_stock_instruction_query_external_grid"/>
+				<div name="funcl_stock_order_input_externalcommand" pos="4,-350,300,-0" placement="funcl_stock_order_input_externalcommand"/>
+				<!--分割线-->
+      	<img pos="1,-352,-1,-351" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+   
+				<tabctrl name="tabctrl.command_query_info" pos="300,-350,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+						
+						<tab name="funcl_stockbbusin_query_grid_allsum_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="指令成交" pos="0,28,-0,-0">
+							<div name="funcl_stockbbusin_query_grid_external_tab" pos="4,0,-4,-0" placement="funcl_stockbbusin_query_grid_external_tab"/>			
+						</tab>
+				</tabctrl>
+			</tab>
+			
+				<!-- <tab name="tab_trade_stock.command_trategic" image="skin:IDB_TAB_LOW_ITEM" title="平仓指令交易" pos="0,30,-0,-0" menuno="61030601" show="1">
+				<img pos="4,7,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0" />
+				<layout name="split_commandtrade" layout-type="horizontal" pos="0,5,-0,-0" img-split="skin:IDB_SPLIT_HORI" img-thumb="skin:IDB_SPLIT_THUMB_HORI" split-width="5" split-imm="1">
+					<layout-div name="" div-pos="-350" >
+						<layout name="" layout-type="vertical" pos="0,0,-0,-0" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+							<layout-div name="" div-pos="-830" min-pos="500">
+								<div name="funcl_stock_instruction_query_trategic_sum_grid" pos="4,0,-4,-4" placement="funcl_stock_instruction_query_trategic_sum_grid" />
+							</layout-div>
+							<layout-div name="">
+								<div name="funcl_stock_instruction_query_trategic_grid" pos="4,0,-4,-4" placement="funcl_stock_instruction_query_trategic_grid" />
+							
+								</layout-div>
+						</layout>
+					</layout-div>
+					<layout-div name="layout-2"  notify-scroll="1" min-pos="100">				
+					<div name="funcl_stock_order_input_command_trategic" pos="0,4,286,-0" placement="funcl_stock_order_input_command_trategic" />
+								
+						
+						
+							<tabctrl name="tabctrl.command_query_info" pos="286,4,-0,-0" img-sep="" img-hover="" img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3" font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+								<tab name="funcl_stockeorder_query_grid_ord_tab" image="skin:IDB_TAB_INSIDE_ITEM" title="订单查询" active="true" pos="0,28,-0,-0">
+									<div name="funcl_stockeorder_query_grid_ord_tab" placement="funcl_stockeorder_query_grid_ord_tab" pos="0,0,-0,-0" />
+								</tab>
+								<tab name="funcl_stock_instruction_log_trategic_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="下单日志" pos="0,28,-0,-0">
+									<div name="funcl_stock_instruction_log_trategic_grid" placement="funcl_stock_instruction_log_trategic_grid" pos="0,0,-0,-0" />
+								  </tab>
+						</tabctrl>
+					</layout-div>
+				</layout>
+				<edit name="command.unitpanel.tmpedit" settitle_notify="0" tabstop="1" number="1" skin="IDB_EDIT" pos="0,0" width="0" height="0" title="" show="1" readonly="0" maxchar="50" font="bigger1" editfont="bigger1" multiline="1" crtext="cf0f0f" entrer_selectall="1" nochangednotify="1" />
+			</tab> -->
+		</tabctrl>
+	</tab>
+</tabctrl>

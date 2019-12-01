@@ -1,0 +1,632 @@
+using LdNet.ClientSdk.Response;
+using LdNet.ClientCore.Sdk;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using LdNet.Communication;
+using LdNet.ClientCore.Domain.Model;
+using LDsdkDefineEx;
+
+namespace LdNet.ClientSdk.Request
+{
+    public class rksecuL_3_1_Request : BaseRequest, IRequest<rksecuL_3_1_Response>
+    {
+        public rksecuL_3_1_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.1";
+            }
+        }
+
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_2_Request : BaseRequest, IRequest<rksecuL_3_2_Response>
+    {
+        public rksecuL_3_2_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.2";
+            }
+        }
+
+        public String index_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("index_code", 'S', index_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_INDEX_CODE_STR,index_code);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_3_Request : BaseRequest, IRequest<rksecuL_3_3_Response>
+    {
+        public rksecuL_3_3_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.3";
+            }
+        }
+
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_4_Request : BaseRequest, IRequest<rksecuL_3_4_Response>
+    {
+        public rksecuL_3_4_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.4";
+            }
+        }
+
+        public int indu_type_no { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("indu_type_no", 'I', indu_type_no);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_INDU_TYPE_NO_INT,indu_type_no);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_5_Request : BaseRequest, IRequest<rksecuL_3_5_Response>
+    {
+        public rksecuL_3_5_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.5";
+            }
+        }
+
+        public int indu_type_no { get; set; }
+        public String indu_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("indu_type_no", 'I', indu_type_no);
+            packer.AddField("indu_code", 'S', indu_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_INDU_TYPE_NO_INT,indu_type_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_INDU_CODE_STR,indu_code);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_6_Request : BaseRequest, IRequest<rksecuL_3_6_Response>
+    {
+        public rksecuL_3_6_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.6";
+            }
+        }
+
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_7_Request : BaseRequest, IRequest<rksecuL_3_7_Response>
+    {
+        public rksecuL_3_7_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.7";
+            }
+        }
+
+        public String dime_type_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_8_Request : BaseRequest, IRequest<rksecuL_3_8_Response>
+    {
+        public rksecuL_3_8_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.8";
+            }
+        }
+
+        public int co_no { get; set; }
+        public int user_dim_type { get; set; }
+        public String dime_type_code { get; set; }
+        public String dime_type_name { get; set; }
+        public int weight_type { get; set; }
+        public String remark_info { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("user_dim_type", 'I', user_dim_type);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+            packer.AddField("dime_type_name", 'S', dime_type_name);
+            packer.AddField("weight_type", 'I', weight_type);
+            packer.AddField("remark_info", 'S', remark_info);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_USER_DIM_TYPE_INT,user_dim_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_NAME_STR,dime_type_name);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_WEIGHT_TYPE_INT,weight_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_REMARK_INFO_STR,remark_info);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_9_Request : BaseRequest, IRequest<rksecuL_3_9_Response>
+    {
+        public rksecuL_3_9_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.9";
+            }
+        }
+
+        public int co_no { get; set; }
+        public int user_dim_type { get; set; }
+        public String dime_type_code { get; set; }
+        public String dime_type_name { get; set; }
+        public int weight_type { get; set; }
+        public String remark_info { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("user_dim_type", 'I', user_dim_type);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+            packer.AddField("dime_type_name", 'S', dime_type_name);
+            packer.AddField("weight_type", 'I', weight_type);
+            packer.AddField("remark_info", 'S', remark_info);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_USER_DIM_TYPE_INT,user_dim_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_NAME_STR,dime_type_name);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_WEIGHT_TYPE_INT,weight_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_REMARK_INFO_STR,remark_info);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_10_Request : BaseRequest, IRequest<rksecuL_3_10_Response>
+    {
+        public rksecuL_3_10_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.10";
+            }
+        }
+
+        public int co_no { get; set; }
+        public int user_dim_type { get; set; }
+        public String dime_type_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("user_dim_type", 'I', user_dim_type);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_USER_DIM_TYPE_INT,user_dim_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_11_Request : BaseRequest, IRequest<rksecuL_3_11_Response>
+    {
+        public rksecuL_3_11_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.11";
+            }
+        }
+
+        public int co_no { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_12_Request : BaseRequest, IRequest<rksecuL_3_12_Response>
+    {
+        public rksecuL_3_12_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.12";
+            }
+        }
+
+        public int co_no { get; set; }
+        public String dime_type_code { get; set; }
+        public int exch_no { get; set; }
+        public int stock_code_no { get; set; }
+        public String stock_code { get; set; }
+        public String stock_name { get; set; }
+        public int stock_type { get; set; }
+        public double weight_value { get; set; }
+        public double weight_ratio { get; set; }
+        public String remark_info { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+            packer.AddField("exch_no", 'I', exch_no);
+            packer.AddField("stock_code_no", 'I', stock_code_no);
+            packer.AddField("stock_code", 'S', stock_code);
+            packer.AddField("stock_name", 'S', stock_name);
+            packer.AddField("stock_type", 'I', stock_type);
+            packer.AddField("weight_value", 'D', weight_value);
+            packer.AddField("weight_ratio", 'D', weight_ratio);
+            packer.AddField("remark_info", 'S', remark_info);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT,exch_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_NO_INT,stock_code_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR,stock_code);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_NAME_STR,stock_name);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_TYPE_INT,stock_type);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_WEIGHT_VALUE_FLOAT,weight_value);
+            fastMsg.SetDouble(LDBizTagDefine.LDBizTag.LDBIZ_WEIGHT_RATIO_FLOAT,weight_ratio);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_REMARK_INFO_STR,remark_info);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_13_Request : BaseRequest, IRequest<rksecuL_3_13_Response>
+    {
+        public rksecuL_3_13_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.13";
+            }
+        }
+
+        public int co_no { get; set; }
+        public String dime_type_code { get; set; }
+        public int exch_no { get; set; }
+        public int stock_code_no { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+            packer.AddField("exch_no", 'I', exch_no);
+            packer.AddField("stock_code_no", 'I', stock_code_no);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT,exch_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_NO_INT,stock_code_no);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_14_Request : BaseRequest, IRequest<rksecuL_3_14_Response>
+    {
+        public rksecuL_3_14_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.14";
+            }
+        }
+
+        public int co_no { get; set; }
+        public String dime_type_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_15_Request : BaseRequest, IRequest<rksecuL_3_15_Response>
+    {
+        public rksecuL_3_15_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.15";
+            }
+        }
+
+        public ulong dime_id { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("dime_id", 'L', dime_id);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt64(LDBizTagDefine.LDBizTag.LDBIZ_DIME_ID_INT64,dime_id);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_16_Request : BaseRequest, IRequest<rksecuL_3_16_Response>
+    {
+        public rksecuL_3_16_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.16";
+            }
+        }
+
+        public int co_no { get; set; }
+        public int dime_type { get; set; }
+        public String ctrl_cond_dim_code_str { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("co_no", 'I', co_no);
+            packer.AddField("dime_type", 'I', dime_type);
+            packer.AddField("ctrl_cond_dim_code_str", 'S', ctrl_cond_dim_code_str);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_CO_NO_INT,co_no);
+            fastMsg.SetInt32(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_INT,dime_type);
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_CTRL_COND_DIM_CODE_STR_STR,ctrl_cond_dim_code_str);
+            return fastMsg;
+        }
+   }
+
+    public class rksecuL_3_17_Request : BaseRequest, IRequest<rksecuL_3_17_Response>
+    {
+        public rksecuL_3_17_Request(ClientOperator CurrOpeartor) : base(CurrOpeartor)
+        {
+
+        }
+
+        public string FunctionNo
+        {
+            get
+            {
+                return "rksecuL.3.17";
+            }
+        }
+
+        public String dime_type_code { get; set; }
+        public void InitParams(ILdPacker packer)
+        {
+            InitCommomParams(packer,FunctionNo);
+            packer.AddField("dime_type_code", 'S', dime_type_code);
+        }
+
+         public LDFastMessageAdapter CreateFastMessage()
+         {
+                var fastMsg = new LDsdkDefineEx.LDFastMessageAdapter(FunctionNo, 0);
+                InitCommomParams(fastMsg,FunctionNo);
+
+            fastMsg.SetString(LDBizTagDefine.LDBizTag.LDBIZ_DIME_TYPE_CODE_STR,dime_type_code);
+            return fastMsg;
+        }
+   }
+
+}

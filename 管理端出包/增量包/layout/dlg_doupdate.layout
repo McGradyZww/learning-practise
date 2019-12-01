@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_doupdate" title="正在升级..." width="500" height="350"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" />
+		<button name="button.min" pos="-69,0,-35,30" skin="IDB_BT_MIN" show="1" tip="最小化" />
+	</base>
+
+	<body>
+		<img pos="0,0,-0,-0" image="skins\doupdate1.png" mode="extrude" framesize="1" show="1" response="0" />	
+		<div pos="164,30,-0,-40">
+			<text name="mainpanl.downfilelabel" pos="15,70,220,100" crtext="FFFFFF" crmark="800000" align="left" title="正在下载文件：" font="default1" show="1"/>			
+			<text name="mainpanl.downfiletips" pos="120,70,240,100" crtext="FFFFFF" crmark="800000" align="left" title="下载中" font="default1" show="1"/>
+			<progress name="mainpanl.progerssdownfile"  pos="15,95,-15,120" skin="IDB_PROGRESS" show-text="1" crtext="FFFFFF" title="" value="0" run="false" show="1" tip="下载进度" max-value="100"/>
+			
+			<text name="mainpanl.downfiles" pos="15,135,-15,160" crtext="FFFFFF" crmark="800000" align="left" title="下载总进度:" font="default1" show="1"/>
+			<progress name="mainpanl.progressdownfiletotal" pos="15,160,-15, 185"  skin="IDB_PROGRESS" show-text="1" crtext="FFFFFF" title="" value="0" run="false" show="1" tip="下载总进度" max-value="100"/>
+		</div>
+		<div pos="0,200,-0,-0">
+			<button name="mainpanl_updatecancel" tabstop="1" skin="IDB_BT_CANCEL" title="取消" pos="-129,-42" width="114" height="32" show="1" font="default3" />
+		</div>
+	</body>
+</dlg>

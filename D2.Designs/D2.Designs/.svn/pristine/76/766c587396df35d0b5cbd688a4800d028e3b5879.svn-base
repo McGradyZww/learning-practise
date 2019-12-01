@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rksecuT.5.1" procedurename="prt_rkseif_SyncSecuMarketInfo" paras="25"/>
+    <func funcname="rksecuT.5.2" procedurename="prt_rkseif_SyncSecuPosition" paras="31"/>
+    <func funcname="rksecuT.5.3" procedurename="prt_rkseif_SyncSecuAmt" paras="24"/>
+    <func funcname="rksecuT.5.4" procedurename="prt_rkseif_SyncSecuAsset" paras="18"/>
+    <func funcname="rksecuT.5.5" procedurename="prt_rkseif_SyncSecuOrder" paras="25"/>
+    <func funcname="rksecuT.5.6" procedurename="prt_rkseif_SyncSecuCommand" paras="23"/>
+    <func funcname="rksecuT.5.7" procedurename="prt_rkseif_ServerQuerySecuClientRiskRule" paras="11"/>
+    <func funcname="rksecuT.5.8" procedurename="prt_rkseif_UpdateSecuClientRiskRuleCalcStr" paras="16"/>
+    <func funcname="rksecuT.5.9" procedurename="prt_rkseif_CheckSecuClientRisk" paras="23"/>
+    <func funcname="rksecuT.5.10" procedurename="prt_rkseif_ChecktBatchSecuClientRisk" paras="23"/>
+    <func funcname="rksecuT.5.11" procedurename="prt_rkseif_UpdateProductMonitorSetServiceValue" paras="21"/>
+    <func funcname="rksecuT.5.12" procedurename="prt_rkseif_GetProductMonitor" paras="11"/>
+    <func funcname="rksecuT.5.13" procedurename="prt_rkseif_SyncSecuCostCalcType" paras="12"/>
+    <func funcname="rksecuT.5.14" procedurename="prt_rkseif_SyncSecuHKrate" paras="14"/>
+    <func funcname="rksecuT.5.15" procedurename="prt_rkseif_TruncateCalcTable" paras="10"/>
+    <func funcname="rksecuT.5.16" procedurename="prt_rkseif_CalcStockMonitorData" paras="12"/>
+    <func funcname="rksecuT.5.17" procedurename="prt_rkseif_GetBatchStockMonitor" paras="11"/>
+    <func funcname="rksecuT.5.18" procedurename="prt_rkseif_GetSingleStockMonitor" paras="38"/>
+    <func funcname="rksecuT.5.19" procedurename="prt_rkseif_GetSingleProductMonitor" paras="50"/>
+    <func funcname="rksecuT.5.20" procedurename="prt_rkseif_GetSingleT0OporResult" paras="52"/>
+    <func funcname="rksecuT.5.21" procedurename="prt_rkseif_GetSingleT0OporSumResult" paras="29"/>
+    <func funcname="rksecuT.5.22" procedurename="prt_rkseif_CheckSecuClientRisk1" paras="23"/>
+    <func funcname="rksecuT.5.23" procedurename="prt_rkseif_SyncBlockTradePosition" paras="23"/>
+    <func funcname="rksecuT.5.24" procedurename="prt_rkseif_GetSingleOporMonitor" paras="49"/>
+    <func funcname="rksecuT.5.25" procedurename="prt_rkseif_GetOporMonitor" paras="11"/>
+    <func funcname="rksecuT.5.26" procedurename="prt_rkseif_UpdateOporMonitorSetServiceValue" paras="18"/>
+    <func funcname="rksecuT.5.27" procedurename="prt_rkseif_UpdateT0OporTrigInfo" paras="40"/>
+    <func funcname="rksecuT.5.28" procedurename="prt_rkseif_UpdateT0OporSumTrigInfo" paras="26"/>
+    <func funcname="rksecuT.5.29" procedurename="prt_rkseif_GetComplianceTriggerId" paras="9"/>
+    <func funcname="rksecuT.5.30" procedurename="prt_rkseif_UpdateComplianceTriggerId" paras="11"/>
+    <func funcname="rksecuT.5.31" procedurename="prt_rkseif_GetRangeByDimeId" paras="18"/>
+    <func funcname="rksecuT.5.32" procedurename="prt_rkseif_AddComplianceTrigData" paras="29"/>
+    <func funcname="rksecuT.5.33" procedurename="prt_rkseif_SyncExchGroupInfo" paras="17"/>
+    <func funcname="rksecuT.5.34" procedurename="prt_rkseif_GetResult" paras="12"/>
+</funcs>

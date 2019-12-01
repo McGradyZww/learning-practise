@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<dlg name="dlg_ins_btcustom" title="" width="400" height="580"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						
+			<text crtext="000000" crmark="800000" align="left" pos="20,25,212,45" title="输入数量/金额后光标默认移到：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_checkcursor_ok" title="确定" skin="IDB_radiobtn" pos="217,22,277,45" crtext="191919" show="1" check="true" showfocus="0" group="1"/>
+	  		<radiobtn name="stockeorder_checkcursor_cancel" title="取消" skin="IDB_radiobtn" pos="282,22,342,45" crtext="191919" show="1"  showfocus="0" group="1" />
+	   		  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,55,122,75" title="双击持仓记录：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_checkholddbc_buy" title="买入该持仓" skin="IDB_radiobtn" pos="127,52,217,75" crtext="191919" show="1" check="true" showfocus="0" group="3"/>
+	  		<radiobtn name="stockeorder_checkholddbc_sell" title="卖出该持仓" skin="IDB_radiobtn" pos="232,52,322,75" crtext="191919" show="1"  showfocus="0" group="3"/> 
+	  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,85,146,105" title="订单方向光标默认：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_checkorderdir_defbuy" title="买入" skin="IDB_radiobtn" pos="151,82,211,105" crtext="191919" show="1" check="true" showfocus="0" group="2"/>
+	  		<radiobtn name="stockeorder_checkorderdir_deflast" title="保持上一条选择" skin="IDB_radiobtn" pos="216,82,328,105" crtext="191919" show="1"  showfocus="0" group="2"/>	  		 
+
+			<text crtext="000000" crmark="800000" align="left" pos="20,115,286,135" title="订单限价二级调整按钮调整值（默认0.1)：" font="default1" show="1" />
+			<edit name="stockeorder_order_price" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,112" width="60" height="26" title="0.1"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+
+            <text crtext="000000" crmark="800000" align="left" pos="20,145,286,165" title="订单数量/金额调整按钮调整值（默认100)：" font="default1" show="1" />
+			<edit name="stockeorder_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,142" width="60" height="26" title="100"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+               
+			<chkbtn name="stockeorder_checkbutton_sure" title="默认弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,180,236,200" crtext="191919" show="1" check="true" showfocus="0"/>
+	   		<text crtext="000000" crmark="800000" align="left" pos="40,205,192,225" title="二次确认框光标默认在：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_dlgsure_ok" title="确定" skin="IDB_radiobtn" pos="197,200,257,225" crtext="191919" show="1" showfocus="0" group="4"/>
+	  		<radiobtn name="stockeorder_dlgsure_cancel" title="取消" skin="IDB_radiobtn" pos="262,200,322,225" crtext="191919" show="1" check="true" showfocus="0" group="4"/>		  		
+			<chkbtn name="stockeorder_checkbutton_clean" title="订单下单后清空证券代码、订单价格和订单数量" skin="IDB_CHECK_BOX" pos="20,237,-5,257" 
+				crtext="191919" show="1" check="true" showfocus="0"/>	   
+			<text crtext="000000" crmark="800000" align="left" pos="20,270" width="100" height="18"  title="数量/金额填入:" font="default1" show="1" />
+			<radiobtn name="stockeorder_rdbsave" title="保留上次" skin="IDB_radiobtn" pos="115,268,195,293" crtext="191919" show="1" check="true" showfocus="0" group="5"/>
+			<radiobtn name="stockeorder_rdbmax" title="最大买卖" skin="IDB_radiobtn" pos="200,268,290,293" crtext="191919" show="1"  showfocus="0" group="5"/> 
+			<radiobtn name="stockeorder_rdbclear" title="清空" skin="IDB_radiobtn" pos="295,268,-5,293" crtext="191919" show="1"  showfocus="0" group="5"/> 
+	  	
+			<text crtext="000000" crmark="800000" align="left" pos="20,300" width="120" height="18"  title="订单默认方式:" font="default1" show="1" />
+			<text crtext="000000" crmark="800000" align="left" pos="40,330" width="35" height="18" title="买入" font="default1" show="1" />	 
+		 	<combobox name="stockeorder_combobox_buy" tabstop="0" skin="IDB_EDIT" pos="75,326" width="120" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128" value="0">
+				<item name="数量买入" value="0" />
+				<item name="金额买入" value="1" />
+				<item name="净值比例" value="2" />
+				<item name="持仓比例" value="3" />
+		 	</combobox>		  	
+		 	<text crtext="000000" crmark="800000" align="left" pos="200,330" width="35" height="18" title="卖出" font="default1" show="1" />
+			<combobox name="stockeorder_combobox_sell" tabstop="0" skin="IDB_EDIT" pos="235,326" width="120" height="26" tip=""
+							  small-image="skin:IDB_DROP_DOWN_small"
+							  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+								font="default" crtext="0,0,0" crtip="128,128,128,128" value="0" >
+				<item name="数量卖出" value="0" />
+				<item name="金额卖出" value="1" />
+				<item name="净值比例" value="2" />
+				<item name="持仓比例" value="3" />
+			</combobox>
+			
+			<text crtext="000000" crmark="800000" align="left" pos="20,360" width="120" height="18"  title="订单默认价格:" font="default1" show="1" />
+			<text crtext="000000" crmark="800000" align="left" pos="40,390" width="135" height="20"  title="买入" font="default1" show="1" />
+			<combobox name="stock.pricedefault.buy" tabstop="1" skin="IDB_EDIT" pos="75,386" width="120" height="26" 
+				small-image="skin:IDB_DROP_DOWN_small"
+				multiline="0" readonly="1" maxchar="50"
+				font="default2" crtext="0,0,0" crtip="128,128,128" >
+			</combobox>
+  		
+			<text crtext="000000" crmark="800000" align="left" pos="200,390" width="135" height="20"  title="卖出" font="default1" show="1" />
+			<combobox name="stock.pricedefault.sell" tabstop="1" skin="IDB_EDIT" pos="235,386" width="120" height="26" 
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128">
+			</combobox>
+
+			<chkbtn name="stockeorder_checkbutton_show_otherentrust" title="显示有权限的账号订单" skin="IDB_CHECK_BOX" pos="20,420"  width="200" height="18" crtext="191919" show="1" check="false" showfocus="0"/>
+			<chkbtn name="stockeorder_unithold_change" title="产品账户变更时，产品持仓联动变更" skin="IDB_CHECK_BOX" pos="20,450" width="200" height="18"  crtext="191919" show="1" check="false" showfocus="0"/>
+	    <chkbtn name="stockeorder_preorder_risk" title="订单下达前执行风险试算" skin="IDB_CHECK_BOX" pos="20,480,-5,500" crtext="191919" show="1" check="false" showfocus="1"/>
+	   
+		    <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+		
+	</body>
+  
+</dlg>

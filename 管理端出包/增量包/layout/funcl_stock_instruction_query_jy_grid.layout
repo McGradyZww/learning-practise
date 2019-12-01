@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_instruction_query_jy_grid" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+	<img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <gridctrl name="grid.funcl_stock_instruction_query" pos="2,5,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="2" image="skin:IDB_COMMAND_OUT_PRICE" sort="1" editcolumn= "1"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" primary-key="batch_no" 
+        valign="middle" down-row="1" align="center" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <!--column title="机构编号" width="100" align="center" key="company_no" /-->
+        <column title="序号" width="0" align="center" key="row_id" />  
+         <column title="批号" width="60" align="center" key="batch_no" deletable="0" data_type="N" />
+        <column title="指令序号" width="100" align="center" key="command_id" data_type="N" />
+        <column title="指令状态" width="100" align="center" key="command_status" />
+         <column title="执行进度" width="110" align="center" key="order_proc"  data_type="N"/> 
+        <column title="成交状态" width="100" align="center" key="execution_status" />
+        <column title="成交进度" width="110" align="center" key="business_proc"  data_type="N"/>       
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="指令方向" width="100" align="center" key="command_dir" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="center" key="command_qty" deletable="0" data_type="T" />
+        <column title="订单数量" width="100" align="center" key="order_qty" deletable="0" data_type="T" />
+        <column title="撤单数量" width="100" align="center" key="cancel_qty" deletable="0" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" /> 
+        <column title="指令金额" width="100" align="center" key="command_amt" data_type="T" />
+        <column title="产品编码" width="100" align="center" key="product_code" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="交易单元" width="100" align="center" key="unit_code" />
+        <column title="有效均价" width="100" align="center" key="average_price1" data_type="N" /> 
+        <column title="全天有效均价" width="100" align="center" key="average_price2" data_type="N" /> 
+        <column title="执行价差(%)" width="100" align="center" key="command_diff_price1" data_type="N"/>
+         <column title="全天执行价差(%)" width="120" align="center" key="command_diff_price2" data_type="N"/>
+        <column title="有效占比(%)" width="120" align="center" key="execution_ratio2" data_type="N"/>
+        <column title="全天有效占比(%)" width="120" align="center" key="execution_ratio4" data_type="N"/>
+        <column title="有效数量" width="100" align="center" key="execution_qty2" data_type="T"/>
+        <column title="全天有效数量" width="100" align="center" key="execution_qty4" data_type="T"/>
+        <column title="市场总成交量" width="100" align="center" key="execution_qty1" data_type="T"/>
+        <column title="执行人名称" width="100" align="center" key="command_executor_name" />
+        <column title="下达人名称" width="100" align="center" key="command_operator_name" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N" />
+		<column title="指令起始日期" width="100" align="center" key="command_begin_date" data_type="N" />
+		<column title="指令起始时间" width="100" align="center" key="command_begin_time" data_type="N" />
+		<column title="指令结束日期" width="100" align="center" key="command_end_date" data_type="N" />
+		<column title="指令结束时间" width="100" align="center" key="command_end_time" data_type="N" />
+		
+    </gridctrl>
+		<chkbtn name="check_show_cancel" title="已撤销" skin="IDB_CHECK_BOX" pos="0,-20,64,-5" crtext="e30202" show="1" check="false" showfocus="0"/>
+		<chkbtn name="check_show_execution" title="全部执行未成交" skin="IDB_CHECK_BOX" pos="64,-20,180,-5" crtext="0493a0" show="1" check="false" showfocus="0"/>
+		<chkbtn name="check_show_deal" title="全部成交" skin="IDB_CHECK_BOX" pos="180,-20,256,-5" crtext="810000" show="1" check="false" showfocus="0"/>
+ 		
+		<text crmark="800000" align="left" pos="257,-20,330,-5" title="买成交总额:" show="1"/>
+		<text name="deal.total.buy"  crtext="ff0000" crmark="800000" align="left" pos="330,-20,420,-5" title="0.00" show="1"/>
+	
+		<text crmark="800000" align="left" pos="420,-20,503,-5" title="卖成交总额:" show="1"/>
+		<text name="deal.total.sell" crtext="00ff00" crmark="800000" align="left" pos="503,-20,593,-5" title="0.00" show="1" />
+		
+		
+		<text crmark="800000" align="left" pos="593,-20,630,-5" title="轧差:" show="1"/>
+		<text name="deal.total.diff" crmark="800000" align="left" pos="630,-20,750,-5" title="0.00" show="1" />
+		
+		<button name="stockeins_button.refresh" title="" pos="-75,-27" width="50" height="25" skin="IDB_BT_STANDARD" title="刷新" font="default2" tip="刷新" show="1" />		
+		<button name="button.gird.shrink" pos="-25,-25" width="25" height="25" skin="IDB_BT_SHRINK" tip="显示" show="0" showfocus="0"/>
+		<button name="button.gird.expand" pos="-25,-25" width="25" height="25" skin="IDB_BT_EXPAND" tip="隐藏" show="1" showfocus="0"/>
+ </div>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_T+0trade_stock" image="skin:IDB_TAB_ITEM" active="true" title="增强交易" pos="0,33,-0,-0" canclose="1">
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		<!--账户区-->
+		<div name="T+0trade_stock_account" pos="5,5,-5,70" placement="T+0trade_stock_account"/>
+		
+		<!--券源区和持仓区增加分隔线-->
+		<layout name="split_T0trade_source_and_holdqry" layout-type="vertical" pos="5,75,-5,-320" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+				<layout-div name="layout_T0trade_source" div-pos="635" min-pos="300">
+						<!--券源展示区-->
+						<div name="T+0trade_stock_source" pos="0,0,-0,-0" placement="T+0trade_stock_source"/>
+						<!--div name="T+0trade_stock_source" pos="5,75,635,-320" placement="T+0trade_stock_source"/-->
+				</layout-div>
+				<layout-div name="layout_T0trade_holdqry">
+						<!--当前持仓区-->
+						<div name="T+0trade_stock_holdqry" pos="0,0,-0,-0" placement="T+0trade_stock_holdqry"/>
+						<!--div name="T+0trade_stock_holdqry" pos="640,75,-5,-320" placement="T+0trade_stock_holdqry"/-->
+				</layout-div>
+		</layout>
+		
+		<!--行情区1-->
+		<div name="T+0trade_stock_handicap1" pos="5,-315,440,-5" placement="T+0trade_stock_handicap3"/>
+		<!--交易策略区-->
+		<div name="T+0trade_stock_exchange" pos="445,-315,825,-5" placement="T+0trade_stock_exchange"/>
+		<!--订单信息区-->
+		<div name="T+0trade_stock_orderqry" pos="830,-315,1260,-120" placement="T+0trade_stock_orderqry"/>
+		<!--撤单区-->
+		<div name="T+0trade_stock_cancel" pos="1260,-315,-5,-120" placement="T+0trade_stock_cancel"/>
+		<!--成交回报信息区-->
+		<div name="T+0trade_stock_realqry" pos="830,-115,-5,-5" placement="T+0trade_stock_realqry"/>
+		
+		<!--印花税率、印花税最小收费 常量-->
+		<text name="T0trade.sell.stamp.tax.rate" crtext="000000" crmark="800000" align="left" pos="200,10,210,20" title="0.001" tip="印花税率" font="default3" show="0" />
+		<text name="T0trade.sell.min.stamp.tax" crtext="000000" crmark="800000" align="left" pos="200,10,210,20" title="0" tip="印花税最小收费" font="default3" show="0" />
+	</tab>
+</tabctrl>

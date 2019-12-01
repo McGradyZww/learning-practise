@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.15.41" procedurename="prt_feefutu_AddFutuFeeTmplat" paras="16"/>
+    <func funcname="pubT.15.42" procedurename="prt_feefutu_ModiFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.15.43" procedurename="prt_feefutu_DeleteFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.15.44" procedurename="prt_feefutu_QueryFutuFeeTmplat" paras="13"/>
+    <func funcname="pubT.15.45" procedurename="prt_feefutu_QueryFutuFeeTmplatJour" paras="14"/>
+    <func funcname="pubT.15.46" procedurename="prt_feefutu_QueryFutuFeeTmplatJour_His" paras="15"/>
+    <func funcname="pubT.15.51" procedurename="prt_feefutu_AddContrcTypeFeeTmplatDetail" paras="25"/>
+    <func funcname="pubT.15.52" procedurename="prt_feefutu_ModiContrcTypeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.15.53" procedurename="prt_feefutu_DeleteContrcTypeFeeTmplatDetail" paras="17"/>
+    <func funcname="pubT.15.54" procedurename="prt_feefutu_QueryContrcTypeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.15.55" procedurename="prt_feefutu_QueryContrcTypeFeeTmplatDetailJour" paras="16"/>
+    <func funcname="pubT.15.56" procedurename="prt_feefutu_QueryContrcTypeFeeTmplatDetailJour_His" paras="17"/>
+    <func funcname="pubT.15.61" procedurename="prt_feefutu_AddContrcCodeFeeTmplatDetail" paras="25"/>
+    <func funcname="pubT.15.62" procedurename="prt_feefutu_ModiContrcCodeFeeTmplatDetail" paras="23"/>
+    <func funcname="pubT.15.63" procedurename="prt_feefutu_DeleteContrcCodeFeeTmplatDetail" paras="17"/>
+    <func funcname="pubT.15.64" procedurename="prt_feefutu_QueryContrcCodeFeeTmplatDetail" paras="16"/>
+    <func funcname="pubT.15.65" procedurename="prt_feefutu_QueryContrcCodeFeeTmplatDetailJour" paras="16"/>
+    <func funcname="pubT.15.66" procedurename="prt_feefutu_QueryContrcCodeFeeTmplatDetailJour_His" paras="17"/>
+    <func funcname="pubT.15.121" procedurename="prt_feefutu_AddOutContrcTypeFee" paras="24"/>
+    <func funcname="pubT.15.122" procedurename="prt_feefutu_ModiOutContrcTypeFee" paras="22"/>
+    <func funcname="pubT.15.123" procedurename="prt_feefutu_DeleteOutContrcTypeFee" paras="16"/>
+    <func funcname="pubT.15.124" procedurename="prt_feefutu_QueryOutContrcTypeFee" paras="15"/>
+    <func funcname="pubT.15.125" procedurename="prt_feefutu_QueryOutContrcTypeFeeJour" paras="16"/>
+    <func funcname="pubT.15.126" procedurename="prt_feefutu_QueryOutContrcTypeFeeJour_His" paras="17"/>
+    <func funcname="pubT.15.131" procedurename="prt_feefutu_AddOutContrcCodeFee" paras="24"/>
+    <func funcname="pubT.15.132" procedurename="prt_feefutu_ModiOutContrcCodeFee" paras="22"/>
+    <func funcname="pubT.15.133" procedurename="prt_feefutu_DeleteOutContrcCodeFee" paras="16"/>
+    <func funcname="pubT.15.134" procedurename="prt_feefutu_QueryOutContrcCodeFee" paras="15"/>
+    <func funcname="pubT.15.135" procedurename="prt_feefutu_QueryOutContrcCodeFeeJour" paras="16"/>
+    <func funcname="pubT.15.136" procedurename="prt_feefutu_QueryOutContrcCodeFeeJour_His" paras="17"/>
+    <func funcname="pubT.15.141" procedurename="prt_feefutu_AddSysContrcTypeFee" paras="23"/>
+    <func funcname="pubT.15.142" procedurename="prt_feefutu_ModiSysContrcTypeFee" paras="21"/>
+    <func funcname="pubT.15.143" procedurename="prt_feefutu_DeleteSysContrcTypeFee" paras="15"/>
+    <func funcname="pubT.15.144" procedurename="prt_feefutu_QuerySysContrcTypeFee" paras="14"/>
+    <func funcname="pubT.15.145" procedurename="prt_feefutu_QuerySysContrcTypeFeeJour" paras="15"/>
+    <func funcname="pubT.15.146" procedurename="prt_feefutu_QuerySysContrcTypeFeeJour_His" paras="16"/>
+    <func funcname="pubT.15.151" procedurename="prt_feefutu_AddSysContrcCodeFee" paras="23"/>
+    <func funcname="pubT.15.152" procedurename="prt_feefutu_ModiSysContrcCodeFee" paras="21"/>
+    <func funcname="pubT.15.153" procedurename="prt_feefutu_DeleteSysContrcCodeFee" paras="15"/>
+    <func funcname="pubT.15.154" procedurename="prt_feefutu_QuerySysContrcCodeFee" paras="14"/>
+    <func funcname="pubT.15.155" procedurename="prt_feefutu_QuerySysContrcCodeFeeJour" paras="15"/>
+    <func funcname="pubT.15.156" procedurename="prt_feefutu_QuerySysContrcCodeFeeJour_His" paras="16"/>
+    <func funcname="pubT.15.302" procedurename="prt_feefutu_QueryFeeNo" paras="13"/>
+</funcs>

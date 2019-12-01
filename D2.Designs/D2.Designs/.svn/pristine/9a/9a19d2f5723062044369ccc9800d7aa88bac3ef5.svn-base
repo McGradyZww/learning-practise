@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.15.1" procedurename="prt_pdfu_GetSyncTime" paras="14"/>
+    <func funcname="pdfutuT.15.2" procedurename="prt_pdfu_UpdateSyncTime" paras="14"/>
+    <func funcname="pdfutuT.15.12" procedurename="prt_pdfu_Syncpdfuca_exgp_capit" paras="113"/>
+    <func funcname="pdfutuT.15.13" procedurename="prt_pdfu_Syncpdfuca_exgp_asset" paras="113"/>
+    <func funcname="pdfutuT.15.14" procedurename="prt_pdfu_Syncpdfuca_asac_capit" paras="113"/>
+    <func funcname="pdfutuT.15.15" procedurename="prt_pdfu_Syncpdfupo_exgp_posi" paras="113"/>
+    <func funcname="pdfutuT.15.16" procedurename="prt_pdfu_Syncpdfupo_asac_posi" paras="113"/>
+</funcs>

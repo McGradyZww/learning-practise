@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_trade_freedom_baskettrading_revocation_replenish" title="" width="1024" height="600"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="50,5,200,25" title="订单撤补" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		
+		
+		<div name="trade_stock_handicap" pos="4,5,235,-30" placement="trade_stock_handicap" show="1" />
+		    <!-- -->
+	    <div name="funcl_trade_freedom_baskettrading_revocation_replenish_input" pos="240,5,-0,-0"  placement="funcl_trade_freedom_baskettrading_revocation_replenish_input" show="1" />
+			   
+		</div>
+		
+	</body>
+  
+</dlg>

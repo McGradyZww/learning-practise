@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_unit_bond_hold_query_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+	 <!--<img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0" />-->
+	<gridctrl name="grid.funcl_unit_bond_hold_query" pos="2,2,-2,-41" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" primary-key="row_id"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2"  sort="1" header-check="0"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+		<column title="债券代码" width="100" align="center" key="stock_code"  />
+		<column title="债券名称" width="100" align="center" key="stock_name"  />        
+		<column title="持仓数量" width="100" align="center" key="holding_qty"  />    
+		<column title="已质押数量" width="100" align="center" key="impawn_qty"  />    
+		<column title="可质押数量" width="100" align="center" key="order_impawn_available_qty"  />         
+		<column title="百元利息" width="100" align="center" key="bond_interest" />
+		<column title="净价" width="100" align="center" key="net_price" />
+		<column title="全价" width="100" align="center" key="full_price" />  
+		<column title="产品" width="100" align="center" key="product_name" />
+		<column title="交易单元" width="100" align="center" key="unit_name" />
+		<column title="证券类型" width="100" align="center" key="stock_type" />
+		<column title="产品代码" width="0" align="center" key="product_code" />
+		<column title="交易单元代码" width="0" align="center" key="unit_code" />
+		<column title="证券账户" width="0" align="center" key="asset_account" />  
+		<column title="股东代码" width="0" align="center" key="stock_account" />  
+		<column title="交易市场" width="0" align="center" key="exchange_no" />  
+		<column title="质押比率" width="0" align="center" key="impawn_ratio"  />   		
+		<column title="编号" width="0" align="center" key="row_id" />   
+        <column title="质押代码" width="0" align="center" key="impawn_code"  />                     
+        <column title="可用标准券" width="0" align="center" key="target_code_available_qty" />        
+    </gridctrl>
+	
+	<!---
+	<img pos="0,-40,-0,-0" image="skins\default\TabBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+
+	  <text crtext="000000" crmark="800000" align="right" pos="10,-30" width="64" height="30" title="质押代码:" show="1"/>
+	  <edit name="bond.collateral.stock_code" tabstop="1" skin="IDB_EDIT" pos="80,-35" width="80" height="30"
+               multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" disable="1" />
+			   
+
+	  <radiobtn name="bond.collateral.commit" tabstop="1" title="质押提交" skin="IDB_radiobtn" pos="180,-35" width="80" height="30" crtext="cf0f0f" show="1" check="true" showfocus="1" group="1" shortcut="B" enabledirkey="1" font="default1"/>
+	  <radiobtn name="bond.collateral.turnback" tabstop="1" title="质押转回" skin="IDB_radiobtn" pos="280,-35" width="80" height="30" crtext="00ff00" show="1"  showfocus="1" group="1" shortcut="S" enabledirkey="1" font="default1"/>
+	  
+	 <button name="bond.collateral.clac" tabstop="1" skin="IDB_BT_BIG" title="计算" pos="370,-35"  width="80" height="30" />
+	 <button name="bond.collateral.ok" tabstop="1" skin="IDB_BT_BIG" title="确定" pos="460,-35"  width="80" height="30" shortcut="RETURN" />
+	 <button name="bond.collateral.cancle" tabstop="0" skin="IDB_BT_BIG" title="取消" pos="550,-35" width="80" height="30" shortcut="" />
+	 
+	<text crtext="000000" crmark="800000" align="right" pos="-500,-30" width="64" height="25" title="交易单元:"  show="1"/>
+    <combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="-436,-35" width="120" height="30" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  
+	
+	<text crtext="000000" crmark="800000" align="right" pos="-315,-30" width="64" height="25" title="债券代码:" show="1"/>
+	<edit name="stockeorder_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="-250,-35" width="80" height="30"
+               multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1" maxchar="6"/>
+	 
+	  
+	<button name="stockeorder_button.query" title="" pos="-165,-35" width="80" height="30" skin="IDB_BT_BIG" title="查询" tip="查询" show="1" />
+	<button name="button_unit_bond_hold.refresh" title="" pos="-80,-35" width="50" height="30" skin="IDB_BT_SMALL" title="刷新" tip="刷新" show="1" />
+	 
+	 
+	 <button name="stockeorder_button.query" title="" pos="595,-27" width="80" height="25" skin="IDB_BT_QUERY" tip="查询" show="1" />
+     <button name="unitstock_button.refresh" title="" pos="-186,-27" width="70" height="25" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+	 <button name="unitstock_button.export" title="" pos="-106,-27" width="70" height="25" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+	 --->
+   
+  </div>

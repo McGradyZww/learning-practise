@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="rptT.1.1" procedurename="prt_rpt_Init_Exch" paras="10"/>
+    <func funcname="rptT.1.2" procedurename="prt_rpt_Init_System" paras="10"/>
+    <func funcname="rptT.1.3" procedurename="prt_rpt_Qry_Sys_Initdate" paras="12"/>
+    <func funcname="rptT.1.21" procedurename="prt_rpt_Add_Def_Sqls_Repo" paras="17"/>
+    <func funcname="rptT.1.22" procedurename="prt_rpt_Modi_Def_Sqls_Repo" paras="17"/>
+    <func funcname="rptT.1.23" procedurename="prt_rpt_Run_Def_Sqls_Repo" paras="11"/>
+    <func funcname="rptT.1.25" procedurename="prt_rpt_Add_Def_Exe_Sqls" paras="22"/>
+    <func funcname="rptT.1.27" procedurename="prt_rpt_Run_Init_Exe_Sql_Grps" paras="12"/>
+    <func funcname="rptT.1.30" procedurename="prt_rpt_Run_Exe_Sql_Grps" paras="17"/>
+</funcs>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.1.901" procedurename="prt_pdseac_GetMarketBusiRecordNo" paras="12"/>
+    <func funcname="pdsecuT.1.40" procedurename="prt_pdseac_CheckSecuAccoExists" paras="13"/>
+    <func funcname="pdsecuT.1.41" procedurename="prt_pdseac_AddSecuAccoInfo" paras="23"/>
+    <func funcname="pdsecuT.1.42" procedurename="prt_pdseac_ModiSecuAccoInfo" paras="22"/>
+    <func funcname="pdsecuT.1.43" procedurename="prt_pdseac_DeleteSecuAccoInfo" paras="16"/>
+    <func funcname="pdsecuT.1.44" procedurename="prt_pdseac_QuerySecuAccoInfo" paras="18"/>
+    <func funcname="pdsecuT.1.45" procedurename="prt_pdseac_QuerySecuAccoInfoJour" paras="16"/>
+    <func funcname="pdsecuT.1.46" procedurename="prt_pdseac_QuerySecuAccoInfoJour_His" paras="18"/>
+    <func funcname="pdsecuT.1.47" procedurename="prt_pdseac_UpdateSecuAccoStatus" paras="17"/>
+    <func funcname="pdsecuT.1.48" procedurename="prt_pdseac_CheckSecuAccoStatus" paras="15"/>
+    <func funcname="pdsecuT.1.51" procedurename="prt_pdseac_QuerySecuAccoList" paras="9"/>
+    <func funcname="pdsecuT.1.61" procedurename="prt_pdseac_InsertSecuAccoNewStockConfig" paras="15"/>
+    <func funcname="pdsecuT.1.62" procedurename="prt_pdseac_UpdateSecuAccoNewStockConfig" paras="14"/>
+    <func funcname="pdsecuT.1.63" procedurename="prt_pdseac_DeleteSecuAccoNewStockConfig" paras="12"/>
+    <func funcname="pdsecuT.1.64" procedurename="prt_pdseac_QuerySecuAccoNewStockConfig" paras="16"/>
+    <func funcname="pdsecuT.1.501" procedurename="prt_pdseac_QueryStockAccoByTrans" paras="10"/>
+    <func funcname="pdsecuT.1.502" procedurename="prt_pdseac_GetHKCodeExchNo" paras="12"/>
+    <func funcname="pdsecuT.1.65" procedurename="prt_pdseac_CheckComboExgpExists" paras="13"/>
+    <func funcname="pdsecuT.1.71" procedurename="prt_pdseac_UpdateAssetAccoStockHoldersInfo" paras="22"/>
+    <func funcname="pdsecuT.1.72" procedurename="prt_pdseac_UpdateSecuAccoStockHoldersStatus" paras="15"/>
+    <func funcname="pdsecuT.1.73" procedurename="prt_pdseac_CheckAsacIfCancel" paras="13"/>
+    <func funcname="pdsecuT.1.74" procedurename="prt_pdseac_CancelAsacRollBackCapitalPosi" paras="19"/>
+    <func funcname="pdsecuT.1.75" procedurename="prt_pdseac_QueryAsacAllExgpCapit" paras="13"/>
+    <func funcname="pdsecuT.1.76" procedurename="prt_pdseac_QueryAsacAllExgpPosi" paras="12"/>
+    <func funcname="pdsecuT.1.77" procedurename="prt_pdseac_QueryAsacAllBlockTradePosi" paras="12"/>
+    <func funcname="pdsecuT.1.79" procedurename="prt_pdseac_GetHoldersCodeNo" paras="11"/>
+    <func funcname="pdsecuT.1.80" procedurename="prt_pdseac_CheckStockAccoIfCancel" paras="14"/>
+    <func funcname="pdsecuT.1.81" procedurename="prt_pdseac_CancelStockAccoRollBackPosi" paras="15"/>
+    <func funcname="pdsecuT.1.82" procedurename="prt_pdseac_AddSecuAccoAutoReverseRepoConfig" paras="19"/>
+    <func funcname="pdsecuT.1.83" procedurename="prt_pdseac_ModiSecuAccoAutoReverseRepoConfig" paras="19"/>
+    <func funcname="pdsecuT.1.84" procedurename="prt_pdseac_DeleteSecuAccoAutoReverseRepoConfig" paras="15"/>
+    <func funcname="pdsecuT.1.85" procedurename="prt_pdseac_QuerySecuAccoAutoReverseRepoConfig" paras="17"/>
+</funcs>

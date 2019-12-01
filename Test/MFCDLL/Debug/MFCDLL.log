@@ -1,0 +1,20 @@
+﻿生成启动时间为 2019.07.29 14:01:15。
+     1>项目“D:\learning\Test\MFCDLL\MFCDLL.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>ClCompile:
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\MFCDLL.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MFCDLL.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MFCDLL.cpp
+         MFCDLL.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\MFCDLL.res" MFCDLL.rc 
+       Link:
+         E:\Software\VS系列\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\learning\Test\Bin\Debug\MFCDLL.dll" /INCREMENTAL /NOLOGO /DEF:".\MFCDLL.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"E:\Software\VS系列\VS2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\learning\Test\Bin\Debug\MFCDLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\learning\Test\lib\MFCDLL.lib" /MACHINE:X86 /DLL Debug\MFCDLL.res
+         Debug\MFCDLL.obj
+         Debug\stdafx.obj
+            正在创建库 D:\learning\Test\lib\MFCDLL.lib 和对象 D:\learning\Test\lib\MFCDLL.exp
+         MFCDLL.vcxproj -> D:\learning\Test\Bin\Debug\MFCDLL.dll
+     1>已完成生成项目“D:\learning\Test\MFCDLL\MFCDLL.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.11

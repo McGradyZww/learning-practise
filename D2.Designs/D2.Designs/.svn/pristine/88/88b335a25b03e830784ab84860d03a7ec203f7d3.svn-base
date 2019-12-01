@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.15.1" procedurename="prt_tdfusyn_GetSyncTime" paras="14"/>
+    <func funcname="tdfutuT.15.2" procedurename="prt_tdfusyn_UpdateSyncTime" paras="14"/>
+    <func funcname="tdfutuT.15.12" procedurename="prt_tdfusyn_Synctdfuac_exgp_busi_capit" paras="113"/>
+    <func funcname="tdfutuT.15.13" procedurename="prt_tdfusyn_Synctdfuac_asac_busi_capit" paras="113"/>
+    <func funcname="tdfutuT.15.14" procedurename="prt_tdfusyn_Synctdfuac_exgp_busi_posi" paras="113"/>
+    <func funcname="tdfutuT.15.15" procedurename="prt_tdfusyn_Synctdfuac_asac_busi_posi" paras="113"/>
+    <func funcname="tdfutuT.15.16" procedurename="prt_tdfusyn_Synctdfuac_exgp_posi_detail" paras="113"/>
+</funcs>

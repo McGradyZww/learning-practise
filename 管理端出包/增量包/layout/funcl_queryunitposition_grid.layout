@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_queryunitposition_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <piechart name="unitholdchart" pos="2,0,498,-1" title="单元持仓分布" show="0" font-title="boldbig" crback="255,255,255" crtitle="255,0,0" maxchart="10" font="default1">
+      	<chartitem id="1" clrItem="47,171,233"/>
+      	<chartitem id="2" clrItem="250,186,60"/>
+      	<chartitem id="3" clrItem="200,96,39"/>
+      	<chartitem id="4" clrItem="128,128,0"/>
+      	<chartitem id="5" clrItem="220,20,60"/>
+      	<chartitem id="6" clrItem="0,100,0"/>
+      	<chartitem id="7" clrItem="255,140,0"/>
+      	<chartitem id="8" clrItem="0,0,255"/>  
+      	<chartitem id="9" clrItem="255,155,0"/>  
+      	<chartitem id="10" clrItem="0,200,255"/>      	
+      </piechart>
+    <text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="" font="big" show="0" />
+    
+    <img pos="499,0,500,-1" image="skins\default\line_split.png" mode="tile" show="0" />	
+    <gridctrl name="grid.funcl_QueryUnitPosition" pos="2,5,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1"  editcolumn= "1"
+        valign="middle" down-row="0" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="初始化日期" width="100" align="center" key="init_date" />
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+				<column title="当前数量" width="100" align="center" key="current_qty" data_type="T" />
+        <column title="期初数量" width="100" align="center" key="begin_qty" data_type="T" />				
+        <column title="持仓市值" width="100" align="center" key="holding_amt" data_type="T" />
+        <column title="成本价" width="100" align="center" key="cost_price" data_type="N" />
+        <column title="成本金额" width="100" align="center" key="current_cost_amt" data_type="T" />
+        <column title="浮动盈亏" width="100" align="center" key="float_pandl" data_type="T" />
+        <column title="实现盈亏" width="100" align="center" key="realize_pandl" data_type="T" />
+        <column title="浮动盈亏比例" width="100" align="center" key="float_pandl_ratio" data_type="N"/>
+ 				<column title="市值占比" width="100" align="center" key="market_value_ratio" data_type="N"/>
+        <column title="净值占比" width="100" align="center" key="Nav_ratio" data_type="N"/>
+
+    </gridctrl>
+  </div>

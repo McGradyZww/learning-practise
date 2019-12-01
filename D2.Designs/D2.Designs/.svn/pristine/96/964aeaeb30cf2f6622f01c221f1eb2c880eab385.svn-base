@@ -1,0 +1,7 @@
+EXPORTS
+	Onload
+	Onunload
+	Onstart
+	Onstop
+	QueryInterface
+	GetLibVersion

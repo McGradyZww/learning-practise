@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+	<tab name="tab_jours_query" image="skin:IDB_TAB_ITEM" active="true" title="流水查询" pos="0,33,-0,-0" canclose="1">
+	<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/> 
+		<img pos="0,0,-0,-0" image="skins\default\TabBack.png" mode="frame" framesize="1" show="1" response="0"/>
+		
+		<tabctrl name="tab_orderjour_query.first" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="tab_commandjour_query" image="skin:IDB_TAB_LOW_ITEM" title="指令流水查询" active="true" pos="0,30,-0,-0"  menuno="61050301">        	
+					<div name="funcl_commandjour_query_grid" placement="funcl_commandjour_query_grid" pos="4,10,-0,-0" />		      	        
+				</tab>
+				<tab name="tab_orderjour_query" image="skin:IDB_TAB_LOW_ITEM" title="订单流水查询" pos="0,30,-0,-0" menuno="61050302">		        	
+						<div name="funcl_orderjour_query_grid" placement="funcl_orderjour_query_grid" pos="4,10,-0,-0" />		      	        
+				</tab>				
+				<tab name="tab_exceptionjour_query" image="skin:IDB_TAB_LOW_ITEM" title="成交流水查询" pos="0,30,-0,-0" menuno="61050303">
+						<div name="funcl_exceptionjour_query_grid" placement="funcl_exceptionjour_query_grid" pos="4,10,-0,-0" />	
+				</tab>		
+				<tab name="tab_equitiescashjour_query" image="skin:IDB_TAB_LOW_ITEM" title="证券资金流水查询" pos="0,30,-0,-0" menuno="61050304">
+						<div name="funcl_equitiescashjour_query_grid" placement="funcl_equitiescashjour_query_grid" pos="4,10,-0,-0" />	
+				</tab>					
+				<tab name="tab_modifyjour_query" image="skin:IDB_TAB_LOW_ITEM" title="证券改单流水查询" pos="0,30,-0,-0" menuno="61050305">
+						<div name="funcl_modifyjour_query_grid" placement="funcl_modifyjour_query_grid" pos="4,10,-0,-0" />	
+				</tab>
+				<tab name="tab_dispensejour_query" image="skin:IDB_TAB_LOW_ITEM" title="指令分发流水查询" pos="0,30,-0,-0" menuno="61050306">
+						<div name="funcl_dispensejour_query_grid" placement="funcl_dispensejour_query_grid" pos="4,10,-0,-0" />	
+				</tab>				
+		</tabctrl>
+	</tab>
+</tabctrl>

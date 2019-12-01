@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_basket_import" title="" width="600" height="400"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="篮子成分导入" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+       <text crtext="000000" crmark="800000" align="left" pos="16,8,80,26" title="文件路径:" font="default1" show="1" />
+						
+       <edit name="basket_composition_file" tabstop="1" skin="IDB_EDIT" pos="82,6" width="380" height="26"
+             multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+             font="default1" crtext="0,0,0" />
+       <button name="button_browse" tabstop="1" skin="IDB_BT_DEFAULT" title="浏览..." pos="462,8,522,30" shortcut="RETURN" crtext="0" font="default1"/>        
+       <text crtext="000000" crmark="800000" align="left" pos="20,50,400,86" title="导入说明" font="bigger" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,90,580,110" title="1.支持导入文件格式：仅支持导入excel(*.xls;*.xlsx)" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,112,580,132" title="2.导入字段格式：导入文件第一行为列标题，每列字段顺序必须按照以下先后顺序" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="40,134,104,154" title="证券代码:" font="bold1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="106,134,580,154" title="必填字段，6位数字，不足6位时系统会自动在左边补0" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="40,156,104,176" title="权重比例:" font="bold1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="106,156,580,176" title="篮子类型为权重比例才有效，例如权重10%，改字段填10" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="40,178,104,198" title="成分数量:" font="bold1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="106,178,580,198" title="篮子类型为绝对数量才有效，数值填写实际数量，数量必须是手(100股)的整数倍" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="40,200,104,220" title="替代股份:" font="bold1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="106,200,580,220" title="可填字段，6位数字，不足6位时系统会自动在左边补0" font="default1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="40,222,104,242" title="替代数量:" font="bold1" show="1" />
+       <text crtext="000000" crmark="800000" align="left" pos="106,222,580,242" title="篮子类型为绝对数量才有效，数值填写实际数量，数量必须是手(100股)的整数倍" font="default1" show="1" />
+
+       <text crtext="FF0000" crmark="800000" align="left" pos="20,280,580,300" title="注意事项：导入数据会覆盖原有篮子的所有数据，导入之前请确认导入文件是否正确" font="bold1" show="1" />
+
+       <button name="button.ok" tabstop="1" skin="IDB_BT_OK" title="确 定" pos="-154,-34,-84,-8" shortcut="RETURN" crtext="ffffff" font="default1"/>        
+       <button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-78,-34,-8,-8" shortcut="RETURN" crtext="0" font="default1"/>        
+               
+		</div>
+		
+	</body>
+  
+</dlg>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="prodT.8.11" procedurename="prt_pdexif_CheckApprProdAccoInfo" paras="42"/>
+    <func funcname="prodT.8.12" procedurename="prt_pdexif_CheckApprProdAccoBatchInfo" paras="39"/>
+    <func funcname="prodT.8.13" procedurename="prt_pdexif_CheckCommApprProdAccoInfo" paras="39"/>
+    <func funcname="prodT.8.21" procedurename="prt_pdexif_CheckExchProdAccoInfo" paras="45"/>
+    <func funcname="prodT.8.22" procedurename="prt_pdexif_CheckExchProdAccoBatchInfo" paras="43"/>
+    <func funcname="prodT.8.108" procedurename="prt_pdexif_CheckFutuExchProdAccoInfo" paras="27"/>
+    <func funcname="prodT.8.109" procedurename="prt_pdexif_CheckFutuCommProdAccoInfo" paras="39"/>
+    <func funcname="prodT.8.110" procedurename="prt_pdexif_CheckFutuApprProdAccoInfo" paras="27"/>
+    <func funcname="prodT.8.111" procedurename="prt_pdexif_GetAccoDefaultExgp" paras="11"/>
+    <func funcname="prodT.8.112" procedurename="prt_pdexif_GetFinaLoanRepaymentWay" paras="15"/>
+</funcs>

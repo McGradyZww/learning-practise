@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.9.1" procedurename="prt_pdsepobk_GetInSecuPosi" paras="21"/>
+    <func funcname="pdsecuT.9.2" procedurename="prt_pdsepobk_AddInSecuPosiCkeck" paras="28"/>
+    <func funcname="pdsecuT.9.3" procedurename="prt_pdsepobk_QuerySecuPosiDiff" paras="22"/>
+    <func funcname="pdsecuT.9.4" procedurename="prt_pdsepobk_DealSecuPosiDiff" paras="54"/>
+    <func funcname="pdsecuT.9.5" procedurename="prt_pdsepobk_AddEvaluOutSecuPosi" paras="27"/>
+    <func funcname="pdsecuT.9.6" procedurename="prt_pdsepobk_QueryEvaluOutSecuPosi" paras="12"/>
+    <func funcname="pdsecuT.9.7" procedurename="prt_pdsepobk_QueryOutSecuPosi" paras="14"/>
+    <func funcname="pdsecuT.9.8" procedurename="prt_pdsepobk_SynchronizedDiff" paras="29"/>
+    <func funcname="pdsecuT.9.9" procedurename="prt_pdsepobk_GetOutPosiData" paras="28"/>
+    <func funcname="pdsecuT.9.10" procedurename="prt_pdsepobk_GetSecuPosiDiffData" paras="13"/>
+    <func funcname="pdsecuT.9.11" procedurename="prt_pdsepobk_GetInBondPledge" paras="20"/>
+    <func funcname="pdsecuT.9.12" procedurename="prt_pdsepobk_AddInBondPledgeCkeck" paras="27"/>
+    <func funcname="pdsecuT.9.13" procedurename="prt_pdsepobk_QueryBondPledgeDiff" paras="19"/>
+    <func funcname="pdsecuT.9.14" procedurename="prt_pdsepobk_DealBondPledgeDiff" paras="14"/>
+    <func funcname="pdsecuT.9.15" procedurename="prt_pdsepobk_GetBondPledgeDiff" paras="11"/>
+    <func funcname="pdsecuT.9.16" procedurename="prt_pdsepobk_SynchronizedBondPledgeDiff" paras="11"/>
+    <func funcname="pdsecuT.9.17" procedurename="prt_pdsepobk_ClearOutPosiRecordDiffRecord" paras="11"/>
+    <func funcname="pdsecuT.9.31" procedurename="prt_pdsepobk_GetBondImpawnInfo" paras="13"/>
+    <func funcname="pdsecuT.9.32" procedurename="prt_pdsepobk_UpdateBondImpawnRatio" paras="13"/>
+    <func funcname="pdsecuT.9.33" procedurename="prt_pdsepobk_ReCalcBondImpawnQty" paras="9"/>
+    <func funcname="pdsecuT.9.71" procedurename="prt_pdsepobk_QueryAsacPosi" paras="18"/>
+    <func funcname="pdsecuT.9.72" procedurename="prt_pdsepobk_QueryAsacPosi_His" paras="19"/>
+    <func funcname="pdsecuT.9.81" procedurename="prt_pdsepobk_QueryAsacPosiJour" paras="19"/>
+    <func funcname="pdsecuT.9.82" procedurename="prt_pdsepobk_QueryAsacPosiJour_His" paras="20"/>
+    <func funcname="pdsecuT.9.83" procedurename="prt_pdsepobk_QueryChannelSecuPosiDiff" paras="23"/>
+    <func funcname="pdsecuT.9.84" procedurename="prt_pdsepobk_QueryAllExgpPosi" paras="19"/>
+</funcs>

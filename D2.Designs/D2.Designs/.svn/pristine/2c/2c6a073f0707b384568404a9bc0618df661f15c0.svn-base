@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="clsecuT.21.1" procedurename="prt_clcrdtcl_AddOutBusi" paras="56"/>
+    <func funcname="clsecuT.21.3" procedurename="prt_clcrdtcl_QueryOutBusi" paras="23"/>
+    <func funcname="clsecuT.21.5" procedurename="prt_clcrdtcl_UpdateBusiClearFlag" paras="11"/>
+    <func funcname="clsecuT.21.11" procedurename="prt_clcrdtcl_DealClear" paras="21"/>
+    <func funcname="clsecuT.21.12" procedurename="prt_clcrdtcl_UpdateGetMergeClear" paras="65"/>
+    <func funcname="clsecuT.21.13" procedurename="prt_clcrdtcl_UpdateMergeClearFlag" paras="11"/>
+    <func funcname="clsecuT.21.14" procedurename="prt_clcrdtcl_QueryMergeClear" paras="14"/>
+    <func funcname="clsecuT.21.15" procedurename="prt_clcrdtcl_DealMergeClear" paras="70"/>
+    <func funcname="clsecuT.21.21" procedurename="prt_clcrdtcl_UpdatePreEntryEntryStatus" paras="12"/>
+    <func funcname="clsecuT.21.22" procedurename="prt_clcrdtcl_UpdatePreEntryUndoStatus" paras="13"/>
+    <func funcname="clsecuT.21.23" procedurename="prt_clcrdtcl_UpdatePreEntry" paras="13"/>
+    <func funcname="clsecuT.21.24" procedurename="prt_clcrdtcl_UpdateGetPreEntry" paras="67"/>
+    <func funcname="clsecuT.21.25" procedurename="prt_clcrdtcl_UpdateGetPreEntryUndo" paras="61"/>
+    <func funcname="clsecuT.21.26" procedurename="prt_clcrdtcl_QueryPreEntry" paras="22"/>
+    <func funcname="clsecuT.21.27" procedurename="prt_clcrdtcl_DealEntryError" paras="20"/>
+    <func funcname="clsecuT.21.28" procedurename="prt_clcrdtcl_UpdateEntryJour" paras="15"/>
+    <func funcname="clsecuT.21.29" procedurename="prt_clcrdtcl_DealEntryJourUndo" paras="17"/>
+    <func funcname="clsecuT.21.30" procedurename="prt_clcrdtcl_GetPreEntryInfo" paras="15"/>
+    <func funcname="clsecuT.21.31" procedurename="prt_clcrdtcl_QueryRetuPreEntry" paras="11"/>
+    <func funcname="clsecuT.21.32" procedurename="prt_clcrdtcl_QueryLoanSellAmt" paras="10"/>
+    <func funcname="clsecuT.21.33" procedurename="prt_clcrdtcl_UpdatePreEntryDealFlag" paras="21"/>
+    <func funcname="clsecuT.21.34" procedurename="prt_clcrdtcl_UpdatePreEntryLoanSellFlag" paras="14"/>
+    <func funcname="clsecuT.21.201" procedurename="prt_clcrdtcl_DataTotal" paras="10"/>
+    <func funcname="clsecuT.21.202" procedurename="prt_clcrdtcl_QueryTotalData" paras="18"/>
+    <func funcname="clsecuT.21.203" procedurename="prt_clcrdtcl_GetClrTotalData" paras="14"/>
+    <func funcname="clsecuT.21.204" procedurename="prt_clcrdtcl_QueryClearStrikeId" paras="11"/>
+    <func funcname="clsecuT.21.205" procedurename="prt_clcrdtcl_QueryMergeClearId" paras="11"/>
+    <func funcname="clsecuT.21.206" procedurename="prt_clcrdtcl_QueryPreEntryId" paras="11"/>
+    <func funcname="clsecuT.21.301" procedurename="prt_clcrdtcl_DataToHis" paras="10"/>
+</funcs>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ClientType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>ZG</Type>
+  <IsRiskVoice>No</IsRiskVoice>
+  <IsT0TsholdTotalVoice>No</IsT0TsholdTotalVoice>
+  <IsT0TsholdSingleVoice>No</IsT0TsholdSingleVoice>
+</ClientType>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.5.1" procedurename="prt_tdserp_DealOrderRsp" paras="61"/>
+    <func funcname="tdsecuT.5.11" procedurename="prt_tdserp_DealWithdrawRsp" paras="60"/>
+    <func funcname="tdsecuT.5.20" procedurename="prt_tdserp_CheckStrikeRspGetOrderInfo" paras="58"/>
+    <func funcname="tdsecuT.5.21" procedurename="prt_tdserp_DealStrikeRsp" paras="77"/>
+    <func funcname="tdsecuT.5.22" procedurename="prt_tdserp_DealSumStrikeRsp" paras="76"/>
+    <func funcname="tdsecuT.5.23" procedurename="prt_tdserp_DealStrikeRspFee" paras="74"/>
+    <func funcname="tdsecuT.5.24" procedurename="prt_tdserp_DealExterCommStrike" paras="83"/>
+    <func funcname="tdsecuT.5.25" procedurename="prt_tdserp_BackGetExterCommStrike" paras="62"/>
+    <func funcname="tdsecuT.5.26" procedurename="prt_tdserp_BackExterCommStrike" paras="70"/>
+    <func funcname="tdsecuT.5.31" procedurename="prt_tdserp_AddMissOrder" paras="84"/>
+    <func funcname="tdsecuT.5.32" procedurename="prt_tdserp_ComboNotEnoughDeal" paras="37"/>
+    <func funcname="tdsecuT.5.101" procedurename="prt_tdserp_QueryOrderRsp" paras="20"/>
+    <func funcname="tdsecuT.5.121" procedurename="prt_tdserp_QueryStrikeRsp" paras="19"/>
+    <func funcname="tdsecuT.5.122" procedurename="prt_tdserp_QueryStrikeDetail" paras="30"/>
+    <func funcname="tdsecuT.5.123" procedurename="prt_tdserp_QueryStrikeDetail_His" paras="32"/>
+    <func funcname="tdsecuT.5.124" procedurename="prt_tdserp_QueryStrikeSummary" paras="27"/>
+    <func funcname="tdsecuT.5.125" procedurename="prt_tdserp_QueryStrikeSummary_His" paras="28"/>
+    <func funcname="tdsecuT.5.126" procedurename="prt_tdserp_QueryOutTradeDiffRecord" paras="21"/>
+    <func funcname="tdsecuT.5.127" procedurename="prt_tdserp_QueryOutTradeDiffRecord_His" paras="23"/>
+    <func funcname="tdsecuT.5.128" procedurename="prt_tdserp_ImportStrikeRsp" paras="77"/>
+    <func funcname="tdsecuT.5.129" procedurename="prt_tdserp_ImportStrikeRspFee" paras="74"/>
+    <func funcname="tdsecuT.5.130" procedurename="prt_tdserp_ImportStrikeGetOrderInfo" paras="54"/>
+    <func funcname="tdsecuT.5.131" procedurename="prt_tdserp_GetMachTime" paras="10"/>
+    <func funcname="tdsecuT.5.132" procedurename="prt_tdserp_DealFinaLoanStrikeRsp" paras="81"/>
+    <func funcname="tdsecuT.5.133" procedurename="prt_tdserp_FinaLoanDealWithdrawRsp" paras="61"/>
+    <func funcname="tdsecuT.5.134" procedurename="prt_tdserp_FinaLoanDealOrderRsp" paras="63"/>
+    <func funcname="tdsecuT.5.135" procedurename="prt_tdserp_DealFinaLoanStrikeRspFee" paras="89"/>
+    <func funcname="tdsecuT.5.136" procedurename="prt_tdserp_DealFinaLoanSumStrikeRsp" paras="82"/>
+    <func funcname="tdsecuT.5.137" procedurename="prt_tdserp_CheckCancelRsp" paras="20"/>
+</funcs>

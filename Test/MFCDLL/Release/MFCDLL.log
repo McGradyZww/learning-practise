@@ -1,0 +1,24 @@
+﻿生成启动时间为 2019.07.29 12:21:52。
+     1>项目“D:\learning\Test\MFCDLL\MFCDLL.vcxproj”在节点 3 上(Build 个目标)。
+     1>ClCompile:
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\MFCDLL.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\MFCDLL.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib MFCDLL.cpp
+         MFCDLL.cpp
+         E:\Software\VS系列\VS2013\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /EHa /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /TP /analyze- /errorReport:prompt "C:\Users\luoding\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D NDEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IRelease\ /nologo /fo"Release\MFCDLL.res" MFCDLL.rc 
+       Link:
+         E:\Software\VS系列\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\learning\Test\Bin\Release\MFCDLL.dll" /INCREMENTAL:NO /NOLOGO /DEF:".\MFCDLL.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"E:\Software\VS系列\VS2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\learning\Test\Bin\Release\MFCDLL.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /IMPLIB:"D:\learning\Test\lib\MFCDLL.lib" /MACHINE:X86 /SAFESEH /DLL Release\MFCDLL.res
+         Release\MFCDLL.obj
+         Release\stdafx.obj
+         "Release\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+            正在创建库 D:\learning\Test\lib\MFCDLL.lib 和对象 D:\learning\Test\lib\MFCDLL.exp
+         LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+         MFCDLL.vcxproj -> D:\learning\Test\Bin\Release\MFCDLL.dll
+     1>已完成生成项目“D:\learning\Test\MFCDLL\MFCDLL.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.98

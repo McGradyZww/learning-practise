@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_msgbox" title="MsgBox" width="300" height="165" frame="" bkimg="" crbk="3c5680" >
+	
+	<base>
+		<text name="msgbox.title" crtext="FFFFFF" crmark="800000" font="big"
+				pos="30,5,220,25" title="[MSGTIP]" mask="" response="0" show="1" />
+		<img pos="4,3" width="20" height="20" image="skin:IDB_TRAY_ICON" mode="extrude" framesize="1" show="1" />
+		<button name="button.close" pos="-34,0,-0,28" skin="IDB_BT_CLOSE_SQUARE" shortcut="ESC" />
+	</base>
+
+	<body>
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,32,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<!--img response="0" pos="0,32,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="1" show="1" /-->
+		
+		<img name="msgbox.icon" pos="25,40" width="38" height="38" skin="IDB_ICON_INFO" mode="normal" framesize="0" show="1" />
+		<text name="msgbox.text" crtext="000000" pos="70,45,-25,-40" title="" image="" show="1" font="default1"/>
+		<chkbtn name="msgbox.check" skin="IDB_CHECK_BOX" pos="75,-60,-25,-40" title="" check="true" show="0" />
+		
+		<div name="msgbox.type.0" pos="0,-40,-0,-0" show="1" >
+			<button name="button.ok" skin="IDB_BT_OK" title="[OK]"	pos="-100,0,-20,24" shortcut="RETURN" crtext="FFFFFF" font="default"/>
+		</div>
+		<div name="msgbox.type.1" pos="0,-40,-0,-0" show="0" >
+			<button name="button.ok" skin="IDB_BT_OK" title="[OK]"	pos="-190,0,-110,24" shortcut="RETURN" crtext="FFFFFF" font="default"/>
+			<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]"	pos="-100,0,-20,24" show="1" defaultbutton="1" font="default"/>
+		</div>
+		<div name="msgbox.type.3" pos="0,-40,-0,-0" show="0" >
+			<button name="button.yes" skin="IDB_BT_OK" title="[YES]"	pos="-280,0,-200,24" show="1" crtext="FFFFFF" font="default"/>
+			<button name="button.no" skin="IDB_BT_DEFAULT" title="[NO]"	pos="-190,0,-110,24" show="1" defaultbutton="1" font="default"/>
+			<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]"	pos="-100,0,-20,24" shortcut="ESC" font="default"/>
+		</div>
+		<div name="msgbox.type.4" pos="0,-40,-0,-0" show="0" >
+			<button name="button.yes" skin="IDB_BT_OK" title="[YES]"	pos="-190,0,-110,24" show="1" crtext="FFFFFF" font="default"/>
+			<button name="button.no" skin="IDB_BT_DEFAULT" title="[NO]"	pos="-100,0,-20,24" show="1" defaultbutton="1" font="default"/>
+		</div>
+
+	</body>
+  
+</dlg>

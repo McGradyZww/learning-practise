@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_bondtrade_paramset" title="" width="400" height="250"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="30,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="dlg_stockorder_multi_paramset.body" pos="0,30,-0,-0">	
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+		<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<tabctrl name="tab_multi_pagamset.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+			font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >				
+			<tab name="bondtrade_paramset" image="skin:IDB_TAB_LOW_ITEM" title="债券交易参数" active="true" pos="0,30,-0,-0">			 
+				<text crtext="000000" crmark="800000" align="left" pos="20,20" width="100" height="20"  title="默认数量策略：" font="default1" show="1" />								
+				<combobox name="bondtrade.buy.style" tabstop="1" skin="IDB_EDIT" pos="121,16"  width="100" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default" crtext="0,0,0" crtip="128,128,128" value="6">
+					<item name="数量" value="0" />
+				  <item name="金额" value="1" />
+				</combobox>
+				
+				<chkbtn name="checkbutton_bond_trade_before_hint" title="显示二次确认框" skin="IDB_CHECK_BOX" pos="20,50" width="240" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>									
+				
+		  
+				</tab> 
+		</tabctrl> 		
+		
+      <!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+	</body>
+</dlg>

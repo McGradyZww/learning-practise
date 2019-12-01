@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+   <div name="funcl_trade_command_basket_revocation_replenish_input" >
+      <gridctrl name="grid.funcl_trade_command_basket_revocation_replenish_input" pos="2,5,-2,-70" show="1"			
+		img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"  
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" sort="1" editcolumn="1"
+        left-pos="30" row-height="35" header-height="38" bk-transparent="1"
+        font-title="big" font="default2" grid-tip="1" header-check="1" 
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">  
+		    <column title="编号" width="100" align="center" key="order_no"  />		
+        <column title="证券代码" width="60" align="center" key="stock_code"  />
+        <column title="证券名称" width="60" align="center" key="stock_name" />
+        <column title="买卖方向" width="60" align="center" key="order_dir" /> 
+        <column title="订单价格" width="60" align="center" key="order_price" data_type="N" />
+        <column title="订单数量" width="100" align="right" key="order_qty" data_type="N"  />
+				<column title="撤补数量" width="100" align="right" key="modify_qty" data_type="N"  />
+	   	  <column title="撤补价格" width="100" align="center" key="modify_price" data_type="N" />
+        <column title="成交数量" width="100" align="right" key="execution_qty" data_type="N" />
+         <column title="市场" width="100" align="right" key="exchange_no" />
+    </gridctrl>
+<!--买价格 -->
+	<text crtext="f30534" crmark="800000" align="right" pos="0,-60" width="50" height="25" title="买价格" show="1"/>
+	<combobox name="ftcbrri_buy_price" tabstop="0" skin="IDB_EDIT" pos="55,-66" width="75" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN" list-height="174"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" value="1">
+					<item name="最新价" value="1" />
+					<item name="均价" value="4" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				  <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+	</combobox>
+	<edit name="ftcbrri_buy_price_float" tabstop="1" skin="IDB_EDIT" pos="130,-66" width="60" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"
+               font="default" crtext="0,0,0" entrer_selectall="1"  double="1" title="0" />
+	<numbtn name="ftcbrri_buy_price_float_add" edit_ctrl="ftcbrri_buy_price_float" add="1" tabstop="0" skin="IDB_BT_ADD" pos="190,-65" width="24" height="24"  shortcut="" crtext="FFFFFF" />
+	<numbtn name="ftcbrri_buy_price_float_subtract" edit_ctrl="ftcbrri_buy_price_float" tabstop="0" skin="IDB_BT_SUBTRACT" pos="216,-65" width="24" height="24"  shortcut="" crtext="FFFFFF" />		
+	
+	
+	<!--卖价格 -->
+	<text crtext="42f803" crmark="800000" align="right" pos="255,-60" width="50" height="25" title="卖价格" show="1"/>
+	<combobox name="ftcbrri_sell_price" tabstop="0" skin="IDB_EDIT" pos="310,-66" width="75" height="26" tip=""
+				  small-image="skin:IDB_DROP_DOWN" list-height="174"
+				  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+					font="default" crtext="0,0,0" crtip="128,128,128,128" value="1">
+					<item name="最新价" value="1" />
+					<item name="均价" value="4" />
+				 	<item name="对手1" value="11" />
+				 	<item name="对手2" value="12" />
+				 	<item name="对手3" value="13" />
+				 	<item name="对手4" value="14" />
+				 	<item name="对手5" value="15" />
+				  <item name="本方1" value="21" />
+				 	<item name="本方2" value="22" />
+				 	<item name="本方3" value="23" />
+				 	<item name="本方4" value="24" />
+				 	<item name="本方5" value="25" />
+	</combobox>
+	<edit name="ftcbrri_sell_price_float" tabstop="1" skin="IDB_EDIT" pos="385,-66" width="60" height="26"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50" align="center"
+               font="default" crtext="0,0,0" entrer_selectall="1" double="1" title="0" />
+	<numbtn name="ftcbrri_sell_price_float_add" edit_ctrl="ftcbrri_sell_price_float" add="1"  tabstop="0" skin="IDB_BT_ADD" pos="445,-65" width="24" height="24"  shortcut="" crtext="FFFFFF" />
+	<numbtn name="ftcbrri_sell_price_float_subtract" edit_ctrl="ftcbrri_sell_price_float" tabstop="0" skin="IDB_BT_SUBTRACT" pos="471,-65" width="24" height="24"  shortcut="" crtext="FFFFFF" />		
+	
+	<chkbtn name="check_hiding_complete_transaction_stock" title="隐藏已成股票" skin="IDB_CHECK_BOX" pos="260,-26" width="110" height="15" crtext="000000" show="0" check="false" showfocus="0"/>
+	<chkbtn name="stockeorder_check.price_all" align="left" title="同一代码同方向订单，价格联动修改" skin="IDB_CHECK_BOX" pos="10,-26" width="240" height="16" crtext="191919" show="1" check="true" showfocus="0" />
+		 
+	
+	<button name="button_batch_change_price" tabstop="0"  skin="IDB_BT_SMALL" title="批量改价"  crtext="1E1E1E" pos="500,-65" width="80" height="26"/>
+	<button name="dlg_button.order.modify" tabstop="0"  skin="IDB_BT_OK" title="撤补下达"  crtext="ffffff" pos="-180,-40,-80,-10" />
+
+	<button name="button.cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="取 消" pos="-76,-40,-6,-10" shortcut="" crtext="0" font="default1"/>
+
+   </div>

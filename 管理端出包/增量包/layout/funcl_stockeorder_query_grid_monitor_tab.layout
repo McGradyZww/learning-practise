@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockeorder_query_grid_monitor_tab">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="  订单查询" font="big" show="1" />-->
+   
+    <gridctrl name="grid.funcl_stockeorder_monitor_query" pos="2,5,-2,-36" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG"      
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">        
+        <column title="订单编号" width="0" align="center" key="order_no" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="订单方向" width="80" align="center" key="order_dir" /> 
+        <column title="订单价格" width="100" align="center" key="order_price" data_type="N" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="订单状态" width="80" align="center" key="order_status" />
+        <column title="操作员号" width="100" align="center" key="operator_no" />
+    </gridctrl>
+    <!--chkbtn name="ins_checkbutton_all" title="全部订单" skin="IDB_CHECK_BOX" pos="-320,-30,-200,-8" crtext="174590" show="1" check="true" showfocus="0"/-->
+    <!--button name="stockorder_monitor.query" skin="IDB_BT_QUERY" title="" pos="-180,-38,-100,-8" shortcut="RETURN" crtext="FFFFFF" /-->       
+    <button name="stockmonitor_revocation" skin="IDB_BT_cancellation" title="" pos="-90,-32,-10,-2" shortcut="RETURN" crtext="FFFFFF" />        
+  </div>

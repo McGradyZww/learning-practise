@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="dcsyncT.1.11" procedurename="prt_dcsypub_Syncbasesedt_stock_tmplat" paras="108"/>
+    <func funcname="dcsyncT.1.12" procedurename="prt_dcsypub_Syncbasesedt_stock_type" paras="108"/>
+    <func funcname="dcsyncT.1.13" procedurename="prt_dcsypub_Syncbasesedt_stock_type_order_dir" paras="108"/>
+    <func funcname="dcsyncT.1.14" procedurename="prt_dcsypub_Syncbasesedt_stock_code_info" paras="108"/>
+    <func funcname="dcsyncT.1.15" procedurename="prt_dcsypub_Syncbasesedt_stock_quot" paras="108"/>
+    <func funcname="dcsyncT.1.16" procedurename="prt_dcsypub_Syncbasesedt_bond_info" paras="108"/>
+    <func funcname="dcsyncT.1.17" procedurename="prt_dcsypub_Syncbase_sys_info" paras="108"/>
+    <func funcname="dcsyncT.1.18" procedurename="prt_dcsypub_Syncbase_co_info" paras="108"/>
+    <func funcname="dcsyncT.1.19" procedurename="prt_dcsypub_Syncbase_market_busi_record_no" paras="108"/>
+    <func funcname="dcsyncT.1.20" procedurename="prt_dcsypub_Syncbase_dictionary" paras="108"/>
+    <func funcname="dcsyncT.1.21" procedurename="prt_dcsypub_Syncbase_hk_exch_rate" paras="108"/>
+    <func funcname="dcsyncT.1.22" procedurename="prt_dcsypub_Syncuser_opor_info" paras="108"/>
+    <func funcname="dcsyncT.1.23" procedurename="prt_dcsypub_Syncuser_opor_allow_co" paras="108"/>
+    <func funcname="dcsyncT.1.24" procedurename="prt_dcsypub_Syncuser_opor_allow_prod" paras="108"/>
+    <func funcname="dcsyncT.1.25" procedurename="prt_dcsypub_Syncuser_exch_group_info" paras="108"/>
+    <func funcname="dcsyncT.1.26" procedurename="prt_dcsypub_Syncuser_exch_group_asset" paras="108"/>
+    <func funcname="dcsyncT.1.27" procedurename="prt_dcsypub_Syncuser_opor_exch_group" paras="108"/>
+    <func funcname="dcsyncT.1.28" procedurename="prt_dcsypub_Syncbasefudt_futu_quot" paras="108"/>
+</funcs>

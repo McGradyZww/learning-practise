@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.5.82" procedurename="prt_pdsepubif_GetStockPosiInfo" paras="19"/>
+    <func funcname="pdsecuT.5.101" procedurename="prt_pdsepubif_ClearCapitalPosiRecorded" paras="39"/>
+    <func funcname="pdsecuT.5.102" procedurename="prt_pdsepubif_UndoClearCapitalPosiRecorded" paras="18"/>
+    <func funcname="pdsecuT.5.103" procedurename="prt_pdsepubif_CoActionRegDeal" paras="34"/>
+    <func funcname="pdsecuT.5.104" procedurename="prt_pdsepubif_UndoCoActionRegDeal" paras="13"/>
+    <func funcname="pdsecuT.5.111" procedurename="prt_pdsepubif_InsertRepoRecord" paras="32"/>
+    <func funcname="pdsecuT.5.112" procedurename="prt_pdsepubif_InsertRepoRecordRollback" paras="10"/>
+</funcs>

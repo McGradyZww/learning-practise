@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.5.76" procedurename="prt_pdfuclif_UpdatePosiSettInfo" paras="24"/>
+    <func funcname="pdfutuT.5.80" procedurename="prt_pdfuclif_UpdateGetExgpPosiInfo" paras="29"/>
+    <func funcname="pdfutuT.5.82" procedurename="prt_pdfuclif_UpdatePosiDeal" paras="11"/>
+    <func funcname="pdfutuT.5.101" procedurename="prt_pdfuclif_ClearCapitalPosiRecorded" paras="32"/>
+    <func funcname="pdfutuT.5.102" procedurename="prt_pdfuclif_UndoClearCapitalPosiRecorded" paras="17"/>
+    <func funcname="pdfutuT.5.103" procedurename="prt_pdfuclif_QueryPosiId" paras="11"/>
+</funcs>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>	
+	<div name="funcl_stock_multiorder_info" >   
+	<img pos="0,0,-0,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+	   <text crtext="000000" crmark="800000" align="left" pos="20,170,82,188" title="订单金额" font="default1" show="1" />
+       <chkbtn name="stockeorder_checkbutton_multiall" align="left" title="全选" skin="IDB_CHECK_BOX" pos="5,4,56,30" crtext="191919" show="1" check="false" showfocus="0"/>
+	    
+       <text crtext="000000" crmark="800000" align="left" pos="60,6,124,40" title="账号总数:" font="default1" show="1" />
+       <text name="stock.multiorder.info.acttotal" crtext="000000" crmark="800000" align="left" pos="125,6,150,40" title="0" font="default1"  />
+      	
+       
+       <text crtext="000000" crmark="800000" align="left" pos="161,6,225,40" title="订单数量:" font="default1" show="1" />
+       <text name="stock.multiorder.info.qtytotal" crtext="000000" crmark="800000" align="left" pos="226,6,300,40" title="0" font="default1"  thousands_digital="1"/>	
+       
+       <text crtext="000000" crmark="800000" align="left" pos="301,6,365,40" title="订单金额:" font="default1" show="1" />
+       <text name="stock.multiorder.info.amttotal" crtext="000000" crmark="800000" align="left" pos="366,6,500,40" title="0.00" font="default1"  thousands_digital="1"/>	
+      
+  
+       
+       <gridctrl name="grid.trade.stock.ordermsg" pos="1200,5,-2,-2" show="0"
+        img-scroll="" img-scrollh="" img-sep=""
+        img-check="" img-colsep=""
+        img-count="2" image="skin:IDB_ORDERFLAG_LIST_IMG"
+        left-pos="0" row-height="30" header-height="0" bk-transparent="100"
+        font-title="big" font="default2"
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" grid-tip="1" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254" >
+		      <column title="标识" width="20" align="center" key="msg_index" />
+		      <column title="信息" width="480" align="left" key="msg_info" />
+		  </gridctrl>						
+  </div>

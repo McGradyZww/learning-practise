@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.22.1" procedurename="prt_pdsecrlif_CapitalPosiRecorded" paras="49"/>
+    <func funcname="pdsecuT.22.2" procedurename="prt_pdsecrliff_UndoClearCapitalPosiRecorded" paras="19"/>
+    <func funcname="pdsecuT.22.3" procedurename="prt_pdsecrlif_RetuStockDebt" paras="27"/>
+    <func funcname="pdsecuT.22.4" procedurename="prt_pdsecrlif_RetuCapitDebt" paras="29"/>
+    <func funcname="pdsecuT.22.5" procedurename="prt_pdsecrlif_UpdateLoanCapitalDebt" paras="15"/>
+    <func funcname="pdsecuT.22.6" procedurename="prt_pdsecrlif_UpdateSumPosiDebt" paras="9"/>
+    <func funcname="pdsecuT.22.7" procedurename="prt_pdsecrlif_UpdateDebtInterest" paras="10"/>
+</funcs>

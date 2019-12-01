@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_preorder_paramset" title="" width="400" height="350"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						
+	    	<text crtext="000000" crmark="800000" align="left" pos="20,25,212,45" title="默认埋单方向：" font="default1" show="1" />
+	  		<radiobtn name="stocke_preorder_buy" title="买入" skin="IDB_radiobtn" pos="147,22,207,45" crtext="191919" show="1" check="true" showfocus="0" group="1"/>
+	  		<radiobtn name="stocke_preorder_sell" title="卖出" skin="IDB_radiobtn" pos="212,22,272,45" crtext="191919" show="1"  showfocus="0" group="1" />
+	   		  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,55,135,75" title="埋单方式默认：" font="default1" show="1" disable="1"/>
+				<combobox name="stockpreorder.type" tabstop="1" skin="IDB_EDIT" pos="140,52" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" value="1">
+					<item name="大于等于" value="1" />
+					<item name="小于等于" value="2" />
+		  	</combobox>
+	  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,85,135,105" title="埋单价格默认：" font="default1" show="1" />
+				<combobox name="stockpreorder.price" tabstop="1" skin="IDB_EDIT" pos="140,82" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" value="0">
+					<item name="0-输入价" value="0" />
+					<item name="1-最新价" value="-1" />
+					<item name="2-涨停价" value="-2" />
+					<item name="3-跌停价" value="-3" />
+					<item name="11对手盘1" value="-11" />
+					<item name="12-对手盘2" value="-12" />
+					<item name="13-对手盘3" value="-13" />
+					<item name="14-对手盘4" value="-14" />
+					<item name="15-对手盘5" value="-15" />
+					<item name="21-本方盘1" value="-21" />
+					<item name="22-本方盘2" value="-22" />
+					<item name="23-本方盘3" value="-23" />
+					<item name="24-本方盘4" value="-24" />
+					<item name="25-本方盘5" value="-25" />
+		  	</combobox>
+	  		 
+			<text crtext="000000" crmark="800000" align="left" pos="20,115,286,135" title="埋单限价二级调整按钮调整值（默认0.1)：" font="default1" show="1" />
+			<edit name="stockeorder_order_price" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,112" width="60" height="26" title="0.1"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+
+            <text crtext="000000" crmark="800000" align="left" pos="20,145,286,165" title="埋单数量调整按钮调整值（默认100)：" font="default1" show="1" />
+			<edit name="stockeorder_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="291,142" width="60" height="26" title="100"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+               
+			<chkbtn name="stockeorder_checkbutton_sure" title="默认弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,180,236,200" crtext="191919" show="1" check="true" showfocus="0"/>
+	   		<text crtext="000000" crmark="800000" align="left" pos="40,205,192,225" title="二次确认框光标默认在：" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_dlgsure_ok" title="确定" skin="IDB_radiobtn" pos="197,200,257,225" crtext="191919" show="1" showfocus="0" group="4"/>
+	  		<radiobtn name="stockeorder_dlgsure_cancel" title="取消" skin="IDB_radiobtn" pos="262,200,322,225" crtext="191919" show="1" check="true" showfocus="0" group="4"/>	
+	  		
+		    <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+			<chkbtn name="preorder_checkbutton_auturun" title="是否后台运行" skin="IDB_CHECK_BOX" pos="20,230,236,250" crtext="191919" show="0" check="true" showfocus="0" disable="1"/>
+		</div>
+		
+	</body>
+  
+</dlg>

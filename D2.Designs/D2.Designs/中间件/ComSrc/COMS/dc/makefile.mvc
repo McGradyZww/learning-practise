@@ -1,0 +1,59 @@
+############################################################################
+##   windows平台下的编译脚本
+##  makefile.mvc
+##
+##  模块：业务组件编译脚本
+##  -----------------------------------------------
+##  Copyright (C) 2016-2017
+##########################################################################*
+
+#(1)变量定义
+#源代码主目录
+LD_HOME = ../..
+
+#目标文件后缀名，平台相关
+TO          = obj
+EXPS        = /def:"../../pub/comexport.def"
+LIB_TO = .lib
+LIB_PRE     =
+LIB_EXT = .dll
+
+#库文件输出目录
+OUTDIR      = $(LD_HOME)\Lib\win
+#其他依赖库路径
+LIBPATH     = $(LD_HOME)\Lib\win
+#附加头文件路径
+INCDIR      = $(LD_HOME)
+
+#处理库文件的前缀后缀
+SUFFIXES    =
+!ifdef _DEBUG
+SUFFIXES    = _d
+!endif
+COM1 = dc_quote$(SUFFIXES)
+
+#(2)编译器参数及预定义宏设置
+CC = cl
+LD          = $(CC)
+DEFS = -DBUILDING_DLL
+RM = del
+
+!ifdef _DEBUG
+COPTIONS    = -nologo -W3 -EHsc -MDd -Zi $(DEFS)
+!else
+COPTIONS    = -nologo -W3 -O2 -EHsc -MT $(DEFS)
+!endif
+
+CFLAGS      = -c $(COPTIONS)
+LFLAGS = -LD
+
+#(3)要连接的标准库和自定义库
+STDLIBS     =/link
+DEFLIBS     =
+
+#(4)文件操作命令
+RMOBJ       = -$(RM) *.$(TO)  $(OUTDIR)\*.exp
+RMALL       = -$(RM) $(OUTDIR)\*$(LIB_EXT)  $(OUTDIR)\*$(LIB_TO)
+
+#(5)编译依赖.cpp.o:
+include makefile.inc

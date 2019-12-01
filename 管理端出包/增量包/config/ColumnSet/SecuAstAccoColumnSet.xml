@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="本币币种" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="期初金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="资金余额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="冻结金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="解冻金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="红冲蓝补金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="A股静态可用金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="港股静态可用金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应收金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="累计应付金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="待交收金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="沪深可用调整金额" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="港股通可用调整金额" IsVisiblity="true" isTotalRow="true" />
+</ColumnSetClass>

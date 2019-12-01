@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="clsecuT.1.6" procedurename="prt_clsepb_AddDealError" paras="13"/>
+    <func funcname="clsecuT.1.12" procedurename="prt_clsepb_UpdateDealStatus" paras="14"/>
+    <func funcname="clsecuT.1.21" procedurename="prt_clsepb_DataToHis" paras="10"/>
+    <func funcname="clsecuT.1.41" procedurename="prt_clsepb_RedoPrepare" paras="15"/>
+    <func funcname="clsecuT.1.42" procedurename="prt_clsepb_AddDealFlowTotal" paras="18"/>
+    <func funcname="clsecuT.1.43" procedurename="prt_clsepb_DealFlowTotal" paras="11"/>
+    <func funcname="clsecuT.1.44" procedurename="prt_clsepb_QueryDealFlowTotal" paras="14"/>
+    <func funcname="clsecuT.1.45" procedurename="prt_clsepb_CheckDealFlow" paras="12"/>
+</funcs>

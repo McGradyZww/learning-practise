@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edit name="edit_gridctrl_btn" tabstop="1" skin="IDB_EDIT" small-image="" pos="0,0" width="100" height="20"
+               multiline="0" autohscroll="1" autovscroll="1" number="1" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" double="1" thousands_digital="1" entrer_selectall="1"/>

@@ -1,0 +1,577 @@
+using LdNet.ClientSdk.Model;
+using LdNet.ClientCore.Sdk;
+using LdNet.Communication;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using LDsdkDefineEx;
+
+namespace LdNet.ClientSdk.Response
+{
+    public class pubL_16_1_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_1_Response()
+        {
+            this.pubL_16_1_InfoList = new ObservableCollection<pubL_16_1_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_1_Info> pubL_16_1_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_1_Info info = new pubL_16_1_Info();
+            info.row_id = unpacker.GetInt64("row_id");
+            pubL_16_1_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_1_InfoList.Add((pubL_16_1_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_初始化证券代码信息
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_1_Info();
+                info.row_id = lpRecord.GetInt64(LDBizTagDefine.LDBizTag.LDBIZ_ROW_ID_INT64);
+                pubL_16_1_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_2_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_2_Response()
+        {
+            this.pubL_16_2_InfoList = new ObservableCollection<pubL_16_2_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_2_Info> pubL_16_2_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_2_Info info = new pubL_16_2_Info();
+            pubL_16_2_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_2_InfoList.Add((pubL_16_2_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_更新证券代码行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_2_Info();
+                pubL_16_2_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_3_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_3_Response()
+        {
+            this.pubL_16_3_InfoList = new ObservableCollection<pubL_16_3_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_3_Info> pubL_16_3_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_3_Info info = new pubL_16_3_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.order_dir = unpacker.GetInt("order_dir");
+            info.comm_limit_price = unpacker.GetDouble("comm_limit_price");
+            info.ask_exec_qty = unpacker.GetDouble("ask_exec_qty");
+            info.ask_exec_qty1 = unpacker.GetDouble("ask_exec_qty1");
+            info.ask_exec_qty2 = unpacker.GetDouble("ask_exec_qty2");
+            info.ask_exec_qty3 = unpacker.GetDouble("ask_exec_qty3");
+            info.ask_exec_qty4 = unpacker.GetDouble("ask_exec_qty4");
+            info.ask_avg_price1 = unpacker.GetDouble("ask_avg_price1");
+            info.ask_avg_price2 = unpacker.GetDouble("ask_avg_price2");
+            pubL_16_3_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_3_InfoList.Add((pubL_16_3_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_请求有效均价
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_3_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.order_dir = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ORDER_DIR_INT);
+                info.comm_limit_price = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_COMM_LIMIT_PRICE_FLOAT);
+                info.ask_exec_qty = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY_FLOAT);
+                info.ask_exec_qty1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY1_FLOAT);
+                info.ask_exec_qty2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY2_FLOAT);
+                info.ask_exec_qty3 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY3_FLOAT);
+                info.ask_exec_qty4 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY4_FLOAT);
+                info.ask_avg_price1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE1_FLOAT);
+                info.ask_avg_price2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE2_FLOAT);
+                pubL_16_3_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_4_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_4_Response()
+        {
+            this.pubL_16_4_InfoList = new ObservableCollection<pubL_16_4_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_4_Info> pubL_16_4_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_4_Info info = new pubL_16_4_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.quot_price_info = unpacker.GetStr("quot_price_info");
+            pubL_16_4_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_4_InfoList.Add((pubL_16_4_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_请求个股行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_4_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.quot_price_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_QUOT_PRICE_INFO_STR);
+                pubL_16_4_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_5_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_5_Response()
+        {
+            this.pubL_16_5_InfoList = new ObservableCollection<pubL_16_5_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_5_Info> pubL_16_5_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_5_Info info = new pubL_16_5_Info();
+            pubL_16_5_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_5_InfoList.Add((pubL_16_5_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_主推实时行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_5_Info();
+                pubL_16_5_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_11_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_11_Response()
+        {
+            this.pubL_16_11_InfoList = new ObservableCollection<pubL_16_11_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_11_Info> pubL_16_11_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_11_Info info = new pubL_16_11_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.quot_price_info = unpacker.GetStr("quot_price_info");
+            pubL_16_11_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_11_InfoList.Add((pubL_16_11_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_请求上海个股行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_11_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.quot_price_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_QUOT_PRICE_INFO_STR);
+                pubL_16_11_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_12_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_12_Response()
+        {
+            this.pubL_16_12_InfoList = new ObservableCollection<pubL_16_12_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_12_Info> pubL_16_12_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_12_Info info = new pubL_16_12_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.quot_price_info = unpacker.GetStr("quot_price_info");
+            pubL_16_12_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_12_InfoList.Add((pubL_16_12_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_请求深圳个股行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_12_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.quot_price_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_QUOT_PRICE_INFO_STR);
+                pubL_16_12_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_15_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_15_Response()
+        {
+            this.pubL_16_15_InfoList = new ObservableCollection<pubL_16_15_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_15_Info> pubL_16_15_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_15_Info info = new pubL_16_15_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.quot_price_info = unpacker.GetStr("quot_price_info");
+            pubL_16_15_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_15_InfoList.Add((pubL_16_15_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_批量请求个股行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            LDsdkDefineEx.LDGroupAdapter lpGroup = fastMsg.GetGroup(LDBizTagDefine.LDSdkTag.LDTAG_NO_RESULTSET);
+            if (lpGroup != null)
+            {
+                var rowCount = lpGroup.GetRecordCount();
+                for (int i = 0; i < rowCount; i++)
+                {
+                    var info = new pubL_16_15_Info();
+                    var lpRecord =lpGroup.GetRecord(i);
+                    info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                    info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                    info.quot_price_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_QUOT_PRICE_INFO_STR);
+                    pubL_16_15_InfoList.Add(info);
+                }
+            }
+        }
+    }
+
+    public class pubL_16_16_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_16_Response()
+        {
+            this.pubL_16_16_InfoList = new ObservableCollection<pubL_16_16_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_16_Info> pubL_16_16_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_16_Info info = new pubL_16_16_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.order_dir = unpacker.GetInt("order_dir");
+            info.comm_limit_price = unpacker.GetDouble("comm_limit_price");
+            info.ask_exec_qty = unpacker.GetDouble("ask_exec_qty");
+            info.ask_exec_qty1 = unpacker.GetDouble("ask_exec_qty1");
+            info.ask_exec_qty2 = unpacker.GetDouble("ask_exec_qty2");
+            info.ask_exec_qty3 = unpacker.GetDouble("ask_exec_qty3");
+            info.ask_exec_qty4 = unpacker.GetDouble("ask_exec_qty4");
+            info.ask_avg_price1 = unpacker.GetDouble("ask_avg_price1");
+            info.ask_avg_price2 = unpacker.GetDouble("ask_avg_price2");
+            pubL_16_16_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_16_InfoList.Add((pubL_16_16_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_请求多日有效均价
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_16_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.order_dir = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ORDER_DIR_INT);
+                info.comm_limit_price = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_COMM_LIMIT_PRICE_FLOAT);
+                info.ask_exec_qty = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY_FLOAT);
+                info.ask_exec_qty1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY1_FLOAT);
+                info.ask_exec_qty2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY2_FLOAT);
+                info.ask_exec_qty3 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY3_FLOAT);
+                info.ask_exec_qty4 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY4_FLOAT);
+                info.ask_avg_price1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE1_FLOAT);
+                info.ask_avg_price2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE2_FLOAT);
+                pubL_16_16_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_17_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_17_Response()
+        {
+            this.pubL_16_17_InfoList = new ObservableCollection<pubL_16_17_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_17_Info> pubL_16_17_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_17_Info info = new pubL_16_17_Info();
+            pubL_16_17_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_17_InfoList.Add((pubL_16_17_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_盘后更新证券代码行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_17_Info();
+                pubL_16_17_InfoList.Add(info);
+            }
+        }
+    }
+
+    public class pubL_16_18_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_18_Response()
+        {
+            this.pubL_16_18_InfoList = new ObservableCollection<pubL_16_18_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_18_Info> pubL_16_18_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_18_Info info = new pubL_16_18_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.quot_price_info = unpacker.GetStr("quot_price_info");
+            pubL_16_18_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_18_InfoList.Add((pubL_16_18_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_批量请求港股行情
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            LDsdkDefineEx.LDGroupAdapter lpGroup = fastMsg.GetGroup(LDBizTagDefine.LDSdkTag.LDTAG_NO_RESULTSET);
+            if (lpGroup != null)
+            {
+                var rowCount = lpGroup.GetRecordCount();
+                for (int i = 0; i < rowCount; i++)
+                {
+                    var info = new pubL_16_18_Info();
+                    var lpRecord =lpGroup.GetRecord(i);
+                    info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                    info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                    info.quot_price_info = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_QUOT_PRICE_INFO_STR);
+                    pubL_16_18_InfoList.Add(info);
+                }
+            }
+        }
+    }
+
+    public class pubL_16_19_Response : IResponse
+    {
+        #region 构造函数
+        public pubL_16_19_Response()
+        {
+            this.pubL_16_19_InfoList = new ObservableCollection<pubL_16_19_Info>();
+        }
+        #endregion
+
+        #region 公共属性
+        public ObservableCollection<pubL_16_19_Info> pubL_16_19_InfoList { get; set; }
+        #endregion
+
+        #region IResponse 成员
+        public void Parser(ILdUnPacker unpacker)
+        {
+            pubL_16_19_Info info = new pubL_16_19_Info();
+            info.exch_no = unpacker.GetInt("exch_no");
+            info.stock_code = unpacker.GetStr("stock_code");
+            info.order_dir = unpacker.GetInt("order_dir");
+            info.comm_limit_price = unpacker.GetDouble("comm_limit_price");
+            info.ask_exec_qty = unpacker.GetDouble("ask_exec_qty");
+            info.ask_exec_qty1 = unpacker.GetDouble("ask_exec_qty1");
+            info.ask_exec_qty2 = unpacker.GetDouble("ask_exec_qty2");
+            info.ask_exec_qty3 = unpacker.GetDouble("ask_exec_qty3");
+            info.ask_exec_qty4 = unpacker.GetDouble("ask_exec_qty4");
+            info.ask_avg_price1 = unpacker.GetDouble("ask_avg_price1");
+            info.ask_avg_price2 = unpacker.GetDouble("ask_avg_price2");
+            pubL_16_19_InfoList.Add(info);
+        }
+
+        public void Parser(object info)
+        {
+            pubL_16_19_InfoList.Add((pubL_16_19_Info)info);
+        }
+        #endregion
+
+        //逻辑_公共_证券行情服务_测试后台服务
+        public void Parser(LDsdkDefineEx.LDFastMessageAdapter fastMsg)
+        {
+            var lpRecord = fastMsg.GetBizBodyRecord();
+            if (lpRecord != null)
+            {
+                var info = new pubL_16_19_Info();
+                info.exch_no = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_EXCH_NO_INT);
+                info.stock_code = lpRecord.GetString(LDBizTagDefine.LDBizTag.LDBIZ_STOCK_CODE_STR);
+                info.order_dir = lpRecord.GetInt32(LDBizTagDefine.LDBizTag.LDBIZ_ORDER_DIR_INT);
+                info.comm_limit_price = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_COMM_LIMIT_PRICE_FLOAT);
+                info.ask_exec_qty = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY_FLOAT);
+                info.ask_exec_qty1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY1_FLOAT);
+                info.ask_exec_qty2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY2_FLOAT);
+                info.ask_exec_qty3 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY3_FLOAT);
+                info.ask_exec_qty4 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_EXEC_QTY4_FLOAT);
+                info.ask_avg_price1 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE1_FLOAT);
+                info.ask_avg_price2 = lpRecord.GetDouble(LDBizTagDefine.LDBizTag.LDBIZ_ASK_AVG_PRICE2_FLOAT);
+                pubL_16_19_InfoList.Add(info);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,80 @@
+############################################################################
+##   windows平台下的编译脚本
+##  makefile.mvc
+##
+##  模块：业务组件编译脚本
+##  -----------------------------------------------
+##  Copyright (C) 2016-2017
+##########################################################################*
+
+#(1)变量定义
+#源代码主目录
+LD_HOME = ../..
+
+#目标文件后缀名，平台相关
+TO          = obj
+EXPS        = /def:"../../pub/comexport.def"
+LIB_TO = .lib
+LIB_PRE     =
+LIB_EXT = .dll
+
+#库文件输出目录
+OUTDIR      = $(LD_HOME)\Lib\win
+#其他依赖库路径
+LIBPATH     = $(LD_HOME)\Lib\win
+#附加头文件路径
+INCDIR      = $(LD_HOME)
+
+#处理库文件的前缀后缀
+SUFFIXES    =
+!ifdef _DEBUG
+SUFFIXES    = _d
+!endif
+COM1 = BaseSecuData$(SUFFIXES)
+COM2 = BaseDataSync$(SUFFIXES)
+COM3 = Base$(SUFFIXES)
+COM4 = BaseClient$(SUFFIXES)
+COM5 = User$(SUFFIXES)
+COM6 = UserClient$(SUFFIXES)
+COM7 = Permission$(SUFFIXES)
+COM8 = PermissionClient$(SUFFIXES)
+COM9 = FeeSecu$(SUFFIXES)
+COM10 = FeeSecuClient$(SUFFIXES)
+COM11 = Message$(SUFFIXES)
+COM12 = BaseFutuData$(SUFFIXES)
+COM13 = FutuQuotServer$(SUFFIXES)
+COM14 = FeeFutu$(SUFFIXES)
+COM15 = FeeFutuClient$(SUFFIXES)
+COM16 = SecuQuotServer$(SUFFIXES)
+COM17 = PublicIF$(SUFFIXES)
+COM18 = TradeIF$(SUFFIXES)
+COM19 = RiskIF$(SUFFIXES)
+COM20 = ClearIF$(SUFFIXES)
+COM21 = PubSyncIF$(SUFFIXES)
+COM22 = BaseSecuMarginData$(SUFFIXES)
+
+#(2)编译器参数及预定义宏设置
+CC = cl
+LD          = $(CC)
+DEFS = -DBUILDING_DLL
+RM = del
+
+!ifdef _DEBUG
+COPTIONS    = -nologo -W3 -EHsc -MDd -Zi $(DEFS)
+!else
+COPTIONS    = -nologo -W3 -O2 -EHsc -MT $(DEFS)
+!endif
+
+CFLAGS      = -c $(COPTIONS)
+LFLAGS = -LD
+
+#(3)要连接的标准库和自定义库
+STDLIBS     =/link
+DEFLIBS     =
+
+#(4)文件操作命令
+RMOBJ       = -$(RM) *.$(TO)  $(OUTDIR)\*.exp
+RMALL       = -$(RM) $(OUTDIR)\*$(LIB_EXT)  $(OUTDIR)\*$(LIB_TO)
+
+#(5)编译依赖.cpp.o:
+include makefile.inc

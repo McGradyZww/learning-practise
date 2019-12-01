@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stock_instruction_query" >
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<img pos="2,2,-2,4" image="skins\default\line_split.png" mode="tile" framesize="0" show="1" response="0"/>-->
+    <gridctrl name="grid.funcl_stock_instruction_query" pos="2,4,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep=""
+        img-count="6" image="skin:IDB_LIST_IMG"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="0" align="center"
+        crtext="255,64,64,64" crhover="125,0,0" crpush="0,112,235" crhead="23,69,144">
+        <!--column title="机构编号" width="100" align="center" key="company_no" /-->
+        <!--column title="交易单元" width="100" align="center" key="unit_code" /-->
+        <!--column title="篮子编号" width="100" align="center" key="basket_no" /-->
+        <!--column title="市场编号" width="100" align="center" key="exchange_no" /-->
+        <!--column title="资产类型" width="100" align="center" key="asset_type" /-->
+        <column title="指令序号" width="100" align="center" key="command_id" data_type="N" />
+        <column title="产品编码" width="100" align="center" key="product_code" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="订单方向" width="100" align="center" key="order_dir" />
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+        <column title="指令数量" width="100" align="center" key="command_qty" data_type="T" />
+        <column title="指令金额" width="100" align="center" key="command_amt" data_type="T" />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="订单冻结金额" width="100" align="center" key="order_frozen_amt" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="指令状态" width="100" align="center" key="command_status" />
+        <column title="成交状态" width="100" align="center" key="execution_status" />
+        <column title="价格模式" width="100" align="center" key="price_mode" />
+        <column title="目标类型" width="100" align="center" key="target_type" />
+        <column title="指令类型" width="100" align="center" key="command_type" />
+        <column title="指令开始日期" width="100" align="center" key="command_begin_date" />
+        <column title="指令开始时间" width="100" align="center" key="command_begin_time" data_type="N"/>
+        <column title="指令结束日期" width="100" align="center" key="command_end_date" />
+        <column title="指令结束时间" width="100" align="center" key="command_end_time" data_type="N"/>
+        <column title="指令下达人" width="100" align="center" key="command_operator" />
+        <column title="指令执行人" width="100" align="center" key="command_executor" />
+        <column title="指令日期" width="100" align="center" key="command_date" />
+        <column title="指令时间" width="100" align="center" key="command_time" data_type="N"/>
+    </gridctrl>
+    <chkbtn name="checkbutton1" title="显示已修改" skin="IDB_CHECK_BOX" pos="16,-20,136,-5" crtext="174590" show="1" check="true" showfocus="0"/>
+		<chkbtn name="checkbutton2" title="显示已撤销" skin="IDB_CHECK_BOX" pos="166,-20,286,-5" crtext="e30202" show="1" check="true" showfocus="0"/>
+		<chkbtn name="checkbutton3" title="显示全部执行" skin="IDB_CHECK_BOX" pos="336,-20,456,-5" crtext="0493a0" show="1" check="true" showfocus="0"/>
+		<chkbtn name="checkbutton4" title="显示全部成交" skin="IDB_CHECK_BOX" pos="506,-20,626,-5" crtext="810000" show="1" check="true" showfocus="0"/>
+					
+		<button name="stockeorder_button.refresh_small" title="" pos="-276,-27" width="70" height="25" skin="IDB_BT_QUERY_small" tip="查询" show="1" />
+	  <button name="stockeorder_button.modify_small" title="" pos="-196,-27" width="70" height="25" skin="IDB_BT_modify_small" tip="修改" show="1" />
+	  <button name="stockeorder_button.revocation_small" title="" pos="-116,-27" width="70" height="25" skin="IDB_BT_revocation_small" tip="撤销" show="1" />	
+  </div>

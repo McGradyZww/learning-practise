@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdsecuT.3.1" procedurename="prt_tdseap_AddComm" paras="134"/>
+    <func funcname="tdsecuT.3.2" procedurename="prt_tdseap_CancelComm" paras="21"/>
+    <func funcname="tdsecuT.3.3" procedurename="prt_tdseap_ModiComm" paras="68"/>
+    <func funcname="tdsecuT.3.4" procedurename="prt_tdseap_ApprComm" paras="71"/>
+    <func funcname="tdsecuT.3.5" procedurename="prt_tdseap_DispComm" paras="36"/>
+    <func funcname="tdsecuT.3.6" procedurename="prt_tdseap_AddBasketBatchComm" paras="105"/>
+    <func funcname="tdsecuT.3.7" procedurename="prt_tdseap_DispBatchComm" paras="18"/>
+    <func funcname="tdsecuT.3.8" procedurename="prt_tdseap_AddBasketTransferComm" paras="107"/>
+    <func funcname="tdsecuT.3.9" procedurename="prt_tdseap_AddComboComm" paras="122"/>
+    <func funcname="tdsecuT.3.11" procedurename="prt_tdseap_CheckCommInfo" paras="51"/>
+    <func funcname="tdsecuT.3.12" procedurename="prt_tdseap_CheckOrderComm" paras="16"/>
+    <func funcname="tdsecuT.3.13" procedurename="prt_tdseap_CheckComboWayComm" paras="13"/>
+    <func funcname="tdsecuT.3.30" procedurename="prt_tdseap_LoopGetComm" paras="47"/>
+    <func funcname="tdsecuT.3.31" procedurename="prt_tdseap_ReCalcuMultiComm" paras="15"/>
+    <func funcname="tdsecuT.3.51" procedurename="prt_tdseap_QueryComm" paras="35"/>
+    <func funcname="tdsecuT.3.52" procedurename="prt_tdseap_QueryComm_His" paras="36"/>
+    <func funcname="tdsecuT.3.53" procedurename="prt_tdseap_QueryCommDispJour" paras="27"/>
+    <func funcname="tdsecuT.3.54" procedurename="prt_tdseap_QueryCommDispJour_His" paras="28"/>
+    <func funcname="tdsecuT.3.55" procedurename="prt_tdseap_QueryCommApprJour" paras="26"/>
+    <func funcname="tdsecuT.3.56" procedurename="prt_tdseap_QueryCommApprJour_His" paras="27"/>
+    <func funcname="tdsecuT.3.57" procedurename="prt_tdseap_QuerySumComm" paras="30"/>
+    <func funcname="tdsecuT.3.58" procedurename="prt_tdseap_QuerySumComm_His" paras="31"/>
+    <func funcname="tdsecuT.3.80" procedurename="prt_tdseap_GetPushCommInfo" paras="56"/>
+    <func funcname="tdsecuT.3.81" procedurename="prt_tdseap_GetPushSumCommInfo" paras="53"/>
+    <func funcname="tdsecuT.3.82" procedurename="prt_tdseap_GetCommLimitActualPrice" paras="18"/>
+    <func funcname="tdsecuT.3.83" procedurename="prt_tdseap_GetCommBatchNo" paras="9"/>
+    <func funcname="tdsecuT.3.84" procedurename="prt_tdseap_LockGetBatchPauseCommCount" paras="11"/>
+    <func funcname="tdsecuT.3.85" procedurename="prt_tdseap_PauseDetailComm" paras="19"/>
+    <func funcname="tdsecuT.3.86" procedurename="prt_tdseap_PauseTotalAndBatchDetailComm" paras="17"/>
+    <func funcname="tdsecuT.3.87" procedurename="prt_tdseap_GetBatchCommInfo" paras="10"/>
+    <func funcname="tdsecuT.3.88" procedurename="prt_tdseap_StartDetailComm" paras="15"/>
+    <func funcname="tdsecuT.3.89" procedurename="prt_tdseap_StartTotalAndBatchDetailComm" paras="13"/>
+    <func funcname="tdsecuT.3.90" procedurename="prt_tdseap_DispApprPendComm" paras="28"/>
+    <func funcname="tdsecuT.3.91" procedurename="prt_tdseap_ApprDispComm" paras="25"/>
+    <func funcname="tdsecuT.3.92" procedurename="prt_tdseap_QueryDispApprComm" paras="27"/>
+    <func funcname="tdsecuT.3.93" procedurename="prt_tdseap_AddFinaLoanComm" paras="176"/>
+    <func funcname="tdsecuT.3.94" procedurename="prt_tdseap_FinaLoanCancelComm" paras="22"/>
+    <func funcname="tdsecuT.3.95" procedurename="prt_tdseap_FinaLoanApprComm" paras="69"/>
+    <func funcname="tdsecuT.3.96" procedurename="prt_tdseap_FinaLoanModiComm" paras="108"/>
+    <func funcname="tdsecuT.3.97" procedurename="prt_tdseap_NewDispComm" paras="53"/>
+</funcs>

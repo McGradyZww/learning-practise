@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_command_baskettrading_single_store_query">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <gridctrl name="grid.funcl_command_baskettrading_single_store_query" pos="2,2,-2,-60" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"
+        img-count="6" image="skin:IDB_LIST_IMG" grid-tip="1" header-check="0"
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center" bCellColor="0"
+        crtext="255,64,64,64"  crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">        
+        <column title="证券代码" width="100" align="center" key="stock_code" deletable="0" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="持仓数量" width="100" align="right" key="current_qty" data_type="T" sum_column="1"/>
+		<column title="可用数量" width="100" align="right" key="command_available_qty" data_type="T" sum_column="1"/>
+        <column title="持仓市值" width="100" align="right" key="holding_amt" data_type="T" sum_column="1"/>
+        <column title="盈亏比例" width="100" align="center" key="pandl_ratio" data_type="N" />
+        <column title="持仓比例" width="100" align="center" key="hold_nav_ratio" data_type="N" sum_column="1"/>
+		<column title="昨收盘" width="100" align="right" key="pre_close_price" data_type="N" />
+        <column title="最新价" width="100" align="right" key="last_price" data_type="N" />
+        <column title="买卖方向" width="100" align="center" key="order_dir" />
+        <column title="买卖数量" width="100" align="right" key="order_qty" data_type="T" sum_column="1"/>
+        <column title="调整后数量" width="100" align="right" key="adjust_qty" data_type="T" />
+        <column title="调整后持仓比例" width="100" align="right" key="adjust_ratio" data_type="N" sum_column="1"/>
+        <column title="调整后市值" width="100" align="right" key="adjust_amt" data_type="T" sum_column="1"/>
+        <column title="停牌标志" width="100" align="center" key="stop_status"  deletable="0" />
+		<column title="交易市场" width="100" align="center" key="exchange_no" deletable="0" />
+		<column title="买卖金额" width="0" align="right" key="order_amt" data_type="T" sum_column="1" deletable="0"/>
+    </gridctrl>
+     <gridctrl name="grid.funcl_command_baskettrading_single_store_query_total" pos="2,-60,-2,-30" show="1"
+       img-sep="skin:IDB_LINE_RP" 
+         modify-column-width="1" column-sep="1" 
+        img-colsep="skin:IDB_LINE_SPLIT"       
+        left-pos="0" row-height="30" header-height="30" bk-transparent="10"
+        font-title="big" font="default2" sort="1" editcolumn="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">       
+        <column title="" width="100" align="center" key="stock_code" deletable="0" />
+        <column title="" width="100" align="center" key="stock_name" />
+        <column title="" width="100" align="center" key="current_qty" data_type="T" sum_column="1"/>
+		<column title="" width="100" align="right" key="command_available_qty" data_type="T" sum_column="1"/>
+        <column title="" width="100" align="center" key="holding_amt" data_type="T" sum_column="1"/>
+        <column title="" width="100" align="center" key="pandl_ratio" data_type="N"/>
+        <column title="" width="100" align="center" key="hold_nav_ratio" data_type="N"/>
+		<column title="" width="100" align="center" key="pre_close_price" data_type="N" />
+        <column title="" width="100" align="center" key="last_price" data_type="N" />
+        <column title="" width="100" align="center" key="order_dir" />
+        <column title="" width="100" align="right" key="order_qty" data_type="T" sum_column="1"/>
+        <column title="" width="100" align="center" key="adjust_qty" data_type="N" />
+        <column title="" width="100" align="center" key="adjust_ratio" data_type="N"/>
+        <column title="" width="100" align="center" key="stop_status"  deletable="0" />
+		<column title="" width="100" align="center" key="exchange_no" deletable="0" />
+		<column title="" width="0" align="center" key="order_amt" data_type="T" sum_column="1" deletable="0"/>
+    </gridctrl>
+   <chkbtn name="checkbutton_excluding_harden" title="剔除涨跌停" skin="IDB_CHECK_BOX" pos="16,-20,136,-5" crtext="e30202" show="1" check="true" showfocus="0"/>
+			
+  </div>

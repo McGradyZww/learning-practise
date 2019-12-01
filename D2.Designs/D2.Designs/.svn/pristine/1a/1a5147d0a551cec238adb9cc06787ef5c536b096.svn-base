@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdsecuT.15.1" procedurename="prt_pdsesy_GetSyncTime" paras="14"/>
+    <func funcname="pdsecuT.15.2" procedurename="prt_pdsesy_UpdateSyncTime" paras="14"/>
+    <func funcname="pdsecuT.15.11" procedurename="prt_pdsesy_SyncAsacPosi" paras="113"/>
+    <func funcname="pdsecuT.15.12" procedurename="prt_pdsesy_SyncAsacAsset" paras="113"/>
+    <func funcname="pdsecuT.15.13" procedurename="prt_pdsesy_Syncpdseac_secu_acco" paras="113"/>
+    <func funcname="pdsecuT.15.14" procedurename="prt_pdsesy_Syncpdseca_exgp_capit" paras="113"/>
+    <func funcname="pdsecuT.15.15" procedurename="prt_pdsesy_Syncpdseca_exgp_asset" paras="113"/>
+    <func funcname="pdsecuT.15.16" procedurename="prt_pdsesy_Syncpdseca_asac_capit" paras="113"/>
+    <func funcname="pdsecuT.15.17" procedurename="prt_pdsesy_Syncpdseca_out_asac_capit" paras="113"/>
+    <func funcname="pdsecuT.15.18" procedurename="prt_pdsesy_Syncpdseca_evalu_out_asac_capit" paras="113"/>
+    <func funcname="pdsecuT.15.19" procedurename="prt_pdsesy_Syncpdsepo_exgp_posi" paras="113"/>
+    <func funcname="pdsecuT.15.20" procedurename="prt_pdsesy_Syncpdsepo_exgp_bond_pledge" paras="113"/>
+    <func funcname="pdsecuT.15.21" procedurename="prt_pdsesy_Syncpdsepo_asac_posi" paras="113"/>
+    <func funcname="pdsecuT.15.22" procedurename="prt_pdsesy_Syncpdsepo_asac_bond_pledge" paras="113"/>
+    <func funcname="pdsecuT.15.23" procedurename="prt_pdsesy_Syncpdsepo_bond_repo" paras="113"/>
+    <func funcname="pdsecuT.15.24" procedurename="prt_pdsesy_Syncpdsepo_out_asac_posi" paras="113"/>
+    <func funcname="pdsecuT.15.25" procedurename="prt_pdsesy_Syncpdsepo_evalu_out_asac_posi" paras="113"/>
+    <func funcname="pdsecuT.15.26" procedurename="prt_pdsesy_Syncpdsepo_block_trade_posi" paras="113"/>
+</funcs>

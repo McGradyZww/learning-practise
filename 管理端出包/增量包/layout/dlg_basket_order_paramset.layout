@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_basket_order_paramset" title="" width="560" height="350"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="30,5,200,25" title="参数设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="dlg_basket_order_paramset.body" pos="0,30,-0,-0">	
+		<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+		<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<tabctrl name="tab_trade_stock.single" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3" font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" 	animate="0">
+			<tab name="dlg_basket_order_paramset.price" image="skin:IDB_TAB_LOW_ITEM" title="价格参数" pos="0,30,-0,-0" menuno="61030101" active="true">
+				 <text crtext="000000" crmark="800000" align="left" pos="10,20" width="135" height="20"  title="买入参数" font="default1" show="1" />
+				 <text crtext="000000" crmark="800000" align="left" pos="30,50" width="48" height="20"  title="基准价" font="default1" show="1" />
+				 <combobox name="basket.pricedefault.buy" tabstop="1" skin="IDB_EDIT" pos="90,46" width="120" height="26"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>
+				<text crtext="000000" crmark="800000" align="left" pos="30,81" width="48" height="20"  title="偏移量" font="default1" show="1" />
+				<edit name="basket.pricestep.buy" tabstop="1" skin="IDB_EDIT" pos="90,81" width="97" height="26"
+					   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					   font="default" crtext="0,0,0" double="1" />
+				<button name="basket.pricestep.buy.top" tabstop="0" skin="IDB_BT_TOP_DOUBLE" title="" pos="188,82" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<button name="basket.pricestep.buy.bottom" tabstop="0" skin="IDB_BT_BOTTOM_DOUBLE" title="" pos="188,95" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<text crtext="000000" crmark="800000" align="left" pos="230,85" width="55" height="20"  title="开盘价>" font="default1" show="1" />  
+				<edit name="basket.priceopen.buy" tabstop="1" skin="IDB_EDIT" pos="286,83" width="88" height="26"
+					   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					   font="default" crtext="0,0,0" double="1" />  
+				<edit name="basket.priceratio.buy" tabstop="1" skin="IDB_EDIT" pos="380,83" width="88" height="26"
+					   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					   font="default" crtext="0,0,0" double="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="469,85" width="55" height="20"  title="%" font="default1" show="1" /> 	
+			
+			
+				<text crtext="000000" crmark="800000" align="left" pos="10,120" width="135" height="20"  title="卖出参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="30,150" width="48" height="20"  title="基准价" font="default1" show="1" />
+				<combobox name="basket.pricedefault.sell" tabstop="1" skin="IDB_EDIT" pos="90,146" width="120" height="26"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>
+				<text crtext="000000" crmark="800000" align="left" pos="30,181" width="48" height="20"  title="偏移量" font="default1" show="1" />
+				<edit name="basket.pricestep.sell" tabstop="1" skin="IDB_EDIT" pos="90,181" width="97" height="26"
+					 multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					 font="default" crtext="0,0,0" double="1" />
+				<button name="basket.pricestep.sell.top" tabstop="0" skin="IDB_BT_TOP_DOUBLE" title="" pos="188,182" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<button name="basket.pricestep.sell.bottom" tabstop="0" skin="IDB_BT_BOTTOM_DOUBLE" title="" pos="188,195" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<text crtext="000000" crmark="800000" align="left" pos="230,185" width="55" height="20"  title="开盘价>" font="default1" show="1" />  
+				<edit name="basket.priceopen.sell" tabstop="1" skin="IDB_EDIT" pos="286,183" width="90" height="26"
+					   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					   font="default" crtext="0,0,0" double="1" />  
+				<edit name="basket.priceratio.sell" tabstop="1" skin="IDB_EDIT" pos="380,183" width="90" height="26"
+					   multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					   font="default" crtext="0,0,0" double="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="469,185" width="55" height="20"  title="%" font="default1" show="1" /> 	
+				
+				<chkbtn name="check_no_price_limit" title="剔除涨跌停股票" skin="IDB_CHECK_BOX" pos="30,-50" width="120" height="18" show="1" check="false" showfocus="0"/>
+				
+			</tab>
+			
+			<tab name="dlg_basket_order_paramset.compareprice" image="skin:IDB_TAB_LOW_ITEM" title="价格校验参数" pos="0,30,-0,-0" >
+				<text crtext="000000" crmark="800000" align="left" pos="10,20" width="135" height="20"  title="买入参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="30,50" width="48" height="20"  title="基准价" font="default1" show="1" />
+				<combobox name="basket.pricedefault.buycompare" tabstop="1" skin="IDB_EDIT" pos="90,46" width="120" height="26"
+				small-image="skin:IDB_DROP_DOWN_small"
+				multiline="0" readonly="1" maxchar="50"
+				font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>
+				
+				<text crtext="000000" crmark="800000" align="left" pos="30,81" width="48" height="20"  title="偏移量" font="default1" show="1" />
+				
+				
+				<edit name="basket.pricestep.buycompare" tabstop="1" skin="IDB_EDIT" pos="90,81" width="97" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />
+					
+				<button name="basket.pricestep.buy.topcompare" tabstop="0" skin="IDB_BT_TOP_DOUBLE" title="" pos="188,82" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<button name="basket.pricestep.buy.bottomcompare" tabstop="0" skin="IDB_BT_BOTTOM_DOUBLE" title="" pos="188,95" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<text crtext="000000" crmark="800000" align="left" pos="230,85" width="55" height="20"  title="开盘价>" font="default1" show="1" />  
+				<edit name="basket.priceopen.buycompare" tabstop="1" skin="IDB_EDIT" pos="286,83" width="88" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />  
+				<edit name="basket.priceratio.buycompare" tabstop="1" skin="IDB_EDIT" pos="380,83" width="88" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="469,85" width="55" height="20"  title="%" font="default1" show="1" /> 	
+  	
+  	
+				<text crtext="000000" crmark="800000" align="left" pos="10,120" width="135" height="20"  title="卖出参数" font="default1" show="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="30,150" width="48" height="20"  title="基准价" font="default1" show="1" />
+				<combobox name="basket.pricedefault.sellcompare" tabstop="1" skin="IDB_EDIT" pos="90,146" width="120" height="26"
+					small-image="skin:IDB_DROP_DOWN_small"
+					multiline="0" readonly="1" maxchar="50"
+					font="default2" crtext="0,0,0" crtip="128,128,128" >
+				</combobox>
+				<text crtext="000000" crmark="800000" align="left" pos="30,181" width="48" height="20"  title="偏移量" font="default1" show="1" />
+				<edit name="basket.pricestep.sellcompare" tabstop="1" skin="IDB_EDIT" pos="90,181" width="97" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />
+				<button name="basket.pricestep.sell.topcompare" tabstop="0" skin="IDB_BT_TOP_DOUBLE" title="" pos="188,182" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<button name="basket.pricestep.sell.bottomcompare" tabstop="0" skin="IDB_BT_BOTTOM_DOUBLE" title="" pos="188,195" width="22" height="11" shortcut="RETURN" crtext="FFFFFF" />
+				<text crtext="000000" crmark="800000" align="left" pos="230,185" width="55" height="20"  title="开盘价>" font="default1" show="1" />  
+				<edit name="basket.priceopen.sellcompare" tabstop="1" skin="IDB_EDIT" pos="286,183" width="90" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />  
+				<edit name="basket.priceratio.sellcompare" tabstop="1" skin="IDB_EDIT" pos="380,183" width="90" height="26"
+					multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+					font="default" crtext="0,0,0" double="1" />
+				<text crtext="000000" crmark="800000" align="left" pos="469,185" width="55" height="20"  title="%" font="default1" show="1" /> 	  
+						
+			</tab>
+		</tabctrl>
+      <!--确认、取消按钮-->
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  	<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+	</body>
+</dlg>

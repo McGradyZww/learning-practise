@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="tdfutuT.4.11" procedurename="prt_tdfutd_AddOrder" paras="66"/>
+    <func funcname="tdfutuT.4.12" procedurename="prt_tdfutd_CancelOrder" paras="69"/>
+    <func funcname="tdfutuT.4.15" procedurename="prt_tdfutd_QueryRptOrder" paras="13"/>
+    <func funcname="tdfutuT.4.16" procedurename="prt_tdfutd_QueryRptCancelOrder" paras="13"/>
+    <func funcname="tdfutuT.4.21" procedurename="prt_tdfutd_UpdateOrderStatus" paras="12"/>
+    <func funcname="tdfutuT.4.72" procedurename="prt_tdfutd_GetRspOrderInfo" paras="45"/>
+    <func funcname="tdfutuT.4.73" procedurename="prt_tdfutd_CheckGetCancelOrder" paras="39"/>
+    <func funcname="tdfutuT.4.101" procedurename="prt_tdfutd_QueryOrder" paras="31"/>
+    <func funcname="tdfutuT.4.102" procedurename="prt_tdfutd_QueryRptOrder_His" paras="32"/>
+    <func funcname="tdfutuT.4.17" procedurename="prt_tdfutd_QueryOrderListByOrderIdStr" paras="10"/>
+    <func funcname="tdfutuT.4.18" procedurename="prt_tdfutd_QueryCancelOrderListByOrderIdStr" paras="10"/>
+    <func funcname="tdfutuT.4.19" procedurename="prt_tdfuap_GetSumOrder" paras="49"/>
+    <func funcname="tdfutuT.4.20" procedurename="prt_tdfuap_QuerySumOrderList" paras="29"/>
+    <func funcname="tdfutuT.4.22" procedurename="prt_tdfuap_QueryHisSumOrderList" paras="31"/>
+    <func funcname="tdfutuT.4.23" procedurename="prt_tdfuap_AddModiOrder" paras="76"/>
+    <func funcname="tdfutuT.4.24" procedurename="prt_tdfuap_UpdateGetModiOrder" paras="25"/>
+    <func funcname="tdfutuT.4.25" procedurename="prt_tdfuap_UpdateModiOrderStatus" paras="14"/>
+    <func funcname="tdfutuT.4.26" procedurename="prt_tdfuap_GetLngshtType" paras="12"/>
+    <func funcname="tdfutuT.4.27" procedurename="prt_tdfutd_GetOrder" paras="57"/>
+    <func funcname="tdfutuT.4.999" procedurename="prt_tdfutd_Test" paras="13"/>
+</funcs>

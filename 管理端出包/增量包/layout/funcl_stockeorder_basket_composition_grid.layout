@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockeorder_basket_composition_grid">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+ 	  <text crtext="000000" crmark="800000" align="left" pos="20,10,86,28" title="订单状态:" font="default1" show="1" />
+    <combobox name="combo_basketorder_orderstatus" tabstop="0" skin="IDB_EDIT" pos="88,6" width="152" height="26" tip=""
+		  small-image="skin:IDB_DROP_DOWN_small"
+		  multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="1" maxchar="50"
+			font="default" crtext="0,0,0" crtip="128,128,128,128">
+ 	  </combobox>
+ 	  	<button name="button_basketorder_composition_reflesh" tabstop="1" skin="IDB_BT_DEFAULT" title="刷 新" pos="-268,4,-188,32" shortcut="RETURN" crtext="0" font="default1"/>
+			<button name="button_basketorder_composition_cancel" tabstop="1" skin="IDB_BT_DEFAULT" title="撤 单" pos="-180,4,-100,32" shortcut="RETURN" crtext="0" font="default1"/>        
+			<button name="button_basketorder_composition_supplement" tabstop="1" skin="IDB_BT_DEFAULT" title="撤 补" pos="-92,4,-12,32" shortcut="RETURN" crtext="0" font="default1"/>        
+ 	  
+    <img pos="1,35,-1,37" image="skins\default\line_split.png" mode="tile" show="1" response="0"/>
+ 
+    <gridctrl name="grid.funcl_stockeorder_basket_composition_grid" pos="2,40,-2,-2" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="" header-check="1"
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG"      
+        left-pos="0" row-height="35" header-height="38" bK-transparent="10"
+        font-title="big" font="default2" sort="1" 
+        valign="middle" down-row="1" align="center"
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="订单编号" width="100" align="center" key="order_no" />
+        <column title="订单方向" width="100" align="center" key="order_dir" /> 
+        <column title="订单价格" width="100" align="center" key="order_price" data_type="N"  />
+        <column title="订单数量" width="100" align="center" key="order_qty" data_type="T" />
+        <column title="成交数量" width="100" align="center" key="execution_qty" data_type="T" />
+        <column title="成交金额" width="100" align="center" key="execution_amt" data_type="T" />
+        <column title="订单状态" width="100" align="center" key="order_status" />
+        <column title="撤单数量" width="100" align="center" key="cancel_qty" data_type="T" />
+        <column title="产品名称" width="100" align="center" key="product_name" />
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+    </gridctrl>
+    
+    
+  </div>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pubT.21.1" procedurename="prt_permclient_AddRole" paras="17"/>
+    <func funcname="pubT.21.2" procedurename="prt_permclient_ModiRole" paras="15"/>
+    <func funcname="pubT.21.3" procedurename="prt_permclient_DeleteRole" paras="13"/>
+    <func funcname="pubT.21.5" procedurename="prt_permclient_QueryRoleList" paras="11"/>
+    <func funcname="pubT.21.13" procedurename="prt_permclient_BatchAddRoleMenuFunc" paras="13"/>
+    <func funcname="pubT.21.14" procedurename="prt_permclient_BatchDeleteRoleMenuFunc" paras="13"/>
+    <func funcname="pubT.21.15" procedurename="prt_permclient_QueryRoleMenuFunc" paras="12"/>
+    <func funcname="pubT.21.4" procedurename="prt_permclient_CopyRole" paras="16"/>
+    <func funcname="pubT.21.21" procedurename="prt_permclient_QueryOperatorAllowRoleList" paras="9"/>
+    <func funcname="pubT.21.22" procedurename="prt_permclient_AddOporRole" paras="13"/>
+    <func funcname="pubT.21.23" procedurename="prt_permclient_DeleteOporRole" paras="13"/>
+    <func funcname="pubT.21.24" procedurename="prt_permclient_QueryOporRoleList" paras="10"/>
+    <func funcname="pubT.21.27" procedurename="prt_permclient_BatchAddOporMenuFunc" paras="14"/>
+    <func funcname="pubT.21.28" procedurename="prt_permclient_BatchDeleteOporMenuFunc" paras="14"/>
+    <func funcname="pubT.21.29" procedurename="prt_permclient_QueryOporAllMenu" paras="11"/>
+    <func funcname="pubT.21.30" procedurename="prt_permclient_QueryOporSpecMenu" paras="11"/>
+    <func funcname="pubT.21.31" procedurename="prt_permclient_QueryOporAllMenuFunc" paras="11"/>
+    <func funcname="pubT.21.32" procedurename="prt_permclient_QueryOporSpecMenuFunc" paras="11"/>
+    <func funcname="pubT.21.33" procedurename="prt_permclient_QueryAllMenu" paras="10"/>
+    <func funcname="pubT.21.51" procedurename="prt_permclient_WithdrawMenuFunc" paras="14"/>
+</funcs>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+	<div name="T+0tradeReport_holdPandl_query">
+		<img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    
+    <!--交易账户标题-->
+	<text crtext="000000" crmark="800000" align="right" pos="5,20,85,40" title="交易账户:" font="bold3" show="1"/>
+    <!--产品-->
+    <combobox name="T+0tradeReport.holdPandl.product_code" tabstop="1" skin="IDB_EDIT" pos="90,12" width="100" height="36" tip="产品"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  <!--单元-->
+    <combobox name="T+0tradeReport.holdPandl.unit_code" tabstop="1" skin="IDB_EDIT" pos="195,12" width="100" height="36" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+    <!--资产账户-->
+    <combobox name="T+0tradeReport.holdPandl.asset_account" tabstop="1" skin="IDB_EDIT" pos="300,12" width="100" height="36" tip="资产账号"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  
+	  <!--市场编号-->
+	  <text crtext="000000" crmark="800000" align="right" pos="390,20,470,40" title="市场编号:" font="bold3" show="1"/>
+	  <combobox name="T+0tradeReport.holdPandl.exchange_no" tabstop="1" skin="IDB_EDIT" pos="470,12" width="100" height="36" tip="市场编号"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  
+	  <!--证券代码-->
+	  <text crtext="000000" crmark="800000" align="right" pos="570,20,640,40" title="证券代码:" font="bold3" show="1"/>
+	  <edit name="T+0tradeReport.holdPandl.stock_code" tabstop="1" skin="IDB_EDIT" pos="640,12" width="80" height="36"
+               multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1" maxchar="6"/>
+
+	  <!--日期-->
+	  <text crtext="000000" crmark="800000" align="right" pos="720,20,760,40" title="日期:" font="bold3" show="1"/>
+	  <nativewnd name="T+0tradeReport.holdPandl.begin_date" tabstop="1" skin="IDB_EDIT" pos="760,12" width="90" height="36"
+               multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+	  <text crtext="000000" crmark="800000" align="right" pos="840,20,860,40" title="——" font="bold3" show="1"/>
+	  <nativewnd name="T+0tradeReport.holdPandl.end_date" tabstop="1" skin="IDB_EDIT" pos="860,12" width="90" height="36"
+               multiline="0" number="0" readonly="0" maxchar="8" font="default" crtext="0,0,0" />
+	  <!--查询按钮-->
+	  <button name="T+0tradeReport.holdPandl.button.query" title="" pos="-180,15" width="80" height="30" skin="IDB_BT_QUERY" tip="查询" show="1" />
+	  <button name="T+0tradeReport.holdPandl.button.export" title="" pos="-90,15" width="80" height="30" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+
+    <!--结果集grid-->
+    <img pos="1,57,-1,60" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+		<gridctrl name="grid.T+0tradeReport_holdPandl_query" pos="5,60,-5,-5" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="" img-colsep="skin:IDB_LINE_SPLIT"
+        img-count="" image=""
+        left-pos="0" row-height="30" header-height="38" bk-transparent="100"
+        font-title="big" font="default2" shortcut="SPACE" sort="1"
+        valign="middle" down-row="1" align="center" grid-tip="1"
+        crtext="000000" crhover="000000" crpush="e1effc" crhead="00a0e9" crtitle="00a0e9" crrowhover="e1effc" >
+      <column title="日期" width="100" key="init_date" data_type="N"/>
+			<column title="产品编码" width="100" key="product_code" />
+			<column title="交易单元" width="100" key="unit_code" />
+			<column title="资产账户" width="100" key="asset_account" />
+			<column title="市场编号" width="100" key="exchange_no" />
+			<column title="证券代码" width="100" key="stock_code" />
+			<column title="证券名称" width="100" key="stock_name" />
+			<column title="持仓数量" width="100" key="holding_qty" data_type="N"/>
+			<column title="交易数量" width="100" key="trading_qty" data_type="N"/>
+			<column title="全部费用" width="100" key="all_fare" data_type="N"/>
+			<column title="当日盈亏" width="100" key="realize_pandl" data_type="N"/>
+			<column title="累计实现盈亏" width="120" key="sum_realize_pandl" data_type="N"/>
+			<column title="收益率" width="100" key="yield_rate" data_type="N"/>
+		</gridctrl>
+	</div>

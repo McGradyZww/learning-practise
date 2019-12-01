@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfutuT.2.8" procedurename="prt_pdfuca_DistrPdCapital" paras="29"/>
+    <func funcname="pdfutuT.2.9" procedurename="prt_pdfuca_BackPdCapital" paras="29"/>
+    <func funcname="pdfutuT.2.10" procedurename="prt_pdfuca_AuthPdCapital" paras="30"/>
+    <func funcname="pdfutuT.2.11" procedurename="prt_pdfuca_BackAuthPdCapital" paras="30"/>
+    <func funcname="pdfutuT.2.32" procedurename="prt_pdfuca_FrozenExgpCapital" paras="31"/>
+    <func funcname="pdfutuT.2.33" procedurename="prt_pdfuca_UndoFrozenExgpCapital" paras="27"/>
+    <func funcname="pdfutuT.2.34" procedurename="prt_pdfuca_UnFrozenExgpCapital" paras="31"/>
+    <func funcname="pdfutuT.2.35" procedurename="prt_pdfuca_UndoUnFrozenExgpCapital" paras="27"/>
+    <func funcname="pdfutuT.2.37" procedurename="prt_pdfuca_QueryExgpCapital" paras="17"/>
+    <func funcname="pdfutuT.2.38" procedurename="prt_pdfuca_QueryExgpCapital_His" paras="19"/>
+    <func funcname="pdfutuT.2.39" procedurename="prt_pdfuca_QueryExgpCapital_Jour" paras="18"/>
+    <func funcname="pdfutuT.2.40" procedurename="prt_pdfuca_QueryExgpCapital_JourHis" paras="19"/>
+    <func funcname="pdfutuT.2.41" procedurename="prt_pdfuca_QueryExgpCapitalFrozenJour" paras="20"/>
+    <func funcname="pdfutuT.2.42" procedurename="prt_pdfuca_QueryExgpCapitalFrozenJour_His" paras="20"/>
+    <func funcname="pdfutuT.2.43" procedurename="prt_pdfuca_GetExgpCapitalFrozenJour" paras="21"/>
+    <func funcname="pdfutuT.2.51" procedurename="prt_pdfuca_PatchAsacCapital" paras="43"/>
+    <func funcname="pdfutuT.2.52" procedurename="prt_pdfuca_FrozenAsacCapital" paras="44"/>
+    <func funcname="pdfutuT.2.53" procedurename="prt_pdfuca_UndoFrozenAsacCapital" paras="26"/>
+    <func funcname="pdfutuT.2.54" procedurename="prt_pdfuca_UnFrozenAsacCapital" paras="44"/>
+    <func funcname="pdfutuT.2.55" procedurename="prt_pdfuca_UndoUnFrozenAsacCapital" paras="26"/>
+    <func funcname="pdfutuT.2.57" procedurename="prt_pdfuca_QueryAsacCapital" paras="16"/>
+    <func funcname="pdfutuT.2.58" procedurename="prt_pdfuca_QueryAsacCapital_His" paras="18"/>
+    <func funcname="pdfutuT.2.59" procedurename="prt_pdfuca_QueryAsacCapital_Jour" paras="17"/>
+    <func funcname="pdfutuT.2.60" procedurename="prt_pdfuca_QueryAsacCapital_JourHis" paras="18"/>
+    <func funcname="pdfutuT.2.61" procedurename="prt_pdfuca_QueryAsacCapitalFrozenJour" paras="19"/>
+    <func funcname="pdfutuT.2.62" procedurename="prt_pdfuca_QueryAsacCapitalFrozenJour_His" paras="19"/>
+    <func funcname="pdfutuT.2.63" procedurename="prt_pdfuca_GetAsacCapitalFrozenJour" paras="20"/>
+    <func funcname="pdfutuT.2.101" procedurename="prt_pdfuca_AddOutCapital" paras="22"/>
+    <func funcname="pdfutuT.2.254" procedurename="prt_pdfuca_DealCloseFrozenUnfrozen" paras="10"/>
+    <func funcname="pdfutuT.2.255" procedurename="prt_pdfuca_UpdateTrdCapital" paras="15"/>
+    <func funcname="pdfutuT.2.256" procedurename="prt_pdfuca_UpdateTrdExgpCapital" paras="16"/>
+</funcs>

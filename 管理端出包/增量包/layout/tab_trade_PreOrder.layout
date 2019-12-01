@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabctrl>
+  <tab name="tab_trade_PreOrder" image="skin:IDB_TAB_ITEM" active="true" title="条件预埋单" pos="0,33,-0,-0" canclose="1">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+		<!--tabctrl name="tabctrl.command_query_info" pos="4,10,-4,-313" img-sep="" img-hover=""
+		 		img-tabbtn-="skins\default\btn_close.png" tabbtnpos="-21,3"
+				font="default1" item-width="90" tab-height="28" crtext="174590" crtexttDeactive="191919" animate="0">
+			<tab name="funcl_pre_stockeorder_query_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="埋单查询" active="true" pos="0,28,-0,-0">
+				<div name="funcl_pre_stockeorder_query_grid" placement="funcl_pre_stockeorder_query_grid" pos="0,0,-0,-0"/>
+			</tab> />
+			<tab name="funcl_unitstock_query_grid" image="skin:IDB_TAB_INSIDE_ITEM" title="持仓查询" pos="0,28,-0,-0">
+				<div name="funcl_unitstock_query_grid" placement="funcl_unitstock_query_grid" pos="0,0,-0,-0"/>
+			</tab>	
+		</tabctrl-->
+		
+			<layout name="tabctrl.command_query_info" layout-type="vertical" pos="4,10,-4,-313" img-split="skin:IDB_SPLIT_VERT" img-thumb="skin:IDB_SPLIT_THUMB_VERT" split-width="5" split-imm="1">
+					<layout-div name="layout-preorderquery" div-pos="600" min-pos="300">
+						<div name="funcl_pre_stockeorder_query_grid" placement="funcl_pre_stockeorder_query_grid" pos="0,0,-0,-0"/>
+					</layout-div>
+					<layout-div name="layout-preholdquery" div-pos="-600" min-pos="100">
+						<div name="funcl_unitstock_query_grid" placement="funcl_unitstock_query_grid" pos="0,0,-0,-0"/>
+					</layout-div>
+				</layout>
+				
+		<div name="trade_stock.handicap" pos="4,-308,240,-0" placement="trade_stock_handicap"/>	
+		<div name="funcl_prestock_order_input" pos="245,-308,-4,-0" placement="funcl_prestock_order_input"/>
+        <!--<text crtext="000000" crmark="800000" align="left" pos="10,-30,-400,-0" title="参数定制" font="default1" show="1" />-->
+    
+  </tab>
+</tabctrl>

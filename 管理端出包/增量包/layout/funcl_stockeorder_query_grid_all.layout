@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockeorder_query_grid_all">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>
+    <chkbtn name="stockeorder_checkbutton_all" align="left" title="全选" skin="IDB_CHECK_BOX" pos="2,20" width="64" height="16" crtext="191919" show="0" check="false" showfocus="0"/>
+	    
+	     <!--市场编号-->
+	  <text crtext="000000" crmark="800000" align="right" pos="2,18,80,48" title="市场编号:" font="bold3" show="1"/>
+	  <combobox name="stockeorder_query.exchange_no" tabstop="1" skin="IDB_EDIT" pos="80,14" width="90" height="30" tip="市场编号"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	   <!--证券代码-->
+	  <text crtext="000000" crmark="800000" align="right" pos="175,18,250,48" title="证券代码:" font="bold3" show="1"/>
+	  <edit name="stockeorder_query.stock_code" tabstop="1" skin="IDB_EDIT" pos="251,14" width="80" height="30"
+               multiline="0" number="0" readonly="0" maxchar="50" font="default" crtext="0,0,0" stockcode="1" changednotify="1" maxchar="6"/>
+	 <!--订单价格-->
+	  <text crtext="000000" crmark="800000" align="right" pos="336,18,406,48" title="订单价格:" font="bold3" show="1"/>
+	 
+	 <edit name="stockeorder_query.order_price" tabstop="1" skin="IDB_EDIT" pos="407,14" width="80" height="30"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0"  />
+	   <!--单元-->
+	   <text crtext="000000" crmark="800000" align="right" pos="495,18,570,48" title="交易单元:" font="bold3" show="1"/>
+    <combobox name="stockeorder_query.unit_code" tabstop="1" skin="IDB_EDIT" pos="571,14" width="120" height="30" tip="交易单元"
+				  small-image="skin:IDB_DROP_DOWN_small"
+				  multiline="0" readonly="1" maxchar="50"
+					font="default3" crtext="0,0,0" crtip="128,128,128">
+	  </combobox>
+	  
+    <button name="stockeorder_button.query" title="" pos="696,14" width="80" height="30" skin="IDB_BT_QUERY" tip="查询" show="1" />
+    <button name="stockeorder_button.revocation" title="" pos="-186,14" width="80" height="30" skin="IDB_BT_cancellation" tip="撤单" show="1" />
+   	<button name="stockeorder_button.refresh" title="" pos="-276,14" width="80" height="30" skin="IDB_BT_REFRESH" tip="刷新" show="1" />
+		<button name="button.export" title="" pos="-96,14" width="80" height="30" skin="IDB_BT_EXPORT" tip="导出" show="1" />
+		<img pos="1,54,-1,56" image="skins\default\line_split.png" mode="tile" show="1" />
+    <gridctrl name="grid.funcl_stockeorder_query" pos="2,62,-2,-30" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT" 
+        img-count="8" image="skin:IDB_ORDER_STATUS_IMG" sort="1" header-check="0" 
+        left-pos="30" row-height="35" header-height="38" bk-transparent="1"
+        font-title="big" font="default2"   editcolumn= "1" grid-tip="1"
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254"> 		
+  		<column title="订单编号" width="100" align="center" key="order_no" deletable="0" data_type="N" />
+        <column title="产品名称" width="100" align="center" key="product_name" />    
+        <column title="证券代码" width="100" align="center" key="stock_code" />
+        <column title="证券名称" width="100" align="center" key="stock_name" />      
+        <column title="订单方向" width="100" align="center" key="order_dir" />       
+        <column title="订单价格" width="100" align="center" key="order_price" data_type="N"/>
+        <column title="订单数量" width="100" align="right" key="order_qty" data_type="T" sum_column="1" />
+        <column title="订单状态" width="100" align="center" key="order_status" />
+        <column title="成交金额" width="100" align="right" key="execution_amt" data_type="T" sum_column="1" />
+        <column title="成交数量" width="100" align="right" key="execution_qty" data_type="T" sum_column="1" />
+        <column title="成交均价" width="100" align="center" key="execution_price" data_type="N" /> 
+        <column title="撤单数量" width="100" align="right" key="cancel_qty" data_type="T" sum_column="1" />
+        <column title="订单冻结金额" width="100" align="right" key="order_frozen_amt" data_type="T" sum_column="1" />
+        <column title="全部费用" width="100" align="right" key="all_fare" data_type="T" sum_column="1" />
+        <column title="订单时间" width="100" align="center" key="order_time" data_type="N"/>
+        <column title="申报日期" width="100" align="center" key="report_date" />
+        <column title="申报时间" width="100" align="center" key="report_time" data_type="N"/>
+		<column title="资产账户" width="100" align="center" key="asset_account" />
+        <column title="股东代码" width="100" align="center" key="stock_account" />
+        <column title="市场编号" width="100" align="center" key="exchange_no" />
+ 		<column title="操作员编号" width="100" align="center" key="operator_no" />
+ 		<column title="废单原因" width="150" align="center" key="response_info"  />
+ 		<column title="指令序号" width="100" align="center" key="command_id" />   
+ 		<column title="证券类型" width="100" align="center" key="stock_type" />
+ 		 <column title="操作员名称" width="100" align="center" key="operator_name" />
+        <column title="本币币种" width="100" align="center" key="currency_type" />  
+        <column title="申报编号" width="100" align="center" key="report_no" />   
+        <column title="交易单元名称" width="100" align="center" key="unit_name" />
+        <column title="序号" width="0" align="center" key="row_id" />
+    </gridctrl>
+    
+   
+     <gridctrl name="grid.funcl_stockeorder_query_total" pos="2,-30,-0,-0" show="1"
+        img-scroll="" img-scrollh="" img-sep="skin:IDB_LINE_RP"
+        img-colsep="skin:IDB_LINE_SPLIT" sort="1"  
+        left-pos="0" row-height="30" header-height="30" bk-transparent="10"
+        font-title="big" font="default2"   editcolumn= "1" 
+        valign="middle" down-row="1" align="center" primary-key="order_no" 
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">
+  		
+  		<column title="合计" width="100" align="center" key="order_no" deletable="0" />
+        <column title="" width="100" align="center" key="product_name" />    
+        <column title="" width="100" align="center" key="stock_code" />
+        <column title="" width="100" align="center" key="stock_name" />      
+        <column title="" width="100" align="center" key="order_dir" />       
+        <column title="" width="100" align="center" key="order_price" />
+        <column title="" width="100" align="right" key="order_qty"  />
+        <column title="" width="100" align="center" key="order_status" />
+        <column title="" width="100" align="right" key="execution_amt" />
+        <column title="" width="100" align="right" key="execution_qty"  />
+        <column title="" width="100" align="center" key="execution_price" /> 
+        <column title="" width="100" align="right" key="cancel_qty"  />
+        <column title="" width="100" align="right" key="order_frozen_amt" />
+        <column title="" width="100" align="right" key="all_fare" />
+        <column title="" width="100" align="center" key="order_time" />
+        <column title="" width="100" align="center" key="report_date" />
+        <column title="" width="100" align="center" key="report_time" />
+		<column title="" width="100" align="center" key="asset_account" />
+        <column title="" width="100" align="center" key="stock_account" />
+        <column title="" width="100" align="center" key="exchange_no" />
+ 		<column title="" width="100" align="center" key="operator_no" />
+ 		<column title="" width="150" align="center" key="response_info"  />
+ 		<column title="" width="100" align="center" key="command_id" />   
+ 		<column title="" width="100" align="center" key="stock_type" />
+        <column title="" width="100" align="center" key="currency_type" />  
+        <column title="" width="100" align="center" key="report_no" />   
+        <column title="" width="100" align="center" key="unit_name" />
+        <column title="" width="0" align="center" key="row_id" />
+    </gridctrl>
+  </div>

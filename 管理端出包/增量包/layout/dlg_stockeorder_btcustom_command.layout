@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_ins_btcustom_command" title="" width="400" height="450"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+			<tabctrl name="tab_stockeorder_pagamset.low" pos="6,12,-6,-8" img-sep="" img-hover="" img-tabbtn-="skin:IDB_TAB_CLOSE" tabbtnpos-="-21,3"
+				font="bold2" item-width="130" tab-height="30" crtext="ffffff" crtexttDeactive="191919" animate="0" >
+				<tab name="stockeorder_pagamset_strategyset" image="skin:IDB_TAB_LOW_ITEM" title="策略参数" active="true" pos="0,30,-0,-0">	
+						
+	    	<text crtext="000000" crmark="800000" align="left" pos="20,25" title="输入数量后光标默认移到：" width="192" height="24" font="default1" show="0" />
+	  		<radiobtn name="stockeorder_checkcursor_ok" title="计算" skin="IDB_radiobtn" pos="197,25" width="110" height="24" crtext="191919" show="0" check="true" showfocus="0" group="1"/>
+	  		<radiobtn name="stockeorder_checkcursor_cancel" title="取消" skin="IDB_radiobtn" pos="262,25" width="110" height="24" crtext="191919" show="0"  showfocus="0" group="1" />
+	   	  
+	   	  <text crtext="000000" crmark="800000" align="left" pos="20,25" width="112" height="18" title="下单数量方式：" font="default1" show="1" />	 
+			 <radiobtn name="stockeorder_radiobtn_input_amount1" tabstop="1" title="启用数量策略" skin="IDB_radiobtn" pos="114,25" width="110" height="24" crtext="191919" show="1" check="true" showfocus="1" group="2" font="default1"/>
+		   <radiobtn name="stockeorder_radiobtn_input_amount2" tabstop="1" title="手工输入数量" skin="IDB_radiobtn" pos="234,25" width="110" height="24" crtext="191919" show="1"  showfocus="1" group="2" font="default1"/>
+		 
+			 <text crtext="000000" crmark="800000" align="left" pos="20,55" width="112" height="18" title="快捷数量" font="default1" show="1" />	 
+			 <radiobtn name="stockeorder_radiobtn_amount_fixed1" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,85" width="120" height="24" crtext="191919" show="1" check="true" showfocus="1" group="3" font="default1"/>
+		   <radiobtn name="stockeorder_radiobtn_amount_ratio1" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,85" width="120" height="24" crtext="191919" show="1"  showfocus="1" group="3" font="default1"/>
+			 <edit name="stockeorder_edit_amount_value1" tabstop="1" skin="IDB_EDIT" pos="250,85" width="80" height="24" title="0" number="0" double="1" minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+			 <radiobtn name="stockeorder_radiobtn_amount_fixed2" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,115" width="120" height="24" crtext="191919" show="1" check="true" showfocus="1" group="4" font="default1"/>
+		   <radiobtn name="stockeorder_radiobtn_amount_ratio2" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,115" width="120" height="24" crtext="191919" show="1"  showfocus="1" group="4" font="default1"/>
+			 <edit name="stockeorder_edit_amount_value2" tabstop="1" skin="IDB_EDIT" pos="250,115" width="80" height="24" title="0" number="0" double="1"  minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+			 <radiobtn name="stockeorder_radiobtn_amount_fixed3" tabstop="1" title="固定数量" skin="IDB_radiobtn" pos="40,145" width="120" height="24" crtext="191919" show="1" check="true" showfocus="1" group="5" font="default1"/>
+		   <radiobtn name="stockeorder_radiobtn_amount_ratio3" tabstop="1" title="可用比例" skin="IDB_radiobtn" pos="140,145" width="120" height="24" crtext="191919" show="1"  showfocus="1" group="5" font="default1"/>
+			 <edit name="stockeorder_edit_amount_value3" tabstop="1" skin="IDB_EDIT" pos="250,145" width="80" height="24" title="0" number="0" double="1"  minvalue="0" shortcutadjust="1" readonly="0" maxchar="50" font="default" crtext="0,0,0" />
+       <text crtext="000000" crmark="800000" align="left" pos="20,175" width="266" height="24" title="订单数量调整按钮调整值（默认100)：" font="default1" show="1" />
+			 <edit name="stockeorder_order_qty" tabstop="1" skin="IDB_EDIT" small-image="" pos="250,175" width="80" height="24" title="100"
+               multiline="0" autohscroll="1" autovscroll="1" number="0" double="1"  minvalue="0" shortcutadjust="1" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+       <!--
+	   <chkbtn name="stockeorder_checkbutton_clean" title="订单下单后清空证券代码和订单价格" skin="IDB_CHECK_BOX" pos="20,205" width="350" height="24" crtext="191919" show="1" check="true" showfocus="0"/>   
+	   -->
+	    <chkbtn name="stockeorder_checkbutton_defultprice" title="订单默认价格为指令限价(未选中时，默认使用最新价)" skin="IDB_CHECK_BOX" pos="20,205" width="400" height="24" crtext="191919" show="1" check="true" showfocus="0"/>   
+		<chkbtn name="stockeorder_checkbutton_defultqty" title="订单数量默认为指令未完成数量" skin="IDB_CHECK_BOX" pos="20,235" width="200" height="24" crtext="191919" show="1" check="true" showfocus="0"/>  
+	    <text crtext="000000" crmark="800000" align="left" pos="20,265" width="120" height="18"  title="下单后数量填入:" font="default1" show="0" />
+      <radiobtn name="stockeorder_rdbsave" title="保留上次" skin="IDB_radiobtn" pos="120,265" width="90" height="18" crtext="191919" show="0" check="true" showfocus="0" group="7"/>
+	    <radiobtn name="stockeorder_rdbmax" title="剩余数量" skin="IDB_radiobtn" pos="200,265" width="90" height="18" crtext="191919" show="0"  showfocus="0" group="7"/> 
+	    <radiobtn name="stockeorder_rdbclear" title="清空" skin="IDB_radiobtn" pos="295,265" width="90" height="18" crtext="191919" show="0"  showfocus="0" group="7"/>         
+       <!--刷新时间-->
+       <text crtext="000000" crmark="800000" align="left" pos="20,265" width="140" height="24" title="指令执行刷新时间：" font="default1" show="1" />
+			 <edit name="stockeorder_refresh_time" tabstop="1" skin="IDB_EDIT" small-image="" pos="150,265" width="80" height="24" title="15"
+               multiline="0" autohscroll="1" autovscroll="1" number="1" double="1"  minvalue="0" shortcutadjust="1" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+		
+     
+      </tab>         
+      <tab name="stockeorder_pagamset_remindset" image="skin:IDB_TAB_LOW_ITEM" title="提醒参数" pos="0,30,-0,-0">               
+			<chkbtn name="stockeorder_checkbutton_sure" title="默认弹出二次确认框" skin="IDB_CHECK_BOX" pos="20,25" width="216" height="24" crtext="191919" show="1" check="true" showfocus="0"/>
+	   		<text crtext="000000" crmark="800000" align="left" pos="40,55" title="二次确认框光标默认在：" width="152" height="24" font="default1" show="1" />
+	  		<radiobtn name="stockeorder_dlgsure_ok" title="确定" skin="IDB_radiobtn" pos="197,55" width="60" height="24" crtext="191919" show="1" showfocus="0" group="6"/>
+	  		<radiobtn name="stockeorder_dlgsure_cancel" title="取消" skin="IDB_radiobtn" pos="262,55" width="60" height="24" crtext="191919" show="1" check="true" showfocus="0" group="6"/>	
+	  	<chkbtn name="stockeorder_checkbutton_entrust_success_hint" title="订单下达成功弹出提示框" skin="IDB_CHECK_BOX" pos="20,85" width="240" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+			</tab> 
+			<tab name="stockeorder_pagamset_otherset" image="skin:IDB_TAB_LOW_ITEM" title="账户块显示" pos="0,30,-0,-0">
+      <radiobtn name="stockeorder_radiobtn_show_proc" tabstop="1" title="显示产品名称" skin="IDB_radiobtn" pos="40,25" width="120" height="24" crtext="174590" show="1" check="true" showfocus="1" group="8" font="default1"/>
+		  <radiobtn name="stockeorder_radiobtn_show_unit" tabstop="1" title="显示单元名称" skin="IDB_radiobtn" pos="170,25" width="120" height="24" crtext="174590" show="1"  showfocus="1" group="8" font="default1"/>
+		  <chkbtn name="stockeorder_checkbutton_show_fund_account" title="显示资产账户" skin="IDB_CHECK_BOX" pos="40,55" width="120" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+	    <chkbtn name="stockeorder_checkbutton_show_order_balance" title="显示订单金额" skin="IDB_CHECK_BOX" pos="40,85" width="120" height="24" crtext="191919" show="1" check="true" showfocus="0" font="default1"/>
+			<chkbtn name="stockeorder_checkbutton_show_balance_type" title="订单金额千分位显示" skin="IDB_CHECK_BOX" pos="40,115" width="160" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+			<chkbtn name="stockeorder_checkbutton_show_amount_type" title="订单数量千分位显示" skin="IDB_CHECK_BOX" pos="40,145" width="160" height="24" crtext="191919" show="1" check="false" showfocus="0" font="default1"/>
+		</tab> 
+		</tabctrl> 
+		    <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+		
+	</body>
+  
+</dlg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_system_set" title="系统设置" width="1024" height="768"  appwin="1" resize="0" frame="" bkimg="">
+  <base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="extrude" show="1" response="0" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE_SQUARE" tip="关闭" show="1" shortcut="ESC"/>
+  </base>
+
+	<body>
+		<!--img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/-->
+	</body>
+  
+</dlg>

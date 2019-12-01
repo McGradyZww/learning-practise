@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ColumnSetClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SingleColumn IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员编号" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="操作员名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券代码" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="证券名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="预估盈亏" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="盈亏比例" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="当前报价" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="当前持仓" IsVisiblity="true" isTotalRow="true" />
+  <SingleColumn Content="成本价" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="产品名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="交易组名称" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="资产账户" IsVisiblity="true" isTotalRow="false" />
+  <SingleColumn Content="开仓日期" IsVisiblity="true" isTotalRow="false" />
+</ColumnSetClass>

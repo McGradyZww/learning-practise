@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_monitor_down_product_monitor_set" title="" width="460" height="520"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	<base>
+		<img pos="0,0,-0,30" image="skins\default\dlg_header.png" mode="titl" show="1" response="0" />
+		<text name="title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="default3"
+			pos="50,5,200,25" title="账户风险设置" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<!--布局规则:
+		大标题:default5 长度和高度25  大标题之间相隔10
+		子项:default3 长度和高度20 和大标题高度相隔5，子项间相隔40
+		combox：长度120，高度26
+		-->
+		<div name="product_monitor_set_pagamset.body" pos="0,30,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>         
+		
+		<!--产品-->
+		<text crtext="000000" crmark="800000" align="left" pos="20,20,80,40" title="产品名称" font="default1" show="1"/>
+		<combobox name="product_monitor_set.product_code" tabstop="1" skin="IDB_EDIT" pos="80,15" width="120" height="36" tip="产品"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+		<!--单元-->
+		<text crtext="000000" crmark="800000" align="left" pos="250,20,310,40" title="交易单元" font="default1" show="1"/>
+		<combobox name="product_monitor_set.unit_code" tabstop="1" skin="IDB_EDIT" pos="310,15" width="120" height="36" tip="交易单元"
+					  small-image="skin:IDB_DROP_DOWN_small"
+					  multiline="0" readonly="1" maxchar="50"
+						font="default3" crtext="0,0,0" crtip="128,128,128">
+		</combobox>
+		
+		<text crtext="000000" crmark="800000" align="left" pos="20,65,80,85" title="监控方式" font="default1" show="1"/>
+		<combobox name="product_monitor_set.monitor_value_kind" tabstop="1" skin="IDB_EDIT" pos="80,60" width="120" height="36" tip="监控方式"
+						  small-image="skin:IDB_DROP_DOWN_small"
+						  multiline="0" readonly="1" maxchar="50"
+							font="default3" crtext="0,0,0" crtip="128,128,128">
+			<item name="固定值" value="1"/>
+			<item name="最大回撤" value="2" />
+		</combobox>
+							
+		<text crtext="000000" crmark="800000" align="left" pos="250,65,310,85" title="监控类型" font="default1" show="1"/>
+		<combobox name="product_monitor_set.monitor_value_type" tabstop="1" skin="IDB_EDIT" pos="310,60" width="120" height="36" tip="监控类型"
+						  small-image="skin:IDB_DROP_DOWN_small"
+						  multiline="0" readonly="1" maxchar="50"
+							font="default3" crtext="0,0,0" crtip="128,128,128">
+			<item name="单位净值" value="1" />
+			<item name="净值" value="2" />
+		</combobox>
+		
+		<text crtext="000000" crmark="800000" align="left" pos="20,110,80,130" title="预警线" font="default1" show="1"/>
+		<edit name="product_monitor_set.warning_value" tabstop="1" skin="IDB_EDIT" pos="80,105" width="120" height="36"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0" double="1" changednotify="1" maxchar="10"/>
+		<text crtext="000000" name="product_monitor_set.dw.warning_value" crmark="800000" align="left" pos="200,115" width="20" height="36" title="%" font="default1" show="0"/>
+		
+		<text crtext="000000" crmark="800000" align="left" pos="250,110,310,130" title="一级平仓" font="default1" show="1"/>
+		<edit name="product_monitor_set.append_value" tabstop="1" skin="IDB_EDIT" pos="310,105" width="120" height="36"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0" double="1" changednotify="1" maxchar="10"/>	
+    <text crtext="000000" name="product_monitor_set.dw.closing_value" crmark="800000" align="left" pos="430,115" width="20" height="36" title="%" font="default1" show="0"/>
+		
+		<text crtext="000000" crmark="800000" align="left" pos="20,155,80,175" title="二级平仓" font="default1" show="1"/>
+		<edit name="product_monitor_set.closing_value" tabstop="1" skin="IDB_EDIT" pos="80,150" width="120" height="36"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0" double="1" changednotify="1" maxchar="10"/>	
+    <text crtext="000000" name="product_monitor_set.dw.closing_value" crmark="800000" align="left" pos="200,160" width="20" height="36" title="%" font="default1" show="0"/>
+		
+			   
+		<text crtext="000000" crmark="800000" align="left" pos="250,155,310,175" title="最大监控" font="default1" show="1"/>
+		<edit name="product_monitor_set.max_monitor_value" tabstop="1" skin="IDB_EDIT" pos="310,150" width="120" height="36"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0" double="1" changednotify="1" maxchar="10"/>
+		<text crtext="000000" name="product_monitor_set.dw.max_monitor_value" crmark="800000" align="left" pos="430,160" width="20" height="36" title="%" font="default1" show="0"/>
+		
+		<text crtext="000000" crmark="800000" align="left" pos="20,200,80,220" title="备注信息" font="default1" show="1"/>
+		<edit name="product_monitor_set.remark_info" tabstop="1" skin="IDB_EDIT" pos="80,200" width="220" height="36"
+               multiline="1"  readonly="0"  font="default" crtext="0,0,0"   maxchar="256"/>	
+			
+	  <chkbtn name="product_monitor_set.autoclose" title="自动平仓" skin="IDB_CHECK_BOX" pos="20,246,236,266" crtext="191919" show="1" check="false" showfocus="0"/> 	
+	    <div name="product_monitor_set.closeset" pos="25,276,-0,-45" show="0">	
+	    	 <text crtext="000000" crmark="800000" align="left" pos="5,4" width="220" height="36" title="达到预警线平仓比例:" font="default1" show="1"/>  
+			   <edit name="product_monitor_set.warning_ratio" tabstop="1" skin="IDB_EDIT" pos="145,0" width="100" height="25"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0"  double="1" maxchar="256"/>	
+         <text crtext="000000" name="product_monitor_set.dw.closing_value" crmark="800000" align="left" pos="245,4" width="20" height="25" title="%" font="default3" show="1"/>
+       
+	    
+			   <text crtext="000000" crmark="800000" align="left" pos="5,45" width="220" height="36" title="达到一级平仓线平仓比例:" font="default1" show="1"/>  
+			   <edit name="product_monitor_set.append_ratio" tabstop="1" skin="IDB_EDIT" pos="145,45" width="100" height="25"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0"  double="1" maxchar="256"/>	
+         <text crtext="000000" name="product_monitor_set.dw.closing_value" crmark="800000" align="left" pos="245,45" width="20" height="25" title="%" font="default3" show="1"/>
+         
+         <text crtext="000000" crmark="800000" align="left" pos="5,80" width="220" height="36" title="达到二级平仓线平仓比例:" font="default1" show="1"/>  
+			   <edit name="product_monitor_set.close_ratio" tabstop="1" skin="IDB_EDIT" pos="145,80" width="100" height="25"
+               multiline="0"  readonly="0" maxchar="50" font="default" crtext="0,0,0" double="1" maxchar="256"/>	
+         <text crtext="000000" name="product_monitor_set.dw.closing_value" crmark="800000" align="left" pos="245,80" width="20" height="25" title="%" font="default3" show="1"/>
+			
+			  </div>
+      <!--确认、取消按钮-->      
+      <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" font="default3" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  <button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" font="default3" show="1" />
+		</div>
+	</body>
+</dlg>

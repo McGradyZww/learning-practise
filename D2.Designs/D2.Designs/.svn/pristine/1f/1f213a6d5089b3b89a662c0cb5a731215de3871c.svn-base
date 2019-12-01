@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<funcs>
+    <func funcname="pdfofuT.4.1" procedurename="prt_pdfopubif_GetFoFutuAccoNo" paras="13"/>
+    <func funcname="pdfofuT.4.2" procedurename="prt_pdfopubif_GetFoFutuAcco" paras="13"/>
+</funcs>

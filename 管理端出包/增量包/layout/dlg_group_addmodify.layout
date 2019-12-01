@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<dlg name="dlg_group_addmodify" title="" width="300" height="180"  appwin="1" resize="0" frame="" bkimg="" crbk="3c5680">
+	
+	<base>
+		<img pos="0,0,-0,35" image="skins\default\dlg_header.png" mode="tile" show="1" response="0" />
+		<text name="user.title" crtext="FFFFFF" crmark="800000" crshadow="808080" font="big"
+			pos="30,4,200,25" title="[MSGTIP]" response="0" show="1" />
+		<button name="button.close" pos="-34,0,-0,30" skin="IDB_BT_CLOSE" show="1" tip="关闭" shortcut="ESC" />
+	</base>
+	<body>
+		<div name="container.body" pos="0,32,-0,-0">	
+			<img pos="0,0,-0,0" image="skins\default\dlg_bg.png" show="1" response="0" />
+			<img pos="3,0,-3,-3" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+						
+	    	<text crtext="000000" crmark="800000" align="left" pos="20,25,90,43" title="账户组名称:" font="default1" show="1" />
+				<edit name="group_name" tabstop="1" skin="IDB_EDIT" small-image="" pos="97,21" width="140" height="26" title=""
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+	   		  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,55,90,73" title="备注说明:" font="default1" show="1" />
+	  		<edit name="group_remark" tabstop="1" skin="IDB_EDIT" small-image="" pos="97,52" width="140" height="26" title=""
+               multiline="0" autohscroll="1" autovscroll="1" number="0" readonly="0" maxchar="50"
+               font="default" crtext="0,0,0" />
+	   		  		
+	  		<text crtext="000000" crmark="800000" align="left" pos="20,85,90,103" title="状态:" font="default1" show="0" />
+	  		<radiobtn name="group_status_normal" title="正常" skin="IDB_radiobtn" pos="97,82,187,105" crtext="191919" show="0" check="true" showfocus="0" group="2"/>
+	  		<radiobtn name="group_status_stop" title="停用" skin="IDB_radiobtn" pos="182,82,272,105" crtext="191919" show="0"  showfocus="0" group="2"/>
+	  		 
+		    <button name="button.ok" skin="IDB_BT_OK" title="[OK]" pos="-200,-45,-120,-15" shortcut="RETURN" crtext="FFFFFF" defaultbutton="1"/>
+	  		<button name="button.cancel" skin="IDB_BT_DEFAULT" title="[CANCEL]" pos="-110,-45,-30,-15" show="1" />
+		</div>
+		
+	</body>
+  
+</dlg>

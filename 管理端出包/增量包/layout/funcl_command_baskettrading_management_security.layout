@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <div name="funcl_stockeorder_query_grid_batchsum_tab">
+    <img pos="0,0,-0,-0" image="skins\default\MsgBack.png" mode="extrude" framesize="0" show="1" response="0"/>
+    <!--<img pos="1,0,-1,3" image="skins\default\line_blue.png" mode="tile" show="1" response="0"/>-->
+    <!--<text crtext="808080" crmark="800000" align="left" pos="2,5,-15,25" title="  订单查询" font="big" show="1" />-->
+   
+    <gridctrl name="grid.funcl_basketcommand_security_query" pos="2,5,-2,-45" show="1"
+        img-scroll="skin:IDB_SCROLL_V" img-scrollh="skin:IDB_SCROLL_H" img-sep="skin:IDB_LINE_RP"
+        img-check="skin:IDB_CHECK_BOX" img-colsep="skin:IDB_LINE_SPLIT"  gird-tip="1"
+        img-count="6" image="skin:IDB_LIST_IMG"   sort="1"   
+        left-pos="0" row-height="35" header-height="38" bk-transparent="10"
+        font-title="big" font="default2" editcolumn="1"
+        valign="middle" down-row="1" align="center"  primary-key="batch_no"  
+        crtext="255,64,64,64" crhover="0,0,0" crpush="212,234,254" crhead="23,69,144" crrowhover="236,240,254">    
+          <column title="指令序号" width="100" align="center" key="command_id" /> 	 
+        <column title="指令状态" width="100" align="center" key="command_status" /> 	
+        <column title="证券代码" width="100" align="center" key="stock_code"  />
+        <column title="证券名称" width="100" align="center" key="stock_name" />
+        <column title="买卖方向" width="100" align="center" key="command_dir" /> 
+        <column title="指令限价" width="100" align="center" key="limit_price" data_type="N" />
+				<column title="指令数量" width="100" align="right" key="command_qty" data_type="T"  />		
+        <column title="订单数量" width="100" align="right" key="order_qty" data_type="T"  />
+         <column title="撤单数量" width="100" align="right" key="cancel_qty" data_type="T"  />
+        <column title="成交数量" width="100" align="right" key="execution_qty" data_type="T" />
+          <column title="成交金额" width="100" align="right" key="execution_amt" data_type="T" /> 
+        <column title="成交价格" width="100" align="right" key="execution_price" data_type="T" />	
+       <column title="审批状态" width="100" align="center" key="command_approve_status" />
+				<column title="审批操作员" width="100" align="center" key="command_approve_operator" />
+				<column title="审批日期" width="100" align="center" key="command_approve_date" />
+				<column title="审批时间" width="100" align="center" key="command_approve_time" data_type="N"/>
+        <column title="有效均价" width="100" align="center" key="average_price1" data_type="N" /> 
+        <column title="全天有效均价" width="100" align="center" key="average_price2" data_type="N" /> 
+        <column title="执行价差(%)" width="100" align="center" key="command_diff_price1" data_type="N"/>
+         <column title="全天执行价差(%)" width="120" align="center" key="command_diff_price2" data_type="N"/>
+        <column title="有效占比(%)" width="120" align="center" key="execution_ratio2" data_type="N"/>
+        <column title="全天有效占比(%)" width="120" align="center" key="execution_ratio4" data_type="N"/>
+        <column title="有效数量" width="100" align="center" key="execution_qty2" data_type="T"/>
+        <column title="全天有效数量" width="100" align="center" key="execution_qty4" data_type="T"/>
+        <column title="市场总成交量" width="100" align="center" key="execution_qty1" data_type="T"/>
+		<column title="指令金额" width="100" align="center" key="command_amt" data_type="N" />		
+      
+          <column title="指令时间" width="100" align="center" key="command_time" data_type="N" deletable="0"/>
+        <column title="指令完成时间" width="100" align="center" key="command_complete_time" data_type="N" deletable="0"/>
+    <column title="证券市场" width="100" align="center" key="exchange_no" />
+		
+    </gridctrl>
+   
+  </div>
