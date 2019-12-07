@@ -1,0 +1,199 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+HelloTimer	main.cpp	/^  HelloTimer(IEventReactor *p) : ITimerHandler(p) { }$/;"	f	class:HelloTimer
+HelloTimer	main.cpp	/^class HelloTimer : public ITimerHandler {$/;"	c	file:
+ICOOKIE_ACTIVATED	itimer_handler.h	/^    ICOOKIE_ACTIVATED = 1 << 1$/;"	e	enum:ITimerCookieType::__anon3
+ICOOKIE_INVALID	itimer_handler.h	/^    ICOOKIE_INVALID   = 0,$/;"	e	enum:ITimerCookieType::__anon3
+ICOOKIE_SCHEDULED	itimer_handler.h	/^    ICOOKIE_SCHEDULED = 1 << 0,$/;"	e	enum:ITimerCookieType::__anon3
+ICommonReadHandler	main.cpp	/^  ICommonReadHandler(int fd, IEventReactor *pReactor)$/;"	f	class:ICommonReadHandler
+ICommonReadHandler	main.cpp	/^class ICommonReadHandler : public IReadHandler {$/;"	c	file:
+IEventHandler	ievent_handler.h	/^class IEventHandler : public IObject {$/;"	c
+IEventReactor	ievent_reactor.cpp	/^IEventReactor::IEventReactor()$/;"	f	class:IEventReactor
+IEventReactor	ievent_reactor.h	/^class IEventReactor {$/;"	c
+IExecutable	iexecutable.h	/^class IExecutable : public IObject {$/;"	c
+IHNDL_NONE	ievent_handler.h	/^    IHNDL_NONE = 1 << 0,$/;"	e	enum:IHandlerType::__anon1
+IHNDL_PERIODIC	ievent_handler.h	/^    IHNDL_PERIODIC = 1 << 5,$/;"	e	enum:IHandlerType::__anon1
+IHNDL_PERSIST	ievent_handler.h	/^    IHNDL_PERSIST = 1 << 6$/;"	e	enum:IHandlerType::__anon1
+IHNDL_PRIOR_BEGIN	ievent_handler.h	/^    IHNDL_PRIOR_BEGIN = 0,$/;"	e	enum:IHandlerPriority::__anon2
+IHNDL_PRIOR_COUNT	ievent_handler.h	/^    IHNDL_PRIOR_COUNT$/;"	e	enum:IHandlerPriority::__anon2
+IHNDL_PRIOR_HIGH	ievent_handler.h	/^    IHNDL_PRIOR_HIGH = 0,$/;"	e	enum:IHandlerPriority::__anon2
+IHNDL_PRIOR_LOW	ievent_handler.h	/^    IHNDL_PRIOR_LOW,$/;"	e	enum:IHandlerPriority::__anon2
+IHNDL_PRIOR_MID	ievent_handler.h	/^    IHNDL_PRIOR_MID,$/;"	e	enum:IHandlerPriority::__anon2
+IHNDL_READ	ievent_handler.h	/^    IHNDL_READ = 1 << 2,$/;"	e	enum:IHandlerType::__anon1
+IHNDL_SIGNAL	ievent_handler.h	/^    IHNDL_SIGNAL = 1 << 4,$/;"	e	enum:IHandlerType::__anon1
+IHNDL_TIMER	ievent_handler.h	/^    IHNDL_TIMER = 1 << 1,$/;"	e	enum:IHandlerType::__anon1
+IHNDL_WRITE	ievent_handler.h	/^    IHNDL_WRITE = 1 << 3,$/;"	e	enum:IHandlerType::__anon1
+IHandlerList	ievent_reactor.h	/^typedef std::list<IEventHandler *>  IHandlerList;$/;"	t
+IHandlerPriority	ievent_handler.h	/^struct IHandlerPriority {$/;"	s
+IHandlerType	ievent_handler.h	/^struct IHandlerType {$/;"	s
+IIOHandler	iio_scheduler.h	/^  struct IIOHandler {$/;"	s	class:IIOScheduler
+IIOScheduler	iio_scheduler.cpp	/^IIOScheduler::IIOScheduler(IEventReactor *pReactor)$/;"	f	class:IIOScheduler
+IIOScheduler	iio_scheduler.h	/^class IIOScheduler : public IScheduler {$/;"	c
+IIOSelSelector	iio_sel_selector.cpp	/^IIOSelSelector::IIOSelSelector(IEventReactor *pReactor)$/;"	f	class:IIOSelSelector
+IIOSelSelector	iio_sel_selector.h	/^class IIOSelSelector : public IIOSelector {$/;"	c
+IIOSelector	iio_selector.h	/^class IIOSelector : public IObject {$/;"	c
+IListenerHandler	main.cpp	/^  IListenerHandler(int fd, IEventReactor *pReactor)$/;"	f	class:IListenerHandler
+IListenerHandler	main.cpp	/^class IListenerHandler : public IReadHandler {$/;"	c	file:
+IObject	iobject.h	/^class IObject {$/;"	c
+IReadHandler	iread_handler.cpp	/^IReadHandler::IReadHandler(int fd, IEventReactor *pReactor)$/;"	f	class:IReadHandler
+IReadHandler	iread_handler.h	/^class IReadHandler : public IEventHandler {$/;"	c
+IScheduler	ischeduler.h	/^class IScheduler : public IObject {$/;"	c
+ITimerCookie	itimer_scheduler.h	/^  }ITimerCookie;$/;"	t	class:ITimerScheduler	typeref:struct:ITimerScheduler::ITimerCookieScheduled
+ITimerCookieActivated	ievent_reactor.h	/^  struct ITimerCookieActivated {$/;"	s	class:IEventReactor
+ITimerCookieScheduled	itimer_scheduler.h	/^  typedef struct ITimerCookieScheduled {$/;"	s	class:ITimerScheduler
+ITimerCookieTLV	itimer_handler.h	/^struct ITimerCookieTLV {$/;"	s
+ITimerCookieType	itimer_handler.h	/^struct ITimerCookieType {$/;"	s
+ITimerHandler	itimer_handler.cpp	/^ITimerHandler::ITimerHandler(IEventReactor *pReactor)$/;"	f	class:ITimerHandler
+ITimerHandler	itimer_handler.h	/^class ITimerHandler : public IEventHandler {$/;"	c
+ITimerHandlerIterator	itimer_scheduler.h	/^  typedef ITimerHandlerList::iterator ITimerHandlerIterator;$/;"	t	class:ITimerScheduler
+ITimerHandlerList	itimer_scheduler.h	/^  typedef std::list<ITimerHandler *>  ITimerHandlerList;$/;"	t	class:ITimerScheduler
+ITimerScheduler	itimer_scheduler.cpp	/^ITimerScheduler::ITimerScheduler(IEventReactor *pReactor, const struct timeval *tvpInterval)$/;"	f	class:ITimerScheduler
+ITimerScheduler	itimer_scheduler.h	/^class ITimerScheduler : public IScheduler {$/;"	c
+IWriteHandler	iwrite_handler.cpp	/^IWriteHandler::IWriteHandler(int fd, IEventReactor *pReactor)$/;"	f	class:IWriteHandler
+IWriteHandler	iwrite_handler.h	/^class IWriteHandler : public IEventHandler {$/;"	c
+MAX_COOKIE_SIZE	itimer_handler.h	/^#define MAX_COOKIE_SIZE /;"	d
+MAX_FILES	iio_scheduler.h	/^#define MAX_FILES /;"	d
+USECS_PER_SEC	iutil.h	/^#define USECS_PER_SEC /;"	d
+__IEVENT_HANDLER_H	ievent_handler.h	/^#define __IEVENT_HANDLER_H$/;"	d
+__IEVENT_REACTOR_H	ievent_reactor.h	/^#define __IEVENT_REACTOR_H$/;"	d
+__IIO_SCHEDULER_H	iio_scheduler.h	/^#define __IIO_SCHEDULER_H$/;"	d
+__IIO_SELECTOR_H	iio_selector.h	/^#define __IIO_SELECTOR_H$/;"	d
+__IIO_SEL_SELECTOR_H	iio_sel_selector.h	/^#define __IIO_SEL_SELECTOR_H$/;"	d
+__IOBJECT_H	iobject.h	/^#define __IOBJECT_H$/;"	d
+__IREAD_HANDLER_H	iread_handler.h	/^#define __IREAD_HANDLER_H$/;"	d
+__IRUNNABLE_H	iexecutable.h	/^#define __IRUNNABLE_H$/;"	d
+__ISCHEDULER_H	ischeduler.h	/^#define __ISCHEDULER_H$/;"	d
+__ITIMER_HANDLER_H	itimer_handler.h	/^#define __ITIMER_HANDLER_H$/;"	d
+__ITIMER_SCHEDULER_H	itimer_scheduler.h	/^#define __ITIMER_SCHEDULER_H$/;"	d
+__IUTIL_H	iutil.h	/^#define __IUTIL_H$/;"	d
+__IWRITE_HANDLER_H	iwrite_handler.h	/^#define __IWRITE_HANDLER_H$/;"	d
+activate	ievent_reactor.cpp	/^void IEventReactor::activate(IEventHandler *pHandler)$/;"	f	class:IEventReactor
+activate	ievent_reactor.cpp	/^void IEventReactor::activate(int fd, int handlerType)$/;"	f	class:IEventReactor
+activate	iio_scheduler.cpp	/^void IIOScheduler::activate(int fd, int handlerType)$/;"	f	class:IIOScheduler
+add	iio_sel_selector.cpp	/^bool IIOSelSelector::add(int fd, int handlerType)$/;"	f	class:IIOSelSelector
+addRead	iio_sel_selector.cpp	/^bool IIOSelSelector::addRead(int fd)$/;"	f	class:IIOSelSelector
+addWrite	iio_sel_selector.cpp	/^bool IIOSelSelector::addWrite(int fd)$/;"	f	class:IIOSelSelector
+buf	main.cpp	/^  char buf[1024];$/;"	m	class:ICommonReadHandler	file:
+cancel	ievent_reactor.cpp	/^void IEventReactor::cancel(IReadHandler *pReadHandler)$/;"	f	class:IEventReactor
+cancel	ievent_reactor.cpp	/^void IEventReactor::cancel(ITimerHandler *pTimer)$/;"	f	class:IEventReactor
+cancel	ievent_reactor.cpp	/^void IEventReactor::cancel(IWriteHandler *pWriteHandler)$/;"	f	class:IEventReactor
+cancel	iio_scheduler.cpp	/^bool IIOScheduler::cancel(IReadHandler *pReadHandler)$/;"	f	class:IIOScheduler
+cancel	iio_scheduler.cpp	/^bool IIOScheduler::cancel(IWriteHandler *pWriteHandler)$/;"	f	class:IIOScheduler
+cancel	itimer_scheduler.cpp	/^bool ITimerScheduler::cancel(ITimerHandler *pTimer)$/;"	f	class:ITimerScheduler
+del	iio_sel_selector.cpp	/^bool IIOSelSelector::del(int fd, int handlerType)$/;"	f	class:IIOSelSelector
+delRead	iio_sel_selector.cpp	/^bool IIOSelSelector::delRead(int fd)$/;"	f	class:IIOSelSelector
+delWrite	iio_sel_selector.cpp	/^bool IIOSelSelector::delWrite(int fd)$/;"	f	class:IIOSelSelector
+dispatch	iio_scheduler.cpp	/^bool IIOScheduler::dispatch(const struct timeval *tvp)$/;"	f	class:IIOScheduler
+dispatch	iio_sel_selector.cpp	/^bool IIOSelSelector::dispatch(const struct timeval *tvp)$/;"	f	class:IIOSelSelector
+dispatch	itimer_scheduler.cpp	/^bool ITimerScheduler::dispatch(const struct timeval *tvp)$/;"	f	class:ITimerScheduler
+dispatchSingleList	itimer_scheduler.cpp	/^int ITimerScheduler::dispatchSingleList(int nListIndex, int nMaxActivate, $/;"	f	class:ITimerScheduler
+expireTime	itimer_handler.h	/^  const struct timeval *expireTime() const { $/;"	f	class:ITimerHandler
+fd	iread_handler.h	/^  int fd() { return m_nFd; }$/;"	f	class:IReadHandler
+fd	iwrite_handler.h	/^  int fd() { return m_nFd; }$/;"	f	class:IWriteHandler
+getCookie	itimer_handler.h	/^  ITimerCookieTLV *getCookie() {$/;"	f	class:ITimerHandler
+getExecute	ievent_handler.h	/^  IExecutable *getExecute() const { return m_pExec; }$/;"	f	class:IEventHandler
+greater	itimer_scheduler.h	/^struct greater : public std::binary_function<ITimerHandler *, ITimerHandler *, bool>$/;"	s
+haveActiveHandlers	ievent_reactor.cpp	/^bool IEventReactor::haveActiveHandlers() const$/;"	f	class:IEventReactor
+init	itimer_scheduler.cpp	/^void ITimerScheduler::init(IEventReactor *pReactor, const struct timeval *tvpInterval)$/;"	f	class:ITimerScheduler
+iter	ievent_reactor.h	/^    IHandlerList::iterator iter;$/;"	m	struct:IEventReactor::ITimerCookieActivated
+m_lstActiveHandler	ievent_reactor.h	/^  IHandlerList        m_lstActiveHandler;$/;"	m	class:IEventReactor
+m_nActivatedHandlers	ievent_reactor.h	/^  size_t              m_nActivatedHandlers;$/;"	m	class:IEventReactor
+m_nCurSchedIdx	itimer_scheduler.h	/^  size_t                              m_nCurSchedIdx;$/;"	m	class:ITimerScheduler
+m_nFd	iread_handler.h	/^  int   m_nFd;$/;"	m	class:IReadHandler
+m_nFd	iwrite_handler.h	/^  int m_nFd;$/;"	m	class:IWriteHandler
+m_nMaxActivate	itimer_scheduler.h	/^  size_t                              m_nMaxActivate;$/;"	m	class:ITimerScheduler
+m_nNumIOHandlers	iio_scheduler.h	/^  size_t            m_nNumIOHandlers;$/;"	m	class:IIOScheduler
+m_nTotalTimer	itimer_scheduler.h	/^  size_t                              m_nTotalTimer;$/;"	m	class:ITimerScheduler
+m_nfds	iio_sel_selector.h	/^  int             m_nfds;$/;"	m	class:IIOSelSelector
+m_pEventReactor	itimer_handler.h	/^  IEventReactor *         m_pEventReactor;$/;"	m	class:ITimerHandler
+m_pExec	ievent_handler.h	/^  IExecutable *   m_pExec;$/;"	m	class:IEventHandler
+m_pExecute	itimer_handler.h	/^  IExecutable *           m_pExecute;$/;"	m	class:ITimerHandler
+m_pIOScheduler	ievent_reactor.h	/^  IIOScheduler *      m_pIOScheduler;$/;"	m	class:IEventReactor
+m_pReactor	ievent_handler.h	/^  IEventReactor * m_pReactor;$/;"	m	class:IEventHandler
+m_pReactor	iio_scheduler.h	/^  IEventReactor *   m_pReactor;$/;"	m	class:IIOScheduler
+m_pReactor	iio_sel_selector.h	/^  IEventReactor * m_pReactor;$/;"	m	class:IIOSelSelector
+m_pReactor	itimer_scheduler.h	/^  IEventReactor *                     m_pReactor;$/;"	m	class:ITimerScheduler
+m_pSelector	iio_scheduler.h	/^  IIOSelector *     m_pSelector;$/;"	m	class:IIOScheduler
+m_pTimerScheduler	ievent_reactor.h	/^  ITimerScheduler *   m_pTimerScheduler;$/;"	m	class:IEventReactor
+m_tpCookieTLV	itimer_handler.h	/^  ITimerCookieTLV         m_tpCookieTLV;$/;"	m	class:ITimerHandler
+m_tpInOutErrorSet	iio_sel_selector.h	/^  fd_set          m_tpInOutErrorSet;$/;"	m	class:IIOSelSelector
+m_tpInOutReadSet	iio_sel_selector.h	/^  fd_set          m_tpInOutReadSet;$/;"	m	class:IIOSelSelector
+m_tpInOutWriteSet	iio_sel_selector.h	/^  fd_set          m_tpInOutWriteSet;$/;"	m	class:IIOSelSelector
+m_tpReadSet	iio_sel_selector.h	/^  fd_set          m_tpReadSet;$/;"	m	class:IIOSelSelector
+m_tpWriteSet	iio_sel_selector.h	/^  fd_set          m_tpWriteSet;$/;"	m	class:IIOSelSelector
+m_tvCurSched	itimer_scheduler.h	/^  struct timeval                      m_tvCurSched;$/;"	m	class:ITimerScheduler	typeref:struct:ITimerScheduler::timeval
+m_tvExpire	itimer_handler.h	/^  struct timeval          m_tvExpire;$/;"	m	class:ITimerHandler	typeref:struct:ITimerHandler::timeval
+m_tvInterval	itimer_scheduler.h	/^  struct timeval                      m_tvInterval; \/\/ 定时器分辨率，以毫秒为单位，最小100毫秒$/;"	m	class:ITimerScheduler	typeref:struct:ITimerScheduler::timeval
+m_vIIOHandlers	iio_scheduler.h	/^  IIOHandler        m_vIIOHandlers[MAX_FILES];$/;"	m	class:IIOScheduler
+m_vTimerQueue	itimer_scheduler.h	/^  std::vector<ITimerHandler *>        m_vTimerQueue;$/;"	m	class:ITimerScheduler
+m_vTimerWheel	itimer_scheduler.h	/^  std::vector<ITimerHandlerList>      m_vTimerWheel;       $/;"	m	class:ITimerScheduler
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f
+nHandlerListIndex	itimer_scheduler.h	/^    size_t                nHandlerListIndex;$/;"	m	struct:ITimerScheduler::ITimerCookieScheduled
+operator ()	itimer_scheduler.h	/^  bool operator()(const ITimerHandler *&x, const ITimerHandler *&y) {$/;"	f	struct:greater
+pReadHandler	iio_scheduler.h	/^    IReadHandler *  pReadHandler;$/;"	m	struct:IIOScheduler::IIOHandler
+pWriteHandler	iio_scheduler.h	/^    IWriteHandler * pWriteHandler;$/;"	m	struct:IIOScheduler::IIOHandler
+poolEmpty	iio_scheduler.h	/^  bool poolEmpty() const { return m_nNumIOHandlers == 0; }$/;"	f	class:IIOScheduler
+poolEmpty	itimer_scheduler.h	/^  bool poolEmpty() const { return m_nTotalTimer == 0; }$/;"	f	class:ITimerScheduler
+poolSize	itimer_scheduler.h	/^  size_t poolSize() const { return m_nTotalTimer; }$/;"	f	class:ITimerScheduler
+priority	iread_handler.cpp	/^int IReadHandler::priority() const$/;"	f	class:IReadHandler
+priority	itimer_handler.h	/^  virtual int priority() const {$/;"	f	class:ITimerHandler
+priority	iwrite_handler.cpp	/^int IWriteHandler::priority() const$/;"	f	class:IWriteHandler
+reactor	ievent_handler.h	/^  IEventReactor *reactor() const { return m_pReactor; }$/;"	f	class:IEventHandler
+reschedule	itimer_scheduler.cpp	/^void ITimerScheduler::reschedule(ITimerHandler *pTimer)$/;"	f	class:ITimerScheduler
+run	iread_handler.cpp	/^void IReadHandler::run()$/;"	f	class:IReadHandler
+run	itimer_handler.cpp	/^void ITimerHandler::run()$/;"	f	class:ITimerHandler
+run	iwrite_handler.cpp	/^void IWriteHandler::run()$/;"	f	class:IWriteHandler
+run	main.cpp	/^  virtual void run() $/;"	f	class:ICommonReadHandler
+run	main.cpp	/^  virtual void run() $/;"	f	class:IListenerHandler
+run	main.cpp	/^  virtual void run() {$/;"	f	class:HelloTimer
+runEventLoop	ievent_reactor.cpp	/^void IEventReactor::runEventLoop()$/;"	f	class:IEventReactor
+s_nPoolSize	itimer_scheduler.h	/^  static const unsigned long          s_nPoolSize = 1024;$/;"	m	class:ITimerScheduler
+schedule	ievent_reactor.cpp	/^void IEventReactor::schedule(IReadHandler *pReadHandler)$/;"	f	class:IEventReactor
+schedule	ievent_reactor.cpp	/^void IEventReactor::schedule(ITimerHandler *pTimer, const struct timeval *tvpDelay)$/;"	f	class:IEventReactor
+schedule	ievent_reactor.cpp	/^void IEventReactor::schedule(IWriteHandler *pWriteHandler)$/;"	f	class:IEventReactor
+schedule	iio_scheduler.cpp	/^bool IIOScheduler::schedule(IReadHandler *pReadHandler)$/;"	f	class:IIOScheduler
+schedule	iio_scheduler.cpp	/^bool IIOScheduler::schedule(IWriteHandler *pWriteHandler)$/;"	f	class:IIOScheduler
+schedule	itimer_scheduler.cpp	/^bool ITimerScheduler::schedule(ITimerHandler *pTimer, const struct timeval *tvpDelay)$/;"	f	class:ITimerScheduler
+server	main.cpp	/^int server(const char *ip, int port)$/;"	f
+setExecute	ievent_handler.h	/^  void  setExecute(const IExecutable *pExec) $/;"	f	class:IEventHandler
+setExpireTime	itimer_handler.h	/^  void setExpireTime(const struct timeval *tvpExpire) { $/;"	f	class:ITimerHandler
+src_files	Makefile	/^src_files = main.cpp \\$/;"	m
+timeoutNext	itimer_scheduler.cpp	/^void ITimerScheduler::timeoutNext(struct timeval *tvInterval) const$/;"	f	class:ITimerScheduler
+timer2string	iutil.cpp	/^timer2string(const struct timeval *tvp)$/;"	f
+timer2usec	iutil.cpp	/^timer2usec(const struct timeval *tvp)$/;"	f
+timer_correct	iutil.cpp	/^timer_correct(struct timeval *tv)$/;"	f
+timeradd	iutil.cpp	/^timeradd(struct timeval *a, struct timeval *b, struct timeval *res)$/;"	f
+timerclear	iutil.cpp	/^timerclear(struct timeval *tvp)$/;"	f
+timercmp	iutil.h	/^#define timercmp(/;"	d
+timerisset	iutil.cpp	/^timerisset(struct timeval *tvp)$/;"	f
+timersub	iutil.cpp	/^timersub(struct timeval *a, struct timeval *b, struct timeval *res)$/;"	f
+toString	iio_scheduler.cpp	/^std::string IIOScheduler::toString() const$/;"	f	class:IIOScheduler
+toString	iio_sel_selector.cpp	/^std::string IIOSelSelector::toString() const $/;"	f	class:IIOSelSelector
+toString	iread_handler.cpp	/^std::string IReadHandler::toString() const$/;"	f	class:IReadHandler
+toString	itimer_handler.cpp	/^std::string ITimerHandler::toString() const $/;"	f	class:ITimerHandler
+toString	itimer_scheduler.cpp	/^std::string ITimerScheduler::toString() const $/;"	f	class:ITimerScheduler
+toString	iwrite_handler.cpp	/^std::string IWriteHandler::toString() const$/;"	f	class:IWriteHandler
+tpHandlerListIter	itimer_scheduler.h	/^    ITimerHandlerIterator tpHandlerListIter;$/;"	m	struct:ITimerScheduler::ITimerCookieScheduled
+type	iread_handler.cpp	/^int IReadHandler::type() const$/;"	f	class:IReadHandler
+type	itimer_handler.cpp	/^int ITimerHandler::type() const$/;"	f	class:ITimerHandler
+type	iwrite_handler.cpp	/^int IWriteHandler::type() const$/;"	f	class:IWriteHandler
+ucCookieValue	itimer_handler.h	/^  unsigned char  ucCookieValue[MAX_COOKIE_SIZE-8];$/;"	m	struct:ITimerCookieTLV
+ucPad	itimer_handler.h	/^  unsigned char  ucPad[4];$/;"	m	struct:ITimerCookieTLV
+usCookieLength	itimer_handler.h	/^  unsigned short usCookieLength;$/;"	m	struct:ITimerCookieTLV
+usCookieType	itimer_handler.h	/^  unsigned short usCookieType;$/;"	m	struct:ITimerCookieTLV
+vector2string	iutil.cpp	/^vector2string(std::vector<IObject> &vObjs, std::string &sObjDesc)$/;"	f
+~IEventHandler	ievent_handler.h	/^  virtual ~IEventHandler() { }$/;"	f	class:IEventHandler
+~IExecutable	iexecutable.h	/^  virtual ~IExecutable() { }$/;"	f	class:IExecutable
+~IIOScheduler	iio_scheduler.cpp	/^IIOScheduler::~IIOScheduler()$/;"	f	class:IIOScheduler
+~IIOSelSelector	iio_sel_selector.h	/^  virtual ~IIOSelSelector() { }$/;"	f	class:IIOSelSelector
+~IIOSelector	iio_selector.h	/^  virtual ~IIOSelector() { }$/;"	f	class:IIOSelector
+~IObject	iobject.h	/^  virtual ~IObject() { }$/;"	f	class:IObject
+~IReadHandler	iread_handler.h	/^  virtual ~IReadHandler() { }$/;"	f	class:IReadHandler
+~IScheduler	ischeduler.h	/^  virtual ~IScheduler() { }$/;"	f	class:IScheduler
+~ITimerHandler	itimer_handler.cpp	/^ITimerHandler::~ITimerHandler()$/;"	f	class:ITimerHandler
+~ITimerScheduler	itimer_scheduler.cpp	/^ITimerScheduler::~ITimerScheduler()$/;"	f	class:ITimerScheduler
+~IWriteHandler	iwrite_handler.h	/^  virtual ~IWriteHandler() { }$/;"	f	class:IWriteHandler
