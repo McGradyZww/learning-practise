@@ -1,0 +1,47 @@
+2243.   Number Sequence 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2380   Accepted Runs: 1717
+
+--------------------------------------------------------------------------------
+
+
+
+Given a positive integer number, we want to generate a number sequence with the following rules:
+
+If the current number is 1, the process will be terminated. Otherwise, if the current number is even, the next number will be n/2. If the current number is odd (except 1), the next number will be 3*n+1. Then we turn to deal with the new number, until we get 1. 
+
+For example, given the first number 22, we will get {22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1}. The length of this sequence is 16.
+
+Given the first number, your task is to find the length of the sequence generated with these rules. We assume that the length will not be more than 1000.
+
+Input
+
+There is only one number N (1 ¡Ü N ¡Ü 1000) for each test case, indicating the first number of the sequence.
+
+The input is terminated by a zero. 
+
+Output
+
+Output one number in a line for each test case, indicating the length of the sequence we generate. 
+
+Sample Input
+
+
+22
+1000
+1
+0
+
+
+Sample Output
+
+
+16
+112
+1 
+
+
+Author: RoBa 
+
+

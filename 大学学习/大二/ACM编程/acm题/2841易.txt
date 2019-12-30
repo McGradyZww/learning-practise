@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+
+2841.   Bitwise Reverse 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2139   Accepted Runs: 1469
+
+--------------------------------------------------------------------------------
+
+
+Professor Robby invents a powerful encryption method, but he is too lazy to implement it. So he turns to you for help.
+In fact, the encryption method is only applied to positive integers. At first, we express the number as binary code, that is, a string only contain '0' and '1', and the first digit can't be '0'. Then we reverse the string. And the last step, we calculate the reversed binary code and express it in decimal again.
+
+For example, we want to encrypt the number 14, we express it as 1110, after reversing it we get 0111, and (0111)2 = 7. So we get 7.
+
+
+Input
+There is only one line for each test case, containing the positive integer to be encrypted. You can assume the number is not more than 106.
+The input is terminated with a zero. 
+
+Output
+Output one line for each test case, indicating the number after encryption.
+Sample Input
+5
+6
+14
+0
+
+Sample Output
+5
+3
+7
+

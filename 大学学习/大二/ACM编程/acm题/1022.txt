@@ -1,0 +1,46 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1022.   Packets 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1311   Accepted Runs: 431
+
+--------------------------------------------------------------------------------
+
+
+A factory produces products packed in square packets of the same height h and of the sizes 1x1, 2x2, 3x3, 4x4, 5x5, 6x6. These products are always delivered to customers in the square parcels of the same height h as the products have and of the size 6x6. Because of the expenses it is the interest of the factory as well as of the customer to minimize the number of parcels necessary to deliver the ordered products from the factory to the customer. A good program solving the problem of finding the minimal number of parcels necessary to deliver the given products according to an order would save a lot of money. You are asked to make such a program. 
+
+Input
+
+The input consists of several lines specifying orders. Each line specifies one order. Orders are described by six integers separated by one space representing successively the number of packets of individual size from the smallest size to the biggest size . The end of the input is indicated by the line containing six zeros. 
+
+
+Output
+
+The output contains one line for each line in the input. This line contains the minimal number of parcels into which the order from the corresponding line of the input file can be packed. There is no line in the output corresponding to the last ``null'' line of the input. 
+
+Sample Input
+
+0 0 4 0 0 1
+7 5 1 0 0 0
+0 0 0 0 0 0
+
+Sample Output
+
+2
+1
+
+
+
+Source: Central European 1996
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

@@ -1,0 +1,28 @@
+1809.   Playground 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2784   Accepted Runs: 657
+________________________________________
+
+George has K ¡Ü 20 steel wires shaped in the form of half-circles, with radii a1, a2, ... , aK. They can be soldered (connected) at the ends, in any angle. Is it possible for George to make a closed shape out of these wires? He does not have to use all the wires. 
+The wires can be combined at any angle, but may not intersect. Beware of floating point errors. 
+Input specifications 
+Each data set consists of a number 0 < K ¡Ü 20 on a line by itself, followed by a line of K space-separated numbers ai. Each number is in the range 0 < ai < 107, and has at most 3 digits after the decimal point. The input will be terminated by a zero on a line by itself. 
+Output specifications 
+For each test case, there should be one word on a line by itself: "YES" if it is possible to make a simple connected figure out of the given arcs, and "NO" if it isn't. 
+Sample Input 
+1
+4.000
+2
+1.000 1.000
+3
+1.455 2.958 4.424
+7
+1.230 2.577 3.411 2.968 5.301 4.398 6.777
+0
+Sample Output 
+NO
+YES
+NO
+YES
+

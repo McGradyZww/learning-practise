@@ -1,0 +1,22 @@
+2199.   A+B Problem 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 3234   Accepted Runs: 870
+________________________________________
+
+You know that the first problem of an online judge system should be the "A+B Problem", but TOJ not. What a terrible! So now it comes... 
+Given a series of numbers, your task is to find the largest number C in the sequence, which is the sum of two other numbers A and B in the sequence. Please note that A and B may have the same value, but cannot be the same number. 
+Input
+The first line of each test case is an integer N (1 ¡Ü N ¡Ü 1000), which is the amount of the numbers, followed by a line of N numbers. 
+You can assume all the numbers in the sequence are positive and not more than 108. 
+The input will be terminated by a zero. 
+Output
+Output one line for each test case, indicating the largest number. If there is no such number, output "-1". 
+Sample Input
+5
+8 3 4 3 6
+0
+Sample Output
+6
+Author: Roba
+

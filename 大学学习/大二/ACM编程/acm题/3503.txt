@@ -1,0 +1,18 @@
+3503.   Degree 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1055   Accepted Runs: 503
+________________________________________
+
+CXB would like to find out the maximum repeat frequency in a figure sequence. For instance, the figure sequence as follows: 5,6,7,5,1. According to this sequence, we can draw a conclusion that 5 is the number which is repeated 2 and 2 is answer.
+Input
+The first line of the input contains ca (ca ¡Ü 50), For each test cases, there is a number of n.(n ¡Ü 10000).Next line contains n positive integer .Each integer is less than 10000.
+Output
+For each test case, print an answer .
+Sample Input
+1
+5
+5 6 7 5 1
+Sample Output
+2
+

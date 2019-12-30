@@ -1,0 +1,28 @@
+2990.   Simple Task 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1420   Accepted Runs: 920
+________________________________________
+
+WCM is a student of UESTC major in Math. He says he is the best Math student of UESTC. ZHC laughs hearing that, so he gives WCM a simple problem to solve. The problem is very simple. Given two sequences of integers (A1, A2,...,An) and (B1, B2, ..., Bm), you are to find how many pairs of integers (i, j) satisfying Ai + Bj = 0. 
+What an easy problem! But WCM works for three days and can't solve it. Now he returns to you for help. If you solve it, he will think you the best Math student of UESTC. 
+Input
+The first line of the input gives an integer t (t < 100), which is the number of test case. 
+For each test case, there are 4 lines. The first line gives the length of the first sequence n (0 < n ¡Ü 200), followed by a line containing n integers A1, A2,...,An separated by single space. The third and fourth lines describe the second sequence (B1, B2,... ,Bm) same as the first sequence above. (0 < m ¡Ü 200) 
+Every number in two sequences will be in the range of [-10000, 10000]. 
+Output
+For each test case, output a line containing the answer. 
+Sample Input
+2
+2
+1 2
+3
+-1 -2 -3
+1
+-1
+2
+2 1
+Sample Output
+2
+1
+

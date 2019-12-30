@@ -1,0 +1,61 @@
+#include "mpi.h"
+#include <stdio.h>
+#include <math.h>
+
+double f(double a)
+{
+    return (4.0 / (1.0 + a*a));
+}
+
+void main(int argc, char *argv[])
+{
+    int done = 0, n, myid, numprocs, i;
+    double PI25DT = 3.141592653589793238462643;
+    double mypi, pi, h, sum, x;
+    double startwtime, endwtime;
+    int  namelen;
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
+	
+    MPI_Init(&argc,&argv);
+    MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
+    MPI_Comm_rank(MPI_COMM_WORLD,&myid);
+    MPI_Get_processor_name(processor_name,&namelen);
+	
+    fflush(stderr);//刷新标准输入缓冲区，将输入缓冲区里的东西丢弃
+	
+    n = 0;
+    while (!done)
+    {
+        if (myid == 0)
+        {
+	    printf("Please give N= ");fflush(stdout);//刷新标准输出缓冲区，把输出缓冲区里的东西强制打印到标准输出设备上
+            在单进程程序中作业不大，但在多进程程序中很有用，程序的输出内容一般不会立即输出，而是在程序结束后在输出。而fflush(sthout)会强制每次printf
+            ()都立即显示在标准输出设备上。
+	    scanf("%d",&n);
+	    startwtime = MPI_Wtime();//进程已经执行过的时间，以秒为单位，双精度
+        }
+        MPI_Bcast(&n, 1, MPI_INT, 0, MPI_COMM_WORLD);
+        if (n == 0)
+            done = 1;
+        else
+        {
+            h   = 1.0 / (double) n;
+            sum = 0.0;
+            for (i = myid + 1; i <= n; i += numprocs)
+            {
+                x = h * ((double)i - 0.5);
+                sum += f(x);
+            }//每个进程执行间隔的相加
+            mypi = h * sum;
+	    MPI_Reduce(&mypi, &pi, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);//归约
+	    if (myid == 0)
+	    {
+                printf("pi is approximately %.16f, Error is %.16f\n",
+		    pi, fabs(pi - PI25DT));
+		endwtime = MPI_Wtime();
+		printf("wall clock time = %f\n", endwtime-startwtime);	       
+	    }
+        }
+    }
+    MPI_Finalize();
+}

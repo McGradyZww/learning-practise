@@ -1,0 +1,32 @@
+2857.   Digit Sorting 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2012   Accepted Runs: 1071
+
+--------------------------------------------------------------------------------
+
+
+
+Several players play a game. Each player chooses a certain number, writes it down (in decimal notation, without leading zeroes) and sorts the digits of the notation in non-decreasing order, obtaining another number. The player who receives the largest number wins. 
+You are given the list of numbers initially chosen by the players. Output the winner's resulting number. 
+
+
+Input
+The first line of each test case contains an integer N (1 ¡Ü N ¡Ü 50), indicating the number of the players. Then N integers followed in the second line. Each number will be between 0 and 100000, inclusive.
+The input is terminated with N = 0.
+
+
+Output
+Output one line for each test case, indicating the winner's resulting number.
+
+Sample Input
+6
+1 10 100 1000 10000 100000
+3
+9638 8210 331
+0
+
+Sample Output
+1
+3689
+

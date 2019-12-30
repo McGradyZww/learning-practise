@@ -1,0 +1,30 @@
+2803.   The Quadratic Equation 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1786   Accepted Runs: 1189
+
+--------------------------------------------------------------------------------
+
+
+
+In middle school, Hawk often needs to solve quadratic equation problems. 
+A quadratic equation, is an equation such as aX2 + bX + c = 0. 
+
+Given the values of a, b, and c, would you please help Hawk determine the value of X ? 
+
+
+Input
+The first line of the input contains an integer n(n < 1000). The next n lines contain n equations, each equation is denoted by three double valued numbers, a, b, and c. The value of a won't be zero.
+Output
+For each equation, output a line contains the solution. For quadratic equation, there may be two different values for X, please output the smaller one firstly. Answers must be rounded to three digits after the decimal point. If the equation has no solution, output "No solution!". 
+Sample Input
+4
+1.0 10.0 5.0
+1.0 2.0 1.0
+2.5 5.8 5.4
+12.0 4.0 -56.0
+Sample Output
+-9.472 -0.528
+-1.000
+No solution!
+-2.333 2.000

@@ -1,0 +1,24 @@
+2859.   S Number 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2494   Accepted Runs: 1364
+
+--------------------------------------------------------------------------------
+
+
+
+You are given a set of numbers. The number which is only less than the largest number is called as S-Number. For the number set which contains 8 numbers: 3, 6, 0, -5, 7, 7, 6, 2. The largest number is 7. So the S-Number is 6 because it is only less than 7. 
+
+Input
+The first line of each case contains a positive integer n that indicates the size of the set. Then n numbers followed, denotes the numbers in the set. The input is terminated by a single line n = 0. All the numbers in the input will be less than 100. 
+Output
+One line contains the S-Number for each case. 
+Sample Input
+8
+3 6 0 -5 7 7 6 2
+0
+
+Sample Output
+6
+
+

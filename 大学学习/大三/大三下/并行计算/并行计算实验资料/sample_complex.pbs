@@ -1,0 +1,22 @@
+#!/bin/bash
+#PBS -N test
+#PBS -l nodes=2:ppn=2
+#PBS -q AA000_queue
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+#all processors number
+procs=$(cat $PBS_NODEFILE | wc -l)
+
+cat $PBS_NODEFILE | uniq > NODES
+
+#nodes number
+nodes=$(cat NODES | uniq | wc -l)
+
+#cores number per node
+cores=$((procs/nodes))
+
+mpirun -np $nodes -machinefile NODES ./test $cores
+
+rm NODES

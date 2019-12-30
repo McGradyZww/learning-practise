@@ -1,0 +1,20 @@
+1779.   Tri Tiling 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1213   Accepted Runs: 656
+________________________________________
+
+In how many ways can you tile a 3xn rectangle with 2x1 dominoes? 
+Here is a sample tiling of a 3x12 rectangle. 
+ 
+Input consists of several test cases followed by a line containing -1. Each test case is a line containing an integer 0 ¡Ü n ¡Ü 30. For each test case, output one integer number giving the number of possible tilings. 
+Sample input
+2
+8
+12
+-1
+Output for Sample Input
+3
+153
+2131
+

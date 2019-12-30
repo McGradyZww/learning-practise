@@ -1,0 +1,25 @@
+1539.   Palindrome Problem El Borpem Ord Nilap 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1566   Accepted Runs: 773
+________________________________________
+
+A palindrome is a word or phrase which is spelled the same backwards and forwards (ignoring any punctuation and whitespace). Some famous palindromes include
+Madam, I'm Adam.
+A man, a plan, a canal: Panama!
+Go hang a salami, I'm a lasagna hog.
+For this problem, you will read in a string of text and determine whether or not it is a palindrome.
+Input
+There will be multiple input sets. Each set will consist of one line of text of no more than 80 characters. The last line of the file will contain the sentence "THE END." and should not be processed.
+Output
+For each input set, output either the word Yes or the word No depending on whether the input string is a palindrome or not.
+Sample Input
+Go hang a salami, I'm a lasagna hog.
+East Central Regional Programming Contest
+Dennis sinned
+THE END.
+Sample Output
+Yes
+No
+Yes
+

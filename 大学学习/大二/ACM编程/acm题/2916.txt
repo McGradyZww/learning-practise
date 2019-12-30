@@ -1,0 +1,23 @@
+2916.   Help Me 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2153   Accepted Runs: 683
+________________________________________
+
+We all interested in mathematics and world are divided in to two parts. One who are interested in mathematics and other who are afraid of mathematics. 
+Here is a equation: 
+      ( X * N ) % Y = 0 
+Given two number X & Y you have to find minimum N that satisfies the equation.
+Input:
+Input consists of two positive integer X & Y . (1¡ÜX,Y¡Ü2000000000)
+Output:
+You have to output minimum N.
+Sample Input:
+1 5
+6 7
+Sample Output:
+5
+7
+Problem Idea: M.H. Rasel.
+Problem Setter: Md. Shakil Ahmed. 
+

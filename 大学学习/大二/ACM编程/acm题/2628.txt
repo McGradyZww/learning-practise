@@ -1,0 +1,36 @@
+2628.   Subsequence 
+--------------------------------------------------------------------------------
+Time Limit: 0.5 Seconds   Memory Limit: 65536K
+Total Runs: 2051   Accepted Runs: 1153
+
+--------------------------------------------------------------------------------
+
+
+
+Given a string s of length n, a subsequence of it, is defined as another string s' = su1 + su2 ... sum where 1 ¡Ü u1 < u2 < ... < um ¡Ü n and si is the ith character of s. Your task is to write a program that, given two strings s1 and s2, checks whether either s2 or its reverse is a subsequence of s1 or not. 
+
+Input
+The first line of input contains an integer T, which is the number of test cases. Each of the next T lines contains two non-empty strings s1 and s2 (with length at most 100) consisted of only alpha-numeric characters and separated from each other by a single space. 
+
+
+Output
+For each test case, your program must output ¡°YES¡±, in a single line, if either s2 or its reverse is a subsequence of s1. Otherwise your program should write ¡°NO¡±. 
+
+
+Sample Input
+5
+arash aah
+arash hsr
+kick kkc
+A a
+a12340b b31
+
+
+Sample Output
+YES
+YES
+NO
+NO
+YES
+
+

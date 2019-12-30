@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IPC - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\zww\AppData\Local\Temp\RSP48D4.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/IPC.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\大学学习\大三\操作系统原理\IPC\randw.cpp"
+]
+Creating command line "cl.exe @C:\Users\zww\AppData\Local\Temp\RSP48D4.tmp" 
+<h3>Output Window</h3>
+Compiling...
+randw.cpp
+f:\visual c++\microsoft visual studio\vc98\include\unistd.h(14) : fatal error C1083: Cannot open include file: 'getopt.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+randw.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

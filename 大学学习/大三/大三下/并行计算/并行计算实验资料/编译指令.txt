@@ -1,0 +1,17 @@
+C:
+gcc -pthread -o test.o test.c
+gcc -fopenmp -o test.o test.c
+icc -pthread -o test.o test.c
+icc -openmp -o test.o test.c
+mpicc -i_dynamic -o test.o test.c
+mpicc -i_dynamic -pthread -o test.o test.c
+mpicc -i_dynamic -openmp -o test.o test.c
+
+C++:
+g++ -pthread -o test.o test.c
+g++ -fopenmp -o test.o test.c
+icpc -pthread  -o test.o test.c
+icpc -openmp -o test.o test.c
+mpic++ -i_dynamic -o test.o test.c
+mpic++ -i_dynamic -pthread -o test.o test.c
+mpic++ -i_dynamic -openmp -o test.o test.c

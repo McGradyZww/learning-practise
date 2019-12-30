@@ -1,0 +1,21 @@
+3070.   Encryption 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1698   Accepted Runs: 779
+________________________________________
+
+You must have heard of an ancient encryption called Caesar cipher or 'shift cipher'. That is, given the plaintext and a number D, you should replace every character c in the plaintext with another character which is D places after c in the alphabet. For example, if D = 2, you should replace 'a' with 'c', replace 'b' with 'd', ... replace 'y' with 'a', and replace 'z' with 'b'. 
+Given the plaintext and D, you should output the cipher text. 
+Input
+The first line is an integer T, the number of test cases. Then T cases follows. 
+Each case contains only one line, consists of the plaintext and the number D, separated by a space. You can assume there are only lower case letters in the plaintext, and the length is no more than 100. 0 ¡Ü D < 26. 
+Output
+Output one line for each test case, indicating the cipher text. 
+Sample Input
+2
+tjucs 1
+abcd 0
+Sample Output
+ukvdt
+abcd
+

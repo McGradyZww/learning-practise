@@ -1,0 +1,48 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1089.   Happy 2004 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 538   Accepted Runs: 298
+
+--------------------------------------------------------------------------------
+
+
+
+Consider a positive integer X,and let S be the sum of all positive integer divisors of 2004X. Your job is to determine S modulo 29 (the rest of the division of S by 29).
+
+Take X = 1 for an example. The positive integer divisors of 20041 are 1, 2, 3, 4, 6, 12, 167, 334, 501, 668, 1002 and 2004. Therefore S = 4704 and S modulo 29 is equal to 6.
+
+Input
+
+The input consists of several test cases. Each test case contains a line with the integer X (1 ¡Ü X ¡Ü 10000000).
+
+A test case of X = 0 indicates the end of input, and should not be processed.
+
+Output
+
+For each test case, in a separate line, please output the result of S modulo 29.
+
+Sample Input
+
+1
+10000
+0
+Sample Output
+
+6
+10
+
+
+Source: Asia - Beijing 2004 Practice
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

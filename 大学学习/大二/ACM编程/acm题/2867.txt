@@ -1,0 +1,24 @@
+2867.   Picking Problem 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1455   Accepted Runs: 633
+________________________________________
+
+On holiday, Kandy happens to come to a square. People there are playing different kinds of games. Each game has a start time and a lasting duration. Two or more games may carry on at the same time. Kandy likes the games so much that he wants to take apart in as many as possible games. Given the list of all the games, can you help him to calculate the maximum number of games that he can take. 
+Input
+There are several test cases. The first line of each test case is a single integer N, which is the total number of the games (1 ¡Ü N ¡Ü 10000). It's followed by N lines, each line has two integers, S and D, and S is the start time of the ith game, and D is the game's duration (0 ¡Ü S ¡Ü 10000, 1 ¡Ü D ¡Ü 1000). 
+The last case is followed by a single integer 0. 
+Output
+For each case, output one line with a single integer M, which is the maximum number of games that Kandy can take. 
+Sample Input
+5
+0 3
+5 10
+9 2
+3 4
+2 2
+0
+Sample Output
+3
+Hint: In the sample, the first game starts at 0, ends at 3, and the forth game starts at 3, ends at 7, and the third game starts at 9, ends at 11. So he can pick these three games. 
+

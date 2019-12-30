@@ -1,0 +1,563 @@
+﻿----------------------- Page 1-----------------------
+
+  A New Eﬃcient Algorithm for  Computing  the 
+                 Longest Common Subsequence 
+
+                  Costas S. Iliopoulos and M. Sohel Rahman 
+
+                                Algorithm Design Group 
+               Department of Computer Science, King’s College London, 
+                         Strand, London WC2R 2LS, England 
+                             {csi,  sohel}@dcs.kcl.ac.uk 
+                            http://www.dcs.kcl.ac.uk/adg 
+
+       Abstract.    The  longest  common  subsequence(LCS)  problem  is  a  clas- 
+       sic and well-studied problem in computer science. The LCS problem is a 
+       common task in DNA sequence analysis with many applications to genet- 
+       ics and molecular biology. In this paper, we present a new and eﬃcient 
+       algorithm  for  solving  the  LCS  problem  for  two  strings.  Our  algorithm 
+       runs  in O(R log log n)  time,  where  R  is the total number   of  ordered 
+       pairs of positions at which the two strings match. 
+
+1    Introduction 
+
+The   longest  common  subsequence(LCS)  problem  is  a  classic  and  well- 
+studied  problem  in  computer  science  with  extensive  applications  in  di- 
+verse areas ranging from  spelling  error corrections  to  molecular  biology. 
+A  subsequence  of  a  string  is  obtained  by  deleting  zero  or  more  sym- 
+bols  of  that  string.  The  longest  common  subsequence  problem  for  two 
+strings,  is  to  ﬁnd  a  common  subsequence  in  both  strings,  having  max- 
+imum  possible  length.  More  formally,  suppose  we  are  given  two  strings 
+X [1..n]  =   X [1]X [2]   . . . X[n]  and  Y [1..n]  =  Y [1]Y [2]   . . . Y [n].  A  sub- 
+sequence  S[1..r]    =   S[1]S[2]    . . . S[r], 0 <   r ≤  n  of  X    is  obtained  by 
+deleting  n − r  symbols  from  X .  A  common  subsequence  of  two  strings 
+X   and  Y ,  denoted cs(X, Y ),  is  a  subsequence  common  to  both  X            and 
+Y . The longest common subsequence of X  and Y , denoted lcs(X, Y ) or 
+LCS(X, Y ),  is  a  common  subsequence  of  maximum  length.  We  denote 
+the length of lcs(X, Y ) by r(X, Y ). In this paper, we assume that the two 
+given strings are of equal length. But our results can be easily extended 
+to handle two strings of diﬀerent length. 
+
+Problem  “LCS”.  LCS Problem for 2 Strings. Given strings X                      and Y , 
+compute the Longest Common Subsequence of X                  and Y . 
+
+----------------------- Page 2-----------------------
+
+2 
+
+    The longest common subsequence problem for  k  strings (k > 2) was 
+ﬁrst shown to be NP-hard [14] and later proved to be hard to be approx- 
+imated [11]. The restricted but, probably, the more studied problem that 
+deals with two strings has been studied extensively [22, 17, 16, 15, 10, 9, 8]. 
+The classic dynamic programming solution to LCS problem, invented by 
+                                        2 
+Wagner and Fischer [22], has O(n  ) worst case running time. Masek and 
+Paterson  [15]  improved  this  algorithm  using  the  “Four-Russians”  tech- 
+                                                                     2 
+nique  [2]  to  reduce  the  worst  case  running  time  to  O(n  / log n).  Since 
+then  not  much  improvement  in  terms  of  n  can  be  found  in  the  litera- 
+ture.  However,  several  algorithms  exist  with  complexities  depending  on 
+other parameters. For example, Myers in [16] and Nakatsu et al. in                 [17] 
+presented an O(nD) algorithm, where the parameter D is the simple Lev- 
+enshtein distance between the two given strings [12]. Another interesting 
+and  perhaps  more  relevant  parameter  for  this  problem  is  R,  which  is 
+the  total  number  of  ordered  pairs  of  positions  at  which  the  two  strings 
+match. More formally, we say a pair (i, j),         1 ≤ i, j  ≤ n, deﬁnes a match, 
+if X [i] = Y [j]. The set of all matches, M , is deﬁned as follows: 
+
+                    M  = {(i, j)  | X [i] = Y [j], 1 ≤ i, j  ≤ n} 
+
+Observe that  |M | = R. Hunt and Szymanski [10] presented an algorithm 
+to  solve  Problem  LCS  in  O((R + n) log n)  time.  They  also  cited  appli- 
+cations,  where  R  ∼  n  and  thereby  claimed  that  for  these  applications 
+the  algorithm  would  run  in  O(n log n)  time.  For  a  comprehensive  com- 
+parison of the well-known algorithms for LCS problem and study of their 
+behaviour  in  various  application  environments  the  readers  are  referred 
+to [6]. 
+    In this paper, we revisit the much studied LCS problem for two strings 
+and  present  new  algorithms  using  some  novel  ideas  and  interesting  ob- 
+servations.  Our  main  result  is  an  O(R log log n)  algorithm  for  Problem 
+LCS. The rest of the paper is organized as follows. In Sections 2 and 3, 
+we  present  the  new  algorithms  to  solve  Problem  LCS.  In  particular,  we 
+present a new approach to solve Problem LCS in Section 2 which provides 
+the base of our new algorithms and also report a new algorithm (LCS-I) 
+                    2                       1 
+that runs in O(n      + R log log n) time  . In Section 3, we improve the run- 
+ning time of LCS-I using some novel techniques. The resulting algorithm, 
+LCS-II, runs in O(R log log n) time. We conclude in Section 4, with some 
+directions to future research. 
+
+ 1 This running time can be improved to O(n2  + R). 
+
+----------------------- Page 3-----------------------
+
+                                                                                      3 
+
+2    A New Algorithm 
+
+In  this  section,  we  present  a  new  algorithm  for  the  LCS  problem  based 
+on some ideas and observations introduced and employed in [19] to solve 
+some  new  interesting  variants  of  the  Problem  LCS.  The  resulting  algo- 
+rithm,  namely  LCS-I,  will  work  in  O(n2  + R log log n)  time.  Note  that, 
+
+LCS-I  is  an  easy  extension  of  the  algorithms  presented  in  [19]  and  the 
+main contribution of this paper is an improved algorithm, namely LCS- 
+II, with O(R log log n) running time, to be presented in Section 3. 
+    From the deﬁnition of LCS it is clear that, if (i, j) ∈ M , then we can 
+calculate T [i, j], 1 ≤ i, j  ≤ n by employing the following equation: 
+                         
+                          Undeﬁned                         if (i, j) ∈/ M, 
+                         
+            T [i, j] =                 (T [  ,  ]) + 1    if (i, j) ∈ M.           (1) 
+                          max   1≤  <i       i   j 
+                                    i 
+                               1≤  <j 
+                         
+                                   j 
+                               (  ,  )∈M 
+                                i  j 
+
+Here we have used the tabular notion T [i, j] to denote r(X [1..i], Y [1..j]). 
+From Equation 1, it follows that only the entries T [i, j] such that (i, j) ∈ 
+M   are  useful.  Therefore,  we  can  ignore  all  T [i, j]  with  (i, j)  ∈/  M from 
+the  calculation.  In  order  to  do  that,  we  need  a  preprocessing  step  to 
+construct the set M in sorted order according to their position they would 
+be considered in the algorithm (we consider a row by row operation). Such 
+a  preprocessing  algorithm,  referred  to  as  “Algorithm  Pre”  in  the  rest 
+of  this  paper,  was  presented  in  [19]  which  runs  in  O(R log log n)  time. 
+After we have computed the set M            (using Algorithm Pre), we can start 
+computing  the  entries  T [i, j], (i, j)   ∈  M   according  to  the  Equation  1. 
+Since we are not calculating all the entries of the table, we need to use a 
+global variable and appropriate pointers to keep track of the actual LCS. 
+It is easy to verify that a straightforward (ineﬃcient) implementation of 
+Equation 1 would give us a running time of  O((i,j)∈M (i − 1)(j  − 1) + 
+
+R log log n). We, on the other hand, present an eﬃcient implementation 
+based on some interesting facts as follows. 
+
+                                                                            
+Fact  1.   Suppose  (i, j) ∈ M . Then for all (i , j), i     > i  ((i, j ), j > j), we 
+                                         
+must have T [i , j] ≥ T [i, j] (T [i, j ] ≥ T [i, j]).   
+
+Fact  2.   The  calculation  of  the  entry T [i, j], (i, j)  ∈  M, 1  ≤ i, j  ≤ n  is 
+independent of any T [, q], (, q) ∈ M,  = i, 1 ≤ q ≤ n.             
+
+    The idea is to avoid checking the (i − 1)(j − 1) entries and check only 
+(j  − 1) (or (i − 1)) entries instead. We maintain an array H  of length n 
+where,  for  T [i, j]  we  have,  H []  =  max1<k<i,(k,)∈M (T [k, ]), 1  ≤   ≤ n. 
+
+----------------------- Page 4-----------------------
+
+4 
+
+The ‘max’ operation, here, returns 0, if there does not exist any (k, ) ∈ M 
+within the range. Given the updated array H , we can easily perform the 
+task by checking only the (j − 1) entries of H . And Fact 1 makes it easy 
+to  maintain  the  array  H  on  the  ﬂy,  as  we  proceed  as  follows.  As  usual, 
+we proceed in a row by row manner. We use another array  S, of length 
+n, as a temporary storage. When we ﬁnd an (i, j) ∈ M , after calculating 
+T [i, j],  we  store  S[j] = T [i, j].  We  continue  to  store  in  this  way  as  long 
+                                                                            
+as we are in the same row. As soon as we ﬁnd an (i , j) ∈ M, i               > i, i.e. 
+we start processing a new row, we update H  with new values from S. 
+    The  correctness  of  the  above  procedure  follows  from  Fact  1  and  2. 
+However, we don’t still have the desired running time for the algorithm, 
+because we need to check a lot of entries to implement the max operation 
+in  Equation  1.  To  achieve  our  goal,  we  have  to  be  able  to  compute  the 
+maximum from the elements of H  array in constant time. To do that we 
+use the Range Maxima Query Problem. 
+
+Problem  “RMAX”.  Range  Maxima  Query  Problem.  Suppose  we  are 
+given a sequence A = a  a  ...a     . A Range Maxima (Minima) Query spec- 
+                            1 2    n 
+iﬁes  an  interval I  =  (i  , i  ), 1 ≤ i ≤ i   ≤ n  and  the  goal  is  to  ﬁnd  the 
+                           s   e        s      e 
+index   with maximum (minimum) value a              for   ∈ I . 
+
+Theorem  1.      (  [7, 5]).  The  RMAX  problem  can  be  solved  in O(n)  pre- 
+processing time and  O(1) time per query.           
+
+So using an appropriate query on duly updated H , we can compute the 
+max  operation  in  Equation  1  in  constant  time.  However  there  is  a  pre- 
+processing time of O(n) in case the array H  gets updated. But since this 
+preprocessing is needed once per row (due to Fact 2), the computational 
+                       2 
+eﬀort added is O(n  ) in total. Therefore we get the following theorem. 
+Theorem  2.      LCS-I solve Problem LCS in O(n2 +R log log n) time using 
+
+θ(max(R, n))  space.       
+
+    The outline of LCS-I is presented formally in the form of Algorithm 1. 
+Note  that  we  can  shave  oﬀ  the  log log n  term  from  the  running  time 
+reported in Theorem 2 as follows. Since we have an n2  term anyway in the 
+
+running time, we do not need to compute the set M  in the preprocessing 
+step using Algorithm Pre. Instead, we consider each T [i, j], 1 ≤ i, j  ≤ n 
+and perform useful computation only when (i, j) ∈ M . 
+
+3    The Improved Algorithm 
+
+In this section, we present the main result of this paper. In particular, we 
+improve the running time of LCS-I, as reported in Theorem 2, with some 
+
+----------------------- Page 5-----------------------
+
+                                                                                          5 
+
+Algorithm  1 Outline of LCS-I 
+ 1: Construct the set M  using Algorithm Pre. Let Mi      = (i, j) ∈ M, 1 ≤ j  ≤ n. 
+ 2: globalLCS.Instance =  
+ 3: globalLCS.Value = 0 
+ 4: for i = 1 to n do 
+ 5:    S[i].V alue = 0 {Initialize the temporary array S} 
+ 6:    S[i].Instance =  
+ 7:  end for 
+ 8: for i = 1 to n do 
+ 9:    H  = S{Update H  for the next row} 
+10:    Preprocess H.V alue for Range Maxima Query 
+11:    for each (i, j) ∈ Mi  do 
+12:       maxindex = RMQH (1, j − 1){Range Maxima Query on Array H} 
+13:       T .V alue[i, j] = H [maxindex].V alue + 1 
+14:       T .P rev[i, j] = H [maxindex].Instance 
+15:       S[j].V alue = T.V alue[i, j] 
+16:       S[j].Instance = (i, j) 
+17:       if  globalLCS.value  < T .V alue[i, j] then 
+18:          globalLCS.Value = T .V alue[i, j] 
+19:          globalLCS.Instance = (i, j) 
+20:       end if 
+21:    end for 
+22:  end for 
+23: return    globalLCS 
+
+nontrivial  modiﬁcations.  The  resulting  Algorithm,  LCS-II,  will  eventu- 
+ally  run  in  O(R log log n)  time.  As  is  explained  in  the  previous  section, 
+LCS-I exploits the constant time query operation (Theorem 1) of Prob- 
+lem RMAX. However, due to the O(n) preprocessing step of RMAX, we 
+can’t eliminate the n2       term from the running time of LCS-I. But a very 
+
+important, albeit easily observable, fact is that the range maxima queries 
+made in LCS-I is always of a special form. 
+
+Fact  3.   All the range maxima queries in Algorithm LCS-I are of the form 
+RMQ(1, j),  0 ≤ j  ≤ n.         
+
+From  Fact  3,  it  seems  that  Problem  RMAX  may  be  too  general  a  tool 
+to solve LCS and it seems to be worthwhile to look for a better solution 
+exploiting  the  special  query  structure  reported  in  Fact  3.  Indeed,  as  we 
+shall show that we can exploit this special structure in the query to avoid 
+the O(n) preprocessing step and hence the n2  term from the running time 
+
+reported in Theorem 2. However the price we pay is that the query time 
+increases to O(log logn). We present the idea as follows. 
+    Assume that we have an array A[1..n] on which we want to apply the 
+range  maxima  queries.  We  now  use  an  elegant  data  structure  (referred 
+
+----------------------- Page 6-----------------------
+
+6 
+
+                       ... → (α  , x ) → (α  , x  ) → (α , x  ) → ... 
+                              i   i      j  j       k   k 
+
+                        Fig. 1. Partial E  with e  , e  , and e 
+                                         A        i  j       k 
+
+to  as  vEB  data  structure  henceforth)  invented  by  van  Emde  Boas  [21] 
+that allows us to maintain a sorted list of integers in the range [1..n] in 
+O(log logn) time per insertion and deletion. In addition to that it can re- 
+turn next(i) (successor element of i in the list) and prev (i) (predecessor el- 
+ement of i in the list) in constant time. We maintain a vEB data structure 
+EA , where each element ei       ∈ E, 1 ≤ i  ≤ |EA | is a 2-tuple  (V alue, P os). 
+The  order  in  E    is  maintained  according  to  e .P os, 1  ≤ i  ≤  |E    |.  Now 
+                  A                                    i                    A 
+consider 3 entries  e , e  , e  ∈ E     such that  e   = next(e ), e    = next(e  ). 
+                       i  j   k      A               j            i   k            j 
+Let e   = (α , x ), e  = (α  , x ) and e    = (α   , x  ) (Figure 1). The invariant 
+      i      i   i   j       j  j         k      k    k 
+we maintain is as follows: 
+
+                   RMQ(1..x) = α ,  prev(e ).P os < x ≤ x 
+                                      i         i                 i 
+
+                         RMQ(1..x) = α  ,  x      < x ≤ x 
+                                            j    i          j 
+
+                         RMQ(1..x) = α       ,  x  < x ≤ x 
+                                            k   j           k 
+
+Assuming that we have the above data structure at our disposal, answer- 
+                                                                       
+ing a query is easy as follows. Consider a query RMQ(1..x ). To answer 
+this query, we just need to return the ‘Value’ of the element, which would 
+be  next  in  order,  if  a  new  element  with  P os  = x   were  inserted  in  EA . 
+
+                                             
+So,  we  create  an  entry  e   =  (null, x )  and  insert  it  in  EA  and  get  the 
+                                                                   
+‘Value’  of  the Next(e ).  Finally,  we  delete  e    =  (null, x )  from  EA .  The 
+only thing we need to ensure is that if there is already an entry e in EA 
+                            
+such that e.P os = x , e     must be placed before e in EA . This is to ensure 
+                
+that  Next(e )  =  e,  as  required.  This  can  be  easily  achieved  if  we  take 
+‘Value’ into account while preserving the order in EA           for equal values of 
+‘Pos’ and assume ‘null’ to be a lesser value than any other ‘Value’. Note, 
+however,  that,  by  deﬁnition,  in  ‘normal’  state,  there  can  be  no  two  ele- 
+ments in EA  having same value for ‘Pos’.The steps are formally presented 
+in Algorithm 2. 
+    The correctness of Algorithm 2 follows from the invariants maintained 
+for EA . Now it remains to show how we can maintain that invariant under 
+update operations in the context of the Algorithm LCS-I. Recall that our 
+goal  is  to  get  the  answer  of  appropriate  range  maxima  queries  on  the 
+array H  in Algorithm LCS-I and we operate in a row by row basis. For 
+the sake of convenience, we use the following notation. 
+
+                      Mi  = {(i, j)|X [i] = Y [j], 1 ≤ j  ≤ n} 
+
+----------------------- Page 7-----------------------
+
+                                                                               7 
+
+                                                           
+Algorithm  2 Steps to answer the query RMQ(1..x ) on array A 
+
+                      
+ 1: Insert e = (null, x ) in EA 
+                    
+ 2: Result = Next(e ).V alue 
+ 3: Delete e from EA 
+
+ 4: return  Result 
+
+We start with reporting the following fact. 
+
+Fact  4.  T [i, j] = 1, for all  (i, j) ∈ M1.  
+
+In cases, where M1  = ∅ or a number of subsequent Mi  = ∅, i > 1, we have 
+the following fact. 
+
+Fact  5.  T [i, j] = 1, for all  (i, j) ∈ Mi such that Mk  = ∅, for all 1 ≤ k < 
+i.   
+
+                          (0, j  − 1) → (1, n) → (∞, ∞) 
+
+                                Fig. 2. Initial EH 
+
+    We  initialize  EH  with  three  elements,  es  =  (0, j − 1),  ee =  (1, n) 
+
+                                                                          
+and  e∞  =  (∞, ∞),  where  (1, j )  ∈ M1   and  there  exists  no j  <  j such 
+that (1, j) ∈ M1   (Figure 2). Note that, if M1  = ∅ then, for initialization, 
+we  have  to  use  Mi instead  of  M1 such  that  Mk   =  ∅,  for  all  1  ≤  k  <  i 
+(Fact 5). This initialization of EH    correctly maintains the invariants for 
+the  processing  of  the  next  row.  Indeed,  for  the  next  row,  we  must  have 
+                                  
+RMQ(1..x) = 0 if x ≤ j  −1 (j  −1 is deﬁned as above) and RMQ(1..x) = 
+1 otherwise. The last element, e∞, is required to tackle the general cases 
+and here we assume ∞ to be greater than any number. Now let us consider 
+the case, where we process the subsequent rows. It is important to note 
+that  as  we  process  a  particular  row  i,  for  each  (i, j)  ∈  M ,  we  need  to 
+                                                                 i 
+update  EH ;  but  this  update  is  eﬀective  only  for  the  next  row,  i.e.  row 
+i +1. So, as we process row i we perform the update on a temporary copy 
+and as soon as row i is completely processed we actually change the EH 
+to make it ready for row i+1. In what follows, for the sake of convenience, 
+we denote by Ei     the ‘state’ of EH  which is used to process row i. 
+                 H 
+    Now consider the case that we are in row i and processing the match 
+(i, x  + 1)  ∈ M .  It  is  easy  to  see  that  we  need  the  answer  of  the  query 
+                 i 
+                                                                             i 
+RMQ(1..x ), which can be obtained easily applying Algorithm 2 on EH . 
+                                                                         
+So, according to LCS-I, we would compute T [i, x +1] = RMQ(1..x )+1 = 
+
+----------------------- Page 8-----------------------
+
+8 
+
+                      ... →  (α  , x ) →  (α , x  ) →  (α , x ) →  ... 
+                             i  i      j  j      k  k 
+
+                   Fig. 3. Partial Ei+1  with e , e  , and e 
+                                      H          i  j        k 
+
+                                                        i              i+1 
+α (let). Now we need to consider the updating of EH  to get the EH         to be 
+used when processing row i + 1. We initialize Ei+1  with Ei        and for each 
+                                                     H           H 
+match (i, j) ∈ Mi  we continue to update Ei+1  so that we get the ‘correct’ 
+                                               H 
+Ei+1  as  soon  as  the  processing  of  row i  is  ﬁnished.  The  update  process 
+  H 
+is as follows. In what follows, we assume (without the loss of generality) 
+that  we  have  e , e  , e ∈  Ei+1  such  that  e  =  next(e ), e   =  next(e  ) 
+                 i  j   k      H                 j            i   k            j 
+(Figure  3).  Let  e =  (α , x ), e  =  (α  , x )  and  e =  (α  , x  ).  Assume, 
+                   i       i  i   j       j   j         k       k   k 
+without  the  loss  of  generality,  that  x <   x  + 1  ≤  x  .  Since  we  have 
+                                           i                  j 
+                                                            
+the value α   at position x   + 1, the query RMQ(1..x  + 1) should return 
+       
+ζ  ≥ α  when we are processing subsequent rows. So, ﬁrst we check whether 
+                                            i+1 
+RMQ(1..x  + 1) ≥ α       on the current  EH     . It is clear that if the answer 
+is positive, we don’t need to do any update at all. Otherwise, we have, at 
+                                                                  
+position x   or before it (oﬀ course after x ) a higher value α . So we insert 
+           j                                 i 
+                                i+1                     
+a  new  element  (α  , x )  to  E  ,  because  up  to x we  have  no  change  in 
+                    j          H 
+the RMQ answers. Now we have to change e           = (α  , x ). But this change 
+                                                 j      j   j 
+may be inﬂuenced by e       = (α  , x  ) as follows. We have two cases. 
+                          k      k   k 
+
+                      
+Case  1.a:   αk  = α .  In this case, we just need to delete ej   because ek   = 
+                                                                              
+    (α   = α , x  ) has already taken into account the updated value α         at 
+       k        k 
+    position x  + 1 ≤ xk   (Figure 4). 
+
+                                                    
+                    ... →  (α  , x ) →  (α , x ) →  (α = α  , x ) →  ... 
+                           i  i      j        k       k 
+
+                      Fig. 4. Updated EH      for Case 1.a 
+
+                      
+Case  1.b:   αk  > α .  In  this  case,  ek .V alue is  greater  than  the  updated 
+                          
+    value at position x  + 1 ≤ x  . So it is clear that up to position x  , we 
+                                   j                                       j 
+    have α  as the highest value and hence we need to update ej        such that 
+    e  .value = α   (Figure 5). 
+     j 
+
+                                             
+                  ... →  (α  , x ) →  (α , x ) →  (α  , x  ) →  (α , x ) →  ... 
+                         i i      j           j      k   k 
+
+                      Fig. 5. Updated EH      for Case 1.b 
+
+----------------------- Page 9-----------------------
+
+                                                                                      9 
+
+    So far we have discussed the algorithm without analyzing the running 
+time. Theorem 3 below reports the running time of the Algorithm LCS-II. 
+
+Theorem  3.      LCS-II solves Problem LCS in O(R log log n)  time. 
+
+Proof.  It  is  clear  that  for  each  (i, j)  ∈  M we  do  the  following  3  steps. 
+
+  1: Perform appropriate range maxima query using Algorithm 2 
+  2: Compute T [i, j] from the result of Step 1 
+  3: Update EH     based on T [i, j] 
+    It  is  easy  to  see  that  Step  1,  i.e.,  Algorithm  2  requires  O(log logn) 
+time. Step 2 requires O(1) time. In Step 3 we perform the update. Here, 
+we ﬁrst check, using Algorithm 2, whether any update is indeed required. 
+This,   again,  requires   O(log logn)    time.   Finally,  if update    is required, 
+then  we  need  to  perform  constant  number  of  insertion  and/or  deletion 
+requiring,  again,  O(log logn)  time.  So,  for  each  (i, j)  ∈  M     the  compu- 
+tation  eﬀort  spent  is  O(log logn).  Therefore,  Algorithm  LCS-II  requires 
+O(R log log n) time to compute LCS.            
+
+4    Conclusion 
+
+In this paper, we have studied the classic and much studied LCS problem 
+for  two  strings.  Problem  LCS  has  been  the  focus  of  extensive  research 
+from both theoretical and practical point of view. Using some new ideas, 
+we have presented an O(R log log n) time algorithm to solve the problem 
+where  R  is  the  total  number  of  ordered  pairs  of  positions  at  which  the 
+                                                  2 
+two  strings   match.   Although,     R   =  O(n  ),  there  are   large  number  of 
+applications for which we have R ∼ n. Typical of such applications include 
+ﬁnding  the  longest  ascending  subsequence  of  a  permutation  of  integers 
+from  1  to  n,  ﬁnding  a  maximum  cardinality  linearly  ordered  subset  of 
+some  ﬁnite  collection  of  vectors  in  2-space  etc  (for  more  details  see  [10] 
+and references therein). So in these situations our algorithm would exhibit 
+an almost linear O(n log log n) behavior. The techniques we have used to 
+develop  our  algorithm  is  new  and,  we  believe,  of  independent  interest. 
+We believe a number of interesting issues remain as candidates for future 
+research as follows. 
+
+ 1.  LCS  problem  for  more  than  two  strings  have  extensive  applications 
+    e.g.  in  molecular  biology.  It  would  be  interesting  to  see  whether  our 
+    techniques  can  be  extended  for  LCS  problems  involving  more  than 
+    two  strings  or  variants  thereof  (e.g.  constrained  LCS  [20, 4, 3],  rigid 
+    LCS [13]), motivated by practical applications in molecular biology. 
+
+----------------------- Page 10-----------------------
+
+10 
+
+ 2.  We   have   implicitly    presented    an   algorithm     for  the  range    maxima 
+    query problem. Our algorithm allows restricted dynamic updates and 
+    considers  a  restricted  sets  of  queries.  It  would  be  interesting  to  see 
+    whether  we  can  lift  the  restrictions  and/or  improve  the  query  and 
+    pre-processing  time.  Moreover,  we  believe  that  this  algorithm  could 
+    be  used  in  many  other  problems  requiring  similar  sort  of  restricted 
+    updates and queries. 
+
+References 
+
+ 1.  Stephen F. Altschul, Warren Gish, Webb Miller, Eugene W. Meyers, and David J. 
+     Lipman.     Basic  local alignment   search  tool.   Journal   of  Molecular  Biology, 
+     215(3):403–410, 1990. 
+ 2.  V.L. Arlazarov, E.A. Dinic, M.A. Kronrod, and I.A. Faradzev.  On economic con- 
+     struction of the transitive closure of a directed graph (english translation).  Soviet 
+     Math. Dokl., 11:1209–1210, 1975. 
+                                ¨ 
+ 3.  Abdullah N. Arslan and  Omer Egecioglu.      Algorithms for the constrained longest 
+     common subsequence problems.  In  Stringology, pages 24–32, 2004. 
+                                ¨ 
+ 4.  Abdullah N. Arslan and  Omer Egecioglu.      Algorithms for the constrained longest 
+     common  subsequence  problems.      Int.  J.  Found.  Comput.  Sci.,  16(6):1099–1109, 
+     2005. 
+ 5.  Michael  A.  Bender  and  Martin  Farach-Colton.     The  lca  problem  revisited.   In 
+     LATIN, pages 88–94, 2000. 
+ 6.  Lasse  Bergroth,  Harri  Hakonen,  and  Timo  Raita.   A  survey  of  longest  common 
+     subsequence algorithms.  In  SPIRE, pages 39–48, 2000. 
+ 7.  H. Gabow, J. Bentley, and R. Tarjan.  Scaling and related techniques for geometry 
+     problems.  In  STOC, pages 135–143, 1984. 
+ 8.  F.  Hadlock.  Minimum  detour  methods  for  string  or  sequence  comparison.    Con- 
+     gressus Numerantium, 61:263–274, 1988. 
+ 9.  Daniel  S.  Hirschberg. Algorithms  for  the  longest  common  subsequence  problem. 
+     J. ACM, 24(4):664–675, 1977. 
+10.  James W. Hunt and Thomas G. Szymanski. A fast algorithm for computing longest 
+     subsequences.   Commun. ACM, 20(5):350–353, 1977. 
+11.  Tao Jiang and Ming Li. On the approximation of shortest common supersequences 
+     and longest common subsequences. SIAM Journal of Computing, 24(5):1122–1139, 
+     1995. 
+12.  V.I.  Levenshtein.  Binary  codes  capable  of  correcting  deletions,  insertions,  and 
+     reversals.  Problems in Information Transmission, 1:8–17, 1965. 
+13.  Bin Ma and Kaizhong Zhang.  On the longest common rigid subsequence problem. 
+     In  CPM, pages 11–20, 2005. 
+14.  David  Maier.   The  complexity  of  some  problems  on  subsequences  and  superse- 
+     quences.  Journal of the ACM, 25(2):322–336, 1978. 
+15.  William  J.  Masek  and  Mike  Paterson.  A  faster  algorithm  computing  string  edit 
+     distances. J. Comput. Syst. Sci., 20(1):18–31, 1980. 
+16.  Eugene W. Myers.  An o(nd) diﬀerence algorithm and its variations. Algorithmica, 
+     1(2):251–266, 1986. 
+17.  Narao Nakatsu, Yahiko Kambayashi, and Shuzo Yajima.           A longest common sub- 
+     sequence algorithm suitable for similar text strings.  Acta Inf., 18:171–179, 1982. 
+
+----------------------- Page 11-----------------------
+
+                                                                                     11 
+
+18. W.R. Pearson and D.J. Lipman. Improved tools for biological sequence comparison. 
+    Proceedings of National Academy of Science, USA, 85:2444–2448, 1988. 
+19. M. Sohel Rahman and Costas S. Iliopoulos.  Algorithms for computing variants of 
+    the longest common subsequence problem.  In  ISAAC, pages 399–408, 2006. 
+20. Yin-Te Tsai.  The constrained longest common subsequence problem.  Inf. Process. 
+    Lett., 88(4):173–176, 2003. 
+21. P. van Emde Boas.  Preserving order in a forest in less than logarithmic time and 
+    linear space.  Information Processing Letters, 6:80–82, 1977. 
+22. Robert A. Wagner and Michael J. Fischer. The string-to-string correction problem. 
+    J. ACM, 21(1):168–173, 1974. 

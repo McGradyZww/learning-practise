@@ -1,0 +1,638 @@
+
+  Linux Basics Exercises
+
+1. What will this statement do?  
+
+set PS1="[\u\w\t]\\$",export PS1
+
+ 
+
+   A. Make the color display work.
+
+   B. Change the look of the command prompt.
+
+   C. Change some of the terminal parameters.
+
+   D. Change the secondary command line prompt.
+
+   E. change the way the mouse works on the console.
+
+  
+
+2. What is the purpose of the bash shell export command?
+
+   A. To allow disks to be mouted remotely.
+
+   B. To run a command as a process in a sub-shell.
+
+   C. To make the command history available to sub-shells.
+
+   D. To setup environment variables for use by other applications.
+
+   E. to share NFS partitions for use by other systems on the network.
+
+  
+
+3. In the event that you run out of disk space on one partition, which of the following would be an easy way to move data between partitions without reconfiguring the path to the data in all the applications?
+
+   A. Run ext2fs ACL.
+
+   B. Use a hard link.
+
+   C. Use a symbolic link.
+
+   D. Use the loopback device.
+
+   E. Create a block device offset.
+
+  
+
+4. If you set the umask to 022, by default what permissions will your files have?
+
+   A. ----w--w-
+
+   B. -w--w----
+
+   C. r-xr-x---
+
+   D. rw-r--r--
+
+   E. r--rw-rw-
+
+  
+
+5. Which command will find the path for the binary file vi with a single command?
+
+   A. man vi
+
+   B. find vi
+
+   C. where vi
+
+   D. which vi
+
+   E. apropos vi
+
+  
+
+6. What permissions must a user have in order to run a shell script? (Select all the apply.)
+
+   A. read
+
+   B. write
+
+   C. execute
+
+   D. browse on the directory
+
+   E. users cannot run shell scripts
+
+  
+
+7. Which command would you use to display how much space is available on all partitions?
+
+  
+
+8. What program would you use to increase or decrease the priority of a command before it is executed?
+
+ 
+
+9. In bash, inserting "1>&2" after a command redirects
+
+   A. standard error to standard input
+
+   B. standard input to standard error
+
+   C. standard output to standard error
+
+   D. standard error to standard output
+
+   E. standard output to standard input
+
+  
+
+10. Which of the following would copy the file file1.txt to file2.txt?
+
+   A. cp file1.txt | file2.txt
+
+   B. cat file1.txt | file2.txt
+
+   C. cat file1.txt > file2.txt
+
+   D. copy file1.txt | file2.txt
+
+   E. cat |file1.txt | file2.txt
+
+  
+
+11. Which command outputs the last few lines of a file?
+
+   A. tac
+
+   B. tail
+
+   C. rear
+
+   D. last
+
+   E. cat -r
+
+  
+
+12. What command outputs the first few lines of a given file?
+
+  
+
+13.What command would be used to view the contents of a binary file?
+
+A. od
+
+B. vil
+
+C. view
+
+D. expand
+
+E. binview
+
+ 
+
+14. What will the command "cd ~" do?
+
+   A. Take you to the ~ directory.
+
+   B. Take you to the sys directory.
+
+   C. Take you to your home directory.
+
+   D. Nothing, this command is invalid.
+
+ 
+
+15. When the kill command is given with only the PID number of the process to kill (as in `kill 1234`), the corresponds to which type of kill signal?
+
+   A. 2(SIGINT)
+
+   B. 1(SIGHUP)
+
+   C. 9(SIGKILL)
+
+   D. 3(SIGQUIT)
+
+   E. 15(SIGTERM)
+
+
+16.The command `kill 9`
+
+A. kills the process whose PID is 9.
+
+B. kills all processes belonging to UID 9.
+
+C. sends SIGKILL to all running processes.
+
+D. sends SIGKILL to the process whose PID is 9.
+
+E. sends SIGTERM to the process whose PID IS 9.
+
+  
+
+
+17. What command can be used to remove the file: -file-?
+
+   A. rm -file-
+
+   B. rm "file"
+
+   C. rm -"file"-
+
+   D. rm -- -file-
+
+   E. rm [-]file[-]
+
+  
+
+18. What does the following command do?
+
+    cat `echo '$TEST'`
+
+    A. Displays a bash syntax error message.
+
+    B. Displays the contents of the file named $TEST if it exists.
+
+    C. Waits for the user to enter text and then echos the text back.
+
+    D. Displays the contents of the file named inside the back quotes.
+
+    E. Displays the contents of the file named by the environment
+variable TEST.
+
+   
+
+19. What three-letter command in bash will display all environment variables?
+
+
+20. What command would execute cmd1 followed by cmd2,regardless of the
+exit status of cmd1?
+
+    A. cmd1 cmd2
+
+    B. cmd1 | cmd2
+
+    C. cmd1 ; cmd2
+
+    D. cmd1 && cmd2
+
+    E. cmd1 || cmd2
+
+21. You have a file called turkey.tst  which contains lines and lines of data. You need to know which lines contain capital letters. Which command would display this information?
+
+   A. cat turkey.tst | wc -l
+
+   B. grep -n [A-Z] burkey.tst
+
+   C. cat trukey.tst | wc -w [A-Z]
+
+   D. grep -v [A-Z] < turkey.tst
+
+   E. for [A-Z] in turkey.tst | count
+
+  
+
+22. Which of the following are valid ways of getting a list of all processes running on the system?(Select all the apply)
+
+   A. ps fu
+
+   B. ps ax
+
+   C. pstree
+
+   D. pstree -a
+
+   E. echo /proc/[0-9]*
+
+  
+
+23. The output from the jobs command in bash is:
+
+    [1]  Stopped          joe superbatch.1.sort
+
+    [2]- Stopped (signal)       lynx www.microsoft.com
+
+    [3]+ Stopped (signal)       top
+
+    Which of these commands could be used to kill the process running top?
+
+   
+
+    A. kill %3
+
+    B. bg -x %3
+
+    C. kill -9 3
+
+    D. fg &3; kill
+
+    E. job %3 --kill
+
+   
+
+24. Assume that foobar is a text file containing 30 lines. What command(s) could you use to number the lines from 1 to 30 and print them to the screen in reverse order?  
+
+    A. nl foobar | tac
+
+    B. ln foobar | tac
+
+    C. tac foobar | nl
+
+    D. ln foobar | reverse
+
+    E. nl < foobar | reverse
+
+   
+
+25. As root you have navigated to directory /B. You wish to move all of the files and directories from directory /A to directory /B. Which of the following options would be the most appropriate command line to execute this task?
+
+    A. cp /A/* .
+
+    B. mv -f /A/* .
+
+    C. mv -Rf /A/* .
+ 
+    D. cp -f /A/* .
+
+    E. cp -rf /A/* .
+
+    
+
+26. Why should "kill -9" be avoided except in cases of absolute need?
+
+    A. A core dump file will be created.
+
+    B. It affects the entire process group.
+
+    C. It makes excessive use of system resources.
+
+    D. The action can be blocked by buggy of malicious process.
+
+    E. The affected process is unable to clean up before exiting.
+
+   
+
+27. What utility would you use to remove/display columns from each line of a file?
+
+A. pwd
+
+B. col
+
+C. cut
+
+D. tail
+
+E. extract
+
+ 
+
+28. Which command removes all subdirectories in the /tmp, regardless of whether they are non-existent or in use?
+
+A. del /tmp/*
+
+B. rm -rf /tmp
+
+C. rm -Ra /tmp/*
+
+D. rm -rf /tmp/*
+
+E. delete /tmp/*.*
+
+ 
+ 29. Which of the following commands could be used to change the permissions of the /home/html/ directory to 0755 and all files and subdirectories contained therein?
+
+A. chmod 0755 /home/html
+
+B. chmod 0755 /home/html/*
+
+C. chown 0755 /home/html -R
+
+D. chmod 0755 /home/html -R
+
+E. umask 0705 && chmod 0050 /home/html
+
+ 
+
+30. If you use ln to make a symbolic link of file1 called file2 then you delete file1, can you access the data originally contained in file1?
+
+A. No.
+
+B. Yes.
+
+C. It depends on who owns file2.
+
+D. It depends on the permissions on file1.
+
+E. It depends on the permissions on file2.
+
+ 
+
+31. You are concerned that core files are taking up excessive space on your /home file system. Which command would you use to remove all files named core that are older than 1 week?
+
+A. cd /home;rm -r -mtime +7 core
+
+B. find /home -older +7 -exec rm {core} \;
+
+C. find /home -atime +1 -name core -exec rm {} \;
+
+D. find /home -mtime +7 -name core -exec rm {} \;
+
+E. find /home -mtime +1 -name core -exec rm {} \;
+
+ 
+
+32.What command will display some information about the permissions of files in the current directory?
+
+A. ls
+
+B. pdir
+
+C. ls -l
+
+D. permdir
+
+E. chmod -l
+
+ 
+
+33. You need to find all references in your system documentation to the word copy. Which single line will best accomplish this task?
+
+A. man copy
+
+B. which copy
+
+C. locate copy
+
+D. apropos copy
+
+E. grep "copy" /usr/man/*
+
+ 
+
+34. Which of the following statements are true?(Select all that apply.)
+
+A. The default "nice" priority value is 0.
+
+B. "Nice" priority values range from 0 to 20.
+
+C. Lower "nice" priority values signify greater priority.
+
+D. Only the super user may assign a process maximum priority.
+
+E. Setting a process's "nice" value to the lowest priority is the same as stopping the process.
+
+35.Sally has created a text file for data which uses an asterisk to highlight items of significance. Which command would list the line she marked as significant in her file?
+
+A. find \* sallysfile
+
+B. wc -l * <sallysfile
+
+C. grep -n * sallysfile
+
+D. search * <sallysfile
+
+E. grep \* sallysfile
+
+ 
+
+36. Which programs will allow you to change the priority of a program already running?(Select all that apply.)
+
+A. top
+
+B. nice
+
+C. niceit
+
+D. renice
+
+E. chnice
+
+37. What environment variable has your home directory?
+
+
+38. Which of the following commands could be used to see which processes are currently running? (Select all that apply.)
+
+A. w
+
+B. ps
+
+C. top
+
+D. proc
+
+E. lsproc
+
+ 
+
+39. What would you use an alias for?
+
+A. To provide faster lookups for commands.
+
+B. To avoid having to type long command lines.
+
+C. So others cannot tell what command you are running.
+
+D. To make a local copy of a file in a directory other than the one it exists in.
+
+40. What will "cd ~foo" do?
+
+A. It will take you to the ~foo directory.
+
+B. It will create the foo directory and change to it.
+
+C. It will take you to the home directory of user foo.
+
+D. It will change the directory to the system foo directory.
+
+E. It will change to the foo directory off of your home directory.
+
+ 
+41.The command "cat>foo.bar" redirects the
+
+A. cat to foo.bar
+
+B. foo.bar to cat
+
+C. standard output to cat
+
+D. standard input to foo.bar
+
+E. foo.bar to standard output
+
+ 
+42. Which ps parameter would you use to display the process of all other users?
+
+A. a
+
+B. b
+
+C. u
+
+D. x
+
+ 
+
+43. What command could be used to get a hierarchical view of all the processes running on the system without requiring you to provide any switches or options?
+
+ 
+
+44. Which line below would count the total number of lines with the word "reject" in /var/log/maillog?
+
+A. wc -l 'reject /var/log/maillog'
+
+B. for "reject" in [maillog (count) +1]
+
+C. wc -l /var/log/maillog |grep 'reject'
+
+D. cat /var/log/maillog |grep 'reject' |wc -l
+
+E. cat /var/log/maillog |grep 'reject' |wc -r
+
+ 
+
+45. Assume that the file foobar contains 30 lines. Which command line would you use to display the middle 10 lines of the file?
+
+A. tail -n 1- -h 10
+
+B. head -n 10 -s 10
+
+C. head -n 10 foobar |tail -n 10
+
+D. head -n 20 foobar |tail -n 10
+
+E. tail -n 20 <foobar |tail -n 20
+
+ 
+
+46. A particular directory contains some files with names starting with letter a and ending with the letter v. Assuming this is the working directory, what command would move all of these files, and only these files, to the /tmp/directory?
+
+A. cp a?v /tmp
+
+B. mv a-v /tmp/
+
+C. mv a*v /tmp/
+
+D. mv a?v /tmp/
+
+E. mv a...v /tmp/
+
+ 
+
+47.In the command `foo <bar |foobar`.
+
+A. the stdout from the command foobar is saved to the file foo.
+
+B. the stdout from the command foo is saved to the file foobar.
+
+C. the command foobar receives its stdin from stderr of foo.
+
+D. the command foobar receives its stdin from the stdout of foo.
+
+E. the command bar receives its stdin from the contents of the file foobar.
+
+ 
+
+48. User Sally has lost a file. She saved it a week ago and now cannot remember where it is. She knows the file name contains the word "turkey" but that's all she can remember. Which command string would help Sally find the complete name of her missing file?
+
+A. ls turkey
+
+B. find turkey
+
+C. grep turkey
+
+D. which turkey
+
+E. ls |grep 'turkey'
+
+49. In what file do you change default variables for all users?
+
+A. /etc/bashrc
+
+B. /etc/profile
+
+C. ~/.bash_profile
+
+D. /etc/skel/.bashrc
+
+E. /etc/skel/.bash_profile
+
+
+50. What symbol can be placed at the end of a line to indicate that the command continues on the next line?
+
+A. /
+
+B. \
+
+C. ;
+
+D. |
+
+E. :
+
+

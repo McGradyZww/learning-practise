@@ -1,0 +1,43 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1009.   Sticks 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 3236   Accepted Runs: 951
+
+--------------------------------------------------------------------------------
+
+
+George took sticks of the same length and cut them randomly until all parts became at most 50 units long. Now he wants to return sticks to the original state, but he forgot how many sticks he had originally and how long they were originally. Please help him and design a program which computes the smallest possible original length of those sticks. All lengths expressed in units are integers greater than zero. 
+Input
+The input contains blocks of 2 lines. The first line contains the number of sticks parts after cutting ( < 100 ). The second line contains the lengths of those parts separated by the space. The last line of the input contains zero. 
+Output
+The output contains the smallest possible length of original sticks, one per line. 
+
+Sample Input
+9
+5 2 1 5 2 1 5 2 1
+4
+1 2 3 4
+0
+
+Sample Output
+6
+5
+
+Hint: You can ignore the parts which more than 50 units long.
+
+
+
+Source: Central European 1995
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

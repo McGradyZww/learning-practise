@@ -1,0 +1,28 @@
+2870.   The K-th City 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2417   Accepted Runs: 867
+________________________________________
+
+Given a map of your country, there are N cities. The cities are labeled as 0, 1, ..., N - 1, and you live in city 0. Can you calculate out the K-th nearest city form you? If two or more cities have the same distance form you, you may assume that the city with smaller label is nearer than the city with bigger one. 
+Input
+There are several cases. The first line of each case is two integers N and M (1 ¡Ü N ¡Ü 200, 0 ¡Ü M ¡Ü 10000), which is the number of cities in your country and the total number of roads in your country. There are three integers in each of the following M lines, A, B, C, which descript one road. A and B are the two cities that connected by that road, and C is the length of that road (1 ¡Ü C ¡Ü 2000). The roads are of both directions, and no two roads connect two same cities. There is at least one path between any two cities. At the last line of each case is a single integer K (1 ¡Ü K < N). 
+The last case is followed by a line with a single 0. 
+Output
+Print the label of the K-th nearest city. 
+Sample Input
+4 3
+0 1 120
+0 2 180
+1 3 40
+3
+4 3
+0 1 120
+0 3 60
+3 2 30
+1
+0
+Sample Output
+2
+3
+

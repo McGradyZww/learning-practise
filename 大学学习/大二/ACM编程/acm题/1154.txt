@@ -1,0 +1,51 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1154.   A Mathematical Curiosity 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 3483   Accepted Runs: 1520    Multiple test files
+
+--------------------------------------------------------------------------------
+
+
+
+Given two integers n and m, count the number of pairs of integers (a,b) such that 0 < a < b < n and (a2+b2+m)/(ab) is an integer.
+
+
+Input
+
+You will be given a number of cases in the input. Each case is specified by a line containing the integers n and m. The end of input is indicated by a case in which n = m = 0. You may assume that 0 < n ¡Ü 100.
+
+
+Output
+
+For each case, print the case number as well as the number of pairs (a,b) satisfying the given property. Print the output for each case on one line in the format as shown below.
+
+
+Sample Input
+
+10 1
+20 3
+30 4
+0 0
+
+Sample Output
+
+Case 1: 2
+Case 2: 4
+Case 3: 5
+
+
+
+Source: East Central North America 1999 Practice
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

@@ -1,0 +1,57 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1156.   Niven Numbers 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1855   Accepted Runs: 651    Multiple test files
+
+--------------------------------------------------------------------------------
+
+
+
+A Niven number is a number such that the sum of its digits divides itself. For example, 111 is a Niven number because the sum of its digits is 3, which divides 111. We can also specify a number in another base b, and a number in base b is a Niven number if the sum of its digits divides its value.
+
+Given b (2 ¡Ü b ¡Ü 10) and a number in base b, determine whether it is a Niven number or not.
+
+
+Input
+
+You will be given a number of test cases. Each line of input contains the base b, followed by a string of digits representing a positive integer in that base. There are no leading zeroes. The input is terminated by a line consisting of 0 alone.
+
+
+Output
+
+For each case, print "yes" on a line if the given number is a Niven number, and "no" otherwise.
+
+
+Sample Input
+
+10 111
+2 110
+10 123
+6 1000
+8 2314
+0
+
+Sample Output
+
+yes
+yes
+no
+yes
+no
+
+
+
+Source: East Central North America 1999 Practice
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

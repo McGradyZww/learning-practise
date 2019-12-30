@@ -1,0 +1,38 @@
+2745.   Permutation Recovery 
+________________________________________
+Time Limit: 3.0 Seconds   Memory Limit: 65536K
+Total Runs: 1023   Accepted Runs: 653    Multiple test files
+________________________________________
+
+Professor Permula gave a number of permutations of the n integers 1, 2, ... , n to her students. For each integer i, (1 ¡Ü i ¡Ü n), she asks the students to write down the number of integers greater than i that appear before i in the given permutation. This number is denoted ai. For example, if n = 8 and the permutation is 2, 7, 3, 5, 4, 1, 8, 6, then a1 = 5 because there are 5 numbers (2, 7, 3, 5, 4) greater than 1 appearing before it. Similarly, a4 = 2 because there are 2 numbers (7, 5) greater than 4 appearing before it. 
+John, one of the students in the class, is studying for the final exams now. He found out that he has lost the assignment questions. He only has the answers (the ai's) but not the original permutation. Can you help him determine the original permutation, so he can review how to obtain the answers? 
+Input
+The input consists of a number of test cases. Each test case starts with a line containing the integer n (n ¡Ü 500). The next n lines give the values of a1, a2, ... , an. The input ends with n = 0. 
+Output
+For each test case, print a line specifying the original permutation. Adjacent elements of a permutation should be separated by a comma. Note that some cases may require you to print lines containing more than 80 characters. 
+Sample Input
+8
+5
+0
+1
+2
+1
+2
+0
+0
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+0
+Sample Output
+2,7,3,5,4,1,8,6
+10,9,8,7,6,5,4,3,2,1
+

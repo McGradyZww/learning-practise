@@ -1,0 +1,25 @@
+________________________________________
+2193.   A Simple Game 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1106   Accepted Runs: 759
+________________________________________
+
+Kandy and Monica are good friends, and they both like playing one old stone game. In the game, there are N stones on the table at first. And the two players take turns to take stones from the table, and each player can take at least 1 stone and at most M stones each time. The winner is the one who takes the last stone. Kandy and Monica have played a lot of times, and they are both good players. When playing game, they both use perfect strategies. 
+For any given value of N, Kandy wonder whether he can win the game or not, if Kandy goes first every time. Can you give him the answers? 
+Input
+The input will consist of several lines; each line consists of two integers N (0 < N < 231), the number of stones on the table initially, and M (1 ¡Ü M ¡Ü N), the number of stones that can be taken at most each time. The end of input is indicated by a line consists of a single number 0.
+Output
+For each game, if Kandy can win, prints "Just Do It.", otherwise prints "Think About It." in a single line. 
+Sample Input
+110 10
+51 3
+1985 11
+0
+Sample Output
+Think About It.
+Just Do It.
+Just Do It.
+Author: Kandy
+
+

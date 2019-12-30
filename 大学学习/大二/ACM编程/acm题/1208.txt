@@ -1,0 +1,50 @@
+
+Problems Submit Runs Status Rank List Statistics Clarifications 
+
+
+--------------------------------------------------------------------------------
+
+D.   Fibonacci Numbers
+
+--------------------------------------------------------------------------------
+
+Time Limit: 1.0 Seconds   Memory Limit: 65536K    Multiple test files
+
+--------------------------------------------------------------------------------
+
+
+A Fibonacci sequence is calculated by adding the previous two members of the sequence, with the first two members being both 1. 
+f(1) = 1, f(2) = 1, f(n > 2) = f(n - 1) + f(n - 2)
+
+Your task is to take a number as input, and print that Fibonacci number.
+
+
+Sample Input
+
+100
+
+
+Sample Output
+
+354224848179261915075
+
+
+Note:
+
+No generated Fibonacci number in excess of 1000 digits will be in the test data, i.e. f(20) = 6765 has 4 digits.
+
+
+
+
+Source:  Waterloo Local Contest Oct. 5, 1996
+
+Problem ID in problemset: 1208
+
+
+--------------------------------------------------------------------------------
+
+Submit   Back   Runs   Statistics   Clarifications
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

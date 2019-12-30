@@ -1,0 +1,16 @@
+1375.   Ones 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1935   Accepted Runs: 926
+________________________________________
+
+Given any integer 0 ¡Ü n ¡Ü 10000 not divisible by 2 or 5, some multiple of n is a number which in decimal notation is a sequence of 1's. How many digits are in the smallest such a multiple of n? 
+Sample Input
+3 
+7 
+9901
+Output for Sample Input
+3
+6
+12
+

@@ -1,0 +1,58 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1152.   Vivian's Problem 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 91   Accepted Runs: 31
+
+--------------------------------------------------------------------------------
+
+
+
+The desire to explore the unknown has been a driving force in human history since the dawn of time. From the earliest documented accounts, ancient civilizations had explored the earth by sailing around. Early adventurers were motivated by religious beliefs, the desire conquest, the need to establish trade routes, and hunger for gold.
+
+You never know what will happen before the exploration. Neither does Bruce Lee. Someday, Mr. Lee entered a desolate tropical rainforest. And after several days' exploring, he came in front of a cave with something blinking in it. A beautiful girl named Vivian came out just before he tried to go into the cave. And Vivian told Mr. Lee that he must answer some questions before he entered the cave. As the best friend of Mr. Lee, you should help him to work it out.
+
+You will get k positive integers p1, p2 ... pi ... pk (1 ¡Ü i ¡Ü k) from Vivian. From these numbers, you can calculate N, N = PI{pi^ei} (0 ¡Ü ei ¡Ü 10, SUM{ei} ¡Ý 1, 1 ¡Ü i ¡Ü k); you may decide the integers ei's as you wish. From one N, you can calculate corresponding M, which equals to the sum of all divisors of N. Now, you should tell Vivian whether or not there is an M which is the power of 2 (1, 2, 4, 8, and 16 ... so on). If there's no N can make M equal to the power of 2, tell Vivian "NO". If M equals to some 2^x, then show her the exponent (x). And if there are several x, only show her the largest one.
+
+
+Input
+
+
+Input contains several testcases. For each testcase, the first line contains only one integer k (0 < k ¡Ü 100), representing the number of positive integers. Then there are k positive integers p1, p2 ... pi ... pk (1 < pi < 2^31, 1 ¡Ü i ¡Ü k) in the second line, representing the given numbers.
+
+Input is terminated by end of file.
+
+
+Output
+
+For each testcase, you should output your result in a single line. If you can find N from the given numbers, output the largest exponent. Otherwise, output "NO". Extra spaces are not allowed.
+
+
+Sample Input
+
+1
+2
+3
+2 3 4
+
+
+Sample Output
+
+NO
+2
+
+
+
+Source: Asia - Guangzhou 2003
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

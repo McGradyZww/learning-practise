@@ -1,0 +1,420 @@
+1132 1139 1105 1171 1167 1101A 1102A 1104A 1106A 1110A 1112A 1117A 1120A 1123A 1127A 
+
+1128A 1133A 1134A 1144A 1153A 1154A  1156A 1162A 1165A 1166A  1169A 1173A 1175A 1176A 1178A  1191A 1192A 1193A 1196A 
+#include<iostream>
+#include<ctime>
+#include<vector>
+#include<cstdlib>
+#include<fstream>
+using namespace  std;
+/*
+1.插入排序
+2.选择排序
+3.冒泡排序
+4.希尔排序
+5.快速排序
+6.归并排序
+7.堆排序
+*/
+
+/*
+1.插入排序
+思路：R[0],R[1],...R[i]是已经排序好的序列，要把R[i+1]插入到合适的位置。
+*/
+
+template <typename T >
+void insertionSort(vector<T> &a)
+{
+ int j;
+ T temp;
+ for(int i=1;i<a.size();i++)
+ {
+  temp=a[i];
+  j=i-1;
+  while(temp<a[j])
+  {
+   a[j+1]=a[j];
+   j--;
+  }
+  a[j+1]=temp;
+  
+ }
+}
+
+/*
+
+2.选择排序：
+依次遍历，在合适的位置选择合适的数。每次选择最小的那一个。
+*/
+template <typename T>
+void selectionSort(vector<T> &a)
+{
+ int num=a.size();
+ T temp;
+ int p;
+ for(int i=0;i<num;i++)
+ {
+  p=i;
+  for(int j=i+1;j<num;j++)
+  {
+   if(a[j] < a[p]) p=j;
+   
+  }
+  if(p > i)
+  {
+   temp=a[i];
+   a[i]=a[p];
+   a[p]=temp;
+  }
+   
+ }
+}
+
+/*
+3.冒泡排序
+思路：从上到下，挨个比较相邻的两个数,较大的放在下面，知道任何两个数都是小在上，大在下。
+*/
+template<typename T>
+void bubbleSort(vector<T> &a)
+{
+ int num=a.size();
+ T temp;
+ bool flag=false;
+ for(int i=0;i<num-1;i++)
+ {
+  flag=false;
+  for(int j=0;j<num-i-1;j++)
+  {
+   if(a[j] > a[j+1])
+   {
+    flag=true;
+    temp=a[j];
+    a[j]=a[j+1];
+    a[j+1]=temp;
+    
+   }
+  }
+  if(flag==false) break;
+ }
+}
+
+
+/*
+4.希尔排序
+思路：不是再每次比较相邻的两个数，而是比较间隔固定距离的两个数，这样一次可以减少。
+*/
+int incre[]={5,3,1};
+
+template<typename T>
+void shellSort(vector<T> &a, int *incre, int ni) //增量存在数组incre里面,ni是数组incre的长度
+{
+ int j;
+ T temp;
+ for(int g=0;g<ni;g++)
+ {
+  for(int i=incre[g];i<a.size();i++)
+  {
+   temp=a[i];
+   j=i-incre[g];
+   while(temp<a[j])
+   {
+    a[j+incre[g]]=a[j];
+    j--;
+   }
+   a[j+incre[g]]=temp;  
+  }
+ }
+}
+
+template<typename T>
+void shellSort2(vector<T> &a)
+{
+
+ int num=a.size();
+ int i,k,j;
+ T temp;
+ ( (num/2)%2 ==0)? k=num/2+1: k=num/2;//保证k为奇数
+ while(k>0)
+ {
+  for(i=k;i<num;i++)
+  {
+   temp=a[i];
+   j=i-k;
+   while( temp < a[j])
+   {
+    a[j+k]=a[j];
+    j-=k;
+   }
+   a[j+k]=temp;
+  }
+  if(1==k) break;
+  (k/2)%2==0 ? k=k/2 +1: k=k/2;
+  
+ }
+}
+
+
+/*
+5.快速排序
+思路：选定一个值（可随机，可为a[0]，随机更好），将小于这个数的所有数放在它的左边，大于这个数的放在右边。
+*/
+template<typename T>
+void quickSort(vector<T> &a, int l, int r)
+{
+ if(l<r)
+ {
+  int q=partition(a,l,r);
+  quickSort(a,l,q-1);
+  quickSort(a,q+1,r);
+ }
+}
+
+template<typename T>
+int partition(vector<T> &a, int l, int r)
+{
+ T temp=a[l],t;
+ int i=l,j=r+1;
+ while(true)
+ {
+  while( a[++i]<temp && i<=r);
+  while( a[--j]>temp);
+   
+  if(i>=j) break;
+   
+  t=a[i];
+  a[i]=a[j];
+  a[j]=t; 
+ }
+ a[l]=a[j];
+ a[j]=temp;
+ return j;
+}
+
+/*
+5.1 快速排序--使用随机数做基数
+*/
+
+template<typename T>
+int RandPartion(vector<T> &a,int l, int r)
+{
+
+ srand(time(0)*l*r);
+ 
+ int i=int(random()%(l-r)+l);
+ //cout<<a.size()<<endl;
+ 
+ T temp =a[l];
+ a[l]=a[i];
+ a[i]=temp;
+ 
+ return partition(a,l,r);
+}
+
+template<typename T>
+void RandQuicksort(vector<T> &a, int l, int r)
+{
+ if(l<r)
+ {
+  int m=RandPartion(a,l,r);
+  //cout<<"pre "<<l<<" " <<m-1<<" "<<endl;
+  RandQuicksort(a,l,m-1);
+  //cout<<"lat "<<m+1<<" " <<r<<" "<<endl;
+  RandQuicksort(a,m+1,r);
+ }
+}
+
+/*
+6.归并排序
+思路：将数组分段，分治思想，然后再合并
+*/
+
+
+template<typename T>
+void mergeSort(vector<T> &a, vector<T> &tmpArray,int l, int r)
+{
+ if(l<r)
+ {
+  int center=(l+r)/2;
+  mergeSort(a, tmpArray, l, center);
+  mergeSort(a, tmpArray, center+1, r);
+  merge(a,tmpArray,l,center+1,r);
+ }
+}
+
+template<typename T>
+void mergeSort(vector<T> &a)
+{
+ vector<T> tmpArray(a.size());
+ mergeSort(a, tmpArray, 0, int(a.size()-1) );
+}
+
+template<typename T>
+void merge(vector<T> &a, vector<T> &tmpArray,int l, int center, int r)
+{
+ int i=l,j=center;
+ int k=l;
+ while(i<center && j<=r)
+ {
+  if(a[i] < a[j] ) 
+   tmpArray[k++]=a[i++];
+  else 
+   tmpArray[k++]=a[j++];
+ }
+ while(i < center) tmpArray[k++]=a[i++];
+ while(j <= r) tmpArray[k++]=a[j++];
+
+ for(i=l;i<=r;i++)  
+ {
+  a[i]=tmpArray[i]; 
+ }
+}
+
+/* 
+7.堆排序
+思路：建立堆，堆顶为最大。交换堆顶与堆底。调节二叉树，使堆顶元素始终为最大元素
+*/
+template<typename T>
+void heapSort(vector<T> &a)
+{
+ for (int i=a.size()/2;i>=0;--i)//build heap
+ {
+  perdown(a, i, a.size());
+ }
+
+ T temp;
+ for(int j=a.size()-1;j>=0;--j)
+ {
+  temp=a[j];
+  a[j]=a[0];
+  a[0]=temp;
+
+  perdown(a, 0 ,j);
+ }
+
+}
+
+
+template<typename T>
+void perdown(vector<T>&a, int i, int n)
+{
+ int child;
+ T temp;
+ for(temp=a[i]; 2*i+1<n;i=child)
+ {
+  child=2*i+1;
+  if(child+1<n && a[child]<a[child+1]) ++child;
+  if(temp <a[child]) a[i]=a[child];
+  else break;
+ }
+ a[i]=temp;
+}
+
+
+int main()
+{
+ 
+ vector<int> vi;
+ cout<<" 请在aaa.txt中 输入你要排序的数组 ，没有aaa.txt则创建之"<<endl;
+ fstream fin("aaa.txt");
+ if(!fin)
+ {
+  cout<<"cannot open aaa.txt"<<endl;
+ }
+ 
+ int input;
+ while(fin>>input)
+ {
+  vi.push_back(input);
+ }
+ 
+
+ cout<<"原数组是："<<endl;
+ for(int i=0;i<vi.size();i++)
+  cout<<vi[i]<<" ";
+ cout<<endl;
+ cout<<endl;
+
+ cout<<"选择排序selectionSort"<<endl;
+ selectionSort(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+ 
+ cout<<"插入排序insertionSort"<<endl;
+ insertionSort(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+ 
+ cout<<"冒泡排序bubbleSort"<<endl;
+ bubbleSort(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+ 
+ cout<<"希尔排序shellSort"<<endl;
+ shellSort(vi,incre,3); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+ 
+ cout<<"希尔排序s2hellSort2"<<endl;
+ shellSort2(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+ 
+ 
+ cout<<"堆排序heapSort"<<endl;
+ heapSort(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+
+ cout<<"合并排序mergeSort"<<endl;
+ mergeSort(vi); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+
+ cout<<"快速排序quickSort"<<endl;
+ quickSort(vi,0, int(vi.size()-1) ); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+
+ cout<<"快速排序（随机数）RandQuicksort"<<endl;
+ RandQuicksort(vi,0,int(vi.size()-1)); 
+ for (int i=0;i<vi.size();i++)
+ {
+  cout<<vi[i]<<" ";
+ }
+ cout<<endl;
+ cout<<endl;
+
+ return 0;
+}

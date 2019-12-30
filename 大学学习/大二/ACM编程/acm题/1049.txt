@@ -1,0 +1,58 @@
+
+Contests  Virtual Contests  Problems  Submit  Runs Status  Rank List  Forum 
+
+
+--------------------------------------------------------------------------------
+
+1049.   Rectangles 
+--------------------------------------------------------------------------------
+Time Limit: 5.0 Seconds   Memory Limit: 65536K
+Total Runs: 1753   Accepted Runs: 596
+
+--------------------------------------------------------------------------------
+
+
+
+Specialist in VLSI design testing must decide if there are some components that cover each other for a given design. A component is represented as a rectangle. Assume that each rectangle is rectilinearly oriented (sides parallel to the x and y axis), so that the representation of a rectangle consists of its minimum and maximum x and y coordinates.
+
+Write a program that counts the rectangles that are entirely covered by another rectangle.
+
+The input contains the text description of several sets of rectangles. The specification of a set consists of the number of rectangles in the set and the list of rectangles given by the minimum and maximum x and y coordinates separated by white spaces, in the format:
+
+nr_rectangles
+xmin1 xmax1 ymin1 ymax1
+xmin2 xmax2 ymin2 ymax2
+...
+xminn xmaxn yminn ymaxn
+
+The output should be printed on the standard output. For each given input data set, print one integer number in a single line that gives the result (the number of rectangles that are covered).
+
+
+Sample Input
+
+3
+100 101 100 101
+0 3 0 101
+20 40 10 400
+4
+10 20 10 20
+10 20 10 20
+10 20 10 20
+10 20 10 20
+
+
+Sample Output
+
+0
+4
+
+
+
+Source: Southeastern European 2000
+--------------------------------------------------------------------------------
+ 
+Submit   List    Runs   Forum   Statistics
+
+--------------------------------------------------------------------------------
+
+Tianjin University Online Judge v1.2.4

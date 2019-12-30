@@ -1,0 +1,40 @@
+2468.   Counting Letters 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 2450   Accepted Runs: 1346
+
+--------------------------------------------------------------------------------
+
+
+
+As a talented student, your boss gave you a task. Given a text string, you should find out which letters appear most frequently. 
+
+Really simple, isn't it? 
+
+Input
+The first line of the input is the number of test cases. Then some test cases followed. 
+
+Each test case contains only one line, indicating the string mentioned above. 
+
+You can assume there is only lower case letters in the string. The length of the string is more than 0 and no more than 100. 
+
+Output
+You should output one line for each test case, indicating the most frequent letters. Please note there may be more than one such letter, so you should output all of them, and these letters should be in the same order as the alphabet, that is, 'a', 'b', 'c', 'd' ... 'z'. 
+
+Sample Input
+2
+abcda
+tjucstju
+
+Sample Output
+a
+jtu
+
+Hint
+In the first sample test case, 'a' appears twice, while 'b','c','d' only appear once. So 'a' is the most frequent letter. 
+
+In the second sample test case, 't', 'j' and 'u' appear twice, so you should output them all, and 'j' should be the first. 
+
+Please note you should not output any unnecessary spaces or empty lines, or else you may get 'Presentation Error'. 
+
+

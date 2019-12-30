@@ -1,0 +1,33 @@
+2994.   Vector 
+--------------------------------------------------------------------------------
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1795   Accepted Runs: 1261
+
+--------------------------------------------------------------------------------
+
+
+
+WCM has been studying linear math recently, but he is tired of calculating the dot product of two vectors. So he returns to ZHC for help, who is good at programming. 
+Your task is just to write the program to calculate the dot product of two given vectors.
+
+Dot product of two vectors (a1, a2, ..., an) and (b1, b2, ..., bn) is defined as: 
+
+
+a1 * b1 + a2 * b2 + ... + an * bn.
+
+Input
+The first line of the input gives an integer t (t < 100), which is the number of test cases. Each test case start with an integer n (0 < n < 10), denoting the dimension of two given vectors. The following two lines give two vectors. Each contains n integers all in the range of [-1000, 1000]. 
+
+Output
+For each test case, output a single integer which is the dot product of two given vectors. 
+
+Sample Input
+1
+3
+1 2 3
+-1 0 3
+
+Sample Output
+8
+
+

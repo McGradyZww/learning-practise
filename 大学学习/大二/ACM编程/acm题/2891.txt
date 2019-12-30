@@ -1,0 +1,22 @@
+2891.   "Sub"-Sequence 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1061   Accepted Runs: 684
+________________________________________
+
+Given a sequence which contains n elements, we can get its "Sub"-sequence by taking the difference between each pair of adjacent elements. For instance, the original sequence is a1, a2... an, and its "Sub"-sequence is b1, b2... bn-1, where bi = ai+1 - ai.
+Now we iteratively apply the above process several times until there is only one element in the sequence. Please write a program to calculate the last element left in the "Sub"-sequence.
+Input:
+There are several test cases in the input data. The first line contains the number of test cases. There are two lines in each test case. The first line contains a positive integer N (1 ¡Ü N ¡Ü 20) denoting the length of the original sequence. The second line contains a sequence of N elements separated by spaces. It is guaranteed that the absolute value of every element will not exceed 100.
+Output:
+Output the last element left in the "Sub"-sequence in one line for every test case.
+Sample input:
+2
+4
+1 2 3 4
+5
+12 -5 3 -100 8
+Sample output:
+0
+458
+

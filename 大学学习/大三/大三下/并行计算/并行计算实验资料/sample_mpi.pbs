@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -N test
+#PBS -l nodes=2:ppn=2
+#PBS -q AA000_queue
+#PBS -j oe
+
+procs=$(cat $PBS_NODEFILE | wc -l)
+
+cd $PBS_O_WORKDIR
+
+mpirun -np $procs -machinefile $PBS_NODEFILE ./test

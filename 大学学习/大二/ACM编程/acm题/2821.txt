@@ -1,0 +1,29 @@
+2821.   Grouping Problem 
+________________________________________
+Time Limit: 1.0 Seconds   Memory Limit: 65536K
+Total Runs: 1688   Accepted Runs: 731
+________________________________________
+
+This is a short problem. However, short doesn't mean easy. You should think about it carefully. 
+N students are going to play the game of "Tug of War", which both you and me are familiar with. N people must be divided into two teams, and each person must be on one team or the other. For the reason of being fair, the difference of total weights of the two teams should be as nearly equal as possible. 
+Input
+There are multiple test cases. The first line of each test case contains a single integer N (2 ¡Ü N ¡Ü 15). It is followed by a line with N integers indicating the weight of the N students. The weight is at least 80, and at most 400. 
+A line with a single zero indicates the end of the input. 
+Output
+For each case, just print a line with a non-negative integer D, which is the smallest difference of the total weights of the two teams. 
+Sample Input
+3
+85
+100
+200
+5
+100
+200
+205
+100
+205
+0
+Sample Output
+15
+0
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -N test1
+#PBS -l  nodes=1:ppn=9
+#PBS -q AD103_queue
+#PBS -j oe
+
+procs=$(cat $PBS_NODEFILE | wc -l)
+
+cd /public/home/AD103/data/
+gcc -pthread -o Pi Pi.c
+./Pi 10000000 10 $procs

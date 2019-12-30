@@ -1,0 +1,34 @@
+#include "mpi.h¡±
+#include <stdio.h>
+int main(argc,argv)
+int argc;
+char *argv[];
+
+{     
+       int myid;
+       double f;
+       int position,i,packsize;
+       char buff[100];
+      MPI_Init(&argc,&argv);
+      MPI_Comm_rank(MPI_COMM_WORLD,&myid);
+      do{ 
+      if(myid==0){
+      scanf("%d %lf",&i,&f);
+      position=0;
+      MPI_Pack(&i,1,MPI_INT,buff,100,&position,MPI_COMM_WORLD);
+      MPI_Pack(&f,1,MPI_DOUBLE,buff,100,&position,MPI_COMM_WORLD);
+      }
+      MPI_Bcast(buff,position,MPI_PACKED,0,MPI_COMM_WORLD);
+      if(myid!=0)
+      {
+       packsize=0;
+       MPI_Unpack(buff,position,&packsize,&i,1,MPI_INT,MPI_COMM_WORLD);
+       MPI_Unpack(buff,position,&packsize,&f,1,MPI_DOUBLE,MPI_COMM_WORLD);
+      }
+       fprintf(stderr,"proc %d received 2 data(s) from proc #0:%d %lf\n",myid,i,f;
+      }while(i>=0);
+      MPI_Finalize();
+      return 0;
+}
+         
+      
